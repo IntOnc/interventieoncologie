@@ -1,0 +1,535 @@
+{
+ "gegenereerd": "2026-07-26",
+ "hoog": [
+  {
+   "kaart": "crc-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Radiofrequency and Microwave Ablation Compared to Systemic Chemotherapy and to Partial Hepatectomy in the Treatment of Colorectal Liver Metastases: A Systematic Review and Meta-Analysis",
+   "url": "https://link.springer.com/article/10.1007/s00270-018-1959-3",
+   "jaar": "2018"
+  },
+  {
+   "kaart": "net-embolisatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Comparison of Transarterial Bland and Chemoembolization for Neuroendocrine Tumours: A Systematic Review and Meta-Analysis",
+   "url": "https://dx.doi.org/10.3747/co.27.6205",
+   "jaar": "2020"
+  },
+  {
+   "kaart": "net-embolisatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "The Efficacy of Hepatic 90Y Resin Radioembolization for Metastatic Neuroendocrine Tumors: A Meta-Analysis",
+   "url": "https://jnm.snmjournals.org/content/55/9/1404",
+   "jaar": "2014"
+  },
+  {
+   "kaart": "vertebroplastiek",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Combination radiofrequency ablation and vertebral cement augmentation for spinal metastatic tumors: A systematic review and meta-analysis of safety and treatment outcomes",
+   "url": "https://www.nassopenaccess.org/article/S2666-5484(24)00010-6/fulltext",
+   "jaar": "2024"
+  },
+  {
+   "kaart": "vertebroplastiek",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Vertebroplasty in Multiple Myeloma: Outcomes in a Large Patient Series",
+   "url": "https://www.ajnr.org/content/29/4/642",
+   "jaar": "2008"
+  },
+  {
+   "kaart": "rcc-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Ablative therapies versus partial nephrectomy for small renal masses - A systematic review and meta-analysis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34958968/",
+   "jaar": "2022"
+  },
+  {
+   "kaart": "rcc-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Cryoablation or Radiofrequency Ablation of the Small Renal Mass: A Meta-analysis",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2704569/",
+   "jaar": "2008"
+  },
+  {
+   "kaart": "desmoid-cryo",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Percutaneous cryoablation for the treatment of extra-abdominal desmoid tumors",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31236956/",
+   "jaar": "2019"
+  },
+  {
+   "kaart": "hcc-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Surgery versus Radiofrequency Ablation for Small Hepatocellular Carcinoma: A Randomized Controlled Trial (SURF Trial)",
+   "url": "https://karger.com/lic/article/11/3/209/824965/",
+   "jaar": "2022"
+  },
+  {
+   "kaart": "hcc-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Radiofrequency ablation versus single-needle microwave ablation for HCC up to 4 cm: a randomized-controlled trial",
+   "url": "https://www.sciencedirect.com/science/article/pii/S2589555924002738",
+   "jaar": "2018"
+  },
+  {
+   "kaart": "hcc-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "A prospective randomized trial comparing percutaneous local ablative therapy and partial hepatectomy for small hepatocellular carcinoma",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16495695/",
+   "jaar": "2006"
+  },
+  {
+   "kaart": "hcc-tace",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Arterial embolisation or chemoembolisation versus symptomatic treatment in patients with unresectable hepatocellular carcinoma: a randomised controlled trial",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12049862/",
+   "jaar": "2002"
+  },
+  {
+   "kaart": "hcc-tace",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Prospective randomized study of doxorubicin-eluting-bead embolization (PRECISION V)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19908093/",
+   "jaar": "2010"
+  },
+  {
+   "kaart": "pve",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Portal vein embolization versus dual vein embolization for management of the future liver remnant: a meta-analysis",
+   "url": "https://academic.oup.com/bjsopen/article/6/6/zrac131/6832521",
+   "jaar": "2022"
+  },
+  {
+   "kaart": "pve",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Predictive Factors for Hypertrophy of the Future Liver Remnant After Portal Vein Embolization: A Systematic Review",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8382618/",
+   "jaar": "2021"
+  },
+  {
+   "kaart": "cca-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Intrahepatic Cholangiocarcinoma and Thermal Ablation: Long-term Results of an Italian Retrospective Multicenter Study",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6943218/",
+   "jaar": "2019"
+  },
+  {
+   "kaart": "cca-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Thermal ablation of intrahepatic cholangiocarcinoma: safety, efficacy, and factors affecting local tumor progression",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29869103/",
+   "jaar": "2018"
+  },
+  {
+   "kaart": "cca-arterieel",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Factors Impacting Survival After Transarterial Radioembolization in Patients with Unresectable Intrahepatic Cholangiocarcinoma: A Combined Analysis of the Prospective CIRT Studies",
+   "url": "https://link.springer.com/article/10.1007/s00270-023-03657-x",
+   "jaar": "2023"
+  },
+  {
+   "kaart": "cca-biliair",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Efficacy and safety of endoscopic radiofrequency ablation for unresectable extrahepatic cholangiocarcinoma: a randomized trial",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29342492/",
+   "jaar": "2018"
+  },
+  {
+   "kaart": "cca-biliair",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "The Impact of Radiofrequency Ablation on Survival and Stent Patency in Unresectable Cholangiocarcinoma: A Systematic Review and Meta-Analysis of RCTs",
+   "url": "https://doi.org/10.3390/cancers16071372",
+   "jaar": "2024"
+  },
+  {
+   "kaart": "cca-biliair",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Percutaneous Intraductal Radiofrequency Ablation Combined with Biliary Stent Placement for Nonresectable Malignant Biliary Obstruction Improves Stent Patency but not Survival",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27082582/",
+   "jaar": "2016"
+  },
+  {
+   "kaart": "bc-cryo",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Cryoablation: A Minimally Invasive Alternative for Early-Stage Breast Cancer: 6-Year Outcomes of the FROST Clinical Trial",
+   "url": "https://link.springer.com/article/10.1245/s10434-025-18991-2",
+   "jaar": "2025"
+  },
+  {
+   "kaart": "wervel-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Combination radiofrequency ablation and vertebral cement augmentation for spinal metastatic tumors: A systematic review and meta-analysis of safety and treatment outcomes",
+   "url": "https://www.nassopenaccess.org/article/S2666-5484(24)00010-6/fulltext",
+   "jaar": "2024"
+  },
+  {
+   "kaart": "wervel-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Simultaneous Bipedicular Radiofrequency Ablation Combined with Vertebral Augmentation for Local Tumor Control of Spinal Metastases",
+   "url": "https://www.ajnr.org/content/39/9/1768",
+   "jaar": "2018"
+  },
+  {
+   "kaart": "wervel-embolisatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Only Tumors Angiographically Identified as Hypervascular Exhibit Lower Intraoperative Blood Loss Upon Selective Preoperative Embolization of Spinal Metastases: Systematic Review and Meta-Analysis",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7874195/",
+   "jaar": "2021"
+  },
+  {
+   "kaart": "wervel-embolisatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Effectiveness of Preoperative Embolization in Patients with Spinal Metastases: A Systematic Review and Meta-Analysis",
+   "url": "https://www.sciencedirect.com/science/article/abs/pii/S1878875021008937",
+   "jaar": "2021"
+  },
+  {
+   "kaart": "wervel-embolisatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "The role of preoperative transarterial embolization in spinal tumors: a large single-center experience",
+   "url": "https://www.researchgate.net/publication/233876933",
+   "jaar": "2015"
+  },
+  {
+   "kaart": "adrenal-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Image-Guided Percutaneous Ablation of Adrenal Metastases: A Meta-Analysis of Efficacy and Safety",
+   "url": "https://www.jvir.org/article/S1051-0443(20)31035-6/abstract",
+   "jaar": "2020"
+  },
+  {
+   "kaart": "adrenal-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Percutaneous ablation for adrenal metastases: a systematic review and meta-analysis",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9909773/",
+   "jaar": "2023"
+  },
+  {
+   "kaart": "adrenal-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Catecholamine Surge during Image-Guided Ablation of Adrenal Gland Metastases: Predictors, Consequences, and Recommendations for Management",
+   "url": "https://www.jvir.org/article/S1051-0443(15)01107-0/abstract",
+   "jaar": "2016"
+  },
+  {
+   "kaart": "long-ablatie",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Response to radiofrequency ablation of pulmonary tumours: a prospective, intention-to-treat, multicentre clinical trial (RAPTURE)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18565793/",
+   "jaar": "2008"
+  },
+  {
+   "kaart": "ire-pancreas",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Comparison of Survival Between Irreversible Electroporation Followed by Chemotherapy and Chemotherapy Alone for Locally Advanced Pancreatic Cancer",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6987260/",
+   "jaar": "2020"
+  },
+  {
+   "kaart": "ect",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Electrochemotherapy in the Treatment of Breast Cancer Metastasis to the Skin and Subcutaneous Tissue: Multicenter Experience",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30537762/",
+   "jaar": "2018"
+  },
+  {
+   "kaart": "ect",
+   "lijst": "core",
+   "prio": "hoog",
+   "titel": "Impact of electrochemotherapy in metastatic cutaneous melanoma: a contemporary systematic review and meta-analysis",
+   "url": "https://www.tandfonline.com/doi/full/10.1080/0284186X.2021.2006776",
+   "jaar": "2021"
+  }
+ ],
+ "laag": [
+  {
+   "kaart": "crc-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Thermal Ablation versus Surgical Resection for Intermediate-Size (3–5 cm) Colorectal Liver Metastases: Results from the Amsterdam Colorectal Liver Met Registry (AmCORE)",
+   "url": "https://www.mdpi.com/2072-6694/18/6/1017",
+   "jaar": "2025"
+  },
+  {
+   "kaart": "crc-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Radiofrequency ablation versus microwave ablation for colorectal liver metastases: long-term results of a retrospective cohort surgical experience",
+   "url": "https://hbsn.amegroups.org/article/view/126362/html",
+   "jaar": "2024"
+  },
+  {
+   "kaart": "crc-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "3D Quantitative Ablation Margins for Prediction of Ablation Site Recurrence After Stereotactic Image-Guided Microwave Ablation of Colorectal Liver Metastases: A Multicenter Study",
+   "url": "https://doi.org/10.3389/fonc.2021.757167",
+   "jaar": "2021"
+  },
+  {
+   "kaart": "net-embolisatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Comparison of Transarterial Bland and Chemoembolization for Neuroendocrine Tumours: A Systematic Review and Meta-Analysis",
+   "url": "https://dx.doi.org/10.3747/co.27.6205",
+   "jaar": "2020"
+  },
+  {
+   "kaart": "vertebroplastiek",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Combination radiofrequency ablation and vertebral cement augmentation for spinal metastatic tumors: A systematic review and meta-analysis of safety and treatment outcomes",
+   "url": "https://www.nassopenaccess.org/article/S2666-5484(24)00010-6/fulltext",
+   "jaar": "2024"
+  },
+  {
+   "kaart": "vertebroplastiek",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Spinal Radiofrequency Ablation Combined with Cement Augmentation for Painful Spinal Vertebral Metastasis: A Single-Center Prospective Study",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31561656/",
+   "jaar": "2019"
+  },
+  {
+   "kaart": "vertebroplastiek",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Percutaneous image-guided cryoablation of spinal metastases: over 10-year experience in two academic centers",
+   "url": "https://link.springer.com/article/10.1007/s00330-021-08477-6",
+   "jaar": "2022"
+  },
+  {
+   "kaart": "vertebroplastiek",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Percutaneous Image-Guided Electrochemotherapy of Spine Metastases: Initial Experience",
+   "url": "https://link.springer.com/article/10.1007/s00270-019-02316-4",
+   "jaar": "2019"
+  },
+  {
+   "kaart": "vertebroplastiek",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Percutaneous Vertebroplasty for Pain Management in Patients with Multiple Myeloma: Is Radiofrequency Ablation Necessary?",
+   "url": "https://link.springer.com/article/10.1007/s00270-013-0624-0",
+   "jaar": "2013"
+  },
+  {
+   "kaart": "rcc-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Long-term Outcomes of Partial Nephrectomy Versus Percutaneous Ablation for Renal Cell Carcinoma: A Propensity-Matched Analysis",
+   "url": "https://www.sciencedirect.com/science/article/abs/pii/S0090429525007460",
+   "jaar": "2025"
+  },
+  {
+   "kaart": "rcc-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Radiofrequency Ablation, Cryoablation, and Microwave Ablation for T1a Renal Cell Carcinoma: A Comparative Evaluation of Therapeutic and Renal Function Outcomes",
+   "url": "https://www.sciencedirect.com/science/article/abs/pii/S1051044318317822",
+   "jaar": "2019"
+  },
+  {
+   "kaart": "rcc-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Percutaneous Ablation of T1 Renal Masses: Comparative Local Control and Complications after Radiofrequency and Cryoablation",
+   "url": "https://doi.org/10.3390/diagnostics13193059",
+   "jaar": "2023"
+  },
+  {
+   "kaart": "desmoid-cryo",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Cryoablation in Extra-Abdominal Desmoid Tumors: A 10-Year Experience in Pediatric and Young Adult Patients",
+   "url": "https://link.springer.com/article/10.1007/s00270-024-03845-3",
+   "jaar": "2024"
+  },
+  {
+   "kaart": "desmoid-cryo",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Percutaneous cryoablation for advanced and refractory extra-abdominal desmoid tumors",
+   "url": "https://link.springer.com/article/10.1007/s10147-021-01887-y",
+   "jaar": "2021"
+  },
+  {
+   "kaart": "hcc-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Liver resection versus radiofrequency ablation or TACE for early multinodular BCLC-A hepatocellular carcinoma: a systematic review and meta-analysis",
+   "url": "https://www.e-jlc.org/journal/view.php?doi=10.17998/jlc.2026.02.21",
+   "jaar": "2026"
+  },
+  {
+   "kaart": "hcc-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Microwave ablation vs. single-needle radiofrequency ablation for the treatment of HCC up to 4 cm: A randomized-controlled trial",
+   "url": "https://www.jhep-reports.eu/article/S2589-5559(24)00273-8/fulltext",
+   "jaar": "2024"
+  },
+  {
+   "kaart": "hcc-tace",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Efficacy of therapies for intermediate-stage hepatocellular carcinoma: systematic review and network meta-analysis",
+   "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1577614/full",
+   "jaar": "2025"
+  },
+  {
+   "kaart": "hcc-tace",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Safety, efficacy, and survival of different transarterial chemoembolization techniques in unresectable HCC: a comparative single-center analysis",
+   "url": "https://link.springer.com/article/10.1007/s00432-024-05722-5",
+   "jaar": "2024"
+  },
+  {
+   "kaart": "hcc-tare",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Efficacy and safety of selective internal radiation therapy versus sorafenib in locally advanced HCC (SARAH)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29129443/",
+   "jaar": "2017"
+  },
+  {
+   "kaart": "pve",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Future liver remnant hypertrophy and postoperative outcomes: segmental versus main right portal vein embolization",
+   "url": "https://cvirendovasc.springeropen.com/articles/10.1186/s42155-025-00537-y",
+   "jaar": "2025"
+  },
+  {
+   "kaart": "pve",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Portal vein ligation versus portal vein embolization for induction of hypertrophy of the future liver remnant: a systematic review and meta-analysis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28807245/",
+   "jaar": "2017"
+  },
+  {
+   "kaart": "cca-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Percutaneous radiofrequency ablation in intrahepatic cholangiocarcinoma: a retrospective single-center experience",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32396398/",
+   "jaar": "2020"
+  },
+  {
+   "kaart": "cca-arterieel",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Survival After Transarterial Radioembolization in Unresectable Intrahepatic Cholangiocarcinoma: An Updated Meta-analysis and Meta-regression",
+   "url": "https://link.springer.com/article/10.1007/s00270-024-03825-7",
+   "jaar": "2024"
+  },
+  {
+   "kaart": "cca-biliair",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Improving biliary stent patency for malignant obstructive jaundice using endobiliary radiofrequency ablation: experience in 150 patients",
+   "url": "https://link.springer.com/article/10.1007/s00464-021-08457-3",
+   "jaar": "2021"
+  },
+  {
+   "kaart": "wervel-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Percutaneous image-guided cryoablation of spinal metastases: over 10-year experience in two academic centers",
+   "url": "https://link.springer.com/article/10.1007/s00330-021-08477-6",
+   "jaar": "2022"
+  },
+  {
+   "kaart": "wervel-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Percutaneous Image-Guided Electrochemotherapy of Spine Metastases: Initial Experience",
+   "url": "https://link.springer.com/article/10.1007/s00270-019-02316-4",
+   "jaar": "2019"
+  },
+  {
+   "kaart": "adrenal-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Comparative effectiveness of thermal ablation, radiotherapy, and surgery for adrenal metastases: a multi-institutional cohort study",
+   "url": "https://link.springer.com/article/10.1007/s00330-026-12380-3",
+   "jaar": "2026"
+  },
+  {
+   "kaart": "long-ablatie",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Prospective multicentre trial of microwave ablation for lung tumours (SOLSTICE)",
+   "url": "https://www.jvir.org/article/S1051-0443(21)00443-1/abstract",
+   "jaar": "2021"
+  },
+  {
+   "kaart": "ect",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Prospective multicentre study of patients with cutaneous metastases from breast cancer treated with electrochemotherapy",
+   "url": "https://link.springer.com/article/10.1007/s10585-025-10350-5",
+   "jaar": "2025"
+  },
+  {
+   "kaart": "ect",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Efficacy of Electrochemotherapy in Cutaneous Melanoma Metastases and Rare Non-melanoma Skin Cancer",
+   "url": "https://ar.iiarjournals.org/content/40/11/6485",
+   "jaar": "2020"
+  },
+  {
+   "kaart": "ect-wervel",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Electrochemotherapy of spinal metastasis using transpedicular approach: a preclinical safety animal study",
+   "url": "https://link.springer.com/article/10.1186/s41747-025-00607-9",
+   "jaar": "2025"
+  },
+  {
+   "kaart": "crc-ire",
+   "lijst": "latest",
+   "prio": "laag",
+   "titel": "Long-term survival after percutaneous irreversible electroporation of inoperable colorectal liver metastases",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6312065/",
+   "jaar": "2019"
+  }
+ ]
+}

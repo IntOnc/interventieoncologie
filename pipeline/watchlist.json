@@ -1,0 +1,1876 @@
+[
+ {
+  "id": "crc-ablatie",
+  "titel": "Thermale ablatie bij colorectale levermetastasen",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Colorectaal carcinoom"
+  ],
+  "technieken": [
+   "RFA",
+   "Microwave",
+   "IRE"
+  ],
+  "bewijs": "Bewijs: Hoog (niveau 1)",
+  "herzien": "Herzien: 25 jul 2026 · v1.4",
+  "nieuwste_core": 202502,
+  "nieuwste_latest": 202607,
+  "aantal": {
+   "guidelines": 4,
+   "core": 3,
+   "latest": 7
+  },
+  "zoektermen_nl": "ablatie thermische ablatie radiofrequent microwave ire elektroporatie colorectaal darmkanker levermetastasen crlm lever",
+  "zoektermen_en": "ablation thermal radiofrequency microwave ire electroporation colorectal bowel liver metastases crlm",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Metastatic colorectal cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up",
+    "bron": "Annals of Oncology · apr 2026",
+    "url": "https://www.annalsofoncology.org/article/S0923-7534(26)00108-0/fulltext",
+    "sortkey": 202604
+   },
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Colon Cancer / Rectal Cancer",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202501
+   },
+   {
+    "titel": "CIRSE Standards of Practice on Thermal Ablation of Liver Tumours",
+    "bron": "Cardiovasc Intervent Radiol · 2020",
+    "url": "https://doi.org/10.1007/s00270-020-02471-z",
+    "sortkey": 202001
+   },
+   {
+    "titel": "Richtlijn Colorectaal carcinoom – Locoregionale behandeling levermetastasen",
+    "bron": "Richtlijnendatabase (NL)",
+    "url": "https://richtlijnendatabase.nl/richtlijn/colorectaal_carcinoom_crc/gemetastaseerd_colorectaalcarcinoom_crc/locoregionale_behandeling_levermetastasen.html",
+    "sortkey": 202401
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/study/NCT04081168",
+   "https://clinicaltrials.gov/search?term=COLDFIRE",
+   "https://clinicaltrials.gov/search?cond=colorectal%20liver%20metastases&term=ablation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Radiofrequency and Microwave Ablation Compared to Systemic Chemotherapy and to Partial Hepatectomy in the Treatment of Colorectal Liver Metastases: A Systematic Review and Meta-Analysis"
+   },
+   {
+    "list": "latest",
+    "title": "Radiofrequency ablation versus microwave ablation for colorectal liver metastases: long-term results of a retrospective cohort surgical experience"
+   }
+  ]
+ },
+ {
+  "id": "net-embolisatie",
+  "titel": "Transarteriële embolisatie bij NET-levermetastasen",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Neuro-endocriene tumor"
+  ],
+  "technieken": [
+   "Embolisatie",
+   "TACE",
+   "TARE (Y-90)"
+  ],
+  "bewijs": "Bewijs: Matig tot hoog",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202503,
+  "nieuwste_latest": 202503,
+  "aantal": {
+   "guidelines": 4,
+   "core": 3,
+   "latest": 4
+  },
+  "zoektermen_nl": "embolisatie bland tae tace chemo-embolisatie tare radio-embolisatie yttrium y90 neuro-endocrien net carcinoid lever levermetastasen",
+  "zoektermen_en": "embolization bland tae tace chemoembolization tare radioembolization yttrium y90 neuroendocrine net carcinoid liver metastases",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "European Neuroendocrine Tumor Society (ENETS) 2023 guidance paper for the management of well-differentiated small intestine neuroendocrine tumours",
+    "bron": "Journal of Neuroendocrinology · 2024",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/jne.13423",
+    "sortkey": 202401
+   },
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Neuroendocrine and Adrenal Tumors",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202501
+   },
+   {
+    "titel": "Role of hepatic intra-arterial therapies in metastatic neuroendocrine tumours (NET): guidelines from the NET-Liver-Metastases Consensus Conference",
+    "bron": "HPB · 2015",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1365182X15311667",
+    "sortkey": 201501
+   },
+   {
+    "titel": "Landelijke richtlijn Neuro-endocriene tumoren (NET)",
+    "bron": "IKNL (NL) · Landelijke richtlijn",
+    "url": "https://iknl.nl/kankersoorten/neuro-endocriene-neoplasie",
+    "sortkey": 201401
+   }
+  ],
+  "trialquery": [
+   "https://www.jvir.org/article/S1051-0443(25)00027-2/fulltext",
+   "https://clinicaltrials.gov/search?cond=neuroendocrine%20liver%20metastases&term=embolization&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Comparison of Transarterial Bland and Chemoembolization for Neuroendocrine Tumours: A Systematic Review and Meta-Analysis"
+   },
+   {
+    "list": "latest",
+    "title": "Comparison of Transarterial Bland and Chemoembolization for Neuroendocrine Tumours: A Systematic Review and Meta-Analysis"
+   }
+  ]
+ },
+ {
+  "id": "vertebroplastiek",
+  "titel": "Cementaugmentatie (vertebroplastiek / kyfoplastiek) bij wervelmetastasen",
+  "orgaan": "Wervelkolom",
+  "ziektebeeld": [
+   "Wervelmetastasen",
+   "Multipel myeloom"
+  ],
+  "technieken": [
+   "Cementoplastiek"
+  ],
+  "bewijs": "Bewijs: Matig tot hoog",
+  "herzien": "Herzien: 25 jul 2026 · v1.1",
+  "nieuwste_core": 202403,
+  "nieuwste_latest": 202403,
+  "aantal": {
+   "guidelines": 4,
+   "core": 3,
+   "latest": 6
+  },
+  "zoektermen_nl": "vertebroplastiek kyfoplastiek cementoplastiek cementaugmentatie wervel wervelmetastasen myeloom pijn inzakkingsfractuur stabilisatie wervelkolom bot",
+  "zoektermen_en": "vertebroplasty kyphoplasty cementoplasty cement augmentation spine vertebral metastases myeloma pain compression fracture stabilisation bone",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "CIRSE Guidelines on Percutaneous Vertebral Augmentation",
+    "bron": "Cardiovasc Intervent Radiol · 2017",
+    "url": "https://link.springer.com/article/10.1007/s00270-017-1574-8",
+    "sortkey": 201701
+   },
+   {
+    "titel": "The role of cement augmentation with percutaneous vertebroplasty and balloon kyphoplasty for the treatment of vertebral compression fractures in multiple myeloma: a consensus statement from the International Myeloma Working Group (IMWG)",
+    "bron": "Blood Cancer Journal · 2019",
+    "url": "https://www.nature.com/articles/s41408-019-0187-7",
+    "sortkey": 201901
+   },
+   {
+    "titel": "Pain management in spinal metastases: the role of percutaneous vertebral augmentation",
+    "bron": "Annals of Oncology · 2019",
+    "url": "https://www.annalsofoncology.org/article/S0923-7534(19)38576-X/fulltext",
+    "sortkey": 201906
+   },
+   {
+    "titel": "Richtlijn Wervelmetastasen (volledig herziene versie)",
+    "bron": "Richtlijnendatabase (NL) · 2026",
+    "url": "https://richtlijnendatabase.nl/richtlijn/wervelmetastasen/overview_-_spinal_metastases.html",
+    "sortkey": 202606
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=spinal%20metastases&term=vertebroplasty%20OR%20ablation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Combination radiofrequency ablation and vertebral cement augmentation for spinal metastatic tumors: A systematic review and meta-analysis of safety and treatment outcomes"
+   },
+   {
+    "list": "core",
+    "title": "Vertebroplasty in Multiple Myeloma: Outcomes in a Large Patient Series"
+   },
+   {
+    "list": "latest",
+    "title": "Combination radiofrequency ablation and vertebral cement augmentation for spinal metastatic tumors: A systematic review and meta-analysis of safety and treatment outcomes"
+   },
+   {
+    "list": "latest",
+    "title": "Spinal Radiofrequency Ablation Combined with Cement Augmentation for Painful Spinal Vertebral Metastasis: A Single-Center Prospective Study"
+   },
+   {
+    "list": "latest",
+    "title": "Percutaneous Image-Guided Electrochemotherapy of Spine Metastases: Initial Experience"
+   },
+   {
+    "list": "latest",
+    "title": "Percutaneous Vertebroplasty for Pain Management in Patients with Multiple Myeloma: Is Radiofrequency Ablation Necessary?"
+   }
+  ]
+ },
+ {
+  "id": "wervel-ablatie",
+  "titel": "Percutane ablatie ± cementoplastie bij wervelmetastasen",
+  "orgaan": "Wervelkolom",
+  "ziektebeeld": [
+   "Wervelmetastasen",
+   "Multipel myeloom"
+  ],
+  "technieken": [
+   "RFA",
+   "Cryoablatie",
+   "Microwave"
+  ],
+  "bewijs": "Bewijs: Matig (prospectief / meta)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202403,
+  "nieuwste_latest": 202301,
+  "aantal": {
+   "guidelines": 2,
+   "core": 3,
+   "latest": 3
+  },
+  "zoektermen_nl": "percutane ablatie radiofrequente rfa cryoablatie microwave elektrochemotherapie wervelmetastasen bot lokale tumorcontrole pijn radioresistent motion cementoplastie augmentatie",
+  "zoektermen_en": "percutaneous ablation radiofrequency rfa cryoablation microwave electrochemotherapy vertebral metastases bone local tumor control pain radioresistant motion cementoplasty augmentation",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Richtlijn Wervelmetastasen (volledig herziene versie)",
+    "bron": "Richtlijnendatabase (NL) · 2026",
+    "url": "https://richtlijnendatabase.nl/richtlijn/wervelmetastasen/overview_-_spinal_metastases.html",
+    "sortkey": 202606
+   },
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Central Nervous System / Bone metastases",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202501
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=spinal%20metastases&term=ablation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Combination radiofrequency ablation and vertebral cement augmentation for spinal metastatic tumors: A systematic review and meta-analysis of safety and treatment outcomes"
+   },
+   {
+    "list": "core",
+    "title": "Simultaneous Bipedicular Radiofrequency Ablation Combined with Vertebral Augmentation for Local Tumor Control of Spinal Metastases"
+   },
+   {
+    "list": "latest",
+    "title": "RFA in Vertebral Body Metastasis with and without Percutaneous Cement Augmentation: A Systematic Review Addressing SPINE Stability"
+   },
+   {
+    "list": "latest",
+    "title": "Percutaneous Image-Guided Electrochemotherapy of Spine Metastases: Initial Experience"
+   }
+  ]
+ },
+ {
+  "id": "wervel-embolisatie",
+  "titel": "Embolisatie van hypervasculaire wervelmetastasen",
+  "orgaan": "Wervelkolom",
+  "ziektebeeld": [
+   "Wervelmetastasen"
+  ],
+  "technieken": [
+   "Embolisatie"
+  ],
+  "bewijs": "Bewijs: Matig (meta / cohort)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202101,
+  "nieuwste_latest": 202501,
+  "aantal": {
+   "guidelines": 2,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "embolisatie trans-arterieel hypervasculair wervelmetastasen niercel schildklier preoperatief bloedverlies devascularisatie wervelchirurgie palliatief",
+  "zoektermen_en": "embolization transarterial hypervascular vertebral metastases renal thyroid preoperative blood loss devascularization spine surgery palliative",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Richtlijn Wervelmetastasen (volledig herziene versie)",
+    "bron": "Richtlijnendatabase (NL) · 2026",
+    "url": "https://richtlijnendatabase.nl/richtlijn/wervelmetastasen/overview_-_spinal_metastases.html",
+    "sortkey": 202606
+   },
+   {
+    "titel": "Effectiveness of Preoperative Embolization in Patients with Spinal Metastases: A Systematic Review and Meta-Analysis",
+    "bron": "Eur J Surg Oncol · 2021",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S1878875021008937",
+    "sortkey": 202101
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=spinal%20metastases&term=embolization&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Only Tumors Angiographically Identified as Hypervascular Exhibit Lower Intraoperative Blood Loss Upon Selective Preoperative Embolization of Spinal Metastases: Systematic Review and Meta-Analysis"
+   },
+   {
+    "list": "core",
+    "title": "Effectiveness of Preoperative Embolization in Patients with Spinal Metastases: A Systematic Review and Meta-Analysis"
+   },
+   {
+    "list": "core",
+    "title": "The role of preoperative transarterial embolization in spinal tumors: a large single-center experience"
+   },
+   {
+    "list": "latest",
+    "title": "Optimizing surgical strategies: a systematic review of the effectiveness of preoperative arterial embolization for hypervascular metastatic spinal tumors"
+   },
+   {
+    "list": "latest",
+    "title": "Current state of preoperative embolization for spinal metastasis: a survey by the EANS spine section"
+   }
+  ]
+ },
+ {
+  "id": "rcc-ablatie",
+  "titel": "Percutane ablatie van niercelcarcinoom",
+  "orgaan": "Nier",
+  "ziektebeeld": [
+   "Niercelcarcinoom"
+  ],
+  "technieken": [
+   "Cryoablatie",
+   "RFA",
+   "Microwave"
+  ],
+  "bewijs": "Bewijs: Matig (observationeel + richtlijn)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202407,
+  "nieuwste_latest": 202601,
+  "aantal": {
+   "guidelines": 4,
+   "core": 5,
+   "latest": 6
+  },
+  "zoektermen_nl": "ablatie cryoablatie rfa radiofrequent microwave nier niercelcarcinoom rcc t1a niertumor nefronsparend",
+  "zoektermen_en": "ablation cryoablation rfa radiofrequency microwave kidney renal cell carcinoma rcc t1a small renal mass nephron-sparing",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "European Association of Urology Guidelines on Renal Cell Carcinoma: The 2025 Update",
+    "bron": "European Urology · 2025",
+    "url": "https://www.europeanurology.com/article/S0302-2838(25)00139-3/fulltext",
+    "sortkey": 202501
+   },
+   {
+    "titel": "Renal Mass and Localized Renal Cancer: Evaluation, Management, and Follow-Up (AUA Guideline)",
+    "bron": "AUA · 2021",
+    "url": "https://www.auanet.org/guidelines-and-quality/guidelines/renal-mass-and-localized-renal-cancer-evaluation-management-and-follow-up",
+    "sortkey": 202101
+   },
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Kidney Cancer",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202502
+   },
+   {
+    "titel": "Richtlijn Niercelcarcinoom - Behandeling niertumoren ≤ 4 cm (T1a)",
+    "bron": "Richtlijnendatabase (NL)",
+    "url": "https://richtlijnendatabase.nl/richtlijn/niercelcarcinoom/behandeling/behandeling_niertumoren_4cm_bij_niercelcarcinoom.html",
+    "sortkey": 202401
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=renal%20cell%20carcinoma&term=ablation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Ablative therapies versus partial nephrectomy for small renal masses - A systematic review and meta-analysis"
+   },
+   {
+    "list": "core",
+    "title": "Cryoablation or Radiofrequency Ablation of the Small Renal Mass: A Meta-analysis"
+   },
+   {
+    "list": "latest",
+    "title": "Long-term Outcomes of Partial Nephrectomy Versus Percutaneous Ablation for Renal Cell Carcinoma: A Propensity-Matched Analysis"
+   },
+   {
+    "list": "latest",
+    "title": "Image-guided percutaneous ablative treatments for renal cell carcinoma"
+   }
+  ]
+ },
+ {
+  "id": "desmoid-cryo",
+  "titel": "Cryoablatie van desmoïdtumor",
+  "orgaan": "Weke delen",
+  "ziektebeeld": [
+   "Desmoïd"
+  ],
+  "technieken": [
+   "Cryoablatie"
+  ],
+  "bewijs": "Bewijs: Matig (prospectief + consensus)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202106,
+  "nieuwste_latest": 202501,
+  "aantal": {
+   "guidelines": 3,
+   "core": 3,
+   "latest": 3
+  },
+  "zoektermen_nl": "cryoablatie desmoid desmoïd fibromatose weke delen sarcoom pijn wervel abdominaal extra-abdominaal",
+  "zoektermen_en": "cryoablation desmoid fibromatosis soft tissue sarcoma pain extra-abdominal abdominal wall aggressive fibromatosis",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "The management of desmoid tumours: A joint global consensus-based guideline approach for adult and paediatric patients",
+    "bron": "European Journal of Cancer · 2020",
+    "url": "https://www.ejcancer.com/article/S0959-8049(19)30832-9/fulltext",
+    "sortkey": 202003
+   },
+   {
+    "titel": "ESMO-EURACAN-GENTURIS Clinical Practice Guidelines: Soft tissue and visceral sarcomas",
+    "bron": "ESMO · 2021",
+    "url": "https://www.esmo.org/guidelines/guidelines-by-topic/esmo-clinical-practice-guidelines-sarcoma-and-gist",
+    "sortkey": 202101
+   },
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Soft Tissue Sarcoma (Desmoid Tumors)",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202501
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=desmoid&term=cryoablation%20OR%20ablation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Percutaneous cryoablation for the treatment of extra-abdominal desmoid tumors"
+   },
+   {
+    "list": "latest",
+    "title": "Cryoablation in Extra-Abdominal Desmoid Tumors: A 10-Year Experience in Pediatric and Young Adult Patients"
+   },
+   {
+    "list": "latest",
+    "title": "Percutaneous cryoablation for advanced and refractory extra-abdominal desmoid tumors"
+   },
+   {
+    "list": "latest",
+    "title": "Cryotherapy in the Treatment of Extra-Abdominal Desmoid Tumors - A Review"
+   }
+  ]
+ },
+ {
+  "id": "hcc-ablatie",
+  "titel": "Thermale ablatie bij hepatocellulair carcinoom",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Hepatocellulair carcinoom"
+  ],
+  "technieken": [
+   "RFA",
+   "Microwave",
+   "IRE"
+  ],
+  "bewijs": "Bewijs: Hoog (niveau 1)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202206,
+  "nieuwste_latest": 202602,
+  "aantal": {
+   "guidelines": 4,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "ablatie thermische rfa radiofrequent microwave ire hepatocellulair carcinoom hcc lever leverkanker bclc vroeg cirrose",
+  "zoektermen_en": "ablation thermal rfa radiofrequency microwave ire hepatocellular carcinoma hcc liver cancer bclc early cirrhosis",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "BCLC strategy for prognosis prediction and treatment recommendation: The 2022 update",
+    "bron": "Journal of Hepatology · 2022",
+    "url": "https://www.journal-of-hepatology.eu/article/S0168-8278(21)02223-6/fulltext",
+    "sortkey": 202201
+   },
+   {
+    "titel": "EASL Clinical Practice Guidelines: Management of hepatocellular carcinoma",
+    "bron": "Journal of Hepatology · 2018",
+    "url": "https://easl.eu/publication/easl-clinical-practice-guidelines-management-of-hepatocellular-carcinoma/",
+    "sortkey": 201801
+   },
+   {
+    "titel": "AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma",
+    "bron": "Hepatology · 2023",
+    "url": "https://www.aasld.org/practice-guidelines",
+    "sortkey": 202301
+   },
+   {
+    "titel": "Richtlijn Hepatocellulair carcinoom (2023)",
+    "bron": "Richtlijnendatabase (NL)",
+    "url": "https://richtlijnendatabase.nl/richtlijn/hepatocellulair_carcinoom_2023/startpagina_hepatocellulair_carcinoom_2023.html",
+    "sortkey": 202301
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=hepatocellular%20carcinoma&term=ablation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "A prospective randomized trial comparing percutaneous local ablative therapy and partial hepatectomy for small hepatocellular carcinoma"
+   },
+   {
+    "list": "latest",
+    "title": "Liver resection versus radiofrequency ablation or TACE for early multinodular BCLC-A hepatocellular carcinoma: a systematic review and meta-analysis"
+   }
+  ]
+ },
+ {
+  "id": "hcc-tace",
+  "titel": "Trans-arteriële chemo-embolisatie (TACE) bij HCC",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Hepatocellulair carcinoom"
+  ],
+  "technieken": [
+   "TACE"
+  ],
+  "bewijs": "Bewijs: Hoog (niveau 1)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 201806,
+  "nieuwste_latest": 202503,
+  "aantal": {
+   "guidelines": 4,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "tace chemo-embolisatie conventioneel deb-tace drug-eluting bead hepatocellulair carcinoom hcc lever intermediair bclc b embolisatie",
+  "zoektermen_en": "tace chemoembolization conventional deb-tace drug-eluting bead hepatocellular carcinoma hcc liver intermediate bclc b embolization",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "BCLC strategy for prognosis prediction and treatment recommendation: The 2022 update",
+    "bron": "Journal of Hepatology · 2022",
+    "url": "https://www.journal-of-hepatology.eu/article/S0168-8278(21)02223-6/fulltext",
+    "sortkey": 202201
+   },
+   {
+    "titel": "EASL Clinical Practice Guidelines: Management of hepatocellular carcinoma",
+    "bron": "Journal of Hepatology · 2018",
+    "url": "https://easl.eu/publication/easl-clinical-practice-guidelines-management-of-hepatocellular-carcinoma/",
+    "sortkey": 201801
+   },
+   {
+    "titel": "AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma",
+    "bron": "Hepatology · 2023",
+    "url": "https://www.aasld.org/practice-guidelines",
+    "sortkey": 202301
+   },
+   {
+    "titel": "Richtlijn Hepatocellulair carcinoom (2023) - Niet-chirurgische lokale behandeling",
+    "bron": "Richtlijnendatabase (NL)",
+    "url": "https://richtlijnendatabase.nl/richtlijn/hepatocellulair_carcinoom_2023/niet_chirurgische_lokale_behandeling_bij_hcc_2023/hepatocellulair_carcinoom_combinatiebehandeling_tace_en_ablatie_2023.html",
+    "sortkey": 202301
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=hepatocellular%20carcinoma&term=chemoembolization%20OR%20TACE&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Arterial embolisation or chemoembolisation versus symptomatic treatment in patients with unresectable hepatocellular carcinoma: a randomised controlled trial"
+   },
+   {
+    "list": "core",
+    "title": "Prospective randomized study of doxorubicin-eluting-bead embolization (PRECISION V)"
+   },
+   {
+    "list": "core",
+    "title": "Updated use of TACE for hepatocellular carcinoma treatment: How and when to use it based on clinical evidence"
+   },
+   {
+    "list": "latest",
+    "title": "Efficacy of therapies for intermediate-stage hepatocellular carcinoma: systematic review and network meta-analysis"
+   },
+   {
+    "list": "latest",
+    "title": "Safety, efficacy, and survival of different transarterial chemoembolization techniques in unresectable HCC: a comparative single-center analysis"
+   }
+  ]
+ },
+ {
+  "id": "hcc-tare",
+  "titel": "Trans-arteriële radio-embolisatie (TARE / Y-90) bij HCC",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Hepatocellulair carcinoom"
+  ],
+  "technieken": [
+   "TARE (Y-90)"
+  ],
+  "bewijs": "Bewijs: Hoog (niveau 1-2)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202203,
+  "nieuwste_latest": 202505,
+  "aantal": {
+   "guidelines": 4,
+   "core": 3,
+   "latest": 3
+  },
+  "zoektermen_nl": "tare radio-embolisatie sirt yttrium y90 radiation segmentectomy hepatocellulair carcinoom hcc lever dosimetrie legacy dosisphere trace",
+  "zoektermen_en": "tare radioembolization sirt yttrium y90 radiation segmentectomy hepatocellular carcinoma hcc liver dosimetry legacy dosisphere trace",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "BCLC strategy for prognosis prediction and treatment recommendation: The 2022 update",
+    "bron": "Journal of Hepatology · 2022",
+    "url": "https://www.journal-of-hepatology.eu/article/S0168-8278(21)02223-6/fulltext",
+    "sortkey": 202201
+   },
+   {
+    "titel": "EASL Clinical Practice Guidelines: Management of hepatocellular carcinoma",
+    "bron": "Journal of Hepatology · 2018",
+    "url": "https://easl.eu/publication/easl-clinical-practice-guidelines-management-of-hepatocellular-carcinoma/",
+    "sortkey": 201801
+   },
+   {
+    "titel": "AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma",
+    "bron": "Hepatology · 2023",
+    "url": "https://www.aasld.org/practice-guidelines",
+    "sortkey": 202301
+   },
+   {
+    "titel": "Richtlijn Hepatocellulair carcinoom (2023) - Radioembolisatie",
+    "bron": "Richtlijnendatabase (NL)",
+    "url": "https://richtlijnendatabase.nl/richtlijn/hepatocellulair_carcinoom_2023/niet_chirurgische_lokale_behandeling_bij_hcc_2023/hepatocellulair_carcinoom_radioembolisatie_2023.html",
+    "sortkey": 202301
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=hepatocellular%20carcinoma&term=radioembolization%20OR%20Y-90&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "latest",
+    "title": "Radiation Segmentectomy for the Treatment of Hepatocellular Carcinoma: A Practical Review of Evidence"
+   }
+  ]
+ },
+ {
+  "id": "pve",
+  "titel": "Vena porta-embolisatie (PVE)",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Colorectaal carcinoom",
+   "Hepatocellulair carcinoom",
+   "Cholangiocarcinoom"
+  ],
+  "technieken": [
+   "PVE (vena porta)"
+  ],
+  "bewijs": "Bewijs: Matig tot hoog (cohort + richtlijn)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202206,
+  "nieuwste_latest": 202501,
+  "aantal": {
+   "guidelines": 3,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "vena porta embolisatie pve dubbele vene liver venous deprivation future liver remnant flr hypertrofie levervolume resectabiliteit hepatectomie colorectaal hcc galwegcarcinoom cholangiocarcinoom lever",
+  "zoektermen_en": "portal vein embolization pve double vein liver venous deprivation future liver remnant flr hypertrophy resectability hepatectomy colorectal hcc cholangiocarcinoma liver",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "CIRSE Standards of Practice on Portal Vein Embolization and Double Vein Embolization/Liver Venous Deprivation",
+    "bron": "Cardiovasc Intervent Radiol · 2024",
+    "url": "https://link.springer.com/article/10.1007/s00270-024-03815-9",
+    "sortkey": 202401
+   },
+   {
+    "titel": "EASL Clinical Practice Guidelines: Management of hepatocellular carcinoma",
+    "bron": "Journal of Hepatology · 2018",
+    "url": "https://easl.eu/publication/easl-clinical-practice-guidelines-management-of-hepatocellular-carcinoma/",
+    "sortkey": 201801
+   },
+   {
+    "titel": "Richtlijn Colorectaal carcinoom (resectabiliteit levermetastasen)",
+    "bron": "Richtlijnendatabase (NL)",
+    "url": "https://richtlijnendatabase.nl/richtlijn/colorectaal_carcinoom_crc/startpagina_-_colorectaal_carcinoom.html",
+    "sortkey": 202401
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?term=portal%20vein%20embolization&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Portal vein embolization versus dual vein embolization for management of the future liver remnant: a meta-analysis"
+   },
+   {
+    "list": "core",
+    "title": "Predictive Factors for Hypertrophy of the Future Liver Remnant After Portal Vein Embolization: A Systematic Review"
+   },
+   {
+    "list": "latest",
+    "title": "Future liver remnant hypertrophy and postoperative outcomes: segmental versus main right portal vein embolization"
+   },
+   {
+    "list": "latest",
+    "title": "Portal vein ligation versus portal vein embolization for induction of hypertrophy of the future liver remnant: a systematic review and meta-analysis"
+   }
+  ]
+ },
+ {
+  "id": "cca-ablatie",
+  "titel": "Thermale ablatie bij intrahepatisch cholangiocarcinoom",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Cholangiocarcinoom"
+  ],
+  "technieken": [
+   "RFA",
+   "Microwave"
+  ],
+  "bewijs": "Bewijs: Matig (cohort/meta + richtlijn)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202206,
+  "nieuwste_latest": 202306,
+  "aantal": {
+   "guidelines": 3,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "ablatie thermische rfa microwave intrahepatisch cholangiocarcinoom icca galwegcarcinoom lever niet-resectabel",
+  "zoektermen_en": "ablation thermal rfa microwave intrahepatic cholangiocarcinoma icca bile duct liver unresectable",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Biliary tract cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up",
+    "bron": "ESMO / Annals of Oncology · 2023",
+    "url": "https://www.esmo.org/guidelines/guidelines-by-topic/esmo-clinical-practice-guidelines-gastrointestinal-cancers",
+    "sortkey": 202301
+   },
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Biliary Tract Cancers",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202501
+   },
+   {
+    "titel": "CIRSE Standards of Practice on Thermal Ablation of Liver Tumours",
+    "bron": "Cardiovasc Intervent Radiol · 2020",
+    "url": "https://doi.org/10.1007/s00270-020-02471-z",
+    "sortkey": 202001
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=cholangiocarcinoma&term=ablation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Intrahepatic Cholangiocarcinoma and Thermal Ablation: Long-term Results of an Italian Retrospective Multicenter Study"
+   },
+   {
+    "list": "core",
+    "title": "Thermal ablation of intrahepatic cholangiocarcinoma: safety, efficacy, and factors affecting local tumor progression"
+   },
+   {
+    "list": "latest",
+    "title": "Treatment of intrahepatic cholangiocarcinoma: evidence for the role of percutaneous ablation"
+   },
+   {
+    "list": "latest",
+    "title": "Percutaneous radiofrequency ablation in intrahepatic cholangiocarcinoma: a retrospective single-center experience"
+   }
+  ]
+ },
+ {
+  "id": "cca-arterieel",
+  "titel": "Trans-arteriële behandeling (TARE / TACE) bij intrahepatisch cholangiocarcinoom",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Cholangiocarcinoom"
+  ],
+  "technieken": [
+   "TARE (Y-90)",
+   "TACE"
+  ],
+  "bewijs": "Bewijs: Matig tot hoog (fase 2 + meta)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202306,
+  "nieuwste_latest": 202406,
+  "aantal": {
+   "guidelines": 3,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "radio-embolisatie tare sirt yttrium y90 tace chemo-embolisatie intra-arterieel intrahepatisch cholangiocarcinoom icca misphec downstaging",
+  "zoektermen_en": "radioembolization tare sirt yttrium y90 tace chemoembolization intra-arterial intrahepatic cholangiocarcinoma icca misphec downstaging",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Biliary tract cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up",
+    "bron": "ESMO / Annals of Oncology · 2023",
+    "url": "https://www.esmo.org/guidelines/guidelines-by-topic/esmo-clinical-practice-guidelines-gastrointestinal-cancers",
+    "sortkey": 202301
+   },
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Biliary Tract Cancers",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202501
+   },
+   {
+    "titel": "Richtlijn Galweg- en galblaascarcinoom (2024) - Locoregionale behandeling met TACE of SIRT voor iCCA",
+    "bron": "Richtlijnendatabase (NL)",
+    "url": "https://richtlijnendatabase.nl/richtlijn/galweg-_en_galblaascarcinoom_2024/behandeling_bij_rl_galweg-_en_galblaascarcinoom/overige_behandeling_-_galweg-_en_galblaascarcinoom/locoregionale_behandeling_met_tace_of_sirt_voor_icca.html",
+    "sortkey": 202401
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=cholangiocarcinoma&term=radioembolization%20OR%20chemoembolization&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Factors Impacting Survival After Transarterial Radioembolization in Patients with Unresectable Intrahepatic Cholangiocarcinoma: A Combined Analysis of the Prospective CIRT Studies"
+   },
+   {
+    "list": "latest",
+    "title": "Survival After Transarterial Radioembolization in Unresectable Intrahepatic Cholangiocarcinoma: An Updated Meta-analysis and Meta-regression"
+   },
+   {
+    "list": "latest",
+    "title": "Unresectable intrahepatic cholangiocarcinoma: TARE or TACE, which one to choose?"
+   }
+  ]
+ },
+ {
+  "id": "cca-biliair",
+  "titel": "Galwegdrainage en endobiliaire RFA bij (peri)hilair cholangiocarcinoom",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Cholangiocarcinoom"
+  ],
+  "technieken": [
+   "Galwegdrainage",
+   "RFA"
+  ],
+  "bewijs": "Bewijs: Matig (RCT's + meta)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202401,
+  "nieuwste_latest": 202306,
+  "aantal": {
+   "guidelines": 2,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "galwegdrainage percutane biliaire drainage ptcd stent endobiliaire intraductale rfa maligne galwegobstructie perihilair klatskin cholangiocarcinoom geelzucht",
+  "zoektermen_en": "biliary drainage percutaneous transhepatic stent endobiliary intraductal rfa malignant biliary obstruction perihilar klatskin cholangiocarcinoma jaundice",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Biliary tract cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up",
+    "bron": "ESMO / Annals of Oncology · 2023",
+    "url": "https://www.esmo.org/guidelines/guidelines-by-topic/esmo-clinical-practice-guidelines-gastrointestinal-cancers",
+    "sortkey": 202301
+   },
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Biliary Tract Cancers",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202501
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=cholangiocarcinoma&term=biliary%20radiofrequency%20OR%20biliary%20drainage&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Efficacy and safety of endoscopic radiofrequency ablation for unresectable extrahepatic cholangiocarcinoma: a randomized trial"
+   },
+   {
+    "list": "core",
+    "title": "The Impact of Radiofrequency Ablation on Survival and Stent Patency in Unresectable Cholangiocarcinoma: A Systematic Review and Meta-Analysis of RCTs"
+   },
+   {
+    "list": "core",
+    "title": "Percutaneous Intraductal Radiofrequency Ablation Combined with Biliary Stent Placement for Nonresectable Malignant Biliary Obstruction Improves Stent Patency but not Survival"
+   },
+   {
+    "list": "latest",
+    "title": "Impact of endobiliary radiofrequency ablation on survival of patients with unresectable cholangiocarcinoma: a narrative review"
+   }
+  ]
+ },
+ {
+  "id": "bc-cryo",
+  "titel": "Cryoablatie van vroeg mammacarcinoom",
+  "orgaan": "Borst",
+  "ziektebeeld": [
+   "Mammacarcinoom"
+  ],
+  "technieken": [
+   "Cryoablatie"
+  ],
+  "bewijs": "Bewijs: Opkomend (prospectief, nog geen standaard)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202506,
+  "nieuwste_latest": 202106,
+  "aantal": {
+   "guidelines": 2,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "cryoablatie mammacarcinoom borstkanker borst vroeg laag-risico ice3 frost borstsparend echografie tumor",
+  "zoektermen_en": "cryoablation breast cancer breast early low-risk ice3 frost breast-conserving ultrasound tumour",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Breast Cancer",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202501
+   },
+   {
+    "titel": "The American Society of Breast Surgeons: consensus on percutaneous ablation of breast tumours",
+    "bron": "ASBrS · consensus",
+    "url": "https://www.breastsurgeons.org/resources/statements",
+    "sortkey": 202301
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=breast%20cancer&term=cryoablation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "latest",
+    "title": "Ultrasound-Guided Breast Cancer Cryoablation"
+   }
+  ]
+ },
+ {
+  "id": "adrenal-ablatie",
+  "titel": "Percutane ablatie van bijniermetastasen",
+  "orgaan": "Bijnier",
+  "ziektebeeld": [
+   "Bijniermetastase"
+  ],
+  "technieken": [
+   "RFA",
+   "Microwave",
+   "Cryoablatie"
+  ],
+  "bewijs": "Bewijs: Matig (cohort / meta)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202301,
+  "nieuwste_latest": 202601,
+  "aantal": {
+   "guidelines": 2,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "ablatie rfa microwave cryoablatie bijnier bijniermetastase adrenal oligometastatisch catecholamine hypertensieve crisis long niercel colorectaal melanoom",
+  "zoektermen_en": "ablation rfa microwave cryoablation adrenal adrenal metastasis oligometastatic catecholamine hypertensive crisis lung renal colorectal melanoma",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "NCCN Clinical Practice Guidelines: local therapy for oligometastatic disease",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202501
+   },
+   {
+    "titel": "ESMO Clinical Practice Guidelines (oligometastatic disease / relevant primaries)",
+    "bron": "ESMO · Annals of Oncology",
+    "url": "https://www.esmo.org/guidelines",
+    "sortkey": 202301
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=adrenal%20metastases&term=ablation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Image-Guided Percutaneous Ablation of Adrenal Metastases: A Meta-Analysis of Efficacy and Safety"
+   },
+   {
+    "list": "core",
+    "title": "Percutaneous ablation for adrenal metastases: a systematic review and meta-analysis"
+   },
+   {
+    "list": "core",
+    "title": "Catecholamine Surge during Image-Guided Ablation of Adrenal Gland Metastases: Predictors, Consequences, and Recommendations for Management"
+   },
+   {
+    "list": "latest",
+    "title": "Comparative effectiveness of thermal ablation, radiotherapy, and surgery for adrenal metastases: a multi-institutional cohort study"
+   }
+  ]
+ },
+ {
+  "id": "long-ablatie",
+  "titel": "Percutane ablatie van longtumoren",
+  "orgaan": "Long",
+  "ziektebeeld": [
+   "Longtumor"
+  ],
+  "technieken": [
+   "RFA",
+   "Microwave",
+   "Cryoablatie"
+  ],
+  "bewijs": "Bewijs: Matig tot hoog (prospectief / meta)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202206,
+  "nieuwste_latest": 202206,
+  "aantal": {
+   "guidelines": 2,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "ablatie rfa microwave cryoablatie long longtumor longmetastasen nsclc inoperabel colorectaal oligometastatisch raptured eclipse solstice sbrt",
+  "zoektermen_en": "ablation rfa microwave cryoablation lung lung tumour lung metastases nsclc inoperable colorectal oligometastatic rapture eclipse solstice sbrt",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "CIRSE Standards of Practice on Thermal Ablation of Primary and Secondary Lung Tumours",
+    "bron": "Cardiovasc Intervent Radiol · 2020",
+    "url": "https://link.springer.com/article/10.1007/s00270-020-02432-6",
+    "sortkey": 202001
+   },
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Non-Small Cell Lung Cancer",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202501
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=lung%20cancer&term=ablation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Response to radiofrequency ablation of pulmonary tumours: a prospective, intention-to-treat, multicentre clinical trial (RAPTURE)"
+   },
+   {
+    "list": "latest",
+    "title": "Up-to-date evidence on image-guided thermal ablation for metastatic lung tumors: a review"
+   },
+   {
+    "list": "latest",
+    "title": "Prospective multicentre trial of microwave ablation for lung tumours (SOLSTICE)"
+   }
+  ]
+ },
+ {
+  "id": "ire-pancreas",
+  "titel": "Irreversibele elektroporatie (IRE) bij lokaal gevorderd pancreascarcinoom",
+  "orgaan": "Pancreas",
+  "ziektebeeld": [
+   "Pancreascarcinoom"
+  ],
+  "technieken": [
+   "IRE"
+  ],
+  "bewijs": "Bewijs: Opkomend (fase II, hoge morbiditeit)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202001,
+  "nieuwste_latest": 202211,
+  "aantal": {
+   "guidelines": 2,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "ire irreversibele elektroporatie nanoknife pancreas pancreascarcinoom lokaal gevorderd lapc niet-resectabel mesenteriaal panfire martin",
+  "zoektermen_en": "ire irreversible electroporation nanoknife pancreas pancreatic cancer locally advanced lapc unresectable mesenteric panfire martin",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Cancer of the pancreas: ESMO Clinical Practice Guideline",
+    "bron": "ESMO / Annals of Oncology · 2023",
+    "url": "https://www.esmo.org/guidelines/guidelines-by-topic/esmo-clinical-practice-guidelines-gastrointestinal-cancers",
+    "sortkey": 202301
+   },
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Pancreatic Adenocarcinoma",
+    "bron": "NCCN · 2025",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202501
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=pancreatic%20cancer&term=irreversible%20electroporation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Comparison of Survival Between Irreversible Electroporation Followed by Chemotherapy and Chemotherapy Alone for Locally Advanced Pancreatic Cancer"
+   },
+   {
+    "list": "latest",
+    "title": "Optimizing Patient Selection for Irreversible Electroporation of Locally Advanced Pancreatic Cancer: Analyses of Survival"
+   },
+   {
+    "list": "latest",
+    "title": "Safety and Efficacy of Irreversible Electroporation in Locally Advanced Pancreatic Cancer: An Evaluation from a Surgeon's Perspective"
+   }
+  ]
+ },
+ {
+  "id": "ect",
+  "titel": "Elektrochemotherapie (ECT) bij cutane en subcutane metastasen",
+  "orgaan": "Huid",
+  "ziektebeeld": [
+   "Cutane metastasen"
+  ],
+  "technieken": [
+   "ECT"
+  ],
+  "bewijs": "Bewijs: Matig (prospectief cohort / meta)",
+  "herzien": "Herzien: 25 jul 2026 · v1.0",
+  "nieuwste_core": 202106,
+  "nieuwste_latest": 202501,
+  "aantal": {
+   "guidelines": 2,
+   "core": 3,
+   "latest": 2
+  },
+  "zoektermen_nl": "elektrochemotherapie ect bleomycine cisplatine cutane subcutane metastasen huid melanoom thoraxwand mamma recidief palliatief esope",
+  "zoektermen_en": "electrochemotherapy ect bleomycin cisplatin cutaneous subcutaneous metastases skin melanoma chest wall breast recurrence palliative esope",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Updated standard operating procedures for electrochemotherapy of cutaneous tumours and skin metastases (ESOPE update)",
+    "bron": "Acta Oncologica · 2018",
+    "url": "https://www.tandfonline.com/doi/full/10.1080/0284186X.2018.1454602",
+    "sortkey": 201801
+   },
+   {
+    "titel": "ESMO Clinical Practice Guidelines: cutaneous melanoma",
+    "bron": "ESMO / Annals of Oncology",
+    "url": "https://www.esmo.org/guidelines/guidelines-by-topic/esmo-clinical-practice-guidelines-melanoma",
+    "sortkey": 202301
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?term=electrochemotherapy&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "core",
+    "title": "Electrochemotherapy in the Treatment of Breast Cancer Metastasis to the Skin and Subcutaneous Tissue: Multicenter Experience"
+   },
+   {
+    "list": "core",
+    "title": "Impact of electrochemotherapy in metastatic cutaneous melanoma: a contemporary systematic review and meta-analysis"
+   },
+   {
+    "list": "latest",
+    "title": "Prospective multicentre study of patients with cutaneous metastases from breast cancer treated with electrochemotherapy"
+   },
+   {
+    "list": "latest",
+    "title": "Efficacy of Electrochemotherapy in Cutaneous Melanoma Metastases and Rare Non-melanoma Skin Cancer"
+   }
+  ]
+ },
+ {
+  "id": "ect-wervel",
+  "titel": "Elektrochemotherapie (ECT) bij radiotherapie-resistente epidurale wervelmetastasen",
+  "orgaan": "Wervelkolom",
+  "ziektebeeld": [
+   "Wervelmetastasen"
+  ],
+  "technieken": [
+   "ECT"
+  ],
+  "bewijs": "Bewijs: Laag tot matig (prospectieve serie, geen RCT)",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202502,
+  "nieuwste_latest": 202509,
+  "aantal": {
+   "guidelines": 1,
+   "core": 4,
+   "latest": 3
+  },
+  "zoektermen_nl": "elektrochemotherapie ect bleomycine wervel wervelmetastase spinaal epidurale compressie mescc ruggenmergcompressie radiotherapie-resistent transpediculair salvage deschamps",
+  "zoektermen_en": "electrochemotherapy ect bleomycin spine vertebral metastasis spinal epidural compression mescc cord compression radiotherapy-resistant transpedicular salvage deschamps",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Updated standard operating procedures for electrochemotherapy of cutaneous tumours and skin metastases (ESOPE update)",
+    "bron": "Acta Oncologica · 2018",
+    "url": "https://www.tandfonline.com/doi/full/10.1080/0284186X.2018.1454602",
+    "sortkey": 201801
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?term=electrochemotherapy%20bone&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "latest",
+    "title": "Electrochemotherapy in the Treatment of Bone Metastases: A Narrative Review"
+   },
+   {
+    "list": "latest",
+    "title": "Electrochemotherapy of spinal metastasis using transpedicular approach: a preclinical safety animal study"
+   }
+  ]
+ },
+ {
+  "id": "crc-tare",
+  "titel": "Radio-embolisatie (TARE / Y-90) bij colorectale levermetastasen",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Colorectaal carcinoom"
+  ],
+  "technieken": [
+   "TARE (Y-90)"
+  ],
+  "bewijs": "Bewijs: Hoog (fase 3), zonder overlevingswinst",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202110,
+  "nieuwste_latest": 202601,
+  "aantal": {
+   "guidelines": 4,
+   "core": 4,
+   "latest": 3
+  },
+  "zoektermen_nl": "tare radio-embolisatie sirt yttrium y-90 microsferen colorectaal levermetastasen epoch foxfire sirflox salvage chemorefractair leverdominant",
+  "zoektermen_en": "tare radioembolisation sirt yttrium y-90 microspheres colorectal liver metastases epoch foxfire sirflox salvage chemorefractory liver-dominant",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Richtlijn Colorectaal carcinoom - Locoregionale behandeling levermetastasen",
+    "bron": "Richtlijnendatabase (NL) · 2025",
+    "url": "https://richtlijnendatabase.nl/richtlijn/colorectaal_carcinoom_crc/gemetastaseerd_colorectaalcarcinoom_crc/locoregionale_behandeling_levermetastasen.html",
+    "sortkey": 202503
+   },
+   {
+    "titel": "Selective internal radiation therapy for unresectable colorectal metastases in the liver",
+    "bron": "NICE IPG672 · 2020",
+    "url": "https://www.nice.org.uk/guidance/ipg672/chapter/1-Recommendations",
+    "sortkey": 202003
+   },
+   {
+    "titel": "EANM procedure guideline for the treatment of liver cancer and liver metastases with intra-arterial radioactive compounds",
+    "bron": "Eur J Nucl Med Mol Imaging · 2022",
+    "url": "https://link.springer.com/article/10.1007/s00259-021-05600-z",
+    "sortkey": 202201
+   },
+   {
+    "titel": "Clinical and dosimetric considerations for yttrium-90 glass microspheres radioembolization of intrahepatic cholangiocarcinoma, metastatic colorectal carcinoma, and metastatic neuroendocrine carcinoma",
+    "bron": "Eur J Nucl Med Mol Imaging · 2025",
+    "url": "https://link.springer.com/article/10.1007/s00259-025-07229-8",
+    "sortkey": 202506
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=colorectal%20liver%20metastases&term=radioembolization&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ },
+ {
+  "id": "crc-ire",
+  "titel": "Irreversibele elektroporatie (IRE) bij perivasculaire colorectale levermetastasen",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Colorectaal carcinoom"
+  ],
+  "technieken": [
+   "IRE"
+  ],
+  "bewijs": "Bewijs: Matig (fase 2, eenarmig)",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202201,
+  "nieuwste_latest": 202305,
+  "aantal": {
+   "guidelines": 2,
+   "core": 2,
+   "latest": 2
+  },
+  "zoektermen_nl": "ire irreversibele elektroporatie nanoknife colorectaal levermetastasen perivasculair peribiliair coldfire meijerink niet-thermisch vaatsparend",
+  "zoektermen_en": "ire irreversible electroporation nanoknife colorectal liver metastases perivascular peribiliary coldfire meijerink non-thermal vessel-sparing",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Richtlijn Colorectaal carcinoom - Locoregionale behandeling levermetastasen",
+    "bron": "Richtlijnendatabase (NL) · 2025",
+    "url": "https://richtlijnendatabase.nl/richtlijn/colorectaal_carcinoom_crc/gemetastaseerd_colorectaalcarcinoom_crc/locoregionale_behandeling_levermetastasen.html",
+    "sortkey": 202503
+   },
+   {
+    "titel": "CIRSE Standards of Practice on Thermal Ablation of Liver Tumours",
+    "bron": "Cardiovasc Intervent Radiol · 2020",
+    "url": "https://doi.org/10.1007/s00270-020-02471-z",
+    "sortkey": 202001
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=liver%20metastases&term=irreversible%20electroporation&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ },
+ {
+  "id": "bot-ablatie",
+  "titel": "Ablatie, cementoplastie en percutane fixatie bij botmetastasen buiten de wervelkolom",
+  "orgaan": "Bot (extraspinaal)",
+  "ziektebeeld": [
+   "Botmetastasen"
+  ],
+  "technieken": [
+   "RFA",
+   "Microwave",
+   "Cryoablatie",
+   "Cementoplastiek",
+   "Percutane fixatie"
+  ],
+  "bewijs": "Bewijs: Matig (prospectief eenarmig, geen RCT)",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202504,
+  "nieuwste_latest": 202503,
+  "aantal": {
+   "guidelines": 3,
+   "core": 5,
+   "latest": 3
+  },
+  "zoektermen_nl": "botmetastasen bot pijn palliatie ablatie rfa microwave cryoablatie cementoplastie osteoplastie percutane fixatie schroef bekken acetabulum sacrum extremiteit femur pathologische fractuur opus motion",
+  "zoektermen_en": "bone metastases bone pain palliation ablation rfa microwave cryoablation cementoplasty osteoplasty percutaneous fixation screw pelvis acetabulum sacrum extremity femur pathological fracture opus motion",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "CIRSE Standards of Practice on Thermal Ablation of Bone Tumours",
+    "bron": "Cardiovasc Intervent Radiol · 2022",
+    "url": "https://link.springer.com/article/10.1007/s00270-022-03126-x",
+    "sortkey": 202205
+   },
+   {
+    "titel": "Richtlijn Botmetastasen - Lokale ablatie",
+    "bron": "Richtlijnendatabase (NL) · 2024",
+    "url": "https://richtlijnendatabase.nl/richtlijn/botmetastasen/lokale_ablatie_bij_rl_botmetastasen.html",
+    "sortkey": 202411
+   },
+   {
+    "titel": "External Beam Radiation Therapy for Palliation of Symptomatic Bone Metastases: An ASTRO Clinical Practice Guideline",
+    "bron": "Practical Radiation Oncology · 2024",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38788923/",
+    "sortkey": 202405
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=bone%20metastases&term=ablation&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ },
+ {
+  "id": "thyroid-ablatie",
+  "titel": "Echogeleide thermale ablatie bij papillair schildkliercarcinoom",
+  "orgaan": "Schildklier",
+  "ziektebeeld": [
+   "Papillair schildkliercarcinoom"
+  ],
+  "technieken": [
+   "RFA",
+   "Microwave"
+  ],
+  "bewijs": "Bewijs: Matig (grote cohorten, geen RCT)",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202501,
+  "nieuwste_latest": 202601,
+  "aantal": {
+   "guidelines": 4,
+   "core": 5,
+   "latest": 4
+  },
+  "zoektermen_nl": "schildklier thyroid ablatie rfa microwave laser papillair carcinoom microcarcinoom ptmc t1a t1b recidief lymfeklier kliermetastase active surveillance lobectomie nervus recurrens",
+  "zoektermen_en": "thyroid ablation rfa microwave laser papillary carcinoma microcarcinoma ptmc t1a t1b recurrence lymph node nodal metastasis active surveillance lobectomy recurrent laryngeal nerve",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "2024 International Expert Consensus on US-guided Thermal Ablation for T1N0M0 Papillary Thyroid Cancer",
+    "bron": "Radiology · 2025",
+    "url": "https://pubs.rsna.org/doi/10.1148/radiol.240347",
+    "sortkey": 202501
+   },
+   {
+    "titel": "European Thyroid Association and Cardiovascular and Interventional Radiological Society of Europe 2021 Clinical Practice Guideline for the Use of Minimally Invasive Treatments in Malignant Thyroid Lesions",
+    "bron": "European Thyroid Journal · 2021",
+    "url": "https://etj.bioscientifica.com/view/journals/etj/10/3/ETJ516469.xml",
+    "sortkey": 202103
+   },
+   {
+    "titel": "Executive Summary of the 2025 American Thyroid Association Management Guidelines for Adult Patients with Differentiated Thyroid Cancer",
+    "bron": "Thyroid · 2025",
+    "url": "https://journals.sagepub.com/doi/10.1177/10507256251390877",
+    "sortkey": 202506
+   },
+   {
+    "titel": "2020 European Thyroid Association Clinical Practice Guideline for the Use of Image-Guided Ablation in Benign Thyroid Nodules",
+    "bron": "European Thyroid Journal · 2020",
+    "url": "https://etj.bioscientifica.com/view/journals/etj/9/4/ETJ508484.xml",
+    "sortkey": 202012
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=thyroid%20cancer&term=ablation&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "latest",
+    "title": "Thermal Ablation for Low-Risk Papillary Thyroid Microcarcinoma in the Era of Active Surveillance: A Critical Narrative Review"
+   }
+  ]
+ },
+ {
+  "id": "effusie-drainage",
+  "titel": "Getunnelde drainage bij maligne pleuravocht en ascites",
+  "orgaan": "Pleura en peritoneum",
+  "ziektebeeld": [
+   "Maligne pleuravocht en ascites"
+  ],
+  "technieken": [
+   "Drainage"
+  ],
+  "bewijs": "Bewijs: Hoog voor pleura (RCT's), matig voor ascites",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202008,
+  "nieuwste_latest": 202601,
+  "aantal": {
+   "guidelines": 3,
+   "core": 4,
+   "latest": 3
+  },
+  "zoektermen_nl": "pleuravocht pleura-effusie ascites getunnelde katheter indwelling pleural catheter ipc pleurx peritoneale drain talkpleurodese paracentese dyspnoe palliatief ample time2",
+  "zoektermen_en": "pleural effusion ascites tunnelled catheter indwelling pleural catheter ipc pleurx peritoneal drain talc pleurodesis paracentesis dyspnoea palliative ample time2",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "British Thoracic Society Guideline for pleural disease",
+    "bron": "Thorax · 2023",
+    "url": "https://www.brit-thoracic.org.uk/quality-improvement/guidelines/",
+    "sortkey": 202301
+   },
+   {
+    "titel": "Management of Malignant Pleural Effusions. An Official ATS/STS/STR Clinical Practice Guideline",
+    "bron": "Am J Respir Crit Care Med · 2018",
+    "url": "https://academic.oup.com/ajrccm/article-lookup/doi/10.1164/rccm.201807-1415ST",
+    "sortkey": 201810
+   },
+   {
+    "titel": "ERS/EACTS statement on the management of malignant pleural effusions",
+    "bron": "Eur J Cardiothorac Surg · 2019",
+    "url": "https://academic.oup.com/ejcts/article/55/1/116/5060018",
+    "sortkey": 201901
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?term=indwelling%20pleural%20catheter%20OR%20tunneled%20peritoneal%20catheter&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ },
+ {
+  "id": "urineweg-drainage",
+  "titel": "Percutane urinewegdrainage bij maligne ureterobstructie",
+  "orgaan": "Urinewegen",
+  "ziektebeeld": [
+   "Maligne urinewegobstructie"
+  ],
+  "technieken": [
+   "Drainage",
+   "Stentplaatsing"
+  ],
+  "bewijs": "Bewijs: Matig (vergelijkende cohorten, geen RCT)",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202211,
+  "nieuwste_latest": 202409,
+  "aantal": {
+   "guidelines": 2,
+   "core": 4,
+   "latest": 2
+  },
+  "zoektermen_nl": "nefrostomie percutane nefrostomie ureterstent double j maligne ureterobstructie hydronefrose postrenale nierinsufficientie urosepsis cervixcarcinoom blaascarcinoom prostaat retroperitoneaal",
+  "zoektermen_en": "nephrostomy percutaneous nephrostomy ureteric stent double j malignant ureteric obstruction hydronephrosis postrenal renal failure urosepsis cervical bladder prostate retroperitoneal",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "CIRSE Standards of Practice on Nephrostomy and Ureteric Stent Placement and Exchange",
+    "bron": "Cardiovasc Intervent Radiol · 2026",
+    "url": "https://link.springer.com/article/10.1007/s00270-025-04328-9",
+    "sortkey": 202601
+   },
+   {
+    "titel": "Quality Improvement Guidelines for Percutaneous Nephrostomy",
+    "bron": "J Vasc Interv Radiol (SIR) · 2016",
+    "url": "https://servei.org/wp-content/uploads/Guidelines-for-percutaneous-Nephrostomy-JVIR.pdf",
+    "sortkey": 201601
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?term=malignant%20ureteral%20obstruction&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ },
+ {
+  "id": "vcs-stent",
+  "titel": "Stenting bij maligne vena cava superior-obstructie",
+  "orgaan": "Grote vaten",
+  "ziektebeeld": [
+   "Vena cava superior-syndroom"
+  ],
+  "technieken": [
+   "Stentplaatsing"
+  ],
+  "bewijs": "Bewijs: Matig (grote gepoolde series, geen RCT)",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202304,
+  "nieuwste_latest": 202511,
+  "aantal": {
+   "guidelines": 2,
+   "core": 4,
+   "latest": 3
+  },
+  "zoektermen_nl": "vena cava superior vcs svc syndroom stent stenting endovasculair obstructie longcarcinoom lymfoom oedeem gelaat dyspnoe radiotherapie snelle verlichting",
+  "zoektermen_en": "superior vena cava svc syndrome stent stenting endovascular obstruction lung cancer lymphoma facial oedema dyspnoea radiotherapy rapid relief",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Quality Assurance Guidelines for Superior Vena Cava Stenting in Malignant Disease",
+    "bron": "Cardiovasc Intervent Radiol (CIRSE) · 2006, herzien 2015",
+    "url": "https://www.cirse.org/wp-content/uploads/2018/11/2015_-SVC-Stenting-in-Malignant-Disease_Revision_Uberoi.pdf",
+    "sortkey": 201501
+   },
+   {
+    "titel": "ACR Appropriateness Criteria Thoracic Venous Occlusions - Suspected Superior Vena Cava Syndrome",
+    "bron": "J Am Coll Radiol · 2026",
+    "url": "https://institutionalrepository.aah.org/allother/1355/",
+    "sortkey": 202601
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?term=superior%20vena%20cava%20syndrome&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ },
+ {
+  "id": "neurolyse",
+  "titel": "Coeliacus-plexusneurolyse bij pijn door pancreascarcinoom",
+  "orgaan": "Pancreas",
+  "ziektebeeld": [
+   "Tumorpijn"
+  ],
+  "technieken": [
+   "Neurolyse"
+  ],
+  "bewijs": "Bewijs: Hoog (RCT en meta-analyses)",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202201,
+  "nieuwste_latest": 202210,
+  "aantal": {
+   "guidelines": 3,
+   "core": 4,
+   "latest": 2
+  },
+  "zoektermen_nl": "coeliacus plexus neurolyse celiac plexus block ct-geleid pijn pancreascarcinoom bovenbuikpijn opioid morfine palliatief wong splanchnicus",
+  "zoektermen_en": "coeliac plexus neurolysis celiac plexus block ct-guided pain pancreatic cancer upper abdominal pain opioid morphine palliative wong splanchnic",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Management of cancer pain in adult patients: ESMO Clinical Practice Guidelines",
+    "bron": "Annals of Oncology · 2018",
+    "url": "https://www.esmo.org/guidelines/guidelines-by-topic/esmo-supportive-and-palliative-care-clinical-practice-guidelines",
+    "sortkey": 201809
+   },
+   {
+    "titel": "NCCN Clinical Practice Guidelines in Oncology: Adult Cancer Pain",
+    "bron": "NCCN · 2024",
+    "url": "https://www.nccn.org/guidelines/category_1",
+    "sortkey": 202403
+   },
+   {
+    "titel": "WHO Guidelines for the Pharmacological and Radiotherapeutic Management of Cancer Pain in Adults and Adolescents",
+    "bron": "World Health Organization · 2018",
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK537486/",
+    "sortkey": 201801
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?term=celiac%20plexus%20neurolysis&aggFilters=status:rec"
+  ],
+  "dunne_items": [
+   {
+    "list": "latest",
+    "title": "CT-guided Celiac Plexus Neurolysis: A Review of Anatomy, Indications, Technique, and Tips for Successful Treatment"
+   }
+  ]
+ },
+ {
+  "id": "tumorbloeding",
+  "titel": "Trans-arteriële embolisatie bij tumorbloeding",
+  "orgaan": "Grote vaten",
+  "ziektebeeld": [
+   "Tumorbloeding"
+  ],
+  "technieken": [
+   "Embolisatie"
+  ],
+  "bewijs": "Bewijs: Matig (cohorten en vergelijkende meta-analyses)",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202301,
+  "nieuwste_latest": 202204,
+  "aantal": {
+   "guidelines": 2,
+   "core": 5,
+   "latest": 2
+  },
+  "zoektermen_nl": "tumorbloeding embolisatie bronchiale arterie hemoptoe hematurie blaasbloeding gastro-intestinale bloeding geruptureerd hcc bae bloedstelping hemostase spoed",
+  "zoektermen_en": "tumour bleeding embolisation bronchial artery haemoptysis haematuria bladder bleeding gastrointestinal bleeding ruptured hcc bae haemostasis emergency",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "CIRSE Standards of Practice on Bronchial Artery Embolisation",
+    "bron": "Cardiovasc Intervent Radiol · 2022",
+    "url": "https://link.springer.com/article/10.1007/s00270-022-03127-w",
+    "sortkey": 202206
+   },
+   {
+    "titel": "Quality Improvement Guidelines for Transcatheter Embolization for Acute Gastrointestinal Nonvariceal Hemorrhage",
+    "bron": "Cardiovasc Intervent Radiol (CIRSE) · 2013",
+    "url": "https://link.springer.com/article/10.1007/s00270-012-0462-5",
+    "sortkey": 201301
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?term=embolization%20hemorrhage%20cancer&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ },
+ {
+  "id": "conduit-enkelj",
+  "titel": "Enkel-J via het conduit bij uretero-enterale strictuur na Bricker-deviatie",
+  "orgaan": "Urinewegen",
+  "ziektebeeld": [
+   "Uretero-enterale strictuur"
+  ],
+  "technieken": [
+   "Drainage",
+   "Stentplaatsing"
+  ],
+  "bewijs": "Bewijs: Matig (cohorten), geen richtlijnuitspraak",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202104,
+  "nieuwste_latest": 202501,
+  "aantal": {
+   "guidelines": 3,
+   "core": 7,
+   "latest": 4
+  },
+  "zoektermen_nl": "enkel-J single-j bricker ileumconduit conduit urinedeviatie urostoma uretero-enterale strictuur uretero-ileale anastomose stenose cystectomie blaascarcinoom retrograad trans-conduit stomazak wissel encrustatie nefrostomie reïmplantatie hydronefrose",
+  "zoektermen_en": "single-j bricker ileal conduit urinary diversion urostomy ureteroenteric stricture ureteroileal anastomosis stenosis cystectomy bladder cancer retrograde trans-conduit stoma bag exchange encrustation nephrostomy reimplantation hydronephrosis",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "CIRSE Standards of Practice on Nephrostomy and Ureteric Stent Placement and Exchange",
+    "bron": "Cardiovasc Intervent Radiol · 2026",
+    "url": "https://link.springer.com/article/10.1007/s00270-025-04328-9",
+    "sortkey": 202601
+   },
+   {
+    "titel": "ACR Appropriateness Criteria Radiologic Management of Urinary Tract Obstruction",
+    "bron": "J Am Coll Radiol · 2020",
+    "url": "https://acsearch.acr.org/docs/69353/Narrative/",
+    "sortkey": 202005
+   },
+   {
+    "titel": "EAU Guidelines on Muscle-invasive and Metastatic Bladder Cancer",
+    "bron": "European Association of Urology · 2026",
+    "url": "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/disease-management",
+    "sortkey": 202601
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?term=ureteroenteric%20stricture&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ },
+ {
+  "id": "biopsie",
+  "titel": "Beeldgeleide biopsie voor diagnose en moleculaire diagnostiek",
+  "orgaan": "Meerdere organen",
+  "ziektebeeld": [
+   "Diagnostiek en moleculair profiel"
+  ],
+  "technieken": [
+   "Biopsie"
+  ],
+  "bewijs": "Bewijs: Hoog (grote series en registries)",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202601,
+  "nieuwste_latest": 202605,
+  "aantal": {
+   "guidelines": 3,
+   "core": 8,
+   "latest": 4
+  },
+  "zoektermen_nl": "biopsie beeldgeleide biopsie naaldbiopsie core biopsie punctie fna cytologie coaxiaal moleculaire diagnostiek ngs sequencing whole genome tumorcelpercentage naaldtractzaaiing seeding pneumothorax lever long bot lymfeklier sarcoom patholoog",
+  "zoektermen_en": "biopsy image-guided needle core biopsy fna cytology coaxial molecular diagnostics ngs sequencing whole genome tumour cell percentage needle tract seeding pneumothorax liver lung bone lymph node sarcoma pathologist",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "CIRSE Guidelines on Percutaneous Needle Biopsy (PNB)",
+    "bron": "Cardiovasc Intervent Radiol · 2017",
+    "url": "https://ssvir.ch/app/uploads/2018/09/Percutaneous-Needle-Biopsy.pdf",
+    "sortkey": 201701
+   },
+   {
+    "titel": "Richtlijn Hepatocellulair carcinoom - diagnostiek",
+    "bron": "Richtlijnendatabase (NL)",
+    "url": "https://richtlijnendatabase.nl/richtlijn/hepatocellulair_carcinoom_hcc/startpagina_-_hcc.html",
+    "sortkey": 202401
+   },
+   {
+    "titel": "Richtlijn Wekedelentumoren - Pathologie",
+    "bron": "Richtlijnendatabase (NL)",
+    "url": "https://richtlijnendatabase.nl/richtlijn/wekedelentumoren/pathologie_wekedelentumoren.html",
+    "sortkey": 202401
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?term=image-guided%20biopsy%20molecular%20profiling&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ },
+ {
+  "id": "gastrostomie",
+  "titel": "Percutane radiologische gastrostomie bij kankerpatiënten",
+  "orgaan": "Maag en darm",
+  "ziektebeeld": [
+   "Hoofd-halscarcinoom",
+   "Maligne darmobstructie"
+  ],
+  "technieken": [
+   "Gastrostomie",
+   "Drainage"
+  ],
+  "bewijs": "Bewijs: Matig (meta-analyses, één RCT buiten de oncologie)",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202301,
+  "nieuwste_latest": 202601,
+  "aantal": {
+   "guidelines": 1,
+   "core": 6,
+   "latest": 2
+  },
+  "zoektermen_nl": "gastrostomie rig peg sonde voedingssonde hoofd-hals oesofaguscarcinoom slikklachten ontlastende gastrostomie venting maligne darmobstructie ileus peritonitis carcinomatosa ovariumcarcinoom ascites gastrojejunostomie transoesofageaal pteg stomametastase",
+  "zoektermen_en": "gastrostomy rig peg feeding tube head and neck oesophageal cancer dysphagia venting gastrostomy malignant bowel obstruction peritoneal carcinomatosis ovarian ascites gastrojejunostomy transoesophageal pteg stomal metastasis",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "CIRSE Standards of Practice Guidelines on Gastrostomy",
+    "bron": "Cardiovasc Intervent Radiol · 2016",
+    "url": "https://link.springer.com/article/10.1007/s00270-016-1344-z",
+    "sortkey": 201607
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=cancer&term=gastrostomy&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ },
+ {
+  "id": "bc-lever",
+  "titel": "Leverdirecte behandeling van levermetastasen bij mammacarcinoom",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Mammacarcinoom"
+  ],
+  "technieken": [
+   "RFA",
+   "Microwave",
+   "TACE",
+   "TARE (Y-90)"
+  ],
+  "bewijs": "Bewijs: Laag (geen gerandomiseerde data)",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202606,
+  "nieuwste_latest": 202108,
+  "aantal": {
+   "guidelines": 5,
+   "core": 7,
+   "latest": 4
+  },
+  "zoektermen_nl": "mammacarcinoom borstkanker levermetastasen leverdirect ablatie rfa microwave chemo-embolisatie tace mitomycine mitomycine-c gemcitabine chemoperfusie tacp radio-embolisatie y-90 vogl frankfurt resectie oligometastatisch nrg-br002",
+  "zoektermen_en": "breast cancer liver metastases liver-directed ablation rfa microwave chemoembolisation tace mitomycin gemcitabine chemoperfusion tacp radioembolisation y-90 vogl frankfurt resection oligometastatic nrg-br002",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "ESMO Clinical Practice Guideline for the diagnosis, staging and treatment of patients with metastatic breast cancer",
+    "bron": "Annals of Oncology · 2021",
+    "url": "https://www.europadonna.org/wp-content/uploads/2022/03/ESMO-Clinical-Practice-Guideline-_MBC2021.pdf",
+    "sortkey": 202101
+   },
+   {
+    "titel": "6th and 7th International consensus guidelines for the management of advanced breast cancer (ABC guidelines 6 and 7)",
+    "bron": "The Breast · 2024",
+    "url": "https://karger.com/brc/article/19/2/116/896870/ABC7-Consensus-Assessment-by-a-German-Group-of",
+    "sortkey": 202401
+   },
+   {
+    "titel": "CIRSE Standards of Practice on Hepatic Transarterial Chemoembolisation",
+    "bron": "Cardiovasc Intervent Radiol · 2021",
+    "url": "https://link.springer.com/article/10.1007/s00270-021-02968-1",
+    "sortkey": 202101
+   },
+   {
+    "titel": "Richtlijn Borstkanker - Gemetastaseerde borstkanker",
+    "bron": "Richtlijnendatabase (NL) · 2026",
+    "url": "https://richtlijnendatabase.nl/richtlijn/borstkanker/gemetastaseerde_borstkanker.html",
+    "sortkey": 202606
+   },
+   {
+    "titel": "New Frontiers in the Role of Locoregional Therapies in Breast Cancer: Proceedings from the Society of Interventional Radiology Foundation Research Consensus Panel",
+    "bron": "J Vasc Interv Radiol · 2023",
+    "url": "https://repository.cshl.edu/id/eprint/40966/",
+    "sortkey": 202307
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=breast%20cancer%20liver%20metastases&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ },
+ {
+  "id": "leverperfusie",
+  "titel": "Percutane leverperfusie met melfalan bij levermetastasen van uveamelanoom",
+  "orgaan": "Lever",
+  "ziektebeeld": [
+   "Uveamelanoom"
+  ],
+  "technieken": [
+   "Leverperfusie (PHP)"
+  ],
+  "bewijs": "Bewijs: Hoog voor respons, geen aangetoonde overlevingswinst",
+  "herzien": "Herzien: 26 jul 2026 · v1.0",
+  "nieuwste_core": 202501,
+  "nieuwste_latest": 202601,
+  "aantal": {
+   "guidelines": 4,
+   "core": 7,
+   "latest": 4
+  },
+  "zoektermen_nl": "leverperfusie percutane leverperfusie geisoleerde leverperfusie chemosaturatie php ihp melfalan chemosat hepzato delcath uveamelanoom oogmelanoom adervliesmelanoom levermetastasen focus scandium chopin tebentafusp lumc filtratie",
+  "zoektermen_en": "hepatic perfusion percutaneous isolated chemosaturation php ihp melphalan chemosat hepzato delcath uveal melanoma ocular melanoma liver metastases focus scandium chopin tebentafusp filtration",
+  "richtlijnen_te_hercontroleren": [
+   {
+    "titel": "Aanbevelingen richtlijn uveamelanoom (oogmelanoom)",
+    "bron": "Nederlandse vertaling · 2017",
+    "url": "https://radiologen.nl/sites/default/files/Kwaliteit/Richtlijnen/2017%2006%2026%20Nederlandse%20vertaling%20definitieve%20aanbevelingen%20richtlijn%20uveamelanoom.pdf",
+    "sortkey": 201706
+   },
+   {
+    "titel": "Standpunt Percutane leverperfusie met melfalan bij leverdominante, niet-resectabele metastasen van een uveamelanoom",
+    "bron": "Zorginstituut Nederland · 2019",
+    "url": "https://www.zorginstituutnederland.nl/documenten/2019/02/12/standpunt-percutane-leverperfusie-met-melfalan-bij-leverdominante-niet-resectabele-mestastasen-van-een-uveamelanoom",
+    "sortkey": 201902
+   },
+   {
+    "titel": "HEPZATO KIT (melphalan) for hepatic delivery: FDA approval",
+    "bron": "U.S. Food and Drug Administration · 2023",
+    "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-melphalan-liver-directed-treatment-uveal-melanoma",
+    "sortkey": 202308
+   },
+   {
+    "titel": "Uveal melanoma: ESMO-EURACAN Clinical Practice Guideline for diagnosis, treatment and follow-up",
+    "bron": "ESMO Open · 2026",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42020098/",
+    "sortkey": 202604
+   }
+  ],
+  "trialquery": [
+   "https://clinicaltrials.gov/search?cond=uveal%20melanoma&term=hepatic%20perfusion&aggFilters=status:rec"
+  ],
+  "dunne_items": []
+ }
+]
