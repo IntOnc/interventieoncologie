@@ -118,6 +118,27 @@ bij 3,8% en galwegstricturen bij 2,8%.
 
 Tijd voor de beoordeling: één publicatie, één beslissing.
 
+## Lopende studies
+
+Sinds 26 juli 2026 staat op elke kaart een lijst met geregistreerde lopende
+studies in plaats van een lege verwijzing naar een zoekopdracht. Het zijn
+61 items over 34 kaarten, elk gecontroleerd tegen het registratierecord op
+status, fase, aantal patienten, verwachte primaire einddatum en datum van de
+laatste registratie-update. Vier kaarten hebben geen enkele lopende studie en
+dragen dat als expliciete bevinding, met de datum waarop dat is nagegaan.
+
+ClinicalTrials.gov is zelf niet op te halen, want de robots.txt sluit alles uit,
+en dat geldt ook voor ISRCTN, de EU-registers en het WHO-platform. Het
+spiegelrecord op ichgcp.net geeft dezelfde velden wel en is de route die de
+maandelijkse ronde gebruikt. Ontdekken van nieuwe studies gaat via WebSearch,
+verifieren via dat record. Een studie waarvan de registratie meer dan drie jaar
+niet is bijgewerkt terwijl de einddatum al verstreken is, telt niet als lopend.
+
+De maandelijkse ronde loopt deze lijsten na (stap 4b in de opdracht), meldt
+gewijzigde statussen, en signaleert wanneer een studie is afgerond, want dan
+verhuist het item van "ongoing" naar "core" of "latest" met een samenvatting
+met getallen erbij.
+
 ## Wat er nog beslist moet worden
 
 Het ⚠-signaal staat nu te ruim afgesteld. Het markeert elk item in Core evidence
