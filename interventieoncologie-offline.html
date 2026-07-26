@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interventie Oncologie · evidence-based interventieradiologie</title>
+<style>
+  :root{
+    --bg:#f6f8fa; --card:#ffffff; --ink:#0f1e2e; --muted:#5a6b7b;
+    --line:#e3e9ef; --brand:#0b5563; --brand-2:#0b6b6b; --brand-soft:#e6f2f2; --accent:#c2410c;
+    --grade-high:#0b6b6b; --grade-mod:#b45309; --grade-low:#9f1239; --change:#7c3aed; --ongoing:#2563eb; --guide:#334155;
+    --shadow:0 1px 3px rgba(16,30,46,.06),0 8px 24px rgba(16,30,46,.06);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line)}
+  .bar{max-width:820px;margin:0 auto;padding:11px 18px;display:flex;align-items:center;gap:12px}
+  .logo{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.3px;font-size:18px;color:var(--brand);cursor:pointer}
+  .logo .mark{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800}
+  .logo span{color:var(--ink);font-weight:700}
+  .dom{font-size:11px;color:var(--muted)}
+  .spacer{flex:1}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:13px}
+  .lang button{border:0;background:#fff;padding:6px 12px;cursor:pointer;color:var(--muted);font-weight:600}
+  .lang button.active{background:var(--brand);color:#fff}
+  main{max-width:820px;margin:0 auto;padding:22px 18px 80px}
+  .hero{padding:12px 4px 8px}
+  .hero h1{font-size:26px;margin:.2em 0;letter-spacing:-.5px}
+  .hero p{color:var(--muted);margin:.2em 0 0;max-width:62ch}
+  .search{margin:18px 0 6px;position:relative}
+  .search input{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:12px;font-size:15px;
+    background:#fff;box-shadow:var(--shadow)}
+  .suggest{position:absolute;left:0;right:0;top:100%;margin-top:5px;background:#fff;border:1px solid var(--line);
+    border-radius:12px;box-shadow:var(--shadow);z-index:30;overflow:hidden;display:none}
+  .sopt{padding:9px 15px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .sopt:hover{background:var(--brand-soft)}
+  .sopt .stag{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);font-weight:700}
+  .sopt b{color:var(--brand)}
+  .entries{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+  @media(max-width:560px){.entries{grid-template-columns:1fr}}
+  .entry{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+  .entry h3{margin:0 0 4px;font-size:15px}
+  .entry p{margin:0;color:var(--muted);font-size:13px}
+  .entry .k{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--brand);font-weight:700}
+  .list-title{font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin:8px 2px}
+  .cardlink{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:14px 16px;margin-bottom:8px;cursor:pointer;box-shadow:var(--shadow);transition:.15s}
+  .cardlink:hover{border-color:var(--brand);transform:translateY(-1px)}
+  .cardlink.disabled{opacity:.55;cursor:default}
+  .cardlink.disabled:hover{border-color:var(--line);transform:none}
+  .cardlink .dot{width:8px;height:8px;border-radius:50%;background:var(--grade-high);flex:none}
+  .cardlink b{font-size:15px}
+  .cardlink small{color:var(--muted);display:block;font-size:12px}
+  .cardlink .cbody{min-width:0}
+  .ctags{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+  .ctag{font-size:10.5px;color:var(--brand);background:var(--brand-soft);border-radius:999px;padding:1px 8px;font-weight:600}
+  .cardlink .arrow{margin-left:auto;color:var(--muted);align-self:center}
+  .detail{display:none}
+  .back{display:inline-flex;align-items:center;gap:6px;background:none;border:0;color:var(--brand);
+    font-weight:600;cursor:pointer;padding:6px 0;font-size:14px;margin-bottom:6px}
+  .doccard{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+  .doc-head{padding:20px 22px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,#fbfdfd)}
+  .crumb{font-size:12px;color:var(--brand);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+  .doc-head h2{margin:6px 0 8px;font-size:22px;letter-spacing:-.4px}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .pill{font-size:12px;padding:4px 10px;border-radius:999px;background:var(--brand-soft);color:var(--brand);font-weight:600}
+  .pill.date{background:#f1f4f7;color:var(--muted)}
+  .sec{padding:18px 22px;border-bottom:1px solid var(--line)}
+  .sec:last-child{border-bottom:0}
+  .sec h4{margin:0 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+  .sec .lead{font-size:11px;color:var(--muted);margin:2px 0 9px}
+  .bottomline{background:var(--brand-soft);border-left:4px solid var(--brand);padding:14px 16px;border-radius:8px;font-size:15px}
+  .posbox{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .techblock{margin-top:26px;border-top:1px solid var(--line);padding-top:18px}
+  .techhead{font-weight:800;font-size:15px;margin-bottom:12px}
+  .techtiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+  .techtile{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;transition:.12s}
+  .techtile:hover{border-color:var(--brand);box-shadow:0 2px 10px rgba(15,23,42,.06)}
+  .techtile b{display:block;font-size:14px;margin-bottom:3px}
+  .techtile .tsub{display:block;font-size:11.5px;color:var(--muted);line-height:1.45}
+  .techtile .tcount{display:inline-block;margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--brand);background:var(--brand-soft);border-radius:999px;padding:2px 8px}
+  .posrow{display:flex;gap:0;border-top:1px solid var(--line);font-size:13.5px}
+  .posrow:first-child{border-top:none}
+  .poslab{flex:0 0 190px;background:#f8fafc;padding:10px 12px;font-weight:700;font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:#475569;border-right:1px solid var(--line)}
+  .posval{flex:1;padding:10px 13px;line-height:1.5}
+  .posrow.needsdata .poslab{background:#fffbeb;color:#92400e}
+  @media(max-width:640px){.posrow{flex-direction:column}.poslab{flex:none;border-right:none;border-bottom:1px solid var(--line)}}
+  ul.crit{margin:0;padding-left:18px}
+  ul.crit li{margin:5px 0;font-size:13.5px;color:#38495a}
+  .altsub{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700;margin:13px 0 7px}
+  .lit{border:1px solid var(--line);border-left:3px solid var(--change);border-radius:8px;padding:6px 10px;margin-bottom:5px;background:#fff;cursor:pointer}
+  .lit:hover{border-color:#cdd7e0}
+  .lit.core{border-left-color:var(--change)} .lit.guide{border-left-color:var(--guide)}
+  .lit.latest{border-left-color:var(--brand-2)} .lit.ongoing{border-left-color:var(--ongoing)}
+  .lit .lh{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+  .lit .chev{font-size:9px;color:var(--muted);transition:transform .15s;flex:none;align-self:center}
+  .lit.open .chev{transform:rotate(90deg)}
+  .lit .ttl{font-weight:700;font-size:12.5px;color:var(--ink);line-height:1.3}
+  .lit:hover .ttl{color:var(--brand)}
+  .lit .venue{font-size:10.5px;color:var(--muted);margin-left:auto;white-space:nowrap}
+  .badge{display:inline-block;font-size:9px;font-weight:700;padding:1px 6px;border-radius:999px;color:#fff;letter-spacing:.3px}
+  .badge.core{background:var(--change)} .badge.latest{background:var(--brand-2)}
+  .badge.ongoing{background:var(--ongoing)} .badge.guide{background:var(--guide)}
+  .lit .short{font-size:11.5px;color:#556575;margin:4px 0 0;line-height:1.45}
+  .lit.open .short{display:none}
+  .lit .more{color:var(--brand);font-weight:600;white-space:nowrap}
+  .lit .sum{display:none;font-size:11.5px;color:#48586a;margin:6px 0 1px;line-height:1.5;padding-top:7px;border-top:1px solid var(--line)}
+  .lit.open .sum{display:block}
+  .lit .sum a{color:var(--brand);font-weight:600;text-decoration:none;white-space:nowrap}
+  .lit .sum a:hover{text-decoration:underline}
+  .flag{font-size:9px;font-weight:700;color:#92400e;background:#fef3c7;border:1px solid #fde68a;border-radius:999px;padding:1px 7px;white-space:nowrap}
+  .flag.laag{color:#8b8b8b;background:#f4f4f5;border-color:#e4e4e7;font-weight:600}
+  .lit.needsdata{border-left-color:var(--accent)}
+  /* home facets */
+  .facets{margin:12px 0 16px}
+  .facetrow{display:flex;align-items:baseline;gap:10px;margin:8px 0;flex-wrap:wrap}
+  .flabel{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700;min-width:74px}
+  .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .chip{font-size:12px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;font-weight:600}
+  .chip:hover{border-color:var(--brand)}
+  .chip.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .facetbar{display:flex;align-items:center;gap:12px;margin-top:8px}
+  .rcount{font-size:12px;color:var(--muted)}
+  .clearf{border:0;background:none;color:var(--brand);font-weight:600;cursor:pointer;font-size:12px;padding:0}
+  .noresults{color:var(--muted);font-size:14px;padding:14px 2px}
+  .evgroup{border-top:1px solid var(--line)}
+  .evhead{padding:14px 22px 4px;font-size:16px;font-weight:800;letter-spacing:-.3px;color:var(--ink);
+    background:linear-gradient(180deg,#f4f8f8,#fff)}
+  .evhint{font-size:11px;font-weight:500;color:var(--muted);letter-spacing:0}
+  .evgroup .sec{border-bottom:1px solid var(--line)}
+  .refs{font-size:13px;color:var(--muted)}
+  .foot{max-width:820px;margin:0 auto;padding:0 18px;color:var(--muted);font-size:12px;text-align:center}
+  .disclaimer{background:#f1f4f7;border-radius:10px;padding:12px 14px;margin-top:14px;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="logo" onclick="showHome()"><span class="mark">IO</span> Interventie <span>Oncologie</span></div>
+    <div class="dom">interventieoncologie.nl</div>
+    <div class="spacer"></div>
+    <div class="lang">
+      <button id="nl" class="active" onclick="setLang('nl')">NL</button>
+      <button id="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="home">
+    <div class="hero"><h1 data-i="h1"></h1><p data-i="sub"></p></div>
+    <div class="search"><input id="q" type="text" data-ph="search" autocomplete="off" oninput="applyFilters();renderSuggest()" onkeydown="if(event.key==='Escape')hideSuggest()" onblur="hideSuggest()"><div id="suggest" class="suggest"></div></div>
+    <div class="facets">
+      <div class="facetrow"><span class="flabel" data-i="f_disease"></span><span id="chips-dis" class="chips"></span></div>
+      <div class="facetrow"><span class="flabel" data-i="f_organ"></span><span id="chips-organ" class="chips"></span></div>
+      <div class="facetrow"><span class="flabel" data-i="f_tech"></span><span id="chips-tech" class="chips"></span></div>
+      <div class="facetbar"><span id="resultcount" class="rcount"></span><button class="clearf" id="clearf" onclick="clearFilters()" data-i="f_clear"></button></div>
+    </div>
+    <div id="cardlist"></div>
+    <div id="noresults" class="noresults" data-i="noresults" style="display:none"></div>
+    <div class="techblock">
+      <div class="techhead"><span data-i="t_head"></span> <span class="evhint" data-i="t_hint"></span></div>
+      <div id="techtiles" class="techtiles"></div>
+    </div>
+    <div class="disclaimer" data-i="disc"></div>
+    <div class="foot" style="margin-top:14px">Inhoud bijgewerkt: <span id="bijgewerkt">…</span></div>
+  </section>
+
+  <section id="tech" class="detail">
+    <button class="back" onclick="showHome()">← <span data-i="back"></span></button>
+    <div class="doccard">
+      <div class="doc-head">
+        <div class="crumb" id="t-crumb"></div>
+        <h2 id="t-title"></h2>
+        <div class="meta"><span class="pill" id="t-lead"></span></div>
+      </div>
+      <div class="sec"><div class="bottomline" id="t-intro"></div></div>
+      <div class="sec"><h4 id="t-h-works"></h4><ul class="crit" id="t-works"></ul></div>
+      <div class="sec"><h4 id="t-h-risks"></h4><ul class="crit" id="t-risks"></ul></div>
+      <div class="sec"><h4 id="t-h-cards"></h4><div id="t-cards"></div></div>
+    </div>
+  </section>
+
+  <section id="detail" class="detail">
+    <button class="back" onclick="showHome()">← <span data-i="back"></span></button>
+    <div class="doccard">
+      <div class="doc-head">
+        <div class="crumb" id="c-crumb"></div>
+        <h2 id="c-title"></h2>
+        <div class="meta">
+          <span class="pill" id="c-proc"></span>
+          <span class="pill" id="c-grade"></span>
+          <span class="pill date" id="c-date"></span>
+        </div>
+      </div>
+
+      <div class="sec"><h4 data-i="s1"></h4><div class="bottomline" id="c-bl"></div></div>
+      <div class="sec"><h4 data-i="s_pos"></h4><div class="posbox" id="c-pos"></div></div>
+      <div class="sec"><h4 data-i="s2"></h4><ul class="crit" id="c-crit"></ul></div>
+      <div class="sec"><h4 data-i="s_res"></h4><ul class="crit" id="c-res"></ul></div>
+
+      <div class="sec"><h4 data-i="s5"></h4><ul class="crit" id="c-lim"></ul></div>
+      <div class="sec"><h4 data-i="s_alt"></h4><div id="c-alts"></div></div>
+
+      <div class="evgroup">
+        <div class="evhead"><span data-i="ev_head"></span> <span class="evhint" data-i="ev_hint"></span></div>
+        <div class="sec"><h4 data-i="lt_guide"></h4><div class="lead" data-i="ld_guide"></div><div id="ov-guide"></div></div>
+        <div class="sec"><h4 data-i="lt_core"></h4><div class="lead" data-i="ld_core"></div><div id="ov-core"></div></div>
+        <div class="sec"><h4 data-i="lt_latest"></h4><div class="lead" data-i="ld_latest"></div><div id="ov-latest"></div></div>
+        <div class="sec"><h4 data-i="lt_ongoing"></h4><div class="lead" data-i="ld_ongoing"></div><div id="ov-ongoing"></div></div>
+      </div>
+
+      <div class="sec"><h4 data-i="s7"></h4><p class="refs" id="c-editorial"></p></div>
+    </div>
+  </section>
+</main>
+<div class="foot"><p data-i="foot"></p></div>
+
+<script>
+// ============ INHOUD ============
+// Alle inhoud staat in content.json. Dit bestand bevat alleen opmaak en weergave.
+// De pipeline bewerkt uitsluitend content.json.
+let SITE={}, ORGANS={}, DISEASES={}, TECHS={}, INDEX=[], CARDS={}, POS={}, TECHPAGES=[];
+let editorialNL='', editorialEN='';
+
+async function laadInhoud(){
+  const res = await fetch('content.json?v=' + Date.now());
+  if(!res.ok) throw new Error('content.json niet gevonden (' + res.status + ')');
+  const d = await res.json();
+  SITE=d.site; ORGANS=d.organs; DISEASES=d.diseases; TECHS=d.techs;
+  INDEX=d.index; CARDS=d.cards; POS=d.pos; TECHPAGES=d.techpages;
+  editorialNL=d.editorial.nl; editorialEN=d.editorial.en;
+  for(const id of Object.keys(CARDS)){
+    CARDS[id].nl.editorial = editorialNL;
+    CARDS[id].en.editorial = editorialEN;
+  }
+  current = INDEX[0].id;
+  document.getElementById('bijgewerkt').textContent = d.bijgewerkt;
+}
+
+function toonLaadfout(e){
+  document.querySelector('main').innerHTML =
+    '<div style="max-width:720px;margin:60px auto;padding:24px;border:1px solid #e2e8f0;'+
+    'border-radius:12px;background:#fff;font-size:14px;line-height:1.6">'+
+    '<b>De inhoud kon niet worden geladen.</b><p>' + e.message + '</p>'+
+    '<p>Deze pagina laadt <code>content.json</code> op en dat lukt niet wanneer je het bestand '+
+    'rechtstreeks vanaf de schijf opent. Zet beide bestanden op een webserver, of gebruik de '+
+    'losse offline-versie.</p></div>';
+}
+// ============ SITE CHROME (shared across cards) ============
+/* SITE -> content.json */
+
+// Facet dictionaries (key -> display per language)
+/* ORGANS -> content.json */
+/* TECHS -> content.json */
+/* DISEASES -> content.json */
+// Card index with tags, subtitle and free-text keywords for search
+/* INDEX -> content.json */
+const SOON={nl:['TACE bij hepatocellulair carcinoom','Binnenkort'],en:['TACE for hepatocellular carcinoma','Coming soon']};
+let selOrgan=new Set(), selTech=new Set(), selDis=new Set();
+
+/* editorialNL -> content.json */
+/* editorialEN -> content.json */
+
+// ============ CARDS ============
+/* CARDS -> content.json */
+
+// ============ RENDER ============
+let lang='nl', current='crc-ablatie', currentTech=null;
+function setLang(l){
+  lang=l; document.documentElement.lang=l;
+  document.getElementById('nl').classList.toggle('active',l==='nl');
+  document.getElementById('en').classList.toggle('active',l==='en');
+  render();
+}
+function litHTML(items,kind,label){
+  const sorted=items.slice().sort((a,b)=>b[4]-a[4]);
+  const linkTxt=lang==='nl'?'Naar publicatie ↗':'View publication ↗';
+  const moreTxt=lang==='nl'?'meer lezen':'read more';
+  const flagTxt=lang==='nl'?'cijfers te verifiëren':'figures to verify';
+  const flagTip=lang==='nl'?'Geen kwantitatieve uitkomst gevonden. Stuur de publicatie om de cijfers in te vullen'
+                           :'No quantitative outcome found. Send the publication to fill in the figures';
+  const flaggable=(kind==='core'||kind==='latest');
+  const RESSEG=/<b>\s*(?:Resultaten|Results)\s*:?\s*<\/b>([\s\S]*?)(?=<b>|$)/i;
+  const NARRATIEF=/narrative review|overzichtsartikel|Review of Anatomy/i;
+  return sorted.map(p=>{
+    const full=p[3];
+    const plain=full.replace(/<[^>]+>/g,'');
+    const parts=full.split(/<b>[^<]*<\/b>\s*/).filter(s=>s.replace(/<[^>]+>/g,'').trim());
+    const short=(parts.length?parts[parts.length-1]:full).replace(/<[^>]+>/g,'').trim();
+    const resm=full.match(RESSEG);
+    const claimtResultaat=!!resm && !/\d/.test(resm[1].replace(/<[^>]+>/g,''));
+    const narratief=NARRATIEF.test(p[0]) || NARRATIEF.test(plain);
+    const needsData=flaggable && claimtResultaat && !narratief;
+    const prio=needsData?(kind==='core'?'hoog':'laag'):'';
+    const flag=needsData?`<span class="flag ${prio}" title="${flagTip}">⚠ ${flagTxt}</span>`:'';
+    return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
+      <div class="lh"><span class="chev">▸</span><span class="badge ${kind}">${label}</span><span class="ttl">${p[0]}</span>${flag}<span class="venue">${p[1]}</span></div>
+      <div class="short">${short} <span class="more">${moreTxt}</span></div>
+      <div class="sum">${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a></div>
+    </div>`;
+  }).join('');
+}
+function renderChips(){
+  const disPresent=[...new Set(INDEX.flatMap(c=>c.dis))];
+  const organsPresent=[...new Set(INDEX.map(c=>c.organ))];
+  const techPresent=[...new Set(INDEX.flatMap(c=>c.tech))];
+  document.getElementById('chips-dis').innerHTML=disPresent.map(k=>
+    `<span class="chip${selDis.has(k)?' on':''}" onclick="toggleChip('dis','${k}')">${DISEASES[k][lang]}</span>`).join('');
+  document.getElementById('chips-organ').innerHTML=organsPresent.map(k=>
+    `<span class="chip${selOrgan.has(k)?' on':''}" onclick="toggleChip('organ','${k}')">${ORGANS[k][lang]}</span>`).join('');
+  document.getElementById('chips-tech').innerHTML=techPresent.map(k=>
+    `<span class="chip${selTech.has(k)?' on':''}" onclick="toggleChip('tech','${k}')">${TECHS[k][lang]}</span>`).join('');
+}
+function toggleChip(type,key){
+  const set=type==='organ'?selOrgan:(type==='tech'?selTech:selDis);
+  set.has(key)?set.delete(key):set.add(key);
+  renderChips(); applyFilters();
+}
+// ---- Autocomplete ----
+function suggestPool(){
+  const catDis=lang==='nl'?'Ziektebeeld':'Condition', catOrg=lang==='nl'?'Orgaan':'Organ', catTech=lang==='nl'?'Techniek':'Technique', catCard=lang==='nl'?'Kaart':'Card';
+  const pool=[];
+  Object.values(DISEASES).forEach(d=>pool.push({t:d[lang],c:catDis}));
+  Object.values(ORGANS).forEach(o=>pool.push({t:o[lang],c:catOrg}));
+  Object.values(TECHS).forEach(x=>pool.push({t:x[lang],c:catTech}));
+  INDEX.forEach(c=>pool.push({t:CARDS[c.id][lang].title,c:catCard}));
+  return pool;
+}
+function renderSuggest(){
+  const box=document.getElementById('suggest');
+  const val=(document.getElementById('q').value||'');
+  const tokens=val.split(/\s+/); const last=(tokens[tokens.length-1]||'').toLowerCase();
+  if(last.length<2){box.style.display='none';box.innerHTML='';return;}
+  const seen=new Set();
+  const hits=suggestPool().filter(o=>{
+    const tl=o.t.toLowerCase();
+    if(tl===last||seen.has(tl)||!tl.includes(last)) return false;
+    seen.add(tl); return true;
+  }).slice(0,7);
+  if(!hits.length){box.style.display='none';return;}
+  box.innerHTML=hits.map(h=>{
+    const esc=h.t.replace(/'/g,"\\'").replace(/"/g,'&quot;');
+    return `<div class="sopt" onmousedown="pickSuggest('${esc}')"><span class="stag">${h.c}</span><span>${h.t}</span></div>`;
+  }).join('');
+  box.style.display='block';
+}
+function pickSuggest(term){
+  const q=document.getElementById('q');
+  const tokens=q.value.split(/\s+/); tokens[tokens.length-1]=term;
+  q.value=tokens.join(' ');
+  hideSuggest(); applyFilters();
+}
+function hideSuggest(){ const b=document.getElementById('suggest'); if(b) b.style.display='none'; }
+function clearFilters(){ selOrgan.clear(); selTech.clear(); selDis.clear(); document.getElementById('q').value=''; renderChips(); applyFilters(); }
+function applyFilters(){
+  const q=(document.getElementById('q').value||'').toLowerCase().trim();
+  const tokens=q?q.split(/\s+/):[];
+  const matches=INDEX.filter(c=>{
+    if(selDis.size && !c.dis.some(d=>selDis.has(d))) return false;
+    if(selOrgan.size && !selOrgan.has(c.organ)) return false;
+    if(selTech.size && !c.tech.some(t=>selTech.has(t))) return false;
+    if(tokens.length){
+      const hay=[CARDS[c.id][lang].title, ORGANS[c.organ][lang], c.dis.map(d=>DISEASES[d][lang]).join(' '),
+        c.tech.map(t=>TECHS[t][lang]).join(' '), c.sub[lang], c.kw[lang]].join(' ').toLowerCase();
+      if(!tokens.every(t=>hay.includes(t))) return false;
+    }
+    return true;
+  });
+  const list=document.getElementById('cardlist');
+  list.innerHTML=matches.map(c=>{
+    const title=CARDS[c.id][lang].title;
+    const tags=[ORGANS[c.organ][lang]].concat(c.dis.map(d=>DISEASES[d][lang])).concat(c.tech.map(t=>TECHS[t][lang]));
+    const tagsHTML=tags.map(t=>`<span class="ctag">${t}</span>`).join('');
+    return `<div class="cardlink" onclick="showCard('${c.id}')"><span class="dot" style="background:${c.dot}"></span>
+      <div class="cbody"><b>${title}</b><div class="ctags">${tagsHTML}</div></div><span class="arrow">→</span></div>`;
+  }).join('');
+  document.getElementById('noresults').style.display=matches.length?'none':'block';
+  const n=matches.length;
+  document.getElementById('resultcount').textContent = lang==='nl'?`${n} kaart${n===1?'':'en'}`:`${n} card${n===1?'':'s'}`;
+}
+function render(){
+  const s=SITE[lang];
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    const k=el.getAttribute('data-i');
+    if(typeof s[k]==='string') el.innerHTML=s[k];
+  });
+  document.querySelectorAll('[data-ph]').forEach(el=>{
+    el.setAttribute('placeholder', s[el.getAttribute('data-ph')]||'');
+  });
+  renderChips(); applyFilters();
+  renderTechTiles();
+  renderCard();
+  if(currentTech) renderTech();
+}
+// ── Positie en kracht ────────────────────────────────────────────────
+// Drie vaste regels per kaart. g = plaats in de richtlijn, l = harde
+// indicatiegrens (grootte/aantal/volume), v = vergelijking met het
+// belangrijkste niet-IR alternatief, met cijfers over effect EN morbiditeit.
+// [[verify]] in een waarde zet het ⚠-signaal aan: cijfers nog aan te leveren.
+/* POS -> content.json */
+
+function posHTML(id){
+  const p=(POS[id]||{})[lang];
+  const L=SITE[lang];
+  if(!p) return '';
+  const flagTxt=lang==='nl'?'cijfers te verifiëren':'figures to verify';
+  const flagTip=lang==='nl'?'Cijfers nog niet volledig na te trekken. Stuur de publicatie om deze regel af te maken'
+                           :'Figures not fully traceable yet. Send the publication to complete this row';
+  return [['p_g',p.g],['p_l',p.l],['p_v',p.v]].map(([k,raw])=>{
+    const marked=/\[\[verify\]\]/.test(raw||'');
+    const txt=String(raw||'').replace(/\s*\[\[verify\]\]\s*/g,' ').trim();
+    const plain=txt.replace(/<[^>]+>/g,'');
+    // p_g en p_l mogen legitiem zonder getal zijn (geen grootte-grens bestaat).
+    // Een vergelijkingsregel zonder enkel getal is altijd een gat.
+    const need=marked || (k==='p_v' && !/\d/.test(plain));
+    return `<div class="posrow${need?' needsdata':''}"><div class="poslab">${L[k]}${need?` <span class="flag" title="${flagTip}">⚠ ${flagTxt}</span>`:''}</div><div class="posval">${txt}</div></div>`;
+  }).join('');
+}
+
+// ── Techniekoverzichtspagina's ───────────────────────────────────────
+// Eén pagina per techniekfamilie. De lijst met indicaties wordt automatisch
+// uit INDEX afgeleid, zodat een nieuwe kaart hier vanzelf verschijnt.
+/* TECHPAGES -> content.json */
+
+function techCards(tp){
+  return INDEX.filter(c=>c.tech.some(t=>tp.techs.includes(t)));
+}
+function renderTechTiles(){
+  const el=document.getElementById('techtiles');
+  if(!el) return;
+  el.innerHTML=TECHPAGES.map(tp=>{
+    const d=tp[lang], n=techCards(tp).length;
+    const word=lang==='nl'?(n===1?'kaart':'kaarten'):(n===1?'card':'cards');
+    return `<div class="techtile" onclick="showTech('${tp.id}')"><b>${d.title}</b><span class="tsub">${d.lead}</span><span class="tcount">${n} ${word}</span></div>`;
+  }).join('');
+}
+function renderTech(){
+  const tp=TECHPAGES.find(t=>t.id===currentTech);
+  if(!tp) return;
+  const d=tp[lang], L=SITE[lang];
+  document.getElementById('t-crumb').textContent=lang==='nl'?'Interventieoncologie · Techniek':'Interventional oncology · Technique';
+  document.getElementById('t-title').textContent=d.title;
+  document.getElementById('t-lead').textContent=d.lead;
+  document.getElementById('t-intro').innerHTML=d.intro;
+  document.getElementById('t-works').innerHTML=d.works.map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('t-risks').innerHTML=(d.risksList||[]).map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('t-h-works').textContent=L.t_works;
+  document.getElementById('t-h-risks').textContent=L.t_risks;
+  document.getElementById('t-h-cards').textContent=L.t_cards;
+  const cards=techCards(tp);
+  document.getElementById('t-cards').innerHTML=cards.map(c=>{
+    const title=CARDS[c.id][lang].title;
+    const tags=[ORGANS[c.organ][lang]].concat(c.dis.map(x=>DISEASES[x][lang]));
+    return `<div class="cardlink" onclick="showCard('${c.id}')"><span class="dot" style="background:${c.dot}"></span>
+      <div class="cbody"><b>${title}</b><div class="ctags">${tags.map(t=>`<span class="ctag">${t}</span>`).join('')}</div></div><span class="arrow">→</span></div>`;
+  }).join('');
+}
+function showTech(id){currentTech=id;renderTech();document.getElementById('home').style.display='none';document.getElementById('detail').style.display='none';document.getElementById('tech').style.display='block';window.scrollTo(0,0);}
+
+function renderCard(){
+  const d=CARDS[current][lang];
+  document.getElementById('c-crumb').textContent=d.crumb;
+  document.getElementById('c-title').textContent=d.title;
+  document.getElementById('c-proc').textContent=d.proc;
+  document.getElementById('c-grade').textContent=d.grade;
+  document.getElementById('c-date').textContent=d.date;
+  document.getElementById('c-bl').innerHTML=d.bl;
+  document.getElementById('c-pos').innerHTML=posHTML(current);
+  document.getElementById('c-crit').innerHTML=d.crit.map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('c-res').innerHTML=d.results.map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('c-lim').innerHTML=d.lim.map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('c-alts').innerHTML='<ul class="crit">'+d.alts.map(a=>`<li><b>${a[0]}</b>: ${a[1]}</li>`).join('')+'</ul>';
+  document.getElementById('c-editorial').innerHTML=d.editorial;
+  document.getElementById('ov-guide').innerHTML=litHTML(d.guides,'guide','Guideline');
+  document.getElementById('ov-core').innerHTML=litHTML(d.core,'core','Core');
+  document.getElementById('ov-latest').innerHTML=litHTML(d.latest,'latest','Latest');
+  document.getElementById('ov-ongoing').innerHTML=litHTML(d.ongoing,'ongoing','Ongoing');
+}
+function showCard(id){current=id;renderCard();document.getElementById('home').style.display='none';document.getElementById('tech').style.display='none';document.getElementById('detail').style.display='block';window.scrollTo(0,0);}
+function showHome(){document.getElementById('detail').style.display='none';document.getElementById('tech').style.display='none';document.getElementById('home').style.display='block';window.scrollTo(0,0);}
+(async function start(){
+  try { await laadInhoud(); } catch(e){ toonLaadfout(e); return; }
+  render();
+})();
+
+</script>
+</body>
+</html>
