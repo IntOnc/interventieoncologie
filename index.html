@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interventie Oncologie · evidence-based interventieradiologie</title>
+<title>Interventie Oncologie · de evidence achter interventieradiologie</title>
 <meta name="description" id="m-desc" content="Snelle, gerefereerde overzichten van interventie-oncologische behandelingen en indicaties.">
 <meta property="og:site_name" content="Interventie Oncologie">
 <meta property="og:type" content="article">
@@ -841,8 +841,8 @@ function zetRoute(soort,id){
 function tekstUit(html){ return (html||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim(); }
 function zetMeta(soort,id){
   const basis='https://www.interventieoncologie.nl/';
-  let titel=lang==='nl'?'Interventie Oncologie · evidence-based interventieradiologie'
-                       :'Interventie Oncologie · evidence-based interventional radiology';
+  let titel=lang==='nl'?'Interventie Oncologie · de evidence achter interventieradiologie'
+                       :'Interventie Oncologie · the evidence behind interventional radiology';
   let oms=SITE[lang]&&SITE[lang].sub?tekstUit(SITE[lang].sub):'';
   if(soort==='kaart' && CARDS[id]){
     const d=CARDS[id][lang];
