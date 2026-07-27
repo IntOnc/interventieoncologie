@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b5563'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='15' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EIO%3C/text%3E%3C/svg%3E">
 <title>Interventie Oncologie · de evidence achter interventieradiologie</title>
 <meta name="description" id="m-desc" content="Snelle, gerefereerde overzichten van interventie-oncologische behandelingen en indicaties.">
 <meta property="og:site_name" content="Interventie Oncologie">
@@ -24,11 +25,13 @@
   header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line)}
   .bar{max-width:820px;margin:0 auto;padding:11px 18px;display:flex;align-items:center;gap:12px}
-  .logo{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.3px;font-size:18px;color:var(--brand);cursor:pointer}
-  .logo .mark{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--brand),var(--brand-2));
-    display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800}
-  .logo span{color:var(--ink);font-weight:700}
-  .dom{font-size:11px;color:var(--muted)}
+  .logo{display:inline-flex;align-items:baseline;font-weight:800;letter-spacing:-.6px;font-size:21px;
+    text-decoration:none;cursor:pointer;line-height:1}
+  .logo .w1{color:var(--brand-2)}
+  .logo .w2{color:var(--ink)}
+  .logo .w3{color:var(--muted);font-weight:600;font-size:.66em;letter-spacing:0;margin-left:1px}
+  .logo:hover .w1{color:var(--brand)}
+  .logo:hover .w2{color:var(--brand)}
   .spacer{flex:1}
   .auteur{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--muted);font-size:11.5px}
   .auteur:hover{color:var(--brand)}
@@ -36,7 +39,8 @@
   .anaam{font-weight:700;color:#31465c}
   .auteur:hover .anaam{color:var(--brand)}
   @media(max-width:820px){ .arol{display:none} }
-  @media(max-width:620px){ .dom{display:none} }
+  @media(max-width:620px){ .logo{font-size:18px} }
+  @media(max-width:420px){ .logo{font-size:16px} }
   @media(max-width:460px){ .anaam{display:none} }
   .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:13px}
   .lang button{border:0;background:#fff;padding:6px 12px;cursor:pointer;color:var(--muted);font-weight:600}
@@ -245,8 +249,9 @@
 <body>
 <header>
   <div class="bar">
-    <div class="logo" onclick="showHome()"><span class="mark">IO</span> Interventie <span>Oncologie</span></div>
-    <div class="dom">interventieoncologie.nl</div>
+    <a class="logo" href="#/nl" onclick="event.preventDefault();showHome()" aria-label="InterventieOncologie.nl">
+      <span class="w1">Interventie</span><span class="w2">Oncologie</span><span class="w3">.nl</span>
+    </a>
     <div class="spacer"></div>
     <a class="auteur" href="https://nl.linkedin.com/in/kenneth-hergaarden-a47096117" target="_blank" rel="noopener"
        title="Kenneth Hergaarden op LinkedIn">
