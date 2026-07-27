@@ -145,7 +145,32 @@
   .facetbar{display:flex;align-items:center;gap:12px;margin-top:8px}
   .rcount{font-size:12px;color:var(--muted)}
   .clearf{border:0;background:none;color:var(--brand);font-weight:600;cursor:pointer;font-size:12px;padding:0}
+  .chip.meerchip{background:#eef4f4;border-color:#cbdcdc;color:#3c5a5a;font-weight:700}
   .noresults{color:var(--muted);font-size:14px;padding:14px 2px}
+  .blokkop{font-size:15px;font-weight:800;letter-spacing:-.2px;color:var(--ink);margin:20px 0 8px}
+  .pubblok{margin:14px 0 0}
+  .pubrij{display:flex;align-items:baseline;gap:9px;padding:5px 10px;border:1px solid var(--line);border-radius:7px;
+    background:#fff;margin-bottom:3px;cursor:pointer}
+  .pubrij:hover{border-color:#b9c6d3;background:#fbfdfe}
+  .pubrij .pdat{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none;min-width:52px}
+  .pubrij .pkaart{font-size:10px;font-weight:700;color:#fff;background:var(--brand-2);border-radius:4px;
+    padding:1px 6px;flex:none;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .pubrij .pkaart.core{background:var(--change)} .pubrij .pkaart.ongoing{background:var(--ongoing)}
+  .pubrij .ptitel{font-weight:700;font-size:12.5px;color:var(--ink);flex:1 1 auto;min-width:0;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .pubrij .pmeta{font-size:10.5px;color:var(--muted);flex:none;white-space:nowrap;max-width:230px;
+    overflow:hidden;text-overflow:ellipsis}
+  .pubrij .paut{font-size:10.5px;color:#5b6b7c;font-weight:600;flex:none}
+  .meerf{font:inherit;font-size:11.5px;font-weight:600;color:#46586b;background:#fff;border:1px solid var(--line);
+    border-radius:999px;padding:3px 11px;cursor:pointer}
+  .meerf:hover{border-color:#b9c6d3}
+  .meerf.on{background:#eef4f4;border-color:#cbdcdc}
+  .meerlink{font-size:11.5px;font-weight:600;color:var(--brand);background:none;border:0;cursor:pointer;padding:6px 2px}
+  @media(max-width:760px){
+    .pubrij{flex-wrap:wrap}
+    .pubrij .ptitel{flex:1 1 100%;white-space:normal;overflow:visible}
+    .pubrij .pmeta,.pubrij .paut{max-width:none}
+  }
   .evgroup{border-top:1px solid var(--line)}
   .evhead{padding:14px 22px 4px;font-size:16px;font-weight:800;letter-spacing:-.3px;color:var(--ink);
     background:linear-gradient(180deg,#f4f8f8,#fff)}
@@ -172,13 +197,22 @@
 <main>
   <section id="home">
     <div class="hero"><h1 data-i="h1"></h1><p data-i="sub"></p></div>
-    <div class="search"><input id="q" type="text" data-ph="search" autocomplete="off" oninput="applyFilters();renderSuggest()" onkeydown="if(event.key==='Escape')hideSuggest()" onblur="hideSuggest()"><div id="suggest" class="suggest"></div></div>
+    <div class="search"><input id="q" type="text" data-ph="search" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="applyFilters();renderSuggest()" onkeydown="if(event.key==='Escape')hideSuggest()" onblur="hideSuggest()"><div id="suggest" class="suggest"></div></div>
     <div class="facets">
       <div class="facetrow"><span class="flabel" data-i="f_disease"></span><span id="chips-dis" class="chips"></span></div>
-      <div class="facetrow"><span class="flabel" data-i="f_organ"></span><span id="chips-organ" class="chips"></span></div>
-      <div class="facetrow"><span class="flabel" data-i="f_tech"></span><span id="chips-tech" class="chips"></span></div>
-      <div class="facetbar"><span id="resultcount" class="rcount"></span><button class="clearf" id="clearf" onclick="clearFilters()" data-i="f_clear"></button></div>
+      <div id="meerfacets" style="display:none">
+        <div class="facetrow"><span class="flabel" data-i="f_organ"></span><span id="chips-organ" class="chips"></span></div>
+        <div class="facetrow"><span class="flabel" data-i="f_tech"></span><span id="chips-tech" class="chips"></span></div>
+      </div>
+      <div class="facetbar">
+        <button class="meerf" id="meerf" onclick="toggleFacets()"></button>
+        <span id="resultcount" class="rcount"></span>
+        <button class="clearf" id="clearf" onclick="clearFilters()" data-i="f_clear"></button>
+      </div>
     </div>
+    <div id="pubhits" class="pubblok" style="display:none"></div>
+    <div id="nieuwste" class="pubblok"></div>
+    <div id="kaartkop" class="blokkop"><span data-i="k_head"></span> <span class="evhint" id="kaartaantal"></span></div>
     <div id="cardlist"></div>
     <div id="noresults" class="noresults" data-i="noresults" style="display:none"></div>
     <div class="techblock">
@@ -356,12 +390,20 @@ function renderLit(){
     : zicht.length+' of '+alles.length+' shown, newest first';
   document.getElementById('ov-all').innerHTML=zicht.map(x=>litRegel(x.p,x.k)).join('');
 }
+let disAlle=false;
 function renderChips(){
   const disPresent=[...new Set(INDEX.flatMap(c=>c.dis))];
   const organsPresent=[...new Set(INDEX.map(c=>c.organ))];
   const techPresent=[...new Set(INDEX.flatMap(c=>c.tech))];
-  document.getElementById('chips-dis').innerHTML=disPresent.map(k=>
-    `<span class="chip${selDis.has(k)?' on':''}" onclick="toggleChip('dis','${k}')">${DISEASES[k][lang]}</span>`).join('');
+  const disSorted=disPresent.slice().sort((a,b)=>
+    INDEX.filter(c=>c.dis.includes(b)).length-INDEX.filter(c=>c.dis.includes(a)).length);
+  const disToon = disAlle ? disSorted : disSorted.filter(k=>selDis.has(k)).concat(
+                  disSorted.filter(k=>!selDis.has(k))).slice(0,9);
+  const rest = disSorted.length-disToon.length;
+  document.getElementById('chips-dis').innerHTML=disToon.map(k=>
+    `<span class="chip${selDis.has(k)?' on':''}" onclick="toggleChip('dis','${k}')">${DISEASES[k][lang]}</span>`).join('')
+    + (rest>0 ? `<span class="chip meerchip" onclick="disAlle=true;renderChips()">+${rest} ${lang==='nl'?'meer':'more'}</span>`
+              : (disAlle&&disSorted.length>9 ? `<span class="chip meerchip" onclick="disAlle=false;renderChips()">${lang==='nl'?'minder':'less'}</span>` : ''));
   document.getElementById('chips-organ').innerHTML=organsPresent.map(k=>
     `<span class="chip${selOrgan.has(k)?' on':''}" onclick="toggleChip('organ','${k}')">${ORGANS[k][lang]}</span>`).join('');
   document.getElementById('chips-tech').innerHTML=techPresent.map(k=>
@@ -407,6 +449,77 @@ function pickSuggest(term){
   hideSuggest(); applyFilters();
 }
 function hideSuggest(){ const b=document.getElementById('suggest'); if(b) b.style.display='none'; }
+// ── Zoeken met synoniemen, publicatie-index en het startscherm ────────
+const SYN={
+  rfa:['radiofrequen','radiofrequency'], mwa:['microgolf','microwave'], mw:['microgolf','microwave'],
+  cryo:['cryoablatie','cryoablation'], ire:['elektroporatie','electroporation','nanoknife'],
+  nanoknife:['elektroporatie','electroporation'], ect:['elektrochemotherapie','electrochemotherapy'],
+  tace:['chemo-embolisatie','chemoembolization','chemoembolisation'],
+  tare:['radio-embolisatie','radioembolization','radioembolisation','yttrium'],
+  sirt:['radio-embolisatie','radioembolization','yttrium'], y90:['yttrium','radio-embolisatie','radioembolization'],
+  'y-90':['yttrium','radio-embolisatie','radioembolization'], pve:['vena porta','portal vein'],
+  hcc:['hepatocellulair','hepatocellular'], crlm:['colorectale levermetastasen','colorectal liver metastases'],
+  cclm:['colorectale levermetastasen','colorectal liver metastases'],
+  rcc:['niercelcarcinoom','renal cell'], net:['neuro-endocrien','neuroendocrine'],
+  cca:['cholangiocarcinoom','cholangiocarcinoma'], icc:['cholangiocarcinoom','cholangiocarcinoma'],
+  ptc:['galweg','biliary'], ptcd:['galwegdrainage','biliary drainage'], pbd:['galwegdrainage','biliary drainage'],
+  svc:['vena cava superior','superior vena cava'], vcs:['vena cava superior','superior vena cava'],
+  rig:['gastrostomie','gastrostomy'], peg:['gastrostomie','gastrostomy'],
+  ipc:['pleurakatheter','pleural catheter'], phe:['leverperfusie','hepatic perfusion'],
+  hai:['intra-arterieel','hepatic arterial'], sbrt:['stereotactische','stereotactic'],
+  kyfo:['kyfoplastiek','kyphoplasty'], vertebro:['vertebroplastiek','vertebroplasty'],
+  histotripsie:['histotripsy'], hifu:['focused ultrasound'],
+  nefrostomie:['nephrostomy'], bricker:['conduit','ileumconduit']
+};
+function zoekTermen(t){ return [t].concat(SYN[t]||[]); }
+function pubIndex(metLopend){
+  const uit=[];
+  const lijsten = metLopend?['core','latest','ongoing']:['core','latest'];
+  INDEX.forEach(c=>{
+    const d=CARDS[c.id][lang];
+    lijsten.forEach(k=>(d[k]||[]).forEach(p=>{
+      if((Number(p[4])||0)<190100) return;
+      uit.push({id:c.id, kaart:d.title, soort:k, titel:p[0], venue:p[1], url:p[2], aut:p[5]||'', sk:Number(p[4])||0});
+    }));
+  });
+  return uit.sort((a,b)=>b.sk-a.sk);
+}
+function pubRij(x){
+  const blad=(x.venue||'').replace(/\s*·\s*(?:[A-Za-zÀ-ÿ]{3,9}\.?\s+)?\d{4}\s*$/,'').replace(/\s*·\s*$/,'').trim();
+  return `<div class="pubrij" onclick="showCard('${x.id}')" title="${x.kaart}">
+    <span class="pdat">${datumLabel(x.sk)}</span>
+    <span class="pkaart ${x.soort}">${x.kaart}</span>
+    <span class="ptitel">${x.titel}</span>
+    ${x.aut?`<span class="paut">${x.aut}</span>`:''}
+    <span class="pmeta">${blad}</span></div>`;
+}
+let nieuwsteAan=8;
+function toonMeerNieuwste(){ nieuwsteAan=nieuwsteAan>=40?8:nieuwsteAan+16; renderNieuwste(); }
+function renderNieuwste(){
+  const box=document.getElementById('nieuwste');
+  if(!box) return;
+  const alles=pubIndex();
+  const kop=lang==='nl'?'Nieuwste publicaties':'Latest publications';
+  const hint=lang==='nl'?'over alle kaarten heen, nieuwste eerst':'across all cards, newest first';
+  const meer=nieuwsteAan>=40?(lang==='nl'?'minder tonen':'show less')
+            :(lang==='nl'?'meer tonen':'show more');
+  box.innerHTML=`<div class="blokkop">${kop} <span class="evhint">${hint}</span></div>`
+    + alles.slice(0,nieuwsteAan).map(pubRij).join('')
+    + `<button class="meerlink" onclick="toonMeerNieuwste()">${meer} ↓</button>`;
+}
+function toggleFacets(){
+  const b=document.getElementById('meerfacets');
+  b.style.display = b.style.display==='none' ? 'block' : 'none';
+  labelFacetKnop();
+}
+function labelFacetKnop(){
+  const open=document.getElementById('meerfacets').style.display!=='none';
+  const n=selOrgan.size+selTech.size;
+  const t=lang==='nl'?(open?'Minder verfijnen':'Verfijnen op orgaan en techniek')
+                     :(open?'Fewer filters':'Refine by organ and technique');
+  document.getElementById('meerf').innerHTML=t+(n?` <b>${n}</b>`:'');
+  document.getElementById('meerf').className='meerf'+(open?' on':'');
+}
 function clearFilters(){ selOrgan.clear(); selTech.clear(); selDis.clear(); document.getElementById('q').value=''; renderChips(); applyFilters(); }
 function applyFilters(){
   const q=(document.getElementById('q').value||'').toLowerCase().trim();
@@ -416,9 +529,11 @@ function applyFilters(){
     if(selOrgan.size && !selOrgan.has(c.organ)) return false;
     if(selTech.size && !c.tech.some(t=>selTech.has(t))) return false;
     if(tokens.length){
-      const hay=[CARDS[c.id][lang].title, ORGANS[c.organ][lang], c.dis.map(d=>DISEASES[d][lang]).join(' '),
-        c.tech.map(t=>TECHS[t][lang]).join(' '), c.sub[lang], c.kw[lang]].join(' ').toLowerCase();
-      if(!tokens.every(t=>hay.includes(t))) return false;
+      const d=CARDS[c.id][lang];
+      const lit=['core','latest','ongoing','guides'].map(k=>(d[k]||[]).map(p=>p[0]+' '+(p[1]||'')+' '+(p[5]||'')+' '+(p[2]||'')).join(' ')).join(' ');
+      const hay=[d.title, ORGANS[c.organ][lang], c.dis.map(x=>DISEASES[x][lang]).join(' '),
+        c.tech.map(t=>TECHS[t][lang]).join(' '), c.sub[lang], c.kw[lang], lit].join(' ').toLowerCase();
+      if(!tokens.every(t=>zoekTermen(t).some(v=>hay.includes(v)))) return false;
     }
     return true;
   });
@@ -433,6 +548,25 @@ function applyFilters(){
   document.getElementById('noresults').style.display=matches.length?'none':'block';
   const n=matches.length;
   document.getElementById('resultcount').textContent = lang==='nl'?`${n} kaart${n===1?'':'en'}`:`${n} card${n===1?'':'s'}`;
+  document.getElementById('kaartaantal').textContent = lang==='nl'?`${n} van ${INDEX.length}`:`${n} of ${INDEX.length}`;
+  labelFacetKnop();
+  const zoekt=tokens.length>0;
+  document.getElementById('nieuwste').style.display = zoekt?'none':'block';
+  if(!zoekt) renderNieuwste();
+  const pb=document.getElementById('pubhits');
+  if(zoekt){
+    const treffers=pubIndex(true).filter(x=>{
+      const hay=(x.titel+' '+x.venue+' '+x.aut+' '+x.url).toLowerCase();
+      return tokens.every(t=>zoekTermen(t).some(v=>hay.includes(v)));
+    });
+    if(treffers.length){
+      const kop=lang==='nl'?'Publicaties die hierop passen':'Matching publications';
+      const extra=treffers.length>12?(lang==='nl'?` (eerste 12 van ${treffers.length})`:` (first 12 of ${treffers.length})`):'';
+      pb.innerHTML=`<div class="blokkop">${kop} <span class="evhint">${treffers.length}${extra}</span></div>`
+        + treffers.slice(0,12).map(pubRij).join('');
+      pb.style.display='block';
+    } else { pb.style.display='none'; pb.innerHTML=''; }
+  } else { pb.style.display='none'; pb.innerHTML=''; }
 }
 function render(){
   const s=SITE[lang];
@@ -535,6 +669,7 @@ function showHome(){document.getElementById('detail').style.display='none';docum
 (async function start(){
   try { await laadInhoud(); } catch(e){ toonLaadfout(e); return; }
   render();
+  if(window.innerWidth>860){ const q=document.getElementById('q'); if(q) q.focus(); }
 })();
 
 </script>
