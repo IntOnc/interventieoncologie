@@ -130,6 +130,7 @@
   .bw{font-size:10px;font-weight:800;border-radius:5px;padding:1px 5px;color:#fff;flex:none;
       font-variant-numeric:tabular-nums;cursor:help}
   .bw.hoog{background:#0b6b6b} .bw.mid{background:#b45309} .bw.laag{background:#94a3b8}
+  .bron{font-size:11px;color:var(--muted);margin-bottom:5px}
   .bwuitleg{font-size:11px;color:#46586b;background:#f6f9f9;border:1px solid var(--line);
       border-radius:6px;padding:5px 8px;margin-bottom:6px}
   .bwont{color:var(--muted);font-style:italic}
@@ -364,6 +365,7 @@
 // ============ INHOUD ============
 // Alle inhoud staat in content.json. Dit bestand bevat alleen opmaak en weergave.
 // De pipeline bewerkt uitsluitend content.json.
+let AFK={};
 let SITE={}, ORGANS={}, DISEASES={}, TECHS={}, INDEX=[], CARDS={}, POS={}, TECHPAGES=[];
 let editorialNL='', editorialEN='';
 
@@ -371,7 +373,7 @@ async function laadInhoud(){
   const res = await fetch('content.json?v=' + Date.now());
   if(!res.ok) throw new Error('content.json niet gevonden (' + res.status + ')');
   const d = await res.json();
-  SITE=d.site; ORGANS=d.organs; DISEASES=d.diseases; TECHS=d.techs;
+  SITE=d.site; AFK=d.afkortingen||{}; ORGANS=d.organs; DISEASES=d.diseases; TECHS=d.techs;
   INDEX=d.index; CARDS=d.cards; POS=d.pos; TECHPAGES=d.techpages;
   editorialNL=d.editorial.nl; editorialEN=d.editorial.en;
   for(const id of Object.keys(CARDS)){
@@ -484,6 +486,13 @@ function scoreUitleg(p){
   const ont=b.ontbreekt.length?` <span class="bwont">(${b.ontbreekt.join(', ')})</span>`:'';
   return `<div class="bwuitleg"><b>${kop} ${b.score}/100:</b> ${b.delen.join(' · ')}${ont}</div>`;
 }
+function kortBlad(naam){
+  const n=(naam||'').trim();
+  const m=n.match(/^(.*?)(\s*\([^)]*\))$/);
+  const basis=(m?m[1]:n).trim(), staart=m?m[2]:'';
+  const kort=AFK[basis];
+  return kort?(kort+staart):n;
+}
 function klapUit(el){
   const open=el.classList.toggle('open');
   el.setAttribute('aria-expanded',open?'true':'false');
@@ -506,8 +515,8 @@ function litRegel(p,kind){
   const aut=p[5]?`<span class="aut">${p[5]}</span>`:'';
   return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
     <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}
-      <span class="meta2">${aut}<span class="venue">${blad}</span>${scorePil(p)}<span class="dat">${datumLabel(p[4])}</span></span></div>
-    <div class="sum">${scoreUitleg(p)}${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a></div>
+      <span class="meta2">${aut}<span class="venue" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>${scorePil(p)}<span class="dat">${datumLabel(p[4])}</span></span></div>
+    <div class="sum"><div class="bron">${p[1]}</div>${scoreUitleg(p)}${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a></div>
   </div>`;
 }
 function litHTML(items,kind){
@@ -660,9 +669,9 @@ function pubRij(x){
       <span class="pkaart ${x.soort}">${x.kort}</span>
       <span class="ptitel">${x.titel}</span>
       ${x.aut?`<span class="paut">${x.aut}</span>`:''}
-      <span class="pmeta">${blad}</span>${scorePil(x.rij)}
+      <span class="pmeta" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>${scorePil(x.rij)}
     </div>
-    <div class="prsam">${scoreUitleg(x.rij)}${kortSam(x.sam)}
+    <div class="prsam"><div class="bron">${x.venue}</div>${scoreUitleg(x.rij)}${kortSam(x.sam)}
       <span class="prlinks">
         <a href="${x.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${naarPub}</a>
         <a href="#" onclick="event.stopPropagation();event.preventDefault();showCard('${x.id}')">${naarKaart}</a>

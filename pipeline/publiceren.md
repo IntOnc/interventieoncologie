@@ -53,6 +53,14 @@ Weet je een veld niet, laat het dan weg. Is de opzet niet vast te stellen, zet
 dan het hele zevende element op `null`; de site toont dan geen score in plaats
 van een verzonnen score.
 
+## Tijdschriftnamen
+
+Schrijf in het tijdschriftveld de naam voluit. De site kort hem zelf in op
+plaatsen met weinig ruimte, aan de hand van de lijst `afkortingen` in
+`content.json`. Staat een lang tijdschrift daar nog niet in, voeg het dan toe
+met de gangbare afkorting, bijvoorbeeld "Journal of Vascular and Interventional
+Radiology": "JVIR". Zet nooit de afkorting zelf in het tijdschriftveld.
+
 ## Controles voor het pushen
 
 - `content.json` is geldige JSON.
