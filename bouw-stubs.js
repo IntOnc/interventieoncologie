@@ -119,16 +119,64 @@ ${[''].concat(paden).map(p => `  <url><loc>${BASIS}${p}</loc><lastmod>${vandaag}
 fs.writeFileSync('sitemap.xml', sitemap);
 fs.writeFileSync('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${BASIS}sitemap.xml\n`);
 
-// Wijzigingenlijst uit de gitgeschiedenis, als reserve voor de live API
+// Wijzigingenlijst: per commit vergelijken wat er inhoudelijk veranderde
+function lees(sha) {
+  try { return JSON.parse(execSync(`git show ${sha}:content.json`, { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 })); }
+  catch (e) { return null; }
+}
+function sleutelVan(it) { return (it[2] || '') + '|' + (it[0] || ''); }
+function tekstVan(kaart, pos) {
+  return JSON.stringify([kaart.bl, kaart.crit, kaart.results, kaart.lim, kaart.alts, pos || null]);
+}
 try {
-  const ruw = execSync('git log -60 --date=short --pretty=format:%ad%x09%s', { encoding: 'utf8' });
-  const RUIS = /^(Add files via upload|Create |Delete |Update README|Merge branch|Merge pull request)/i;
-  const regels = ruw.split('\n').filter(Boolean).map(r => {
-    const [datum, ...rest] = r.split('\t');
-    return { datum, tekst: rest.join(' ') };
-  }).filter(x => !RUIS.test(x.tekst));
-  fs.writeFileSync('wijzigingen.json', JSON.stringify({ bijgewerkt: vandaag, regels }, null, 1));
-  console.log('wijzigingen.json:', regels.length, 'regels');
+  const log = execSync('git log --date=short --pretty=format:%H%x09%ad -- content.json', { encoding: 'utf8' })
+    .split('\n').filter(Boolean).map(r => { const [sha, datum] = r.split('\t'); return { sha, datum }; });
+  log.reverse();                       // oudste eerst
+  const regels = [];
+  let vorige = null;
+  for (const c of log) {
+    const nu = lees(c.sha);
+    if (!nu) continue;
+    if (vorige) {
+      const kort = id => {
+        const rij = (d.index || []).find(x => x.id === id);
+        return rij && rij.kort ? rij.kort.nl : ((d.cards[id] && d.cards[id].nl.title) || id);
+      };
+      for (const id of Object.keys(nu.cards)) {
+        if (!vorige.cards[id]) { regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: 'nieuw', wat: nu.cards[id].nl.title }); continue; }
+        for (const lijst of ['guides', 'core', 'latest', 'ongoing']) {
+          const oud = new Map((vorige.cards[id].nl[lijst] || []).map(x => [sleutelVan(x), x]));
+          const nieuwe = new Map((nu.cards[id].nl[lijst] || []).map(x => [sleutelVan(x), x]));
+          for (const [k, x] of nieuwe) if (!oud.has(k))
+            regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: lijst === 'guides' ? 'richtlijn' : 'toegevoegd', lijst, wat: x[0], bron: x[2] });
+          for (const [k, x] of oud) if (!nieuwe.has(k))
+            regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: 'verwijderd', lijst, wat: x[0] });
+        }
+        const a = tekstVan(vorige.cards[id].nl, (vorige.pos || {})[id] && vorige.pos[id].nl);
+        const b = tekstVan(nu.cards[id].nl, (nu.pos || {})[id] && nu.pos[id].nl);
+        if (a !== b) regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: 'tekst', wat: nu.cards[id].nl.title });
+      }
+    }
+    vorige = nu;
+  }
+  // een verwijderde en toegevoegde regel met dezelfde titel op dezelfde dag is een correctie
+  const perDag = {};
+  regels.forEach(r => { const k = r.datum + '|' + r.kaart + '|' + r.wat; (perDag[k] = perDag[k] || []).push(r); });
+  const samen = [];
+  const gedaan = new Set();
+  for (const r of regels) {
+    const k = r.datum + '|' + r.kaart + '|' + r.wat;
+    if (gedaan.has(k)) continue;
+    const groep = perDag[k];
+    if (groep.length > 1 && groep.some(x => x.type === 'toegevoegd') && groep.some(x => x.type === 'verwijderd')) {
+      samen.push(Object.assign({}, groep.find(x => x.type === 'toegevoegd'), { type: 'bijgewerkt' }));
+      gedaan.add(k);
+    } else { samen.push(r); }
+  }
+  regels.length = 0; regels.push(...samen);
+  regels.reverse();                    // nieuwste eerst
+  fs.writeFileSync('wijzigingen.json', JSON.stringify({ bijgewerkt: vandaag, regels: regels.slice(0, 500) }, null, 1));
+  console.log('wijzigingen.json:', regels.length, 'inhoudelijke wijzigingen');
 } catch (e) {
   console.log('wijzigingen.json overgeslagen:', e.message);
 }

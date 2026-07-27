@@ -1012,25 +1012,42 @@ function toonPagina(id,zonderRoute){
 }
 
 // ── Recent gewijzigde kaarten op de startpagina ──────────────────────
-function renderGewijzigd(){
+async function renderGewijzigd(){
   const box=document.getElementById('gewijzigd'); if(!box) return;
+  const kop=lang==='nl'?'Laatste wijzigingen aan de kaarten':'Latest changes to the cards';
+  const meer=lang==='nl'?'alle wijzigingen →':'all changes →';
+  if(!wijzigCache){
+    try{
+      const r=await fetch('wijzigingen.json?v='+Date.now());
+      if(!r.ok) throw new Error(r.status);
+      wijzigCache=(await r.json()).regels||[];
+    }catch(e){ wijzigCache=null; }
+  }
+  if(wijzigCache && wijzigCache.length){
+    const rijen=wijzigCache.slice(0,6);
+    box.innerHTML=`<div class="blokkop">${kop} <span class="evhint">${lang==='nl'?'per kaart, met datum':'per card, dated'}</span></div>`
+      + rijen.map(r=>{
+          const klik=CARDS[r.kaart]?`onclick="showCard('${r.kaart}')" role="link" tabindex="0"`:'';
+          return `<div class="pubrij" ${klik}><div class="prkop">
+            <span class="pdat">${Number(r.datum.slice(8))} ${MND[lang][Number(r.datum.slice(5,7))-1]}</span>
+            <span class="pkaart ${WTYPE[r.type]?WTYPE[r.type].kl:''}">${r.kort||r.kaart}</span>
+            <span class="ptitel">${r.wat}</span>
+            <span class="pmeta">${WTYPE[r.type]?WTYPE[r.type][lang]:r.type}</span></div></div>`;
+        }).join('')
+      + `<button class="meerlink" onclick="toonPagina('wijzigingen')">${meer}</button>`;
+    return;
+  }
+  // terugval: afleiden uit de jongste verwijzing per kaart
   const rijen=INDEX.map(c=>{
     const d=CARDS[c.id][lang];
     let beste=null;
-    ['guides','core','latest'].forEach(k=>(d[k]||[]).forEach(p=>{
-      if(!beste || p[4]>beste[4]) beste=p;
-    }));
+    ['guides','core','latest'].forEach(k=>(d[k]||[]).forEach(p=>{ if(!beste || p[4]>beste[4]) beste=p; }));
     return beste?{id:c.id, kort:(c.kort?c.kort[lang]:d.title), titel:d.title, sk:Number(beste[4])||0, wat:beste[0]}:null;
   }).filter(Boolean).sort((a,b)=>b.sk-a.sk).slice(0,6);
-  const kop=lang==='nl'?'Kaarten met de nieuwste aanvulling':'Cards updated most recently';
-  const hint=lang==='nl'?'op basis van de jongste verwijzing op de kaart':'based on the newest reference on the card';
-  box.innerHTML=`<div class="blokkop">${kop} <span class="evhint">${hint}</span></div>`
-    + rijen.map(r=>`<div class="pubrij" role="link" tabindex="0" onclick="showCard('${r.id}')"
-        onkeydown="if(event.key==='Enter')showCard('${r.id}')">
-        <div class="prkop"><span class="pdat">${datumLabel(r.sk)}</span>
-        <span class="pkaart core">${r.kort}</span>
-        <span class="ptitel">${r.titel}</span>
-        <span class="pmeta">${r.wat.slice(0,70)}</span></div></div>`).join('');
+  box.innerHTML=`<div class="blokkop">${kop}</div>`+rijen.map(r=>
+    `<div class="pubrij" role="link" tabindex="0" onclick="showCard('${r.id}')"><div class="prkop">
+      <span class="pdat">${datumLabel(r.sk)}</span><span class="pkaart core">${r.kort}</span>
+      <span class="ptitel">${r.titel}</span><span class="pmeta">${r.wat.slice(0,70)}</span></div></div>`).join('');
 }
 
 // ── Literatuurpagina met filters ─────────────────────────────────────
@@ -1161,42 +1178,57 @@ window.addEventListener('hashchange',leesRoute);
 // ── Wat is er veranderd ──────────────────────────────────────────────
 let wijzigCache=null;
 function showWijzig(zonderRoute){ toonPagina('wijzigingen',zonderRoute); }
+const WTYPE={
+  toegevoegd:{nl:'toegevoegd',en:'added',kl:'core'},
+  bijgewerkt:{nl:'gecorrigeerd',en:'corrected',kl:'latest'},
+  verwijderd:{nl:'verwijderd',en:'removed',kl:''},
+  richtlijn:{nl:'richtlijn',en:'guideline',kl:'guide'},
+  tekst:{nl:'kaarttekst',en:'card text',kl:'ongoing'},
+  nieuw:{nl:'nieuwe kaart',en:'new card',kl:'core'}};
+let wFilter='alles';
+function zetWFilter(v){ wFilter=v; renderWijzig(); }
 async function renderWijzig(){
   document.getElementById('w-titel').textContent=lang==='nl'?'Wat is er veranderd':'What changed';
   document.getElementById('w-sub').textContent=lang==='nl'
-    ? 'Elke wijziging aan de inhoud, met datum, rechtstreeks uit het archief van de site'
-    : 'Every change to the content, dated, straight from the site archive';
+    ? 'Elke inhoudelijke wijziging aan de kaarten, afgeleid uit het archief van de site'
+    : 'Every content change to the cards, derived from the site archive';
   const lijst=document.getElementById('w-lijst');
   if(!wijzigCache){
     lijst.innerHTML=`<p class="refs">${lang==='nl'?'Bezig met ophalen…':'Loading…'}</p>`;
     try{
-      const r=await fetch('https://api.github.com/repos/IntOnc/interventieoncologie/commits?per_page=40');
+      const r=await fetch('wijzigingen.json?v='+Date.now());
       if(!r.ok) throw new Error(r.status);
-      wijzigCache=(await r.json()).map(c=>({
-        datum:(c.commit.author.date||'').slice(0,10),
-        tekst:(c.commit.message||'').split('\n')[0] }));
+      wijzigCache=(await r.json()).regels||[];
     }catch(e){
-      try{
-        const r2=await fetch('wijzigingen.json?v='+Date.now());
-        if(!r2.ok) throw new Error(r2.status);
-        wijzigCache=(await r2.json()).regels;
-      }catch(e2){
       lijst.innerHTML=`<p class="refs">${lang==='nl'
         ?'De lijst met wijzigingen is nu niet op te halen. Probeer het later nog eens.'
         :'The change list cannot be retrieved right now. Please try again later.'}</p>`;
-        return;
-      }
+      return;
     }
   }
-  const RUIS=/^(Add files via upload|Create |Delete |Update README|Merge branch|Merge pull request)/i;
+  const tel={alles:wijzigCache.length};
+  Object.keys(WTYPE).forEach(t=>tel[t]=wijzigCache.filter(r=>r.type===t).length);
+  const knop=(v,t)=>tel[v]?`<button class="litchip${wFilter===v?' on':''}" onclick="zetWFilter('${v}')">${t} <span class="n">${tel[v]}</span></button>`:'';
+  const balk=`<div class="litbar"><span class="litchips">`+knop('alles',lang==='nl'?'Alles':'All')
+    +['toegevoegd','richtlijn','tekst','bijgewerkt','verwijderd'].map(t=>knop(t,WTYPE[t][lang])).join('')
+    +`</span></div>`;
+  const zicht=wFilter==='alles'?wijzigCache:wijzigCache.filter(r=>r.type===wFilter);
   const perMaand={};
-  wijzigCache.filter(c=>!RUIS.test(c.tekst)).forEach(c=>{ const k=c.datum.slice(0,7); (perMaand[k]=perMaand[k]||[]).push(c); });
-  const maandnaam=k=>{const d=k.split('-'); return MND[lang][Number(d[1])-1]+' '+d[0];};
-  lijst.innerHTML=Object.keys(perMaand).sort().reverse().map(k=>
-    `<h4>${maandnaam(k)}</h4>`+perMaand[k].map(c=>
-      `<div class="lit" style="cursor:default"><div class="lh">
-        <span class="badge" style="background:var(--guide)">${Number(c.datum.slice(8))} ${MND[lang][Number(c.datum.slice(5,7))-1]}</span>
-        <span class="ttl">${c.tekst}</span></div></div>`).join('')).join('');
+  zicht.forEach(r=>{ const k=(r.datum||'').slice(0,7); (perMaand[k]=perMaand[k]||[]).push(r); });
+  const maandnaam=k=>{const t=k.split('-'); return MND[lang][Number(t[1])-1]+' '+t[0];};
+  lijst.innerHTML=balk+(Object.keys(perMaand).sort().reverse().map(k=>
+    `<div class="blokkop">${maandnaam(k)} <span class="evhint">${perMaand[k].length}</span></div>`
+    +perMaand[k].map(r=>{
+      const kaartBestaat=!!CARDS[r.kaart];
+      const klik=kaartBestaat?`onclick="showCard('${r.kaart}')" role="link" tabindex="0"`:'';
+      const bron=r.bron?` <a href="${r.bron}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗</a>`:'';
+      return `<div class="pubrij" ${klik}><div class="prkop">
+        <span class="pdat">${Number(r.datum.slice(8))} ${MND[lang][Number(r.datum.slice(5,7))-1]}</span>
+        <span class="pkaart ${WTYPE[r.type].kl}">${r.kort||r.kaart}</span>
+        <span class="ptitel">${r.wat}${bron}</span>
+        <span class="pmeta">${WTYPE[r.type][lang]}</span></div></div>`;
+    }).join('')).join('')
+    || `<p class="noresults">${lang==='nl'?'Niets gevonden.':'Nothing found.'}</p>`);
 }
 
 // ── Sneltoetsen ──────────────────────────────────────────────────────

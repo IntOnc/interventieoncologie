@@ -3,99 +3,873 @@
  "regels": [
   {
    "datum": "2026-07-27",
-   "tekst": "Zeventien tijdschriftvelden gecorrigeerd die een studietype bevatten"
+   "kaart": "wervel-embolisatie",
+   "kort": "Embolisatie wervel",
+   "type": "bijgewerkt",
+   "lijst": "core",
+   "wat": "The role of preoperative transarterial embolization in spinal tumors: a large single-center experience",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/23218826/"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Tijdschriftnamen afgekort waar de ruimte krap is, voluit waar het kan"
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "tekst",
+   "wat": "Thermale ablatie bij hepatocellulair carcinoom"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Korte kaartnamen op de publicatieregels"
+   "kaart": "wervel-embolisatie",
+   "kort": "Embolisatie wervel",
+   "type": "verwijderd",
+   "lijst": "guides",
+   "wat": "Effectiveness of Preoperative Embolization in Patients with Spinal Metastases: A Systematic Review and Meta-Analysis"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Kopbalk teruggebracht tot een woordmerk InterventieOncologie.nl"
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "verwijderd",
+   "lijst": "latest",
+   "wat": "Combination radiofrequency ablation and vertebral cement augmentation for spinal metastatic tumors: A systematic review and meta-analysis of safety and treatment outcomes"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "LinkedIn-link van de auteur in de kopbalk, zoals op SINScore.nl"
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "verwijderd",
+   "lijst": "latest",
+   "wat": "Comparison of Transarterial Bland and Chemoembolization for Neuroendocrine Tumours: A Systematic Review and Meta-Analysis"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Bewijskracht per publicatie als score van 0 tot 100"
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "verwijderd",
+   "lijst": "latest",
+   "wat": "Randomized Embolization Trial for NeuroEndocrine Tumors (RETNET)"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Nieuwe kop en ondertitel op de startpagina"
+   "kaart": "tumorbloeding",
+   "kort": "Tumorbloeding",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Transarterial Embolization for the Management of Emergent Hemoptysis in Patients With Primary and Metastatic Lung Tumors",
+   "bron": "https://doi.org/10.1016/j.cllc.2024.11.008"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Eigen domein in gebruik genomen: www.interventieoncologie.nl"
+   "kaart": "thyroid-ablatie",
+   "kort": "Ablatie schildklier",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Microwave ablation versus surgical resection for unifocal T1aN0M0 papillary thyroid carcinoma: a 10-year follow-up study",
+   "bron": "https://link.springer.com/article/10.1007/s00330-026-12724-z"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Rondes mogen nu ook kaartteksten voorstellen, en BCLC-verwijzing bijgewerkt"
+   "kaart": "ire-pancreas",
+   "kort": "IRE pancreas",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Outcomes of Irreversible Electroporation for Treatment of Refractory Locally Advanced Pancreatic Cancer",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/42425450/"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Navigatie gestroomlijnd: adressen per kaart, printversie, kruisverwijzingen en wijzigingenpagina"
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Outcomes following microwave ablation of 669 primary and metastatic lung malignancies",
+   "bron": "https://link.springer.com/article/10.1007/s00330-025-11973-8"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Publicatieregels op de startpagina klappen open met samenvatting en directe link"
+   "kaart": "cca-arterieel",
+   "kort": "TARE/TACE CCA",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Hepatic artery infusion pump chemotherapy for unresectable intrahepatic cholangiocarcinoma: Pooled individual patient-level analysis of four clinical trials",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/42331230/"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Vijf dubbele literatuurverwijzingen verwijderd en ontdubbelregel vastgelegd"
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Ablative Radioembolization Dosing Thresholds for Glass Microspheres Predictive of Complete Imaging Response and Survival in Patients with Hepatocellular Carcinomas Larger than 4 cm: a Multi-institution Retrospective Analysis",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/42468839/"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Samengevoegd met de publicaties van de onderhoudsrondes"
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Yttrium-90 radioembolization is associated with a lower risk of liver transplant waitlist dropout than chemoembolization in hepatocellular carcinoma",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/41580092/"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Nieuwe startpagina: zoeken voorop, nieuwste publicaties over alle kaarten"
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "verwijderd",
+   "lijst": "guides",
+   "wat": "BCLC strategy for prognosis prediction and treatment recommendation: The 2022 update"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Onderhoudsronde 1: BCLC 2026-update op HCC-kaarten en zes geverifieerde literatuurvoorstellen"
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "richtlijn",
+   "lijst": "guides",
+   "wat": "BCLC strategy for prognosis prediction and treatment recommendations: The 2026 update",
+   "bron": "https://www.journal-of-hepatology.eu/article/S0168-8278(25)02571-1/fulltext"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Ronde 3: 4 nieuwe latest-items (crc-ablatie, long-ablatie, tumorbloeding, thyroid-ablatie); bijgewerkt 2026-07-27"
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Transarterial Embolization Alone Versus Drug-Eluting Microspheres Chemoembolization for Hepatocellular Carcinoma (RAD-18-TAcE): A Multicenter Randomized Clinical Trial",
+   "bron": "https://doi.org/10.1007/s00270-026-04487-3"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "rcc-ablatie: gepoolde 5-jaars FASTRACK SABR-analyse toegevoegd aan latest"
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "verwijderd",
+   "lijst": "guides",
+   "wat": "BCLC strategy for prognosis prediction and treatment recommendation: The 2022 update"
   },
   {
    "datum": "2026-07-27",
-   "tekst": "Literatuur in een gecombineerd scherm met filters, compacter en met eerste auteur"
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "richtlijn",
+   "lijst": "guides",
+   "wat": "BCLC strategy for prognosis prediction and treatment recommendations: The 2026 update",
+   "bron": "https://www.journal-of-hepatology.eu/article/S0168-8278(25)02571-1/fulltext"
+  },
+  {
+   "datum": "2026-07-27",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "verwijderd",
+   "lijst": "guides",
+   "wat": "BCLC strategy for prognosis prediction and treatment recommendation: The 2022 update"
+  },
+  {
+   "datum": "2026-07-27",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "richtlijn",
+   "lijst": "guides",
+   "wat": "BCLC strategy for prognosis prediction and treatment recommendations: The 2026 update",
+   "bron": "https://www.journal-of-hepatology.eu/article/S0168-8278(25)02571-1/fulltext"
+  },
+  {
+   "datum": "2026-07-27",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "bijgewerkt",
+   "lijst": "latest",
+   "wat": "Multicentre real-world outcomes of Irreversible Electroporation for complex small kidney cancers (REWIRED)",
+   "bron": "https://doi.org/10.1007/s44343-026-00049-z"
+  },
+  {
+   "datum": "2026-07-27",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Ultra-hypofractionated stereotactic ablative body radiotherapy for primary renal cell carcinoma: 5-year outcomes from a pooled analysis of the FASTRACK trials",
+   "bron": "https://doi.org/10.1016/S1470-2045(26)00170-1"
+  },
+  {
+   "datum": "2026-07-27",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Sequencing Ablation and Systemic Therapy in Colorectal Liver Oligometastases: An Upfront versus Delayed Approach Nationwide Analysis",
+   "bron": "https://pubs.rsna.org/doi/10.1148/radiol.251003"
   },
   {
    "datum": "2026-07-26",
-   "tekst": "Werkwijze voor publiceren na akkoord toegevoegd"
+   "kaart": "biopsie",
+   "kort": "Biopsie",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Tract cauterisation by microwave ablation following percutaneous biopsy of intraabdominal tumour in children",
+   "bron": "https://link.springer.com/article/10.1007/s44343-025-00015-1"
   },
   {
    "datum": "2026-07-26",
-   "tekst": "Samengevoegd met de handmatig geuploade versie op GitHub"
+   "kaart": "bc-lever",
+   "kort": "Mamma levermeta",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Nab-paclitaxel in conventional trans arterial chemoembolization for breast cancer liver metastasis: it is time to add new drugs to TACE",
+   "bron": "https://link.springer.com/article/10.1007/s44343-025-00006-2"
   },
   {
    "datum": "2026-07-26",
-   "tekst": "Repo opgeruimd en pipelinebestanden bijgewerkt"
+   "kaart": "bc-lever",
+   "kort": "Mamma levermeta",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Transarterial radioembolization for liver metastases of non-colorectal origin: safety and effectiveness results from the prospective multicenter CIRSE registry for SIR-spheres therapy (CIRT)",
+   "bron": "https://link.springer.com/article/10.1007/s44343-026-00039-1"
   },
   {
    "datum": "2026-07-26",
-   "tekst": "CVIR Oncology volledig doorgelicht, 11 artikelen toegevoegd"
+   "kaart": "bot-ablatie",
+   "kort": "Ablatie bot",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Too close for comfort? Assessing the impact of thermoprotective techniques in image-guided ablation of musculoskeletal tumors",
+   "bron": "https://link.springer.com/article/10.1007/s44343-025-00014-2"
   },
   {
    "datum": "2026-07-26",
-   "tekst": "Lopende studies per kaart uit trialregisters toegevoegd"
+   "kaart": "cca-biliair",
+   "kort": "Galwegdrainage",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Percutaneous transhepatic cholangioscopy for complex biliary lesions: multicenter real-world diagnostic performance and safety study",
+   "bron": "https://link.springer.com/article/10.1007/s44343-026-00045-3"
   },
   {
    "datum": "2026-07-26",
-   "tekst": "Site opgesplitst in schil (index.html) en inhoud (content.json)"
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Hepatocellular carcinoma patients treated with TARE monotherapy or combination therapy with curative intent: a retrospective, exploratory analysis of two European prospective studies",
+   "bron": "https://link.springer.com/article/10.1007/s44343-026-00035-5"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "High-concentration doxorubicin in cTACE: a retrospective cohort study of efficacy and safety",
+   "bron": "https://link.springer.com/article/10.1007/s44343-025-00022-2"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Irreversible electroporation as a definitive treatment for early-stage HCC unsuitable for thermal ablation: insights from a tertiary liver centre",
+   "bron": "https://link.springer.com/article/10.1007/s44343-025-00018-y"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "MulticentRe rEal World outcomes of IrReversible Electroporation for complex small kiDney cancers (REWIRED)",
+   "bron": "https://link.springer.com/article/10.1007/s44343-026-00049-z"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Safety and oncologic efficacy of percutaneous cryoablation of papillary renal cell carcinoma: a 5-year single-center follow-up study",
+   "bron": "https://link.springer.com/article/10.1007/s44343-025-00003-5"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Image guided energy-based ablation of T1 renal cell cancer: a ten-year single centre experience",
+   "bron": "https://link.springer.com/article/10.1007/s44343-025-00001-7"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "gastrostomie",
+   "kort": "Gastrostomie",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "DOULEURGPR: Pain Assessment Following Placement of a Percutaneous Radiologic Gastrostomy and Predictive Factors",
+   "bron": "https://clinicaltrials.gov/study/NCT05618392"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "biopsie",
+   "kort": "Biopsie",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "ACCELERATE: Accelerating Lung Cancer Diagnosis Through Liquid Biopsy",
+   "bron": "https://clinicaltrials.gov/study/NCT04863924"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "biopsie",
+   "kort": "Biopsie",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "INNOVA-LUNG: Impact of Liquid Biopsy on the Therapeutic Pathway for Advanced Lung Adenocarcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT07649629"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "bc-lever",
+   "kort": "Mamma levermeta",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "BOOMBOX: Real-world Evaluation of the HistoSonics Edison System for Treatment of Liver Tumors Across Multidisciplinary Users",
+   "bron": "https://clinicaltrials.gov/study/NCT06486454"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "leverperfusie",
+   "kort": "Leverperfusie",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Sequential Treatment With Melphalan Percutaneous Hepatic Perfusion Followed by Tebentafusp in Metastatic Uveal Melanoma",
+   "bron": "https://clinicaltrials.gov/study/NCT07276386"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "leverperfusie",
+   "kort": "Leverperfusie",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "CHOPIN: Percutaneous Hepatic Perfusion Combined With Ipilimumab and Nivolumab in Metastatic Uveal Melanoma",
+   "bron": "https://clinicaltrials.gov/study/NCT04283890"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "conduit-enkelj",
+   "kort": "Enkel-J Bricker",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Geen geregistreerde lopende studie gevonden",
+   "bron": "https://clinicaltrials.gov/"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "tumorbloeding",
+   "kort": "Tumorbloeding",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "HALT: Hydrogel Embolic System Study of Embolization in Peripheral Arterial Bleeds",
+   "bron": "https://clinicaltrials.gov/study/NCT05364502"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "neurolyse",
+   "kort": "Coeliacusneurolyse",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "First-Line Systemic Therapy Combined With Celiac Plexus Blockade for Advanced Biliopancreatic Cancer With Pain",
+   "bron": "https://clinicaltrials.gov/study/NCT07326137"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "neurolyse",
+   "kort": "Coeliacusneurolyse",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "EUS-NB: Celiac Plexus Neurolysis With and Without Bupivacaine: A Randomized Controlled Trial",
+   "bron": "https://clinicaltrials.gov/study/NCT04951804"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "neurolyse",
+   "kort": "Coeliacusneurolyse",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Upfront Celiac Ganglion Neurolysis Versus a Conventional Step-up Approach for Patients With Painful, Inoperable Pancreatic Cancer",
+   "bron": "https://clinicaltrials.gov/study/NCT06160323"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "vcs-stent",
+   "kort": "VCS-stent",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Geen geregistreerde lopende studie gevonden",
+   "bron": "https://clinicaltrials.gov/"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "urineweg-drainage",
+   "kort": "Urinewegdrainage",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "TSTENT: Tandem Polyurethane Stents Compared to a Single Silicone Stent for Malignant Ureteral Obstruction",
+   "bron": "https://clinicaltrials.gov/study/NCT05992363"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "effusie-drainage",
+   "kort": "Pleura en ascites",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Alteplase Through an Indwelling Pleural Catheter for the Management of Symptomatic Septated Malignant Pleural Effusion",
+   "bron": "https://clinicaltrials.gov/study/NCT06184321"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "effusie-drainage",
+   "kort": "Pleura en ascites",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Indwelling Pleural Catheters With or Without Doxycycline in Treating Patients With Malignant Pleural Effusions",
+   "bron": "https://clinicaltrials.gov/study/NCT03465774"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "thyroid-ablatie",
+   "kort": "Ablatie schildklier",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Factors Influencing Recurrence After Thermal Ablation of Papillary Thyroid Carcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT05962892"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "thyroid-ablatie",
+   "kort": "Ablatie schildklier",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Laser Ablation of Papillary Thyroid Microcarcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT04623801"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "bot-ablatie",
+   "kort": "Ablatie bot",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "BOREALIS: Bone Metastases Registry for Patients Undergoing Cryoablation With Curative Purpose",
+   "bron": "https://clinicaltrials.gov/study/NCT06480955"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "bot-ablatie",
+   "kort": "Ablatie bot",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "CROME: Cryoablation Combined With Stereotactic Body Radiation Therapy for the Treatment of Painful Bone Metastases",
+   "bron": "https://clinicaltrials.gov/study/NCT04693377"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "crc-ire",
+   "kort": "IRE CRLM",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "COLDFIRE-III: Efficacy of Irreversible Electroporation and Stereotactic Body Radiotherapy for Perivascular and Peribiliary Colorectal Liver Metastases",
+   "bron": "https://clinicaltrials.gov/study/NCT06185556"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "crc-tare",
+   "kort": "TARE CRLM",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Preoperative Y-90 Radioembolization for Tumor Control and Future Liver Remnant Hypertrophy in Patients With Colorectal Liver Metastases",
+   "bron": "https://clinicaltrials.gov/study/NCT05195710"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "ect-wervel",
+   "kort": "ECT wervel",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Geen geregistreerde lopende studie gevonden",
+   "bron": "https://clinicaltrials.gov/"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "ect",
+   "kort": "ECT cutaan",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Electrochemotherapy Changes in Tumor Microenvironment of Cutaneous and Subcutaneous Metastases in Melanoma Patients",
+   "bron": "https://clinicaltrials.gov/study/NCT06388252"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "ect",
+   "kort": "ECT cutaan",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Electrochemotherapy-Induced Changes in Tumor Microenvironment in Cutaneous Melanoma",
+   "bron": "https://clinicaltrials.gov/study/NCT07404605"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "ect",
+   "kort": "ECT cutaan",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "BLESS: The Effect of Reduced Bleomycin in Electrochemotherapy Treatment",
+   "bron": "https://clinicaltrials.gov/study/NCT06647342"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "ire-pancreas",
+   "kort": "IRE pancreas",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Chemotherapy and Irreversible Electroporation in the Treatment of Advanced Pancreatic Adenocarcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT03484299"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "ire-pancreas",
+   "kort": "IRE pancreas",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Intra-tumoral Mitazalimab (CD40 Antibody) With Irreversible Electroporation in Locally Advanced Pancreatic Cancer",
+   "bron": "https://clinicaltrials.gov/study/NCT06205849"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "ire-pancreas",
+   "kort": "IRE pancreas",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "DIRECT: A Registry Study of NanoKnife Irreversible Electroporation for Stage 3 Pancreatic Cancer",
+   "bron": "https://clinicaltrials.gov/study/NCT03899649"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "One-stop Diagnosis and Treatment for Suspected Lung Cancer: Robotic Bronchoscopy, Biopsy and Ablation in a Single Session",
+   "bron": "https://clinicaltrials.gov/study/NCT07521618"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "AURORA: Performance, Safety and Clinical Benefit of a Transbronchial Microwave Ablation System in Patients Undergoing Lung Ablation",
+   "bron": "https://clinicaltrials.gov/study/NCT07291973"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "adrenal-ablatie",
+   "kort": "Ablatie bijnier",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "WAVE: Randomised Trial Comparing Thermal Ablation With Adrenalectomy in Unilateral Asymmetric Primary Aldosteronism",
+   "bron": "https://clinicaltrials.gov/study/NCT05405101"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "wervel-embolisatie",
+   "kort": "Embolisatie wervel",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Geen geregistreerde lopende studie gevonden",
+   "bron": "https://clinicaltrials.gov/"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "wervel-ablatie",
+   "kort": "Ablatie wervel",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Randomized Phase II Study of Radiation Therapy Alone Versus Radiation Therapy Plus Radiofrequency Ablation With Vertebral Augmentation for Localized Spine Metastasis",
+   "bron": "https://clinicaltrials.gov/study/NCT04375891"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "wervel-ablatie",
+   "kort": "Ablatie wervel",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Radiofrequency Ablation With Bone Augmentation Plus Radiotherapy Versus Radiotherapy Alone for Spinal Metastases",
+   "bron": "https://clinicaltrials.gov/study/NCT07090122"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "bc-cryo",
+   "kort": "Cryo mamma",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "LOGIC: Grouping Immune-modulation With Cryoablation for Breast Cancers",
+   "bron": "https://clinicaltrials.gov/study/NCT05806385"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "bc-cryo",
+   "kort": "Cryo mamma",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "COOL-IT: Cryoablation vs Lumpectomy in T1 Breast Cancers: A Randomized Controlled Trial With Safety Lead-in",
+   "bron": "https://clinicaltrials.gov/study/NCT05505643"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "cca-biliair",
+   "kort": "Galwegdrainage",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "TESLA: Primary Percutaneous Stenting Above the Ampulla Versus Endoscopic Drainage for Unresectable Malignant Hilar Biliary Obstruction",
+   "bron": "https://clinicaltrials.gov/study/NCT06671418"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "cca-arterieel",
+   "kort": "TARE/TACE CCA",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "PDS01ADC in Combination With Hepatic Artery Infusion Pump and Systemic Therapy for Metastatic Colorectal Cancer, Intrahepatic Cholangiocarcinoma or Metastatic Adrenocortical Carcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT05286814"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "cca-arterieel",
+   "kort": "TARE/TACE CCA",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Induction Gemcitabine, Cisplatin and Durvalumab Followed by Gemcitabine, Cisplatin and Y-90 Radioembolization for Locally Advanced Unresectable Intrahepatic Cholangiocarcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT05422690"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "cca-arterieel",
+   "kort": "TARE/TACE CCA",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Y-90 SIRT in Combination With Durvalumab and Gemcitabine/Cisplatin in Locally Advanced, Unresectable or Metastatic Intrahepatic Cholangiocarcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT05655949"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "cca-ablatie",
+   "kort": "Ablatie CCA",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "OPTIMAL: Open Versus Laparoscopic Ablation of Liver Malignancies",
+   "bron": "https://clinicaltrials.gov/study/NCT06304766"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "pve",
+   "kort": "PVE",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "LEATUM: Liver Embolization Approaches for Tumor Management, Retrospective and Prospective Analysis",
+   "bron": "https://clinicaltrials.gov/study/NCT05714124"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "pve",
+   "kort": "PVE",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "DRAGON-PLC: Combined Portal and Hepatic Vein Embolization Versus Portal Vein Embolization Alone in Primary Liver Cancers",
+   "bron": "https://clinicaltrials.gov/study/NCT06914648"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "pve",
+   "kort": "PVE",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "DRAGON 2: Combined Portal and Hepatic Vein Embolization Versus Portal Vein Embolization Alone in Patients With Colorectal Liver Metastases and a Small Future Liver Remnant",
+   "bron": "https://clinicaltrials.gov/study/NCT05428735"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "RESCUE: Radiation Major Hepatectomy to Selectively Treat Large Unifocal Hepatocellular Carcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT06178198"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "ROWAN: TheraSphere Followed by Durvalumab With Tremelimumab for Hepatocellular Carcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT05063565"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "DOORwaY90: Selective Internal Radiation Therapy Using Y-90 Resin Microspheres on Duration of Response and Objective Response Rate in Unresectable Hepatocellular Carcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT04736121"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Phase II/III Trial Comparing Transarterial Tirapazamine Embolization With Conventional TACE for Intermediate-Stage Liver Cancer",
+   "bron": "https://clinicaltrials.gov/study/NCT06844357"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "EMERALD-3: Durvalumab and Tremelimumab With or Without Lenvatinib in Combination With TACE in Patients With Locoregional HCC",
+   "bron": "https://clinicaltrials.gov/study/NCT05301842"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "ABC-HCC: Atezolizumab Plus Bevacizumab Versus Transarterial Chemoembolization in Intermediate-Stage Hepatocellular Carcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT04803994"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Clinical Effectiveness of Microwave Ablation Using a 150 W Generator for Hepatic Malignancies",
+   "bron": "https://clinicaltrials.gov/study/NCT06426992"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "AB-LATE02: Neoadjuvant Atezolizumab and Adjuvant Atezolizumab plus Bevacizumab in Combination With Percutaneous Radiofrequency Ablation of Small HCC",
+   "bron": "https://clinicaltrials.gov/study/NCT04727307"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Stereotactic Body Radiotherapy Versus Radiofrequency Ablation for Unresectable, Small (3 cm or Less) Hepatocellular Carcinoma",
+   "bron": "https://clinicaltrials.gov/study/NCT05433701"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "desmoid-cryo",
+   "kort": "Cryo desmoïd",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "CARDT: Cryoablation for Advanced and Refractory Desmoid Tumors",
+   "bron": "https://clinicaltrials.gov/study/NCT06113094"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "desmoid-cryo",
+   "kort": "Cryo desmoïd",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Phase II Study of Cryoablation and Nirogacestat for Desmoid Tumor",
+   "bron": "https://clinicaltrials.gov/study/NCT05949099"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "HOPE4KIDNEY: The HistoSonics Edison System for Treatment of Primary Solid Renal Tumors Using Histotripsy",
+   "bron": "https://clinicaltrials.gov/study/NCT05820087"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "A Phase II Randomized Trial of Combined Radiotherapy and Vertebroplasty to Improve the Quality of Life of Patients With Painful Metastatic Localized Spinal Lesions",
+   "bron": "https://clinicaltrials.gov/study/NCT04242589"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "verwijderd",
+   "lijst": "ongoing",
+   "wat": "RETNET: aanvullende analyses (totale overleving en patient-reported outcomes)"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Pembrolizumab and Peptide Receptor Radionuclide Therapy Using 177Lu-DOTATATE and Arterial Embolization in Neuroendocrine Neoplasm With Liver Metastases",
+   "bron": "https://clinicaltrials.gov/study/NCT03457948"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "Capecitabine-Temozolomide With Yttrium-90 Radioembolization in Unresectable Metastatic Grade 2/3 Neuroendocrine Tumors",
+   "bron": "https://clinicaltrials.gov/study/NCT04339036"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "verwijderd",
+   "lijst": "ongoing",
+   "wat": "Efficacy of Irreversible Electroporation and Stereotactic Body Radiotherapy for Perivascular and Peribiliary Colorectal Liver Metastases (COLDFIRE-III)"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "verwijderd",
+   "lijst": "ongoing",
+   "wat": "Unresectable Intermediate-Size (3–5 cm) Colorectal Liver Metastases: Stereotactic Ablative Body Radiotherapy Versus Microwave Ablation (COLLISION-XL): Protocol of a Phase II/III Multicentre Randomized Controlled Trial"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "COLLISION-XL: Unresectable Intermediate-Size (3-5 cm) Colorectal Liver Metastases: Stereotactic Ablative Body Radiotherapy Versus Microwave Ablation",
+   "bron": "https://clinicaltrials.gov/study/NCT04081168"
+  },
+  {
+   "datum": "2026-07-26",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "ongoing",
+   "wat": "NEW-COMET: Ablation vs Resection of Colorectal Cancer Liver Metastases",
+   "bron": "https://clinicaltrials.gov/study/NCT05129787"
   }
  ]
 }
