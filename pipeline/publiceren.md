@@ -34,8 +34,10 @@ controleren of een wijziging live staat.
 ## Controles voor het pushen
 
 - `content.json` is geldige JSON.
-- Elk literatuuritem is een rij van precies vijf elementen:
-  titel, "tijdschrift · jaar", url, samenvatting, sorteersleutel JJJJMM.
+- Elk literatuuritem is een rij van vijf of zes elementen:
+  titel, "tijdschrift · jaar", url, samenvatting, sorteersleutel JJJJMM, en
+  optioneel de eerste auteur als "Achternaam et al.". Vul dat zesde element
+  alleen als je de auteur op het record hebt gelezen, anders laat je het weg.
 - De lijsten `guides`, `core`, `latest` en `ongoing` zijn per kaart even lang in
   `nl` en in `en`, en de items staan in dezelfde volgorde.
 - Er staat nergens een em-dash of en-dash in nieuwe tekst.

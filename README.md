@@ -25,9 +25,18 @@ uitsluitend `content.json` en komt nooit aan `index.html`.
     techpages   de techniekoverzichtspagina's
     editorial   de vaste voettekst over auteurschap en herziening
 
-Een literatuurverwijzing is steeds een rij van vijf:
+Een literatuurverwijzing is een rij van vijf, met een optioneel zesde element:
 
-    [titel, "tijdschrift · jaar", url, samenvatting, sorteersleutel JJJJMM]
+    [titel, "tijdschrift · jaar", url, samenvatting, sorteersleutel JJJJMM, auteur]
+
+Het zesde element is de eerste auteur zoals die getoond wordt, bijvoorbeeld
+"Meijerink et al." of, bij een enkele auteur, alleen de achternaam. Het mag
+ontbreken of leeg zijn; de weergave laat het veld dan gewoon weg. Vul het
+alleen met een naam die je op het registratie- of uitgeversrecord hebt gelezen.
+
+De lijsten `core`, `latest` en `ongoing` worden op de kaart als een lijst
+getoond, gesorteerd op sorteersleutel met de nieuwste bovenaan, met knoppen om
+op soort te filteren. De richtlijnen staan daarboven in een eigen blok.
 
 De samenvatting gebruikt `<b>Opzet:</b>`, `<b>Resultaten:</b>` en
 `<b>Conclusie:</b>` in het Nederlands, en `Design`, `Results` en `Conclusion`

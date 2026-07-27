@@ -91,22 +91,42 @@
   ul.crit{margin:0;padding-left:18px}
   ul.crit li{margin:5px 0;font-size:13.5px;color:#38495a}
   .altsub{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700;margin:13px 0 7px}
-  .lit{border:1px solid var(--line);border-left:3px solid var(--change);border-radius:8px;padding:6px 10px;margin-bottom:5px;background:#fff;cursor:pointer}
+  .lit{border:1px solid var(--line);border-left:3px solid var(--change);border-radius:7px;padding:4px 9px;margin-bottom:3px;background:#fff;cursor:pointer}
   .lit:hover{border-color:#cdd7e0}
   .lit.core{border-left-color:var(--change)} .lit.guide{border-left-color:var(--guide)}
   .lit.latest{border-left-color:var(--brand-2)} .lit.ongoing{border-left-color:var(--ongoing)}
-  .lit .lh{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+  .lit .lh{display:flex;align-items:baseline;gap:7px;flex-wrap:nowrap}
   .lit .chev{font-size:9px;color:var(--muted);transition:transform .15s;flex:none;align-self:center}
   .lit.open .chev{transform:rotate(90deg)}
-  .lit .ttl{font-weight:700;font-size:12.5px;color:var(--ink);line-height:1.3}
+  .lit .ttl{font-weight:700;font-size:12.5px;color:var(--ink);line-height:1.3;flex:1 1 auto;min-width:0;
+             overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .lit.open .ttl{white-space:normal;overflow:visible}
   .lit:hover .ttl{color:var(--brand)}
-  .lit .venue{font-size:10.5px;color:var(--muted);margin-left:auto;white-space:nowrap}
+  .lit .venue{font-size:10.5px;color:var(--muted);white-space:nowrap;max-width:190px;overflow:hidden;text-overflow:ellipsis}
   .badge{display:inline-block;font-size:9px;font-weight:700;padding:1px 6px;border-radius:999px;color:#fff;letter-spacing:.3px}
   .badge.core{background:var(--change)} .badge.latest{background:var(--brand-2)}
   .badge.ongoing{background:var(--ongoing)} .badge.guide{background:var(--guide)}
-  .lit .short{font-size:11.5px;color:#556575;margin:4px 0 0;line-height:1.45}
-  .lit.open .short{display:none}
-  .lit .more{color:var(--brand);font-weight:600;white-space:nowrap}
+  .lit .meta2{margin-left:auto;display:flex;align-items:baseline;gap:8px;flex:none;white-space:nowrap}
+  .lit .aut{font-size:10.5px;color:#5b6b7c;font-weight:600}
+  .lit .dat{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
+  .litbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 8px}
+  .litchips{display:flex;gap:6px;flex-wrap:wrap}
+  .litchip{font:inherit;font-size:11px;font-weight:600;color:#46586b;background:#fff;border:1px solid var(--line);
+           border-radius:999px;padding:3px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+  .litchip:hover{border-color:#b9c6d3}
+  .litchip .n{font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .litchip.on{background:var(--brand);border-color:var(--brand);color:#fff}
+  .litchip.on .n{color:#dbe7f2}
+  .litchip.k-core::before{content:'';width:7px;height:7px;border-radius:2px;background:var(--change)}
+  .litchip.k-latest::before{content:'';width:7px;height:7px;border-radius:2px;background:var(--brand-2)}
+  .litchip.k-ongoing::before{content:'';width:7px;height:7px;border-radius:2px;background:var(--ongoing)}
+  .litcount{font-size:10.5px;color:var(--muted);margin-left:auto}
+  @media(max-width:760px){
+    .lit .lh{flex-wrap:wrap}
+    .lit .meta2{margin-left:22px;width:100%;flex-wrap:wrap;white-space:normal}
+    .lit .dat{text-align:left;min-width:0}
+    .litcount{margin-left:0;width:100%}
+  }
   .lit .sum{display:none;font-size:11.5px;color:#48586a;margin:6px 0 1px;line-height:1.5;padding-top:7px;border-top:1px solid var(--line)}
   .lit.open .sum{display:block}
   .lit .sum a{color:var(--brand);font-weight:600;text-decoration:none;white-space:nowrap}
@@ -208,9 +228,12 @@
       <div class="evgroup">
         <div class="evhead"><span data-i="ev_head"></span> <span class="evhint" data-i="ev_hint"></span></div>
         <div class="sec"><h4 data-i="lt_guide"></h4><div class="lead" data-i="ld_guide"></div><div id="ov-guide"></div></div>
-        <div class="sec"><h4 data-i="lt_core"></h4><div class="lead" data-i="ld_core"></div><div id="ov-core"></div></div>
-        <div class="sec"><h4 data-i="lt_latest"></h4><div class="lead" data-i="ld_latest"></div><div id="ov-latest"></div></div>
-        <div class="sec"><h4 data-i="lt_ongoing"></h4><div class="lead" data-i="ld_ongoing"></div><div id="ov-ongoing"></div></div>
+        <div class="sec">
+          <h4 data-i="lt_all"></h4>
+          <div class="lead" data-i="ld_all"></div>
+          <div class="litbar"><span id="litchips" class="litchips"></span><span id="litcount" class="litcount"></span></div>
+          <div id="ov-all"></div>
+        </div>
       </div>
 
       <div class="sec"><h4 data-i="s7"></h4><p class="refs" id="c-editorial"></p></div>
@@ -276,33 +299,62 @@ function setLang(l){
   document.getElementById('en').classList.toggle('active',l==='en');
   render();
 }
-function litHTML(items,kind,label){
-  const sorted=items.slice().sort((a,b)=>b[4]-a[4]);
+const MND={nl:['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'],
+           en:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']};
+const SOORT={guide:{nl:'Richtlijn',en:'Guideline'},core:{nl:'Kern',en:'Core'},
+             latest:{nl:'Recent',en:'Latest'},ongoing:{nl:'Lopend',en:'Ongoing'}};
+let litFilter='alle';
+
+function datumLabel(sk){
+  const n=Number(sk)||0;
+  if(n<190100) return lang==='nl'?'doorlopend':'continuous';
+  const j=Math.floor(n/100), m=(n%100)-1;
+  return (m>=0&&m<12?MND[lang][m]+' ':'')+j;
+}
+function litRegel(p,kind){
+  const label=SOORT[kind][lang];
   const linkTxt=lang==='nl'?'Naar publicatie ↗':'View publication ↗';
-  const moreTxt=lang==='nl'?'meer lezen':'read more';
   const flagTxt=lang==='nl'?'cijfers te verifiëren':'figures to verify';
   const flagTip=lang==='nl'?'Geen kwantitatieve uitkomst gevonden. Stuur de publicatie om de cijfers in te vullen'
                            :'No quantitative outcome found. Send the publication to fill in the figures';
-  const flaggable=(kind==='core'||kind==='latest');
   const RESSEG=/<b>\s*(?:Resultaten|Results)\s*:?\s*<\/b>([\s\S]*?)(?=<b>|$)/i;
   const NARRATIEF=/narrative review|overzichtsartikel|Review of Anatomy/i;
-  return sorted.map(p=>{
-    const full=p[3];
-    const plain=full.replace(/<[^>]+>/g,'');
-    const parts=full.split(/<b>[^<]*<\/b>\s*/).filter(s=>s.replace(/<[^>]+>/g,'').trim());
-    const short=(parts.length?parts[parts.length-1]:full).replace(/<[^>]+>/g,'').trim();
-    const resm=full.match(RESSEG);
-    const claimtResultaat=!!resm && !/\d/.test(resm[1].replace(/<[^>]+>/g,''));
-    const narratief=NARRATIEF.test(p[0]) || NARRATIEF.test(plain);
-    const needsData=flaggable && claimtResultaat && !narratief;
-    const prio=needsData?(kind==='core'?'hoog':'laag'):'';
-    const flag=needsData?`<span class="flag ${prio}" title="${flagTip}">⚠ ${flagTxt}</span>`:'';
-    return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
-      <div class="lh"><span class="chev">▸</span><span class="badge ${kind}">${label}</span><span class="ttl">${p[0]}</span>${flag}<span class="venue">${p[1]}</span></div>
-      <div class="short">${short} <span class="more">${moreTxt}</span></div>
-      <div class="sum">${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a></div>
-    </div>`;
-  }).join('');
+  const full=p[3], plain=full.replace(/<[^>]+>/g,'');
+  const resm=full.match(RESSEG);
+  const claimtResultaat=!!resm && !/\d/.test(resm[1].replace(/<[^>]+>/g,''));
+  const narratief=NARRATIEF.test(p[0]) || NARRATIEF.test(plain);
+  const needsData=(kind==='core'||kind==='latest') && claimtResultaat && !narratief;
+  const flag=needsData?`<span class="flag ${kind==='core'?'hoog':'laag'}" title="${flagTip}">⚠</span>`:'';
+  const blad=(p[1]||'').replace(/\s*·\s*(?:[A-Za-zÀ-ÿ]{3,9}\.?\s+)?\d{4}\s*$/,'').replace(/\s*·\s*$/,'').trim();
+  const aut=p[5]?`<span class="aut">${p[5]}</span>`:'';
+  return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
+    <div class="lh"><span class="chev">▸</span><span class="badge ${kind}">${label}</span><span class="ttl">${p[0]}</span>${flag}
+      <span class="meta2">${aut}<span class="venue">${blad}</span><span class="dat">${datumLabel(p[4])}</span></span></div>
+    <div class="sum">${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a></div>
+  </div>`;
+}
+function litHTML(items,kind){
+  return items.slice().sort((a,b)=>b[4]-a[4]).map(p=>litRegel(p,kind)).join('');
+}
+function litAlles(){
+  const d=CARDS[current][lang];
+  const uit=[];
+  ['core','latest','ongoing'].forEach(k=>(d[k]||[]).forEach(p=>uit.push({p:p,k:k})));
+  return uit.sort((a,b)=>b.p[4]-a.p[4]);
+}
+function setLitFilter(v){litFilter=v;renderLit();}
+function renderLit(){
+  const alles=litAlles();
+  const tel={alle:alles.length,core:0,latest:0,ongoing:0};
+  alles.forEach(x=>tel[x.k]++);
+  const knop=(v,txt)=>`<button class="litchip${litFilter===v?' on':''}${v!=='alle'?' k-'+v:''}" onclick="setLitFilter('${v}')">${txt} <span class="n">${tel[v]}</span></button>`;
+  document.getElementById('litchips').innerHTML=
+    knop('alle',lang==='nl'?'Alles':'All')+knop('core',SOORT.core[lang])+knop('latest',SOORT.latest[lang])+knop('ongoing',SOORT.ongoing[lang]);
+  const zicht=litFilter==='alle'?alles:alles.filter(x=>x.k===litFilter);
+  document.getElementById('litcount').textContent=lang==='nl'
+    ? zicht.length+' van '+alles.length+' getoond, nieuwste eerst'
+    : zicht.length+' of '+alles.length+' shown, newest first';
+  document.getElementById('ov-all').innerHTML=zicht.map(x=>litRegel(x.p,x.k)).join('');
 }
 function renderChips(){
   const disPresent=[...new Set(INDEX.flatMap(c=>c.dis))];
@@ -475,10 +527,8 @@ function renderCard(){
   document.getElementById('c-lim').innerHTML=d.lim.map(x=>`<li>${x}</li>`).join('');
   document.getElementById('c-alts').innerHTML='<ul class="crit">'+d.alts.map(a=>`<li><b>${a[0]}</b>: ${a[1]}</li>`).join('')+'</ul>';
   document.getElementById('c-editorial').innerHTML=d.editorial;
-  document.getElementById('ov-guide').innerHTML=litHTML(d.guides,'guide','Guideline');
-  document.getElementById('ov-core').innerHTML=litHTML(d.core,'core','Core');
-  document.getElementById('ov-latest').innerHTML=litHTML(d.latest,'latest','Latest');
-  document.getElementById('ov-ongoing').innerHTML=litHTML(d.ongoing,'ongoing','Ongoing');
+  document.getElementById('ov-guide').innerHTML=litHTML(d.guides,'guide');
+  renderLit();
 }
 function showCard(id){current=id;renderCard();document.getElementById('home').style.display='none';document.getElementById('tech').style.display='none';document.getElementById('detail').style.display='block';window.scrollTo(0,0);}
 function showHome(){document.getElementById('detail').style.display='none';document.getElementById('tech').style.display='none';document.getElementById('home').style.display='block';window.scrollTo(0,0);}
