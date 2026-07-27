@@ -56,6 +56,13 @@ Weet je een veld niet, laat het dan weg. Is de opzet niet vast te stellen, zet
 dan het hele zevende element op `null`; de site toont dan geen score in plaats
 van een verzonnen score.
 
+Het aantal patienten `n` is niet optioneel bij een uitkomst-ontwerp. Staat de
+opzet op `meta_rct`, `rct3`, `rct`, `meta`, `prosp` of `retro`, dan hoort er een
+`n` bij; die staat vrijwel altijd in het abstract dat je toch al ophaalt. Zonder
+`n` wordt de studie te laag gescoord. `node bouw-stubs.js` meldt aan het eind
+welke kernpublicaties een uitkomst-ontwerp hebben maar geen aantal; los die op
+voordat je pusht.
+
 ## Tijdschriftnamen
 
 Schrijf in het tijdschriftveld de naam voluit. De site kort hem zelf in op

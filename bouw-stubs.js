@@ -181,4 +181,22 @@ try {
   console.log('wijzigingen.json overgeslagen:', e.message);
 }
 
+// Controle: kernpublicaties met een uitkomst-ontwerp horen een aantal patienten te hebben
+const UITKOMST = ['meta_rct', 'rct3', 'rct', 'meta', 'prosp', 'retro'];
+const zonderN = [];
+for (const rij of d.index) {
+  const c = d.cards[rij.id];
+  for (const lijst of ['core', 'latest']) {
+    (c.nl[lijst] || []).forEach((it, i) => {
+      const m = it[6];
+      if (m && UITKOMST.includes(m.d) && !m.n) zonderN.push(`${rij.id} ${lijst}[${i}] :: ${(it[0] || '').slice(0, 60)}`);
+    });
+  }
+}
+if (zonderN.length) {
+  console.log('\nLET OP, ' + zonderN.length + ' kernpublicatie(s) met een uitkomst-ontwerp maar zonder aantal patienten:');
+  zonderN.forEach(x => console.log('  - ' + x));
+  console.log('Vul het veld n in het zevende element aan, of zet het ontwerp op review/serie als dat klopt.\n');
+}
+
 console.log('stubs geschreven:', paden.length, '| sitemap:', paden.length + 1, 'adressen');
