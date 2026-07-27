@@ -149,8 +149,16 @@
   .noresults{color:var(--muted);font-size:14px;padding:14px 2px}
   .blokkop{font-size:15px;font-weight:800;letter-spacing:-.2px;color:var(--ink);margin:20px 0 8px}
   .pubblok{margin:14px 0 0}
-  .pubrij{display:flex;align-items:baseline;gap:9px;padding:5px 10px;border:1px solid var(--line);border-radius:7px;
-    background:#fff;margin-bottom:3px;cursor:pointer}
+  .pubrij{padding:5px 10px;border:1px solid var(--line);border-radius:7px;background:#fff;margin-bottom:3px;cursor:pointer}
+  .pubrij .prkop{display:flex;align-items:baseline;gap:9px}
+  .pubrij .prsam{display:none;font-size:11.5px;color:#48586a;line-height:1.5;margin:6px 0 2px;padding-top:7px;
+    border-top:1px solid var(--line)}
+  .pubrij.open .prsam{display:block}
+  .pubrij.open .ptitel{white-space:normal;overflow:visible}
+  .prkort{color:var(--muted);font-style:italic}
+  .prlinks{display:block;margin-top:6px}
+  .prlinks a{color:var(--brand);font-weight:600;text-decoration:none;white-space:nowrap;margin-right:14px}
+  .prlinks a:hover{text-decoration:underline}
   .pubrij:hover{border-color:#b9c6d3;background:#fbfdfe}
   .pubrij .pdat{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none;min-width:52px}
   .pubrij .pkaart{font-size:10px;font-weight:700;color:#fff;background:var(--brand-2);border-radius:4px;
@@ -167,7 +175,7 @@
   .meerf.on{background:#eef4f4;border-color:#cbdcdc}
   .meerlink{font-size:11.5px;font-weight:600;color:var(--brand);background:none;border:0;cursor:pointer;padding:6px 2px}
   @media(max-width:760px){
-    .pubrij{flex-wrap:wrap}
+    .pubrij .prkop{flex-wrap:wrap}
     .pubrij .ptitel{flex:1 1 100%;white-space:normal;overflow:visible}
     .pubrij .pmeta,.pubrij .paut{max-width:none}
   }
@@ -479,19 +487,39 @@ function pubIndex(metLopend){
     const d=CARDS[c.id][lang];
     lijsten.forEach(k=>(d[k]||[]).forEach(p=>{
       if((Number(p[4])||0)<190100) return;
-      uit.push({id:c.id, kaart:d.title, soort:k, titel:p[0], venue:p[1], url:p[2], aut:p[5]||'', sk:Number(p[4])||0});
+      uit.push({id:c.id, kaart:d.title, soort:k, titel:p[0], venue:p[1], url:p[2], aut:p[5]||'', sam:p[3]||'', sk:Number(p[4])||0});
     }));
   });
   return uit.sort((a,b)=>b.sk-a.sk);
 }
+function kortSam(html){
+  const h=html||'';
+  const kaal=h.replace(/<[^>]+>/g,'');
+  if(kaal.length<=700) return h;
+  const seg=/<b>\s*(?:Resultaten|Results)\s*:?\s*<\/b>[\s\S]*/i.exec(h);
+  const kort=seg?seg[0]:h;
+  const merk=lang==='nl'?'Opzet staat op de kaart.':'Design is on the card.';
+  return seg? kort+` <span class="prkort">${merk}</span>` : kort;
+}
 function pubRij(x){
   const blad=(x.venue||'').replace(/\s*·\s*(?:[A-Za-zÀ-ÿ]{3,9}\.?\s+)?\d{4}\s*$/,'').replace(/\s*·\s*$/,'').trim();
-  return `<div class="pubrij" onclick="showCard('${x.id}')" title="${x.kaart}">
-    <span class="pdat">${datumLabel(x.sk)}</span>
-    <span class="pkaart ${x.soort}">${x.kaart}</span>
-    <span class="ptitel">${x.titel}</span>
-    ${x.aut?`<span class="paut">${x.aut}</span>`:''}
-    <span class="pmeta">${blad}</span></div>`;
+  const naarPub=lang==='nl'?'Naar publicatie ↗':'View publication ↗';
+  const naarKaart=lang==='nl'?'Naar de kaart →':'Open the card →';
+  return `<div class="pubrij" onclick="this.classList.toggle('open')" title="${x.kaart}">
+    <div class="prkop">
+      <span class="pdat">${datumLabel(x.sk)}</span>
+      <span class="pkaart ${x.soort}">${x.kaart}</span>
+      <span class="ptitel">${x.titel}</span>
+      ${x.aut?`<span class="paut">${x.aut}</span>`:''}
+      <span class="pmeta">${blad}</span>
+    </div>
+    <div class="prsam">${kortSam(x.sam)}
+      <span class="prlinks">
+        <a href="${x.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${naarPub}</a>
+        <a href="#" onclick="event.stopPropagation();event.preventDefault();showCard('${x.id}')">${naarKaart}</a>
+      </span>
+    </div>
+  </div>`;
 }
 let nieuwsteAan=8;
 function toonMeerNieuwste(){ nieuwsteAan=nieuwsteAan>=40?8:nieuwsteAan+16; renderNieuwste(); }
