@@ -189,7 +189,7 @@
   .pubrij:hover{border-color:#b9c6d3;background:#fbfdfe}
   .pubrij .pdat{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none;min-width:52px}
   .pubrij .pkaart{font-size:10px;font-weight:700;color:#fff;background:var(--brand-2);border-radius:4px;
-    padding:1px 6px;flex:none;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    padding:1px 6px;flex:none;white-space:nowrap}
   .pubrij .pkaart.core{background:var(--change)} .pubrij .pkaart.ongoing{background:var(--ongoing)}
   .pubrij .ptitel{font-weight:700;font-size:12.5px;color:var(--ink);flex:1 1 auto;min-width:0;
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -635,7 +635,7 @@ function pubIndex(metLopend){
     const d=CARDS[c.id][lang];
     lijsten.forEach(k=>(d[k]||[]).forEach(p=>{
       if((Number(p[4])||0)<190100) return;
-      uit.push({id:c.id, kaart:d.title, soort:k, titel:p[0], venue:p[1], url:p[2], aut:p[5]||'', sam:p[3]||'', sk:Number(p[4])||0, rij:p});
+      uit.push({id:c.id, kaart:d.title, kort:(c.kort?c.kort[lang]:d.title), soort:k, titel:p[0], venue:p[1], url:p[2], aut:p[5]||'', sam:p[3]||'', sk:Number(p[4])||0, rij:p});
     }));
   });
   return uit.sort((a,b)=>b.sk-a.sk);
@@ -657,7 +657,7 @@ function pubRij(x){
     onclick="klapUit(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();klapUit(this)}">
     <div class="prkop">
       <span class="pdat">${datumLabel(x.sk)}</span>
-      <span class="pkaart ${x.soort}">${x.kaart}</span>
+      <span class="pkaart ${x.soort}">${x.kort}</span>
       <span class="ptitel">${x.titel}</span>
       ${x.aut?`<span class="paut">${x.aut}</span>`:''}
       <span class="pmeta">${blad}</span>${scorePil(x.rij)}
