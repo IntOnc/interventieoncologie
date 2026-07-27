@@ -44,6 +44,10 @@ controleren of een wijziging live staat.
 - Elke nieuwe samenvatting bevat in het Resultaten-deel ten minste een getal,
   tenzij het om een richtlijnstandpunt of een lopende studie gaat.
 - De sorteersleutel is een geheel getal van zes cijfers.
+- Geen dubbelen binnen een kaart. Vergelijk voor het toevoegen niet alleen de
+  titel maar ook de link, en normaliseer daarbij: haal https, www en dx weg, en
+  behandel doi.org/10.x en link.springer.com/article/10.x als dezelfde bron.
+  Een publicatie hoort in core of in latest, nooit in allebei.
 
 ## Wat je niet doet
 
