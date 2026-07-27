@@ -34,6 +34,25 @@ Het zesde element is de eerste auteur zoals die getoond wordt, bijvoorbeeld
 ontbreken of leeg zijn; de weergave laat het veld dan gewoon weg. Vul het
 alleen met een naam die je op het registratie- of uitgeversrecord hebt gelezen.
 
+Een zevende element bevat de gegevens voor de bewijskracht:
+
+    {"d":"rct3","n":760,"mc":1,"cmp":1,"t":"A"}
+
+`d` is de studieopzet (`meta_rct`, `rct3`, `rct`, `meta`, `prosp`, `retro`,
+`serie` of `review`), `n` het aantal patienten, `mc` 1 bij multicentrisch,
+`cmp` 1 bij een vergelijkende opzet en `t` de tijdschriftklasse A, B of C.
+Ontbreekt het veld of is `d` leeg, dan toont de site geen score in plaats van
+een gegokte. De klassenlijst met tijdschriften staat in `content.json` onder
+`tijdschriften` en mag daar worden uitgebreid.
+
+De score loopt van 0 tot 100 en is opgebouwd uit opzet (maximaal 50), aantal
+patienten (maximaal 18), vergelijkend (10), multicentrisch (10) en tijdschrift
+(maximaal 12). Opzet weegt bewust het zwaarst: een gerandomiseerde fase
+III-trial in een gemiddeld blad hoort hoger uit te komen dan een kleine
+retrospectieve serie in een goed blad. De opbouw staat bij elk item uitgeklapt,
+zodat een lezer kan zien waar het cijfer vandaan komt en het desgewenst kan
+negeren.
+
 De lijsten `core`, `latest` en `ongoing` worden op de kaart als een lijst
 getoond, gesorteerd op sorteersleutel met de nieuwste bovenaan, met knoppen om
 op soort te filteren. De richtlijnen staan daarboven in een eigen blok.

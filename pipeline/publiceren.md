@@ -33,6 +33,26 @@ controleren of een wijziging live staat.
    Dat werkt de vindbare pagina's per kaart, de sitemap en de wijzigingenlijst bij.
 8. Meld in een kort bericht wat er gepubliceerd is en wat er niet in ging.
 
+## Bewijskracht bij nieuwe items
+
+Elk nieuw item in `core` of `latest` krijgt een zevende element met de gegevens
+voor de bewijskracht, afgeleid uit de samenvatting die je zelf hebt geschreven:
+
+    {"d":"rct3","n":760,"mc":1,"cmp":1,"t":"A"}
+
+`d` is de opzet: `meta_rct` (meta-analyse van gerandomiseerde trials), `rct3`
+(gerandomiseerde fase III), `rct` (overige gerandomiseerde trials), `meta`
+(systematische review of meta-analyse), `prosp` (prospectief cohort of
+register), `retro` (retrospectief cohort), `serie` (patientenserie) of `review`
+(overzichtsartikel). `n` is het aantal patienten dat in de samenvatting staat,
+`mc` is 1 bij multicentrisch, `cmp` is 1 als er een vergelijkingsarm is, en `t`
+is de tijdschriftklasse: A of B volgens de lijst onder `tijdschriften` in
+`content.json`, anders C.
+
+Weet je een veld niet, laat het dan weg. Is de opzet niet vast te stellen, zet
+dan het hele zevende element op `null`; de site toont dan geen score in plaats
+van een verzonnen score.
+
 ## Controles voor het pushen
 
 - `content.json` is geldige JSON.

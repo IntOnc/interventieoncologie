@@ -115,6 +115,13 @@
   .badge.ongoing{background:var(--ongoing)} .badge.guide{background:var(--guide)}
   .lit .meta2{margin-left:auto;display:flex;align-items:baseline;gap:8px;flex:none;white-space:nowrap}
   .lit .aut{font-size:10.5px;color:#5b6b7c;font-weight:600}
+  .bw{font-size:10px;font-weight:800;border-radius:5px;padding:1px 5px;color:#fff;flex:none;
+      font-variant-numeric:tabular-nums;cursor:help}
+  .bw.hoog{background:#0b6b6b} .bw.mid{background:#b45309} .bw.laag{background:#94a3b8}
+  .bwuitleg{font-size:11px;color:#46586b;background:#f6f9f9;border:1px solid var(--line);
+      border-radius:6px;padding:5px 8px;margin-bottom:6px}
+  .bwont{color:var(--muted);font-style:italic}
+  .litchip.srt{background:#f6f9f9}
   .lit .dat{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
   .litbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 8px}
   .litchips{display:flex;gap:6px;flex-wrap:wrap}
@@ -399,7 +406,8 @@ const MND={nl:['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov'
            en:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']};
 const SOORT={guide:{nl:'Richtlijn',en:'Guideline'},core:{nl:'Kern',en:'Core'},
              latest:{nl:'Recent',en:'Latest'},ongoing:{nl:'Lopend',en:'Ongoing'}};
-let litFilter='alle';
+let litFilter='alle', litSort='datum';
+function wisselLitSort(){ litSort = litSort==='datum'?'kracht':'datum'; renderLit(); }
 
 function datumLabel(sk){
   const n=Number(sk)||0;
@@ -407,12 +415,62 @@ function datumLabel(sk){
   const j=Math.floor(n/100), m=(n%100)-1;
   return (m>=0&&m<12?MND[lang][m]+' ':'')+j;
 }
+// ── Bewijskracht: transparante score van 0 tot 100 ───────────────────
+// opzet (max 50) + aantal (max 18) + vergelijkend (10) + multicentrisch (10) + tijdschrift (max 12)
+const D_PT={meta_rct:50,rct3:48,rct:40,meta:34,prosp:26,retro:15,serie:6,review:4};
+const D_NAAM={
+  meta_rct:{nl:'meta-analyse van gerandomiseerde trials',en:'meta-analysis of randomised trials'},
+  rct3:{nl:'gerandomiseerde fase III-trial',en:'randomised phase III trial'},
+  rct:{nl:'gerandomiseerde trial',en:'randomised trial'},
+  meta:{nl:'systematische review of meta-analyse',en:'systematic review or meta-analysis'},
+  prosp:{nl:'prospectief cohort of register',en:'prospective cohort or registry'},
+  retro:{nl:'retrospectief cohort',en:'retrospective cohort'},
+  serie:{nl:'patientenserie',en:'case series'},
+  review:{nl:'overzichtsartikel',en:'narrative review'}};
+function nPunten(n){
+  if(!n) return 0;
+  const t=[[1000,18],[500,15],[200,12],[100,10],[50,7],[20,4]];
+  for(const [g,p] of t) if(n>=g) return p;
+  return 2;
+}
+function tierPunten(t){ return t==='A'?12:t==='B'?8:4; }
+function bewijs(p){
+  const m=p&&p[6];
+  if(!m||!m.d) return null;
+  const on=[];
+  const d=D_PT[m.d]||0;
+  const n=nPunten(m.n); if(!m.n) on.push(lang==='nl'?'aantal niet vermeld':'sample size not stated');
+  const c=m.cmp?10:0; if(m.cmp===undefined) on.push(lang==='nl'?'vergelijking onbekend':'comparison unknown');
+  const mc=m.mc?10:0;
+  const t=tierPunten(m.t);
+  const totaal=Math.min(100,d+n+c+mc+t);
+  const delen=[`${D_NAAM[m.d][lang]} (${d})`];
+  if(m.n) delen.push((lang==='nl'?`${m.n} patienten (${n})`:`${m.n} patients (${n})`));
+  if(m.cmp) delen.push((lang==='nl'?`vergelijkend (${c})`:`comparative (${c})`));
+  if(m.mc) delen.push((lang==='nl'?`multicentrisch (${mc})`:`multicentre (${mc})`));
+  delen.push((lang==='nl'?`tijdschrift ${m.t} (${t})`:`journal ${m.t} (${t})`));
+  return {score:totaal, delen:delen, ontbreekt:on};
+}
+function bandVan(s){ return s>=70?'hoog':s>=45?'mid':'laag'; }
+function scorePil(p){
+  const b=bewijs(p);
+  if(!b) return '';
+  const tip=(lang==='nl'?'Bewijskracht ':'Strength of evidence ')+b.score+': '+b.delen.join(' · ');
+  return `<span class="bw ${bandVan(b.score)}" title="${tip.replace(/"/g,'&quot;')}">${b.score}</span>`;
+}
+function scoreUitleg(p){
+  const b=bewijs(p);
+  if(!b) return '';
+  const kop=lang==='nl'?'Bewijskracht':'Strength of evidence';
+  const ont=b.ontbreekt.length?` <span class="bwont">(${b.ontbreekt.join(', ')})</span>`:'';
+  return `<div class="bwuitleg"><b>${kop} ${b.score}/100:</b> ${b.delen.join(' · ')}${ont}</div>`;
+}
 function klapUit(el){
   const open=el.classList.toggle('open');
   el.setAttribute('aria-expanded',open?'true':'false');
 }
 function litRegel(p,kind){
-  const label=SOORT[kind][lang];
+  const label=kind==='latest'?'':SOORT[kind][lang];
   const linkTxt=lang==='nl'?'Naar publicatie ↗':'View publication ↗';
   const flagTxt=lang==='nl'?'cijfers te verifiëren':'figures to verify';
   const flagTip=lang==='nl'?'Geen kwantitatieve uitkomst gevonden. Stuur de publicatie om de cijfers in te vullen'
@@ -428,9 +486,9 @@ function litRegel(p,kind){
   const blad=(p[1]||'').replace(/\s*·\s*(?:[A-Za-zÀ-ÿ]{3,9}\.?\s+)?\d{4}\s*$/,'').replace(/\s*·\s*$/,'').trim();
   const aut=p[5]?`<span class="aut">${p[5]}</span>`:'';
   return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
-    <div class="lh"><span class="chev">▸</span><span class="badge ${kind}">${label}</span><span class="ttl">${p[0]}</span>${flag}
-      <span class="meta2">${aut}<span class="venue">${blad}</span><span class="dat">${datumLabel(p[4])}</span></span></div>
-    <div class="sum">${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a></div>
+    <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}
+      <span class="meta2">${aut}<span class="venue">${blad}</span>${scorePil(p)}<span class="dat">${datumLabel(p[4])}</span></span></div>
+    <div class="sum">${scoreUitleg(p)}${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a></div>
   </div>`;
 }
 function litHTML(items,kind){
@@ -448,12 +506,23 @@ function renderLit(){
   const tel={alle:alles.length,core:0,latest:0,ongoing:0};
   alles.forEach(x=>tel[x.k]++);
   const knop=(v,txt)=>`<button class="litchip${litFilter===v?' on':''}${v!=='alle'?' k-'+v:''}" onclick="setLitFilter('${v}')">${txt} <span class="n">${tel[v]}</span></button>`;
+  const sorteer=`<button class="litchip srt" onclick="wisselLitSort()">${litSort==='datum'
+      ?(lang==='nl'?'sorteer op bewijskracht ↓':'sort by strength ↓')
+      :(lang==='nl'?'sorteer op datum ↓':'sort by date ↓')}</button>`;
   document.getElementById('litchips').innerHTML=
-    knop('alle',lang==='nl'?'Alles':'All')+knop('core',SOORT.core[lang])+knop('latest',SOORT.latest[lang])+knop('ongoing',SOORT.ongoing[lang]);
-  const zicht=litFilter==='alle'?alles:alles.filter(x=>x.k===litFilter);
+    knop('alle',lang==='nl'?'Alles':'All')+knop('core',SOORT.core[lang])+knop('ongoing',SOORT.ongoing[lang])+sorteer;
+  let zicht=litFilter==='alle'?alles:alles.filter(x=>x.k===litFilter);
+  if(litSort==='kracht'){
+    zicht=zicht.slice().sort((a,b)=>{
+      const sa=bewijs(a.p), sb=bewijs(b.p);
+      const va=sa?sa.score:-1, vb=sb?sb.score:-1;
+      return vb-va || b.p[4]-a.p[4];
+    });
+  }
+  const hoe=litSort==='kracht'?(lang==='nl'?'sterkste eerst':'strongest first'):(lang==='nl'?'nieuwste eerst':'newest first');
   document.getElementById('litcount').textContent=lang==='nl'
-    ? zicht.length+' van '+alles.length+' getoond, nieuwste eerst'
-    : zicht.length+' of '+alles.length+' shown, newest first';
+    ? zicht.length+' van '+alles.length+' getoond, '+hoe
+    : zicht.length+' of '+alles.length+' shown, '+hoe;
   document.getElementById('ov-all').innerHTML=zicht.map(x=>litRegel(x.p,x.k)).join('');
 }
 let disAlle=false;
@@ -547,7 +616,7 @@ function pubIndex(metLopend){
     const d=CARDS[c.id][lang];
     lijsten.forEach(k=>(d[k]||[]).forEach(p=>{
       if((Number(p[4])||0)<190100) return;
-      uit.push({id:c.id, kaart:d.title, soort:k, titel:p[0], venue:p[1], url:p[2], aut:p[5]||'', sam:p[3]||'', sk:Number(p[4])||0});
+      uit.push({id:c.id, kaart:d.title, soort:k, titel:p[0], venue:p[1], url:p[2], aut:p[5]||'', sam:p[3]||'', sk:Number(p[4])||0, rij:p});
     }));
   });
   return uit.sort((a,b)=>b.sk-a.sk);
@@ -572,9 +641,9 @@ function pubRij(x){
       <span class="pkaart ${x.soort}">${x.kaart}</span>
       <span class="ptitel">${x.titel}</span>
       ${x.aut?`<span class="paut">${x.aut}</span>`:''}
-      <span class="pmeta">${blad}</span>
+      <span class="pmeta">${blad}</span>${scorePil(x.rij)}
     </div>
-    <div class="prsam">${kortSam(x.sam)}
+    <div class="prsam">${scoreUitleg(x.rij)}${kortSam(x.sam)}
       <span class="prlinks">
         <a href="${x.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${naarPub}</a>
         <a href="#" onclick="event.stopPropagation();event.preventDefault();showCard('${x.id}')">${naarKaart}</a>
