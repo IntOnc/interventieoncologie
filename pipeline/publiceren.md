@@ -51,8 +51,16 @@ controleren of een wijziging live staat.
   behandel doi.org/10.x en link.springer.com/article/10.x als dezelfde bron.
   Een publicatie hoort in core of in latest, nooit in allebei.
 
+## Tekstwijzigingen aan de kaart
+
+Een ronde mag ook de kaarttekst zelf voorstellen aan te passen: bl, de drie
+regels van `pos`, `crit`, `results`, `lim` en `alts`. Dat gebeurt alleen als
+Kenneth het nummer van dat tekstvoorstel heeft genoemd, en dan letterlijk zoals
+voorgesteld, in beide talen. Pas de zin aan, herschrijf niet de hele alinea, en
+laat elke wijziging steunen op een bron die in die ronde is opgehaald.
+
 ## Wat je niet doet
 
 - Voorstellen opnemen die Kenneth niet heeft genoemd.
-- Bestaande items herschrijven zonder dat daar akkoord voor is.
+- Bestaande items of kaartteksten herschrijven zonder dat daar akkoord voor is.
 - Iets publiceren waarvan de cijfers niet geverifieerd zijn.

@@ -3,6 +3,10 @@
  "regels": [
   {
    "datum": "2026-07-27",
+   "tekst": "Navigatie gestroomlijnd: adressen per kaart, printversie, kruisverwijzingen en wijzigingenpagina"
+  },
+  {
+   "datum": "2026-07-27",
    "tekst": "Publicatieregels op de startpagina klappen open met samenvatting en directe link"
   },
   {
