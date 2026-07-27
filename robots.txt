@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://intonc.github.io/interventieoncologie/sitemap.xml
+Sitemap: https://www.interventieoncologie.nl/sitemap.xml

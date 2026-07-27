@@ -766,7 +766,7 @@ function renderCard(){
   renderSecnav(); renderVerwant();
   document.getElementById('c-editorial').innerHTML=d.editorial;
   const pv=document.getElementById('printvoet');
-  if(pv){ const u='https://intonc.github.io/interventieoncologie/kaart/'+current+'/';
+  if(pv){ const u='https://www.interventieoncologie.nl/kaart/'+current+'/';
     pv.textContent=(lang==='nl'?'Bron: ':'Source: ')+u+(lang==='nl'?' · afgedrukt op ':' · printed on ')
       +new Date().toLocaleDateString(lang==='nl'?'nl-NL':'en-GB'); }
   document.getElementById('ov-guide').innerHTML=litHTML(d.guides,'guide');
@@ -840,7 +840,7 @@ function zetRoute(soort,id){
 }
 function tekstUit(html){ return (html||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim(); }
 function zetMeta(soort,id){
-  const basis='https://intonc.github.io/interventieoncologie/';
+  const basis='https://www.interventieoncologie.nl/';
   let titel=lang==='nl'?'Interventie Oncologie · evidence-based interventieradiologie'
                        :'Interventie Oncologie · evidence-based interventional radiology';
   let oms=SITE[lang]&&SITE[lang].sub?tekstUit(SITE[lang].sub):'';

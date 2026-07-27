@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const BASIS = 'https://intonc.github.io/interventieoncologie/';
+const BASIS = 'https://www.interventieoncologie.nl/';
 const d = JSON.parse(fs.readFileSync('content.json', 'utf8'));
 
 function kaal(html) {
