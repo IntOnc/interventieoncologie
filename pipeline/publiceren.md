@@ -29,7 +29,9 @@ controleren of een wijziging live staat.
    `https://intonc.github.io/interventieoncologie/content.json` de wijziging bevat.
    Let op dat een groot bestand door WebFetch afgekapt kan worden; controleer dus
    op iets dat vooraan staat, bijvoorbeeld het veld `bijgewerkt`.
-7. Meld in een kort bericht wat er gepubliceerd is en wat er niet in ging.
+7. Draai `node bouw-stubs.js` in de kloon en commit de gewijzigde bestanden mee.
+   Dat werkt de vindbare pagina's per kaart, de sitemap en de wijzigingenlijst bij.
+8. Meld in een kort bericht wat er gepubliceerd is en wat er niet in ging.
 
 ## Controles voor het pushen
 

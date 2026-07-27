@@ -43,6 +43,19 @@ De samenvatting gebruikt `<b>Opzet:</b>`, `<b>Resultaten:</b>` en
 in het Engels. Het ⚠-signaal kijkt naar het Resultaten-segment: staat daar geen
 getal in, dan wordt het item gemarkeerd als "cijfers te verifiëren".
 
+## Adressen
+
+Elke kaart en elke techniekpagina heeft een eigen adres. In de applicatie is dat
+een hash-route, bijvoorbeeld `#/nl/kaart/rcc-ablatie` of `#/en/techniek/abl`.
+Daarnaast staat er per kaart een vindbare pagina op schijf, bijvoorbeeld
+`kaart/rcc-ablatie/`, met een eigen titel, omschrijving en Open Graph-gegevens,
+zodat zoekmachines en linkvoorbeelden iets zinnigs te pakken hebben. Die pagina
+stuurt een bezoeker met JavaScript door naar de interactieve versie.
+
+`node bouw-stubs.js` genereert die pagina's, plus `sitemap.xml`, `robots.txt` en
+`wijzigingen.json`. Draai dat na elke inhoudelijke wijziging. Staat de site
+later op het eigen domein, pas dan de constante `BASIS` bovenin dat bestand aan.
+
 ## Lokaal bekijken
 
 `index.html` rechtstreeks vanaf de schijf openen werkt niet, omdat de browser

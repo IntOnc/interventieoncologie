@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interventie Oncologie · evidence-based interventieradiologie</title>
+<meta name="description" id="m-desc" content="Snelle, gerefereerde overzichten van interventie-oncologische behandelingen en indicaties.">
+<meta property="og:site_name" content="Interventie Oncologie">
+<meta property="og:type" content="article">
+<meta property="og:title" id="m-ogt" content="Interventie Oncologie">
+<meta property="og:description" id="m-ogd" content="Snelle, gerefereerde overzichten van interventie-oncologische behandelingen en indicaties.">
+<meta property="og:url" id="m-ogu" content="">
+<link rel="canonical" id="m-can" href="">
 <style>
   :root{
     --bg:#f6f8fa; --card:#ffffff; --ink:#0f1e2e; --muted:#5a6b7b;
@@ -146,6 +153,7 @@
   .rcount{font-size:12px;color:var(--muted)}
   .clearf{border:0;background:none;color:var(--brand);font-weight:600;cursor:pointer;font-size:12px;padding:0}
   .chip.meerchip{background:#eef4f4;border-color:#cbdcdc;color:#3c5a5a;font-weight:700}
+  .lit:focus-visible,.pubrij:focus-visible,.cardlink:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
   .noresults{color:var(--muted);font-size:14px;padding:14px 2px}
   .blokkop{font-size:15px;font-weight:800;letter-spacing:-.2px;color:var(--ink);margin:20px 0 8px}
   .pubblok{margin:14px 0 0}
@@ -186,7 +194,37 @@
   .evgroup .sec{border-bottom:1px solid var(--line)}
   .refs{font-size:13px;color:var(--muted)}
   .foot{max-width:820px;margin:0 auto;padding:0 18px;color:var(--muted);font-size:12px;text-align:center}
+  .secnav{position:sticky;top:52px;z-index:5;display:flex;gap:4px;flex-wrap:wrap;padding:8px 22px;
+    background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .secnav a{font-size:11px;font-weight:600;color:#46586b;text-decoration:none;border:1px solid var(--line);
+    border-radius:999px;padding:2px 9px;background:#fff;white-space:nowrap}
+  .secnav a:hover{border-color:#b9c6d3;color:var(--brand)}
+  .rel{display:flex;flex-wrap:wrap;gap:6px}
+  .rel a{font-size:11.5px;font-weight:600;color:#46586b;text-decoration:none;border:1px solid var(--line);
+    border-radius:999px;padding:3px 10px;background:#fff}
+  .rel a:hover{border-color:#b9c6d3;color:var(--brand)}
+  .rel a.tech{background:#eef4f4;border-color:#cbdcdc}
+  .altlink{font-size:11px;font-weight:700;color:var(--brand);text-decoration:none;white-space:nowrap;margin-left:6px}
+  .altlink:hover{text-decoration:underline}
   .disclaimer{background:#f1f4f7;border-radius:10px;padding:12px 14px;margin-top:14px;font-size:12px;color:var(--muted)}
+  @media print{
+    @page{margin:16mm 14mm}
+    body{background:#fff;font-size:10.5pt}
+    header,.lang,.search,.facets,.techblock,.back,.backlink,.evhint,.litbar,#pubhits,#nieuwste,
+    #kaartkop,#cardlist,#noresults,.secnav,.prlinks,.meerlink,.foot{display:none !important}
+    main{max-width:none;padding:0}
+    .doc,.card,.doccard{border:0;box-shadow:none;border-radius:0}
+    .sec{border-color:#ddd}
+    .lit,.pubrij{break-inside:avoid;border:0;border-left:2px solid #999;border-radius:0;padding:3px 0 3px 8px;margin-bottom:4px}
+    .lit .sum,.pubrij .prsam{display:block !important;border-top:0;color:#333;padding-top:2px}
+    .lit .chev,.pubrij .chev{display:none}
+    .lit .ttl{white-space:normal;overflow:visible}
+    .sec{break-inside:avoid}
+    .evgroup{border-top:1px solid #ccc}
+    .printvoet{display:block !important;margin-top:14px;padding-top:8px;border-top:1px solid #ccc;
+      font-size:9pt;color:#444}
+  }
+  .printvoet{display:none}
 </style>
 </head>
 <body>
@@ -246,6 +284,14 @@
     </div>
   </section>
 
+  <section id="wijzig" class="detail" style="display:none">
+    <button class="back" onclick="showHome()">← <span data-i="back"></span></button>
+    <div class="doccard">
+      <div class="doc-head"><h2 id="w-titel"></h2><div class="meta"><span class="pill" id="w-sub"></span></div></div>
+      <div class="sec"><div id="w-lijst"></div></div>
+    </div>
+  </section>
+
   <section id="detail" class="detail">
     <button class="back" onclick="showHome()">← <span data-i="back"></span></button>
     <div class="doccard">
@@ -259,15 +305,17 @@
         </div>
       </div>
 
-      <div class="sec"><h4 data-i="s1"></h4><div class="bottomline" id="c-bl"></div></div>
-      <div class="sec"><h4 data-i="s_pos"></h4><div class="posbox" id="c-pos"></div></div>
-      <div class="sec"><h4 data-i="s2"></h4><ul class="crit" id="c-crit"></ul></div>
-      <div class="sec"><h4 data-i="s_res"></h4><ul class="crit" id="c-res"></ul></div>
+      <nav class="secnav" id="secnav" aria-label="Secties"></nav>
+      <div class="sec" id="sec-bl"><h4 data-i="s1"></h4><div class="bottomline" id="c-bl"></div></div>
+      <div class="sec" id="sec-pos"><h4 data-i="s_pos"></h4><div class="posbox" id="c-pos"></div></div>
+      <div class="sec" id="sec-crit"><h4 data-i="s2"></h4><ul class="crit" id="c-crit"></ul></div>
+      <div class="sec" id="sec-res"><h4 data-i="s_res"></h4><ul class="crit" id="c-res"></ul></div>
 
-      <div class="sec"><h4 data-i="s5"></h4><ul class="crit" id="c-lim"></ul></div>
-      <div class="sec"><h4 data-i="s_alt"></h4><div id="c-alts"></div></div>
+      <div class="sec" id="sec-lim"><h4 data-i="s5"></h4><ul class="crit" id="c-lim"></ul></div>
+      <div class="sec" id="sec-alt"><h4 data-i="s_alt"></h4><div id="c-alts"></div></div>
+      <div class="sec" id="sec-rel"><h4 id="c-relkop"></h4><div id="c-rel"></div></div>
 
-      <div class="evgroup">
+      <div class="evgroup" id="sec-lit">
         <div class="evhead"><span data-i="ev_head"></span> <span class="evhint" data-i="ev_hint"></span></div>
         <div class="sec"><h4 data-i="lt_guide"></h4><div class="lead" data-i="ld_guide"></div><div id="ov-guide"></div></div>
         <div class="sec">
@@ -279,10 +327,12 @@
       </div>
 
       <div class="sec"><h4 data-i="s7"></h4><p class="refs" id="c-editorial"></p></div>
+      <div class="printvoet" id="printvoet"></div>
     </div>
   </section>
 </main>
-<div class="foot"><p data-i="foot"></p></div>
+<div class="foot"><p data-i="foot"></p>
+  <p><a href="#/nl/wijzigingen" id="wlink" onclick="event.preventDefault();showWijzig()"></a></p></div>
 
 <script>
 // ============ INHOUD ============
@@ -340,6 +390,10 @@ function setLang(l){
   document.getElementById('nl').classList.toggle('active',l==='nl');
   document.getElementById('en').classList.toggle('active',l==='en');
   render();
+  const zicht = document.getElementById('detail').style.display!=='none' ? ['kaart',current]
+              : document.getElementById('tech').style.display!=='none' ? ['techniek',currentTech]
+              : ['home',''];
+  zetRoute(zicht[0],zicht[1]);
 }
 const MND={nl:['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'],
            en:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']};
@@ -352,6 +406,10 @@ function datumLabel(sk){
   if(n<190100) return lang==='nl'?'doorlopend':'continuous';
   const j=Math.floor(n/100), m=(n%100)-1;
   return (m>=0&&m<12?MND[lang][m]+' ':'')+j;
+}
+function klapUit(el){
+  const open=el.classList.toggle('open');
+  el.setAttribute('aria-expanded',open?'true':'false');
 }
 function litRegel(p,kind){
   const label=SOORT[kind][lang];
@@ -420,6 +478,8 @@ function renderChips(){
 function toggleChip(type,key){
   const set=type==='organ'?selOrgan:(type==='tech'?selTech:selDis);
   set.has(key)?set.delete(key):set.add(key);
+  const wl=document.getElementById('wlink');
+  if(wl){ wl.textContent=lang==='nl'?'Wat is er veranderd →':'What changed →'; wl.setAttribute('href','#/'+lang+'/wijzigingen'); }
   renderChips(); applyFilters();
 }
 // ---- Autocomplete ----
@@ -505,7 +565,8 @@ function pubRij(x){
   const blad=(x.venue||'').replace(/\s*·\s*(?:[A-Za-zÀ-ÿ]{3,9}\.?\s+)?\d{4}\s*$/,'').replace(/\s*·\s*$/,'').trim();
   const naarPub=lang==='nl'?'Naar publicatie ↗':'View publication ↗';
   const naarKaart=lang==='nl'?'Naar de kaart →':'Open the card →';
-  return `<div class="pubrij" onclick="this.classList.toggle('open')" title="${x.kaart}">
+  return `<div class="pubrij" role="button" tabindex="0" aria-expanded="false" title="${x.kaart}"
+    onclick="klapUit(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();klapUit(this)}">
     <div class="prkop">
       <span class="pdat">${datumLabel(x.sk)}</span>
       <span class="pkaart ${x.soort}">${x.kaart}</span>
@@ -521,17 +582,26 @@ function pubRij(x){
     </div>
   </div>`;
 }
-let nieuwsteAan=8;
+let nieuwsteAan=8, nieuwstePeriode='alles';
 function toonMeerNieuwste(){ nieuwsteAan=nieuwsteAan>=40?8:nieuwsteAan+16; renderNieuwste(); }
+function zetPeriode(v){ nieuwstePeriode=v; nieuwsteAan=8; renderNieuwste(); }
 function renderNieuwste(){
   const box=document.getElementById('nieuwste');
   if(!box) return;
-  const alles=pubIndex();
+  const nu=new Date();
+  const grens=(nu.getFullYear()-1)*100+(nu.getMonth()+1);
+  const totaal=pubIndex();
+  const alles=nieuwstePeriode==='jaar'?totaal.filter(x=>x.sk>=grens):totaal;
   const kop=lang==='nl'?'Nieuwste publicaties':'Latest publications';
   const hint=lang==='nl'?'over alle kaarten heen, nieuwste eerst':'across all cards, newest first';
   const meer=nieuwsteAan>=40?(lang==='nl'?'minder tonen':'show less')
             :(lang==='nl'?'meer tonen':'show more');
-  box.innerHTML=`<div class="blokkop">${kop} <span class="evhint">${hint}</span></div>`
+  const knop=(v,t)=>`<button class="litchip${nieuwstePeriode===v?' on':''}" onclick="zetPeriode('${v}')">${t}</button>`;
+  const rij=`<div class="litbar"><span class="litchips">`
+    +knop('alles',lang==='nl'?'Alles':'All')
+    +knop('jaar',lang==='nl'?'Laatste 12 maanden':'Last 12 months')
+    +`</span><span class="litcount">${alles.length} ${lang==='nl'?'publicaties':'publications'}</span></div>`;
+  box.innerHTML=`<div class="blokkop">${kop} <span class="evhint">${hint}</span></div>`+rij
     + alles.slice(0,nieuwsteAan).map(pubRij).join('')
     + `<button class="meerlink" onclick="toonMeerNieuwste()">${meer} ↓</button>`;
 }
@@ -570,7 +640,8 @@ function applyFilters(){
     const title=CARDS[c.id][lang].title;
     const tags=[ORGANS[c.organ][lang]].concat(c.dis.map(d=>DISEASES[d][lang])).concat(c.tech.map(t=>TECHS[t][lang]));
     const tagsHTML=tags.map(t=>`<span class="ctag">${t}</span>`).join('');
-    return `<div class="cardlink" onclick="showCard('${c.id}')"><span class="dot" style="background:${c.dot}"></span>
+    return `<div class="cardlink" role="link" tabindex="0" onclick="showCard('${c.id}')"
+      onkeydown="if(event.key==='Enter'){showCard('${c.id}')}"><span class="dot" style="background:${c.dot}"></span>
       <div class="cbody"><b>${title}</b><div class="ctags">${tagsHTML}</div></div><span class="arrow">→</span></div>`;
   }).join('');
   document.getElementById('noresults').style.display=matches.length?'none':'block';
@@ -673,7 +744,7 @@ function renderTech(){
       <div class="cbody"><b>${title}</b><div class="ctags">${tags.map(t=>`<span class="ctag">${t}</span>`).join('')}</div></div><span class="arrow">→</span></div>`;
   }).join('');
 }
-function showTech(id){currentTech=id;renderTech();document.getElementById('home').style.display='none';document.getElementById('detail').style.display='none';document.getElementById('tech').style.display='block';window.scrollTo(0,0);}
+function showTech(id,zonderRoute){currentTech=id;renderTech();document.getElementById('home').style.display='none';document.getElementById('detail').style.display='none';document.getElementById('wijzig').style.display='none';document.getElementById('tech').style.display='block';window.scrollTo(0,0);if(!zonderRoute)zetRoute('techniek',id);else zetMeta('techniek',id);}
 
 function renderCard(){
   const d=CARDS[current][lang];
@@ -687,17 +758,196 @@ function renderCard(){
   document.getElementById('c-crit').innerHTML=d.crit.map(x=>`<li>${x}</li>`).join('');
   document.getElementById('c-res').innerHTML=d.results.map(x=>`<li>${x}</li>`).join('');
   document.getElementById('c-lim').innerHTML=d.lim.map(x=>`<li>${x}</li>`).join('');
-  document.getElementById('c-alts').innerHTML='<ul class="crit">'+d.alts.map(a=>`<li><b>${a[0]}</b>: ${a[1]}</li>`).join('')+'</ul>';
+  document.getElementById('c-alts').innerHTML='<ul class="crit">'+d.alts.map(a=>{
+    const doel=altKaart(a[0]);
+    const naar=lang==='nl'?'naar de kaart':'open the card';
+    return `<li><b>${a[0]}</b>: ${a[1]}`+(doel?` <a class="altlink" href="${hashVan('kaart',doel)}">${naar} →</a>`:'')+'</li>';
+  }).join('')+'</ul>';
+  renderSecnav(); renderVerwant();
   document.getElementById('c-editorial').innerHTML=d.editorial;
+  const pv=document.getElementById('printvoet');
+  if(pv){ const u='https://intonc.github.io/interventieoncologie/kaart/'+current+'/';
+    pv.textContent=(lang==='nl'?'Bron: ':'Source: ')+u+(lang==='nl'?' · afgedrukt op ':' · printed on ')
+      +new Date().toLocaleDateString(lang==='nl'?'nl-NL':'en-GB'); }
   document.getElementById('ov-guide').innerHTML=litHTML(d.guides,'guide');
   renderLit();
 }
-function showCard(id){current=id;renderCard();document.getElementById('home').style.display='none';document.getElementById('tech').style.display='none';document.getElementById('detail').style.display='block';window.scrollTo(0,0);}
-function showHome(){document.getElementById('detail').style.display='none';document.getElementById('tech').style.display='none';document.getElementById('home').style.display='block';window.scrollTo(0,0);}
+// ── Onderlinge verwijzingen tussen kaarten ───────────────────────────
+function techVanTekst(tekst){
+  const t=(tekst||'').toLowerCase();
+  const treffers=[];
+  Object.keys(TECHS).forEach(k=>{
+    const labels=[TECHS[k].nl,TECHS[k].en,k].map(x=>String(x).toLowerCase());
+    if(labels.some(l=>l.length>2 && t.includes(l))) treffers.push(k);
+  });
+  const extra={ 'tare':'TARE','y-90':'TARE','radio-embolisatie':'TARE','radioembolisation':'TARE',
+    'tace':'TACE','chemo-embolisatie':'TACE','chemoembolization':'TACE',
+    'ire':'IRE','elektroporatie':'IRE','electroporation':'IRE','nanoknife':'IRE',
+    'cryoablatie':'CRYO','cryoablation':'CRYO','radiofrequent':'RFA','radiofrequency':'RFA',
+    'microwave':'MWA','microgolf':'MWA','embolisatie':'EMB','embolization':'EMB',
+    'cementoplastie':'CEM','vertebroplastiek':'CEM','kyphoplasty':'CEM',
+    'elektrochemotherapie':'ECT','electrochemotherapy':'ECT' };
+  Object.keys(extra).forEach(w=>{ if(t.includes(w) && TECHS[extra[w]] && !treffers.includes(extra[w])) treffers.push(extra[w]); });
+  return treffers;
+}
+function altKaart(titel){
+  const hier=INDEX.find(c=>c.id===current);
+  if(!hier) return null;
+  const techs=techVanTekst(titel);
+  if(!techs.length) return null;
+  const kand=INDEX.filter(c=>c.id!==current && c.dis.some(x=>hier.dis.includes(x)) && c.tech.some(t=>techs.includes(t)));
+  return kand.length?kand[0].id:null;
+}
+function renderVerwant(){
+  const hier=INDEX.find(c=>c.id===current); if(!hier) return;
+  const score=c=>(c.dis.some(x=>hier.dis.includes(x))?2:0)+(c.organ===hier.organ?1:0);
+  const kaarten=INDEX.filter(c=>c.id!==current && score(c)>0)
+      .sort((a,b)=>score(b)-score(a)).slice(0,8);
+  const paginas=(TECHPAGES||[]).filter(tp=>tp.techs && tp.techs.some(t=>hier.tech.includes(t)));
+  document.getElementById('c-relkop').textContent = lang==='nl'?'Verwante kaarten en technieken':'Related cards and techniques';
+  const a=kaarten.map(c=>`<a href="${hashVan('kaart',c.id)}">${CARDS[c.id][lang].title}</a>`).join('');
+  const b=paginas.map(tp=>`<a class="tech" href="${hashVan('techniek',tp.id)}">${tp[lang].title}</a>`).join('');
+  document.getElementById('c-rel').innerHTML=`<div class="rel">${a}${b}</div>`;
+}
+function renderSecnav(){
+  const items=lang==='nl'
+    ? [['sec-bl','Kernboodschap'],['sec-pos','Positie'],['sec-crit','Wanneer geschikt'],['sec-res','Resultaten'],
+       ['sec-lim','Beperkingen'],['sec-alt','Alternatieven'],['sec-rel','Verwant'],['sec-lit','Literatuur']]
+    : [['sec-bl','Bottom line'],['sec-pos','Position'],['sec-crit','When suitable'],['sec-res','Results'],
+       ['sec-lim','Limitations'],['sec-alt','Alternatives'],['sec-rel','Related'],['sec-lit','Literature']];
+  document.getElementById('secnav').innerHTML=items.map(([id,t])=>
+    `<a href="#" onclick="event.preventDefault();naarSectie('${id}')">${t}</a>`).join('');
+}
+function naarSectie(id){
+  const el=document.getElementById(id); if(!el) return;
+  const y=el.getBoundingClientRect().top+window.scrollY-100;
+  window.scrollTo({top:y,behavior:'smooth'});
+}
+function showCard(id,zonderRoute){current=id;renderCard();document.getElementById('home').style.display='none';document.getElementById('tech').style.display='none';document.getElementById('wijzig').style.display='none';document.getElementById('detail').style.display='block';window.scrollTo(0,0);if(!zonderRoute)zetRoute('kaart',id);else zetMeta('kaart',id);}
+function showHome(zonderRoute){document.getElementById('detail').style.display='none';document.getElementById('tech').style.display='none';document.getElementById('wijzig').style.display='none';document.getElementById('home').style.display='block';window.scrollTo(0,0);if(!zonderRoute)zetRoute('home','');else zetMeta('home','');}
+
+// ── Adressen: elke kaart en techniekpagina heeft een eigen link ───────
+let routeBezig=false;
+function hashVan(soort,id){
+  if(soort==='kaart') return '#/'+lang+'/kaart/'+id;
+  if(soort==='techniek') return '#/'+lang+'/techniek/'+id;
+  return '#/'+lang;
+}
+function zetRoute(soort,id){
+  const h=hashVan(soort,id);
+  if(location.hash!==h){ routeBezig=true; location.hash=h; setTimeout(()=>routeBezig=false,0); }
+  zetMeta(soort,id);
+}
+function tekstUit(html){ return (html||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim(); }
+function zetMeta(soort,id){
+  const basis='https://intonc.github.io/interventieoncologie/';
+  let titel=lang==='nl'?'Interventie Oncologie · evidence-based interventieradiologie'
+                       :'Interventie Oncologie · evidence-based interventional radiology';
+  let oms=SITE[lang]&&SITE[lang].sub?tekstUit(SITE[lang].sub):'';
+  if(soort==='kaart' && CARDS[id]){
+    const d=CARDS[id][lang];
+    titel=d.title+' · Interventie Oncologie';
+    oms=tekstUit(d.bl).slice(0,300);
+  } else if(soort==='techniek'){
+    const tp=TECHPAGES.find(t=>t.id===id);
+    if(tp){ titel=tp[lang].title+' · Interventie Oncologie'; oms=tekstUit(tp[lang].lead).slice(0,300); }
+  }
+  document.title=titel;
+  const url=basis+hashVan(soort,id);
+  const zet=(el,attr,v)=>{const e=document.getElementById(el); if(e) e.setAttribute(attr,v);};
+  zet('m-desc','content',oms); zet('m-ogt','content',titel); zet('m-ogd','content',oms);
+  zet('m-ogu','content',url); zet('m-can','href',url);
+}
+function leesRoute(){
+  if(routeBezig) return;
+  const h=(location.hash||'').replace(/^#\/?/,'');
+  const dl=h.split('/').filter(Boolean);
+  const taal=(dl[0]==='nl'||dl[0]==='en')?dl.shift():lang;
+  if(taal!==lang){ lang=taal; document.documentElement.lang=taal;
+    document.getElementById('nl').classList.toggle('active',taal==='nl');
+    document.getElementById('en').classList.toggle('active',taal==='en');
+    render(); }
+  if(dl[0]==='wijzigingen') showWijzig(true);
+  else if(dl[0]==='kaart' && CARDS[dl[1]]) showCard(dl[1],true);
+  else if(dl[0]==='techniek' && TECHPAGES.some(t=>t.id===dl[1])) showTech(dl[1],true);
+  else showHome(true);
+}
+window.addEventListener('hashchange',leesRoute);
+// ── Wat is er veranderd ──────────────────────────────────────────────
+let wijzigCache=null;
+function showWijzig(zonderRoute){
+  document.getElementById('home').style.display='none';
+  document.getElementById('detail').style.display='none';
+  document.getElementById('tech').style.display='none';
+  document.getElementById('wijzig').style.display='block';
+  window.scrollTo(0,0);
+  renderWijzig();
+  if(!zonderRoute){ const h='#/'+lang+'/wijzigingen';
+    if(location.hash!==h){ routeBezig=true; location.hash=h; setTimeout(()=>routeBezig=false,0); } }
+  document.title=(lang==='nl'?'Wat is er veranderd':'What changed')+' · Interventie Oncologie';
+}
+async function renderWijzig(){
+  document.getElementById('w-titel').textContent=lang==='nl'?'Wat is er veranderd':'What changed';
+  document.getElementById('w-sub').textContent=lang==='nl'
+    ? 'Elke wijziging aan de inhoud, met datum, rechtstreeks uit het archief van de site'
+    : 'Every change to the content, dated, straight from the site archive';
+  const lijst=document.getElementById('w-lijst');
+  if(!wijzigCache){
+    lijst.innerHTML=`<p class="refs">${lang==='nl'?'Bezig met ophalen…':'Loading…'}</p>`;
+    try{
+      const r=await fetch('https://api.github.com/repos/IntOnc/interventieoncologie/commits?per_page=40');
+      if(!r.ok) throw new Error(r.status);
+      wijzigCache=(await r.json()).map(c=>({
+        datum:(c.commit.author.date||'').slice(0,10),
+        tekst:(c.commit.message||'').split('\n')[0] }));
+    }catch(e){
+      try{
+        const r2=await fetch('wijzigingen.json?v='+Date.now());
+        if(!r2.ok) throw new Error(r2.status);
+        wijzigCache=(await r2.json()).regels;
+      }catch(e2){
+      lijst.innerHTML=`<p class="refs">${lang==='nl'
+        ?'De lijst met wijzigingen is nu niet op te halen. Probeer het later nog eens.'
+        :'The change list cannot be retrieved right now. Please try again later.'}</p>`;
+        return;
+      }
+    }
+  }
+  const RUIS=/^(Add files via upload|Create |Delete |Update README|Merge branch|Merge pull request)/i;
+  const perMaand={};
+  wijzigCache.filter(c=>!RUIS.test(c.tekst)).forEach(c=>{ const k=c.datum.slice(0,7); (perMaand[k]=perMaand[k]||[]).push(c); });
+  const maandnaam=k=>{const d=k.split('-'); return MND[lang][Number(d[1])-1]+' '+d[0];};
+  lijst.innerHTML=Object.keys(perMaand).sort().reverse().map(k=>
+    `<h4>${maandnaam(k)}</h4>`+perMaand[k].map(c=>
+      `<div class="lit" style="cursor:default"><div class="lh">
+        <span class="badge" style="background:var(--guide)">${Number(c.datum.slice(8))} ${MND[lang][Number(c.datum.slice(5,7))-1]}</span>
+        <span class="ttl">${c.tekst}</span></div></div>`).join('')).join('');
+}
+
+// ── Sneltoetsen ──────────────────────────────────────────────────────
+document.addEventListener('keydown',e=>{
+  const veld=document.getElementById('q');
+  const inVeld=document.activeElement===veld;
+  if(e.key==='/' && !inVeld){ e.preventDefault(); showHome(); veld.focus(); veld.select(); return; }
+  if(e.key==='Escape' && inVeld){ veld.value=''; applyFilters(); veld.blur(); return; }
+  if(inVeld && (e.key==='ArrowDown'||e.key==='Enter')){
+    const eerste=document.querySelector('#pubhits .pubrij, #cardlist .cardlink');
+    if(eerste){ e.preventDefault(); if(e.key==='Enter') eerste.click(); else eerste.focus(); }
+    return;
+  }
+  if(e.key==='ArrowDown'||e.key==='ArrowUp'){
+    const rijen=[...document.querySelectorAll('#pubhits .pubrij, #cardlist .cardlink, #nieuwste .pubrij')];
+    const i=rijen.indexOf(document.activeElement);
+    if(i>=0){ e.preventDefault(); const j=e.key==='ArrowDown'?Math.min(i+1,rijen.length-1):Math.max(i-1,0); rijen[j].focus(); }
+  }
+});
 (async function start(){
   try { await laadInhoud(); } catch(e){ toonLaadfout(e); return; }
   render();
-  if(window.innerWidth>860){ const q=document.getElementById('q'); if(q) q.focus(); }
+  leesRoute();
+  if(window.innerWidth>860 && document.getElementById('home').style.display!=='none'){
+    const q=document.getElementById('q'); if(q) q.focus();
+  }
 })();
 
 </script>

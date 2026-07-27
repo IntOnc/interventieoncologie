@@ -1,0 +1,61 @@
+{
+ "bijgewerkt": "2026-07-27",
+ "regels": [
+  {
+   "datum": "2026-07-27",
+   "tekst": "Publicatieregels op de startpagina klappen open met samenvatting en directe link"
+  },
+  {
+   "datum": "2026-07-27",
+   "tekst": "Vijf dubbele literatuurverwijzingen verwijderd en ontdubbelregel vastgelegd"
+  },
+  {
+   "datum": "2026-07-27",
+   "tekst": "Samengevoegd met de publicaties van de onderhoudsrondes"
+  },
+  {
+   "datum": "2026-07-27",
+   "tekst": "Nieuwe startpagina: zoeken voorop, nieuwste publicaties over alle kaarten"
+  },
+  {
+   "datum": "2026-07-27",
+   "tekst": "Onderhoudsronde 1: BCLC 2026-update op HCC-kaarten en zes geverifieerde literatuurvoorstellen"
+  },
+  {
+   "datum": "2026-07-27",
+   "tekst": "Ronde 3: 4 nieuwe latest-items (crc-ablatie, long-ablatie, tumorbloeding, thyroid-ablatie); bijgewerkt 2026-07-27"
+  },
+  {
+   "datum": "2026-07-27",
+   "tekst": "rcc-ablatie: gepoolde 5-jaars FASTRACK SABR-analyse toegevoegd aan latest"
+  },
+  {
+   "datum": "2026-07-27",
+   "tekst": "Literatuur in een gecombineerd scherm met filters, compacter en met eerste auteur"
+  },
+  {
+   "datum": "2026-07-26",
+   "tekst": "Werkwijze voor publiceren na akkoord toegevoegd"
+  },
+  {
+   "datum": "2026-07-26",
+   "tekst": "Samengevoegd met de handmatig geuploade versie op GitHub"
+  },
+  {
+   "datum": "2026-07-26",
+   "tekst": "Repo opgeruimd en pipelinebestanden bijgewerkt"
+  },
+  {
+   "datum": "2026-07-26",
+   "tekst": "CVIR Oncology volledig doorgelicht, 11 artikelen toegevoegd"
+  },
+  {
+   "datum": "2026-07-26",
+   "tekst": "Lopende studies per kaart uit trialregisters toegevoegd"
+  },
+  {
+   "datum": "2026-07-26",
+   "tekst": "Site opgesplitst in schil (index.html) en inhoud (content.json)"
+  }
+ ]
+}
