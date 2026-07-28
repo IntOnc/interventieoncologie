@@ -184,6 +184,8 @@
   .pubrij.open .prsam{display:block}
   .pubrij.open .ptitel{white-space:normal;overflow:visible}
   .watverd{font-weight:600;color:#33475b;margin-bottom:6px}
+  .aanl{border-left:2px solid var(--line);padding:2px 0 2px 9px;margin:5px 0}
+  .aanltitel{font-weight:600;color:#2b3947;margin-bottom:2px}
   .kern{display:inline-block;font-size:10.5px;font-weight:700;color:#0b5563;background:#e6f0f2;
     border-radius:5px;padding:1px 6px;margin-right:7px;white-space:nowrap;vertical-align:middle}
   .mrbadge{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
@@ -1226,15 +1228,19 @@ const WTYPE={
   nieuw:{nl:'nieuwe kaart',en:'new card',kl:'core'}};
 let wFilter='alles';
 function zetWFilter(v){ wFilter=v; renderWijzig(); }
+// zoek een literatuurregel op de kaart via de bron-url
+function litViaBron(kaart,bron){
+  const c=CARDS[kaart]; if(!c||!bron) return null;
+  const d=c[lang]||{};
+  for(const k of ['guides','core','latest','ongoing'])
+    for(const it of (d[k]||[])) if(it[2]===bron) return it;
+  return null;
+}
 // zoek de bijbehorende literatuurregel op de huidige kaart (voor abstract + score)
 function wijzigLit(r){
   const c=CARDS[r.kaart]; if(!c) return null;
   const d=c[lang]||{};
-  for(const k of ['guides','core','latest','ongoing']){
-    for(const it of (d[k]||[])){
-      if(r.bron && it[2]===r.bron) return it;
-    }
-  }
+  if(r.bron){ const t=litViaBron(r.kaart,r.bron); if(t) return t; }
   for(const k of ['guides','core','latest','ongoing']){
     for(const it of (d[k]||[])){
       if(it[0]===r.wat) return it;
@@ -1260,9 +1266,18 @@ function watVeranderd(r){
   if(r.type==='bijgewerkt')
     return lang==='nl'?`De gegevens van deze publicatie op de kaart ${naam} zijn gecorrigeerd.`
                       :`The details of this publication on the ${naam} card were corrected.`;
-  if(r.type==='tekst')
-    return lang==='nl'?`De kaarttekst van ${naam} is herzien op basis van nieuwe literatuur.`
-                      :`The card text of ${naam} was revised based on new literature.`;
+  if(r.type==='tekst'){
+    const FL={bl:{nl:'inleiding',en:'introduction'},crit:{nl:'wanneer geschikt',en:'when suitable'},
+      results:{nl:'resultaten',en:'results'},lim:{nl:'beperkingen',en:'limitations'},
+      alts:{nl:'alternatieven',en:'alternatives'},pos:{nl:'positie en kracht',en:'position and strength'}};
+    const secs=(r.velden||[]).map(f=>FL[f]?FL[f][lang]:f);
+    const secTxt=secs.length?` (${secs.join(', ')})`:'';
+    if(r.naaraanleiding&&r.naaraanleiding.length)
+      return lang==='nl'?`De kaarttekst van ${naam}${secTxt} is aangepast naar aanleiding van nieuwe literatuur:`
+                        :`The card text of ${naam}${secTxt} was updated in response to new literature:`;
+    return lang==='nl'?`De kaarttekst van ${naam}${secTxt} is herzien.`
+                      :`The card text of ${naam}${secTxt} was revised.`;
+  }
   if(r.type==='nieuw')
     return lang==='nl'?`Nieuwe kaart ${naam} aan de site toegevoegd.`
                       :`New card ${naam} added to the site.`;
@@ -1305,8 +1320,18 @@ async function renderWijzig(){
       const lit=(r.type!=='nieuw'&&r.type!=='verwijderd')?wijzigLit(r):null;
       const bronLink=r.bron?`<a href="${r.bron}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${naarPub}</a>`:'';
       const kaartLink=CARDS[r.kaart]?`<a href="#" onclick="event.stopPropagation();event.preventDefault();showCard('${r.kaart}')">${naarKaart}</a>`:'';
+      const aanleiding=(r.type==='tekst'&&r.naaraanleiding&&r.naaraanleiding.length)
+        ? r.naaraanleiding.map(a=>{
+            const t=litViaBron(r.kaart,a.bron);
+            const titel=t?t[0]:a.wat;
+            const lnk=a.bron?` <a href="${a.bron}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗</a>`:'';
+            const det=t?`<div class="bron">${t[1]}</div>${kortSam(t[3])}`:'';
+            return `<div class="aanl"><div class="aanltitel">${kernChip(t||[])}${titel}${lnk}</div>${det}</div>`;
+          }).join('')
+        : '';
       const binnen=`<div class="prsam"><div class="watverd">${watVeranderd(r)}</div>`
         +(lit?`<div class="bron">${lit[1]}</div>${scoreUitleg(lit)}${kortSam(lit[3])}`:'')
+        +aanleiding
         +`<span class="prlinks">${bronLink}${kaartLink}</span></div>`;
       return `<div class="pubrij" role="button" tabindex="0" aria-expanded="false"
         onclick="klapUit(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();klapUit(this)}">

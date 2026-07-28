@@ -144,17 +144,27 @@ try {
       };
       for (const id of Object.keys(nu.cards)) {
         if (!vorige.cards[id]) { regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: 'nieuw', wat: nu.cards[id].nl.title }); continue; }
+        const nieuweHier = [];       // publicaties die in deze commit aan deze kaart zijn toegevoegd
         for (const lijst of ['guides', 'core', 'latest', 'ongoing']) {
           const oud = new Map((vorige.cards[id].nl[lijst] || []).map(x => [sleutelVan(x), x]));
           const nieuwe = new Map((nu.cards[id].nl[lijst] || []).map(x => [sleutelVan(x), x]));
-          for (const [k, x] of nieuwe) if (!oud.has(k))
+          for (const [k, x] of nieuwe) if (!oud.has(k)) {
             regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: lijst === 'guides' ? 'richtlijn' : 'toegevoegd', lijst, wat: x[0], bron: x[2] });
+            if (lijst === 'core' || lijst === 'latest') nieuweHier.push({ wat: x[0], bron: x[2] });
+          }
           for (const [k, x] of oud) if (!nieuwe.has(k))
             regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: 'verwijderd', lijst, wat: x[0] });
         }
-        const a = tekstVan(vorige.cards[id].nl, (vorige.pos || {})[id] && vorige.pos[id].nl);
-        const b = tekstVan(nu.cards[id].nl, (nu.pos || {})[id] && nu.pos[id].nl);
-        if (a !== b) regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: 'tekst', wat: nu.cards[id].nl.title });
+        // welke tekstvelden zijn veranderd
+        const ov = vorige.cards[id].nl, nv = nu.cards[id].nl;
+        const oPos = (vorige.pos || {})[id] && vorige.pos[id].nl, nPos = (nu.pos || {})[id] && nu.pos[id].nl;
+        const gelijk = (x, y) => JSON.stringify(x || null) === JSON.stringify(y || null);
+        const velden = [];
+        for (const f of ['bl', 'crit', 'results', 'lim', 'alts']) if (!gelijk(ov[f], nv[f])) velden.push(f);
+        if (!gelijk(oPos, nPos)) velden.push('pos');
+        const a = tekstVan(ov, oPos);
+        const b = tekstVan(nv, nPos);
+        if (a !== b) regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: 'tekst', wat: nu.cards[id].nl.title, velden, naaraanleiding: nieuweHier.slice(0, 4) });
       }
     }
     vorige = nu;

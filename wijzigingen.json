@@ -1254,7 +1254,11 @@
    "kaart": "hcc-ablatie",
    "kort": "Ablatie HCC",
    "type": "tekst",
-   "wat": "Thermale ablatie bij hepatocellulair carcinoom"
+   "wat": "Thermale ablatie bij hepatocellulair carcinoom",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": []
   },
   {
    "datum": "2026-07-27",
