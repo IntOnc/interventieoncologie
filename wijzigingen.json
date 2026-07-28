@@ -3,6 +3,15 @@
  "regels": [
   {
    "datum": "2026-07-28",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Partial Nephrectomy Versus Thermal Ablation for Cystic Renal Tumors: A Registry-Based, Propensity Score Matched Analysis (UroCCR n°177)",
+   "bron": "https://link.springer.com/article/10.1007/s00270-026-04482-8"
+  },
+  {
+   "datum": "2026-07-28",
    "kaart": "hcc-ablatie",
    "kort": "Ablatie HCC",
    "type": "toegevoegd",
