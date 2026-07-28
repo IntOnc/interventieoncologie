@@ -50,8 +50,13 @@
   .hero h1{font-size:26px;margin:.2em 0;letter-spacing:-.5px}
   .hero p{color:var(--muted);margin:.2em 0 0;max-width:62ch}
   .search{margin:18px 0 6px;position:relative}
-  .search input{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:12px;font-size:15px;
+  .search input{width:100%;padding:14px 46px 14px 16px;border:1px solid var(--line);border-radius:12px;font-size:15px;
     background:#fff;box-shadow:var(--shadow)}
+  .qclear{position:absolute;top:50%;right:10px;transform:translateY(-50%);width:26px;height:26px;border:none;
+    border-radius:50%;background:#eef2f5;color:#5a6b7b;font-size:17px;line-height:1;cursor:pointer;display:none;
+    align-items:center;justify-content:center;padding:0}
+  .qclear:hover{background:#e0e6ea;color:#0f1e2e}
+  .search.heeft .qclear{display:flex}
   .suggest{position:absolute;left:0;right:0;top:100%;margin-top:5px;background:#fff;border:1px solid var(--line);
     border-radius:12px;box-shadow:var(--shadow);z-index:30;overflow:hidden;display:none}
   .sopt{padding:9px 15px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px}
@@ -302,7 +307,7 @@
 <main>
   <section id="home">
     <div class="hero"><h1 data-i="h1"></h1><p data-i="sub"></p></div>
-    <div class="search"><input id="q" type="text" data-ph="search" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="applyFilters();renderSuggest()" onkeydown="if(event.key==='Escape')hideSuggest()" onblur="hideSuggest()"><div id="suggest" class="suggest"></div></div>
+    <div class="search"><input id="q" type="text" data-ph="search" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="applyFilters();renderSuggest()" onkeydown="if(event.key==='Escape')hideSuggest()" onblur="hideSuggest()"><button id="qclear" class="qclear" type="button" aria-label="Wis zoekopdracht" title="Wissen" onmousedown="event.preventDefault()" onclick="wisZoek()">×</button><div id="suggest" class="suggest"></div></div>
     <div id="pubhits" class="pubblok" style="display:none"></div>
     <div id="homecards" class="pubblok" style="display:none"></div>
     <div id="mustread" class="pubblok"></div>
@@ -802,8 +807,15 @@ function labelFacetKnop(){
   document.getElementById('meerf').className='meerf'+(open?' on':'');
 }
 function clearFilters(){ selOrgan.clear(); selTech.clear(); selDis.clear(); document.getElementById('q').value=''; renderChips(); applyFilters(); }
+function wisZoek(){
+  const v=document.getElementById('q');
+  v.value=''; hideSuggest(); applyFilters(); v.focus();
+}
 function applyFilters(){
-  const q=(document.getElementById('q').value||'').toLowerCase().trim();
+  const veld=document.getElementById('q');
+  const zoekBox=veld.closest('.search');
+  if(zoekBox) zoekBox.classList.toggle('heeft', !!veld.value.trim());
+  const q=(veld.value||'').toLowerCase().trim();
   const tokens=q?q.split(/\s+/):[];
   const matches=INDEX.filter(c=>{
     if(selDis.size && !c.dis.some(d=>selDis.has(d))) return false;
