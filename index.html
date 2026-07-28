@@ -184,6 +184,10 @@
   .pubrij.open .prsam{display:block}
   .pubrij.open .ptitel{white-space:normal;overflow:visible}
   .watverd{font-weight:600;color:#33475b;margin-bottom:6px}
+  .kern{display:inline-block;font-size:10.5px;font-weight:700;color:#0b5563;background:#e6f0f2;
+    border-radius:5px;padding:1px 6px;margin-right:7px;white-space:nowrap;vertical-align:middle}
+  .mrbadge{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+    color:#7a4a02;background:#ffe8b3;border-radius:5px;padding:1px 6px;margin:0 6px;vertical-align:middle}
   .prkort{color:var(--muted);font-style:italic}
   .prlinks{display:block;margin-top:6px}
   .prlinks a{color:var(--brand);font-weight:600;text-decoration:none;white-space:nowrap;margin-right:14px}
@@ -290,6 +294,7 @@
     <div class="search"><input id="q" type="text" data-ph="search" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="applyFilters();renderSuggest()" onkeydown="if(event.key==='Escape')hideSuggest()" onblur="hideSuggest()"><div id="suggest" class="suggest"></div></div>
     <div id="pubhits" class="pubblok" style="display:none"></div>
     <div id="homecards" class="pubblok" style="display:none"></div>
+    <div id="mustread" class="pubblok"></div>
     <div id="nieuwste" class="pubblok"></div>
     <div id="gewijzigd" class="pubblok"></div>
     <div class="disclaimer" data-i="disc"></div>
@@ -528,6 +533,22 @@ function klapUit(el){
   const open=el.classList.toggle('open');
   el.setAttribute('aria-expanded',open?'true':'false');
 }
+// Must-read: sterke en recente evidence (bewijskracht hoog + laatste 24 maanden)
+function grensMR(){ const n=new Date(); const t=n.getFullYear()*12+n.getMonth()-24; return Math.floor(t/12)*100+(t%12)+1; }
+function isMustRead(p){ const b=bewijs(p); return !!(b && b.score>=70 && (Number(p&&p[4])||0)>=grensMR()); }
+function mustBadge(){ return `<span class="mrbadge" title="${lang==='nl'?'Sterke, recente evidence':'Strong, recent evidence'}">must read</span>`; }
+// Kerngetal: opzet + aantal patiënten uit de gestructureerde bewijsgegevens (altijd correct);
+// een expliciete kop in het 8e element gaat voor als die er is.
+function kernChip(p){
+  if(typeof p[7]==='string' && p[7].trim()) return `<span class="kern">${p[7]}</span>`;
+  const s=p[6]; if(!s||!s.d) return '';
+  const D={meta_rct:{nl:'meta-RCT',en:'meta-RCT'},rct3:{nl:'RCT',en:'RCT'},rct:{nl:'RCT',en:'RCT'},
+    meta:{nl:'meta-analyse',en:'meta-analysis'},prosp:{nl:'prospectief',en:'prospective'},
+    retro:{nl:'retrospectief',en:'retrospective'},serie:{nl:'serie',en:'series'},review:{nl:'review',en:'review'}};
+  const d=D[s.d]?D[s.d][lang]:''; if(!d) return '';
+  const n=s.n?` · ${s.n} ${lang==='nl'?'pt':'pts'}`:'';
+  return `<span class="kern">${d}${n}</span>`;
+}
 function litRegel(p,kind){
   const label=kind==='latest'?'':SOORT[kind][lang];
   const linkTxt=lang==='nl'?'Naar publicatie ↗':'View publication ↗';
@@ -544,9 +565,10 @@ function litRegel(p,kind){
   const flag=needsData?`<span class="flag ${kind==='core'?'hoog':'laag'}" title="${flagTip}">⚠</span>`:'';
   const blad=(p[1]||'').replace(/\s*·\s*(?:[A-Za-zÀ-ÿ]{3,9}\.?\s+)?\d{4}\s*$/,'').replace(/\s*·\s*$/,'').trim();
   const aut=p[5]?`<span class="aut">${p[5]}</span>`:'';
+  const mr=isMustRead(p)?mustBadge():'';
   return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
-    <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}
-      <span class="meta2">${aut}<span class="venue" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>${scorePil(p)}<span class="dat">${datumLabel(p[4])}</span></span></div>
+    <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}${mr}
+      <span class="meta2">${aut}${kernChip(p)}<span class="venue" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>${scorePil(p)}<span class="dat">${datumLabel(p[4])}</span></span></div>
     <div class="sum"><div class="bron">${p[1]}</div>${scoreUitleg(p)}${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a></div>
   </div>`;
 }
@@ -706,9 +728,9 @@ function pubRij(x){
     <div class="prkop">
       <span class="pdat">${datumLabel(x.sk)}</span>
       <span class="pkaart ${x.soort}">${x.kort}</span>
-      <span class="ptitel">${x.titel}</span>
+      <span class="ptitel">${x.titel}</span>${isMustRead(x.rij)?mustBadge():''}
       ${x.aut?`<span class="paut">${x.aut}</span>`:''}
-      <span class="pmeta" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>${scorePil(x.rij)}
+      ${kernChip(x.rij)}<span class="pmeta" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>${scorePil(x.rij)}
     </div>
     <div class="prsam"><div class="bron">${x.venue}</div>${scoreUitleg(x.rij)}${kortSam(x.sam)}
       <span class="prlinks">
@@ -717,6 +739,20 @@ function pubRij(x){
       </span>
     </div>
   </div>`;
+}
+let mustreadAan=6;
+function toonMeerMustread(){ mustreadAan=mustreadAan>=24?6:mustreadAan+12; renderMustread(); }
+function renderMustread(){
+  const box=document.getElementById('mustread');
+  if(!box) return;
+  const alles=pubIndex().filter(x=>isMustRead(x.rij));
+  if(!alles.length){ box.innerHTML=''; return; }
+  const kop=lang==='nl'?'Must reads':'Must reads';
+  const hint=lang==='nl'?'sterke en recente evidence, automatisch geselecteerd':'strong and recent evidence, selected automatically';
+  const meer=mustreadAan>=24?(lang==='nl'?'minder tonen':'show less'):(lang==='nl'?'meer tonen':'show more');
+  box.innerHTML=`<div class="blokkop">${kop} <span class="evhint">${hint}</span></div>`
+    + alles.slice(0,mustreadAan).map(pubRij).join('')
+    + (alles.length>6?`<button class="meerlink" onclick="toonMeerMustread()">${meer} ↓</button>`:'');
 }
 let nieuwsteAan=8, nieuwstePeriode='alles';
 function toonMeerNieuwste(){ nieuwsteAan=nieuwsteAan>=40?8:nieuwsteAan+16; renderNieuwste(); }
@@ -789,6 +825,8 @@ function applyFilters(){
   labelFacetKnop();
   const zoekt=tokens.length>0;
   document.getElementById('nieuwste').style.display = zoekt?'none':'block';
+  const mr=document.getElementById('mustread');
+  if(mr) mr.style.display = zoekt?'none':'block';
   const gw=document.getElementById('gewijzigd');
   if(gw) gw.style.display = zoekt?'none':'block';
   const hc=document.getElementById('homecards');
@@ -799,7 +837,7 @@ function applyFilters(){
       hc.style.display='block';
     } else { hc.style.display='none'; hc.innerHTML=''; }
   }
-  if(!zoekt){ renderNieuwste(); renderGewijzigd(); }
+  if(!zoekt){ renderMustread(); renderNieuwste(); renderGewijzigd(); }
   const pb=document.getElementById('pubhits');
   if(zoekt){
     const treffers=pubIndex(true).filter(x=>{
@@ -995,7 +1033,7 @@ function verbergAlles(){
 function toonPagina(id,zonderRoute){
   huidigePagina=id;
   verbergAlles();
-  if(id==='start'){ document.getElementById('home').style.display='block'; renderNieuwste(); renderGewijzigd(); }
+  if(id==='start'){ document.getElementById('home').style.display='block'; renderMustread(); renderNieuwste(); renderGewijzigd(); }
   if(id==='kaarten'){ document.getElementById('kaarten').style.display='block'; applyFilters(); }
   if(id==='literatuur'){ document.getElementById('literatuur').style.display='block'; renderLitPagina(); }
   if(id==='technieken'){ document.getElementById('technieken').style.display='block'; renderTechTiles(); }
