@@ -3,6 +3,28 @@
  "regels": [
   {
    "datum": "2026-07-28",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "tekst",
+   "wat": "Thermale ablatie bij hepatocellulair carcinoom",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "tekst",
+   "wat": "Percutane ablatie van niercelcarcinoom",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-28",
    "kaart": "biopsie",
    "kort": "Biopsie",
    "type": "tekst",
