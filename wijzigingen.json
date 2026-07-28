@@ -3,6 +3,267 @@
  "regels": [
   {
    "datum": "2026-07-28",
+   "kaart": "cca-biliair",
+   "kort": "Galwegdrainage",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Endoluminal radiofrequency ablation in patients with malignant biliary obstruction: a randomised trial",
+   "bron": "https://doi.org/10.1136/gutjnl-2023-329700"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-biliair",
+   "kort": "Galwegdrainage",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Local palliative therapies for unresectable malignant biliary obstruction: radiofrequency ablation combined with stent or biliary stent alone? An updated meta-analysis of nineteen trials",
+   "bron": "https://doi.org/10.1007/s00464-022-09181-2"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-biliair",
+   "kort": "Galwegdrainage",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Percutaneous stenting for malignant hilar biliary obstruction: a randomized controlled trial of unilateral versus bilateral stenting",
+   "bron": "https://doi.org/10.1007/s00261-019-02010-6"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-biliair",
+   "kort": "Galwegdrainage",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Endoscopic versus percutaneous biliary drainage in patients with resectable perihilar cholangiocarcinoma: a multicentre, randomised controlled trial",
+   "bron": "https://doi.org/10.1016/S2468-1253(18)30234-6"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-arterieel",
+   "kort": "TARE/TACE CCA",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Efficacy analysis of drug-eluting beads transcatheter arterial chemoembolization combining systemic chemotherapy and immune checkpoint inhibitors in unresectable intrahepatic cholangiocarcinoma: a multicenter retrospective cohort study based on propensity score matching",
+   "bron": "https://doi.org/10.1186/s12957-025-03679-4"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-arterieel",
+   "kort": "TARE/TACE CCA",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Transarterial chemoembolization versus supportive therapy in the palliative treatment of unresectable intrahepatic cholangiocarcinoma",
+   "bron": "https://doi.org/10.1016/j.crad.2010.11.002"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-arterieel",
+   "kort": "TARE/TACE CCA",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Intra-arterial Therapy for Advanced Intrahepatic Cholangiocarcinoma: A Multi-institutional Analysis",
+   "bron": "https://doi.org/10.1245/s10434-013-3127-y"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-arterieel",
+   "kort": "TARE/TACE CCA",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Conventional and drug-eluting beads transarterial chemoembolization in patients with unresectable intrahepatic cholangiocarcinoma: a systematic review and pooled analysis",
+   "bron": "https://doi.org/10.1007/s00432-022-04485-1"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-arterieel",
+   "kort": "TARE/TACE CCA",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Assessment of Hepatic Arterial Infusion of Floxuridine in Combination With Systemic Gemcitabine and Oxaliplatin in Patients With Unresectable Intrahepatic Cholangiocarcinoma: A Phase 2 Clinical Trial",
+   "bron": "https://doi.org/10.1001/jamaoncol.2019.3718"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-ablatie",
+   "kort": "Ablatie CCA",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Survival Outcomes of Microwave Ablation Compared with Repeat Liver Resection in the Treatment of Recurrent Intrahepatic Cholangiocarcinoma",
+   "bron": "https://doi.org/10.1148/radiol.243254"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-ablatie",
+   "kort": "Ablatie CCA",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Radiofrequency Ablation vs. Surgical Resection for Small Early-Stage Primary Intrahepatic Cholangiocarcinoma",
+   "bron": "https://doi.org/10.3389/fonc.2020.540662"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-ablatie",
+   "kort": "Ablatie CCA",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Comparing Survival After Resection, Ablation, and Radiation in Small Intrahepatic Cholangiocarcinoma",
+   "bron": "https://doi.org/10.1245/s10434-023-13872-y"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "cca-ablatie",
+   "kort": "Ablatie CCA",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Efficacy of microwave ablation for intrahepatic cholangiocarcinoma: a systematic review and meta-analysis",
+   "bron": "https://doi.org/10.21037/qims-24-607"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "pve",
+   "kort": "PVE",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Liver regeneration after portal and hepatic vein embolization improves overall survival compared with portal vein embolization alone: mid-term survival analysis of the multicentre DRAGON 0 cohort",
+   "bron": "https://doi.org/10.1093/bjs/znae087"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "pve",
+   "kort": "PVE",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "ALPPS Versus Portal Vein Embolization for Hepatitis-related Hepatocellular Carcinoma: A Changing Paradigm in Modulation of Future Liver Remnant Before Major Hepatectomy",
+   "bron": "https://doi.org/10.1097/sla.0000000000003433"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "pve",
+   "kort": "PVE",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Portal Vein Embolization is Associated with Reduced Liver Failure and Mortality in High-Risk Resections for Perihilar Cholangiocarcinoma",
+   "bron": "https://doi.org/10.1245/s10434-020-08258-3"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "pve",
+   "kort": "PVE",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "ALPPS Improves Resectability Compared With Conventional Two-stage Hepatectomy in Patients With Advanced Colorectal Liver Metastasis: Results From a Scandinavian Multicenter Randomized Controlled Trial (LIGRO Trial)",
+   "bron": "https://doi.org/10.1097/sla.0000000000002511"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "pve",
+   "kort": "PVE",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Portal vein embolization before right hepatectomy: prospective clinical trial",
+   "bron": "https://doi.org/10.1097/01.sla.0000048447.16651.7b"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Radioembolization for Hepatocellular Carcinoma Using Yttrium-90 Microspheres: A Comprehensive Report of Long-term Outcomes",
+   "bron": "https://doi.org/10.1053/j.gastro.2009.09.006"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Survival after yttrium-90 resin microsphere radioembolization of hepatocellular carcinoma across Barcelona clinic liver cancer stages: a European evaluation",
+   "bron": "https://doi.org/10.1002/hep.24451"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Impact of combined selective internal radiation therapy and sorafenib on survival in advanced hepatocellular carcinoma",
+   "bron": "https://doi.org/10.1016/j.jhep.2019.08.006"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "SIRveNIB: Selective Internal Radiation Therapy Versus Sorafenib in Asia-Pacific Patients With Hepatocellular Carcinoma",
+   "bron": "https://doi.org/10.1200/JCO.2017.76.0892"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Y90 Radioembolization Significantly Prolongs Time to Progression Compared With Chemoembolization in Patients With Hepatocellular Carcinoma",
+   "bron": "https://doi.org/10.1053/j.gastro.2016.08.029"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Transarterial chemoembolisation combined with lenvatinib plus pembrolizumab versus dual placebo for unresectable, non-metastatic hepatocellular carcinoma (LEAP-012): a multicentre, randomised, double-blind, phase 3 study",
+   "bron": "https://doi.org/10.1016/S0140-6736(24)02575-3"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Durvalumab with or without bevacizumab with transarterial chemoembolisation in hepatocellular carcinoma (EMERALD-1): a multiregional, randomised, double-blind, placebo-controlled, phase 3 study",
+   "bron": "https://doi.org/10.1016/S0140-6736(24)02551-0"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Radiofrequency Ablation With or Without Transcatheter Arterial Chemoembolization in the Treatment of Hepatocellular Carcinoma: A Prospective Randomized Trial",
+   "bron": "https://doi.org/10.1200/JCO.2012.42.9936"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Lenvatinib Combined With Transarterial Chemoembolization as First-Line Treatment for Advanced Hepatocellular Carcinoma: A Phase III, Randomized Clinical Trial (LAUNCH)",
+   "bron": "https://doi.org/10.1200/JCO.22.00392"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Sorafenib in combination with transarterial chemoembolisation in patients with unresectable hepatocellular carcinoma (TACE 2): a randomised placebo-controlled, double-blind, phase 3 trial",
+   "bron": "https://doi.org/10.1016/S2468-1253(17)30156-5"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Randomised, multicentre prospective trial of transarterial chemoembolisation (TACE) plus sorafenib as compared with TACE alone in patients with hepatocellular carcinoma: TACTICS trial",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/31801872/"
+  },
+  {
+   "datum": "2026-07-28",
    "kaart": "wervel-embolisatie",
    "kort": "Embolisatie wervel",
    "type": "toegevoegd",
