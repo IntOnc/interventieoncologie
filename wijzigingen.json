@@ -1,6 +1,204 @@
 {
- "bijgewerkt": "2026-07-27",
+ "bijgewerkt": "2026-07-28",
  "regels": [
+  {
+   "datum": "2026-07-28",
+   "kaart": "vcs-stent",
+   "kort": "VCS-stent",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Outcomes in patients managed with endovascular stent for malignant superior vena cava syndrome",
+   "bron": "https://www.sciencedirect.com/science/article/pii/S2589845023000635"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vcs-stent",
+   "kort": "VCS-stent",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Covered versus uncovered stents for malignant superior vena cava syndrome: a systematic review and meta-analysis",
+   "bron": "https://acvjournal.com/index.php/acv/article/view/614"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vcs-stent",
+   "kort": "VCS-stent",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Endovascular Treatment of Malignant Superior Vena Cava Syndrome through Upper-Limb Access: A Comparison between Venous-Dedicated and Conventional Stents",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/33127247/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vcs-stent",
+   "kort": "VCS-stent",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Evaluation of stent placement for vena cava syndrome: phase II trial and phase III randomized controlled trial",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/30112721/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vcs-stent",
+   "kort": "VCS-stent",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Endovascular therapy for superior vena cava syndrome: A systematic review and meta-analysis",
+   "bron": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(21)00250-9/fulltext"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Cryoablation Protocols for Primary and Metastatic Lung Tumors: A Systematic Review and Meta-Analysis Evaluating Effectiveness and Safety of Percutaneous Cryoablation of Pulmonary Tumors",
+   "bron": "https://www.jvir.org/article/S1051-0443(25)00661-X/fulltext"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Percutaneous local tumor ablation vs. stereotactic body radiotherapy for early-stage non-small cell lung cancer: a systematic review and meta-analysis",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/35830244/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Radiofrequency ablation of stage IA non-small cell lung cancer in medically inoperable patients: Results from the American College of Surgeons Oncology Group Z4033 (Alliance) trial",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/26096694/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Survival Rates after Thermal Ablation versus Stereotactic Radiation Therapy for Stage 1 Non-Small Cell Lung Cancer: A National Cancer Database Study",
+   "bron": "https://pubs.rsna.org/doi/10.1148/radiol.2018180979"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Radiofrequency ablation is a valid treatment option for lung metastases: experience in 566 patients with 1037 metastases",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/25688058/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Three-year Survival Rate after Radiofrequency Ablation for Surgically Resectable Colorectal Lung Metastases: A Prospective Multicenter Study",
+   "bron": "https://pubs.rsna.org/doi/abs/10.1148/radiol.2020191272"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Partial Nephrectomy versus Percutaneous Cryoablation of Small Renal Cell Carcinomas: A Comparison of Adverse Events in a Prospective Multicenter Cohort Study",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/35842025/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "An Updated Systematic Review and Meta-Analysis on the Technical, Oncologic, and Safety Outcomes of Microwave Ablation in Patients with Renal Cell Carcinoma",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/37819699/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Perioperative, functional, and oncologic outcomes after ablation or partial nephrectomy for solitary renal tumors: a systematic review and meta-analysis of comparative trials",
+   "bron": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10331136/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Percutaneous ablation versus robotic-assisted partial nephrectomy for cT1 renal cell carcinoma: an evidence-based analysis of comparative outcomes",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/39078530/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Percutaneous Cryoablation for Stage 1 Renal Cell Carcinoma: Outcomes from a 10-year Prospective Study and Comparison with Matched Cohorts from the National Cancer Database",
+   "bron": "https://pubs.rsna.org/doi/abs/10.1148/radiol.2020192325"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Comparative efficacy and safety of ablative therapies in the management of primary localised renal cell carcinoma: a systematic review and meta-analysis",
+   "bron": "https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(24)00731-9/abstract"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Thermal Ablation versus Stereotactic Ablative Body Radiotherapy to Treat Unresectable Colorectal Liver Metastases: A Comparative Analysis from the Prospective Amsterdam CORE Registry",
+   "bron": "https://doi.org/10.3390/cancers13174303"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Comparative outcomes of combined thermal ablation and liver resection versus liver resection alone for multiple colorectal liver metastases: a systematic review and meta-analysis",
+   "bron": "https://doi.org/10.3389/fonc.2025.1613615"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Improved Outcomes of Thermal Ablation for Colorectal Liver Metastases: A 10-Year Analysis from the Prospective Amsterdam CORE Registry (AmCORE)",
+   "bron": "https://doi.org/10.1007/s00270-022-03152-9"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Thermal ablation versus surgical resection for colorectal liver metastases: a GRADE-assessed systematic review, survival meta-analysis, and meta-regression",
+   "bron": "https://doi.org/10.21037/tcr-2025-1726"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "The prognosis of radiofrequency ablation versus hepatic resection for patients with colorectal liver metastases: A systematic review and meta-analysis based on 22 studies",
+   "bron": "https://doi.org/10.1016/j.ijsu.2021.105896"
+  },
   {
    "datum": "2026-07-27",
    "kaart": "hcc-ablatie",
