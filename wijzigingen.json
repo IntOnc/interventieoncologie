@@ -3,6 +3,204 @@
  "regels": [
   {
    "datum": "2026-07-28",
+   "kaart": "crc-tare",
+   "kort": "TARE CRLM",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Survival and Toxicities after 90Y Transarterial Radioembolization of Metastatic Colorectal Cancer in the RESIN Registry",
+   "bron": "https://doi.org/10.1148/radiol.220387"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-tare",
+   "kort": "TARE CRLM",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Randomised phase 2 trial of SIR-Spheres plus fluorouracil/leucovorin chemotherapy versus fluorouracil/leucovorin chemotherapy alone in advanced colorectal cancer",
+   "bron": "https://doi.org/10.1002/jso.20141"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-tare",
+   "kort": "TARE CRLM",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Phase III Trial Comparing Protracted Intravenous Fluorouracil Infusion Alone or With Yttrium-90 Resin Microspheres Radioembolization for Liver-Limited Metastatic Colorectal Cancer Refractory to Standard Chemotherapy",
+   "bron": "https://doi.org/10.1200/JCO.2010.28.5643"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "ect-wervel",
+   "kort": "ECT wervel",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Is the association of electrochemotherapy and bone fixation rational in patients with bone metastasis?",
+   "bron": "https://doi.org/10.1002/jso.27247"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "ect-wervel",
+   "kort": "ECT wervel",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Operating procedures for electrochemotherapy in bone metastases: Results from a multicenter prospective study on 102 patients",
+   "bron": "https://doi.org/10.1016/j.ejso.2021.05.004"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "ect-wervel",
+   "kort": "ECT wervel",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Electrochemotherapy in the Treatment of Bone Metastases: A Phase II Trial",
+   "bron": "https://doi.org/10.1007/s00268-016-3627-6"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "ect",
+   "kort": "ECT cutaan",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Prospective cohort study by InspECT on safety and efficacy of electrochemotherapy for cutaneous tumors and metastases depending on ulceration",
+   "bron": "https://doi.org/10.1111/ddg.14699"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "ect",
+   "kort": "ECT cutaan",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Antitumor effectiveness of electrochemotherapy: a systematic review and meta-analysis",
+   "bron": "https://doi.org/10.1016/j.ejso.2012.08.016"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "ect",
+   "kort": "ECT cutaan",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Electrochemotherapy in the treatment of metastatic malignant melanoma: a prospective cohort study by InspECT",
+   "bron": "https://doi.org/10.1111/bjd.15340"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "ire-pancreas",
+   "kort": "IRE pancreas",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Use of Irreversible Electroporation in Pancreatic Cancer Patients: A Multi-Center Experience",
+   "bron": "https://doi.org/10.3390/curroncol32100574"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "ire-pancreas",
+   "kort": "IRE pancreas",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Irreversible electroporation combined with immunotherapy versus irreversible electroporation alone for locally advanced pancreatic cancer: a systematic review and meta-analysis",
+   "bron": "https://doi.org/10.31744/einstein_journal/2026RW1656"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "ire-pancreas",
+   "kort": "IRE pancreas",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Single-Institution Experience with Irreversible Electroporation for T4 Pancreatic Cancer: First 50 Patients",
+   "bron": "https://doi.org/10.1245/s10434-015-5034-x"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "ire-pancreas",
+   "kort": "IRE pancreas",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Treatment of 200 Locally Advanced (Stage III) Pancreatic Adenocarcinoma Patients With Irreversible Electroporation: Safety and Efficacy",
+   "bron": "https://doi.org/10.1097/SLA.0000000000001441"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "adrenal-ablatie",
+   "kort": "Ablatie bijnier",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Survival benefits of computed tomography-guided thermal ablation for adrenal metastases from hepatocellular carcinoma",
+   "bron": "https://doi.org/10.1080/02656736.2019.1663279"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "adrenal-ablatie",
+   "kort": "Ablatie bijnier",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Treatment outcomes of percutaneous radiofrequency ablation versus adrenalectomy for adrenal metastases: a retrospective comparative study",
+   "bron": "https://doi.org/10.1007/s40618-020-01212-w"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "adrenal-ablatie",
+   "kort": "Ablatie bijnier",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Comparison between surgery and thermal ablation for adrenal metastases: a retrospective study",
+   "bron": "https://doi.org/10.1080/02656736.2021.1993356"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "adrenal-ablatie",
+   "kort": "Ablatie bijnier",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Local Control and Survival after Image-Guided Percutaneous Ablation of Adrenal Metastases",
+   "bron": "https://doi.org/10.1016/j.jvir.2017.07.026"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "adrenal-ablatie",
+   "kort": "Ablatie bijnier",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Unresectable Adrenal Metastases: Clinical Outcomes of Radiofrequency Ablation",
+   "bron": "https://doi.org/10.1148/radiol.2015142029"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "bc-cryo",
+   "kort": "Cryo mamma",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Percutaneous ultrasound-guided cryoablation for early-stage primary breast cancer: a follow-up study in Japan",
+   "bron": "https://doi.org/10.1007/s12282-024-01584-4"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "bc-cryo",
+   "kort": "Cryo mamma",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Breast Cancer Recurrence after Cryoablation in Patients Who Are Poor Surgical Candidates or Who Refuse Surgery",
+   "bron": "https://doi.org/10.1016/j.jvir.2025.01.048"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "bc-cryo",
+   "kort": "Cryo mamma",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Cryoablation of Primary Breast Cancer in Patients Ineligible for Clinical Trials: A Multiinstitutional Study",
+   "bron": "https://doi.org/10.2214/AJR.24.31392"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "bc-cryo",
+   "kort": "Cryo mamma",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Local recurrence and residual tumor rates following cryoablation for small early-stage breast cancers: systematic review and meta-analysis",
+   "bron": "https://doi.org/10.1007/s12282-024-01643-w"
+  },
+  {
+   "datum": "2026-07-28",
    "kaart": "cca-biliair",
    "kort": "Galwegdrainage",
    "type": "toegevoegd",
