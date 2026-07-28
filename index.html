@@ -107,6 +107,12 @@
   .posval{flex:1;padding:10px 13px;line-height:1.5}
   .posrow.needsdata .poslab{background:#fffbeb;color:#92400e}
   @media(max-width:640px){.posrow{flex-direction:column}.poslab{flex:none;border-right:none;border-bottom:1px solid var(--line)}}
+  .ir{background:#e7f4ee;color:#0e5c43;border-radius:4px;padding:0 3px;font-weight:600;box-shadow:inset 0 -1px 0 #bfe3d4}
+  .ircallout{border:1px solid #bfe3d4;background:#e7f4ee;border-radius:9px;padding:9px 12px;margin:0 0 10px}
+  .ircallout .irkop{display:flex;align-items:center;gap:6px;font-weight:800;color:#147a5a;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px}
+  .ircallout .irkop svg{width:14px;height:14px;flex:none}
+  .ircallout ul{margin:0;padding-left:17px}
+  .ircallout li{margin:2px 0;font-size:13px}
   ul.crit{margin:0;padding-left:18px}
   ul.crit li{margin:5px 0;font-size:13.5px;color:#38495a}
   .altsub{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700;margin:13px 0 7px}
@@ -880,10 +886,16 @@ function posHTML(id){
   const p=(POS[id]||{})[lang];
   const L=SITE[lang];
   if(!p) return '';
+  // Optie A: 'Kracht van IR'-callout wanneer de kaart een 'sterk'-lijst heeft
+  const sterk=(CARDS[id] && CARDS[id][lang] && CARDS[id][lang].sterk) || null;
+  const bliksem='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>';
+  const callout=(sterk && sterk.length)
+    ? `<div class="ircallout"><div class="irkop">${bliksem}${lang==='nl'?'Kracht van IR':'Strength of IR'}</div><ul>${sterk.map(s=>`<li>${s}</li>`).join('')}</ul></div>`
+    : '';
   const flagTxt=lang==='nl'?'cijfers te verifiëren':'figures to verify';
   const flagTip=lang==='nl'?'Cijfers nog niet volledig na te trekken. Stuur de publicatie om deze regel af te maken'
                            :'Figures not fully traceable yet. Send the publication to complete this row';
-  return [['p_g',p.g],['p_l',p.l],['p_v',p.v]].map(([k,raw])=>{
+  return callout + [['p_g',p.g],['p_l',p.l],['p_v',p.v]].map(([k,raw])=>{
     const marked=/\[\[verify\]\]/.test(raw||'');
     const txt=String(raw||'').replace(/\s*\[\[verify\]\]\s*/g,' ').trim();
     const plain=txt.replace(/<[^>]+>/g,'');

@@ -3,6 +3,29 @@
  "regels": [
   {
    "datum": "2026-07-28",
+   "kaart": "adrenal-ablatie",
+   "kort": "Ablatie bijnier",
+   "type": "tekst",
+   "wat": "Percutane ablatie van bijniermetastasen",
+   "velden": [
+    "results",
+    "pos"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "tekst",
+   "wat": "Thermale ablatie bij colorectale levermetastasen",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-28",
    "kaart": "gastrostomie",
    "kort": "Gastrostomie",
    "type": "toegevoegd",
