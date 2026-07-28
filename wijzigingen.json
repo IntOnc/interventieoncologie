@@ -3,6 +3,50 @@
  "regels": [
   {
    "datum": "2026-07-28",
+   "kaart": "biopsie",
+   "kort": "Biopsie",
+   "type": "tekst",
+   "wat": "Beeldgeleide biopsie voor diagnose en moleculaire diagnostiek",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "leverperfusie",
+   "kort": "Leverperfusie",
+   "type": "tekst",
+   "wat": "Percutane leverperfusie met melfalan bij levermetastasen van uveamelanoom",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "tekst",
+   "wat": "Percutane ablatie van longtumoren",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "tekst",
+   "wat": "Thermale ablatie bij hepatocellulair carcinoom",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-28",
    "kaart": "adrenal-ablatie",
    "kort": "Ablatie bijnier",
    "type": "tekst",
