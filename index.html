@@ -756,8 +756,10 @@ function pubRij(x){
     </div>
   </div>`;
 }
-let mustreadAan=6;
-function toonMeerMustread(){ mustreadAan=mustreadAan>=24?6:mustreadAan+12; renderMustread(); }
+// Rustige startpagina: korte lijsten, 3 regels op mobiel en 5 op breder scherm
+function startAantal(){ return (window.innerWidth||360)<=640 ? 3 : 5; }
+let mustreadOpen=false;
+function toonMeerMustread(){ mustreadOpen=!mustreadOpen; renderMustread(); }
 function renderMustread(){
   const box=document.getElementById('mustread');
   if(!box) return;
@@ -765,14 +767,16 @@ function renderMustread(){
   if(!alles.length){ box.innerHTML=''; return; }
   const kop=lang==='nl'?'Must reads':'Must reads';
   const hint=lang==='nl'?'sterke en recente evidence, automatisch geselecteerd':'strong and recent evidence, selected automatically';
-  const meer=mustreadAan>=24?(lang==='nl'?'minder tonen':'show less'):(lang==='nl'?'meer tonen':'show more');
+  const start=startAantal();
+  const n=mustreadOpen?alles.length:start;
+  const meer=mustreadOpen?(lang==='nl'?'minder tonen ↑':'show less ↑'):(lang==='nl'?'meer tonen ↓':'show more ↓');
   box.innerHTML=`<div class="blokkop">${kop} <span class="evhint">${hint}</span></div>`
-    + alles.slice(0,mustreadAan).map(pubRij).join('')
-    + (alles.length>6?`<button class="meerlink" onclick="toonMeerMustread()">${meer} ↓</button>`:'');
+    + alles.slice(0,n).map(pubRij).join('')
+    + (alles.length>start?`<button class="meerlink" onclick="toonMeerMustread()">${meer}</button>`:'');
 }
-let nieuwsteAan=8, nieuwstePeriode='alles';
-function toonMeerNieuwste(){ nieuwsteAan=nieuwsteAan>=40?8:nieuwsteAan+16; renderNieuwste(); }
-function zetPeriode(v){ nieuwstePeriode=v; nieuwsteAan=8; renderNieuwste(); }
+let nieuwsteExtra=0, nieuwstePeriode='alles';
+function toonMeerNieuwste(){ nieuwsteExtra = nieuwsteExtra>=24 ? 0 : nieuwsteExtra+12; renderNieuwste(); }
+function zetPeriode(v){ nieuwstePeriode=v; nieuwsteExtra=0; renderNieuwste(); }
 function renderNieuwste(){
   const box=document.getElementById('nieuwste');
   if(!box) return;
@@ -782,16 +786,18 @@ function renderNieuwste(){
   const alles=nieuwstePeriode==='jaar'?totaal.filter(x=>x.sk>=grens):totaal;
   const kop=lang==='nl'?'Nieuwste publicaties':'Latest publications';
   const hint=lang==='nl'?'over alle kaarten heen, nieuwste eerst':'across all cards, newest first';
-  const meer=nieuwsteAan>=40?(lang==='nl'?'minder tonen':'show less')
-            :(lang==='nl'?'meer tonen':'show more');
+  const start=startAantal();
+  const n=start+nieuwsteExtra;
+  const meer=nieuwsteExtra>=24?(lang==='nl'?'minder tonen ↑':'show less ↑')
+            :(lang==='nl'?'meer tonen ↓':'show more ↓');
   const knop=(v,t)=>`<button class="litchip${nieuwstePeriode===v?' on':''}" onclick="zetPeriode('${v}')">${t}</button>`;
   const rij=`<div class="litbar"><span class="litchips">`
     +knop('alles',lang==='nl'?'Alles':'All')
     +knop('jaar',lang==='nl'?'Laatste 12 maanden':'Last 12 months')
     +`</span><span class="litcount">${alles.length} ${lang==='nl'?'publicaties':'publications'}</span></div>`;
   box.innerHTML=`<div class="blokkop">${kop} <span class="evhint">${hint}</span></div>`+rij
-    + alles.slice(0,nieuwsteAan).map(pubRij).join('')
-    + `<button class="meerlink" onclick="toonMeerNieuwste()">${meer} ↓</button>`;
+    + alles.slice(0,n).map(pubRij).join('')
+    + (alles.length>start?`<button class="meerlink" onclick="toonMeerNieuwste()">${meer}</button>`:'');
 }
 function toggleFacets(){
   const b=document.getElementById('meerfacets');
@@ -1100,7 +1106,7 @@ async function renderGewijzigd(){
     }catch(e){ wijzigCache=null; }
   }
   if(wijzigCache && wijzigCache.length){
-    const rijen=wijzigCache.slice(0,6);
+    const rijen=wijzigCache.slice(0,startAantal());
     box.innerHTML=`<div class="blokkop">${kop} <span class="evhint">${lang==='nl'?'per kaart, met datum':'per card, dated'}</span></div>`
       + rijen.map(r=>{
           const klik=CARDS[r.kaart]?`onclick="showCard('${r.kaart}')" role="link" tabindex="0"`:'';
@@ -1119,7 +1125,7 @@ async function renderGewijzigd(){
     let beste=null;
     ['guides','core','latest'].forEach(k=>(d[k]||[]).forEach(p=>{ if(!beste || p[4]>beste[4]) beste=p; }));
     return beste?{id:c.id, kort:(c.kort?c.kort[lang]:d.title), titel:d.title, sk:Number(beste[4])||0, wat:beste[0]}:null;
-  }).filter(Boolean).sort((a,b)=>b.sk-a.sk).slice(0,6);
+  }).filter(Boolean).sort((a,b)=>b.sk-a.sk).slice(0,startAantal());
   box.innerHTML=`<div class="blokkop">${kop}</div>`+rijen.map(r=>
     `<div class="pubrij" role="link" tabindex="0" onclick="showCard('${r.id}')"><div class="prkop">
       <span class="pdat">${datumLabel(r.sk)}</span><span class="pkaart core">${r.kort}</span>
