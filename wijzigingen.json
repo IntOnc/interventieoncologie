@@ -10,6 +10,153 @@
    "velden": [
     "pos"
    ],
+   "naaraanleiding": [
+    {
+     "wat": "Cost Minimization Study of Image-Guided Core Biopsy Versus Surgical Excisional Biopsy for Women With Abnormal Mammograms",
+     "bron": "https://doi.org/10.1200/JCO.2004.06.154"
+    }
+   ]
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "biopsie",
+   "kort": "Biopsie",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Cost Minimization Study of Image-Guided Core Biopsy Versus Surgical Excisional Biopsy for Women With Abnormal Mammograms",
+   "bron": "https://doi.org/10.1200/JCO.2004.06.154"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "tekst",
+   "wat": "Percutane ablatie van longtumoren",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": [
+    {
+     "wat": "National Utilization, Survival, and Costs Analysis of Treatment Options for Stage I Non-Small Cell Lung Cancer: A SEER-Medicare Database Analysis",
+     "bron": "https://doi.org/10.1016/j.acra.2021.07.009"
+    }
+   ]
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "National Utilization, Survival, and Costs Analysis of Treatment Options for Stage I Non-Small Cell Lung Cancer: A SEER-Medicare Database Analysis",
+   "bron": "https://doi.org/10.1016/j.acra.2021.07.009"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "tekst",
+   "wat": "Thermale ablatie bij hepatocellulair carcinoom",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": [
+    {
+     "wat": "Cost-effectiveness of hepatic resection versus percutaneous radiofrequency ablation for early hepatocellular carcinoma",
+     "bron": "https://doi.org/10.1016/j.jhep.2013.04.009"
+    }
+   ]
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Cost-effectiveness of hepatic resection versus percutaneous radiofrequency ablation for early hepatocellular carcinoma",
+   "bron": "https://doi.org/10.1016/j.jhep.2013.04.009"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "tekst",
+   "wat": "Percutane ablatie van niercelcarcinoom",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": [
+    {
+     "wat": "Cost-effectiveness of minimally invasive partial nephrectomy and percutaneous cryoablation for cT1a renal cell carcinoma",
+     "bron": "https://doi.org/10.1007/s00330-022-09211-6"
+    }
+   ]
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Cost-effectiveness of minimally invasive partial nephrectomy and percutaneous cryoablation for cT1a renal cell carcinoma",
+   "bron": "https://doi.org/10.1007/s00330-022-09211-6"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "tekst",
+   "wat": "Cementaugmentatie (vertebroplastiek / kyfoplastiek) bij wervelmetastasen",
+   "velden": [
+    "pos"
+   ],
+   "naaraanleiding": [
+    {
+     "wat": "Percutaneous Vertebroplasty and Kyphoplasty for Pathologic Vertebral Fractures in the Medicare Population: Safer and Less Expensive than Open Surgery",
+     "bron": "https://doi.org/10.1016/j.jvir.2012.08.010"
+    },
+    {
+     "wat": "Comparison of inpatient treatment costs after balloon kyphoplasty and non-surgical treatment of vertebral body compression fractures",
+     "bron": "https://doi.org/10.1007/s00586-011-1692-y"
+    }
+   ]
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Comparison of inpatient treatment costs after balloon kyphoplasty and non-surgical treatment of vertebral body compression fractures",
+   "bron": "https://doi.org/10.1007/s00586-011-1692-y"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Percutaneous Vertebroplasty and Kyphoplasty for Pathologic Vertebral Fractures in the Medicare Population: Safer and Less Expensive than Open Surgery",
+   "bron": "https://doi.org/10.1016/j.jvir.2012.08.010"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Thermal ablation versus hepatectomy for solitary colorectal liver metastases up to 5 cm: a multicenter target trial emulation on safety, efficacy, and cost-effectiveness",
+   "bron": "https://doi.org/10.1186/s12916-026-04767-2"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "biopsie",
+   "kort": "Biopsie",
+   "type": "tekst",
+   "wat": "Beeldgeleide biopsie voor diagnose en moleculaire diagnostiek",
+   "velden": [
+    "pos"
+   ],
    "naaraanleiding": []
   },
   {

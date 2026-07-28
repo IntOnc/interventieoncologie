@@ -161,6 +161,14 @@ Kenneth het nummer van dat tekstvoorstel heeft genoemd, en dan letterlijk zoals
 voorgesteld, in beide talen. Pas de zin aan, herschrijf niet de hele alinea, en
 laat elke wijziging steunen op een bron die in die ronde is opgehaald.
 
+## Terugkerende actualisatie
+
+Naast nieuwe literatuur houdt elke ronde ook het bestaande actueel:
+
+- Lopende studies. Loop de `ongoing`-lijsten na. Is een trial afgerond en gepubliceerd, verplaats hem dan naar `core` of `latest` met een samenvatting met kerngetallen; is hij ingetrokken of gestopt, haal hem weg. Controleer de status via het trialregister (NCT-nummer) of een recente publicatie.
+- Richtlijnversies. Controleer of een geciteerde richtlijn (BCLC, EASL, AASLD, ESMO, NCCN, CIRSE, Richtlijnendatabase) een nieuwere versie heeft en werk jaartal, link en zo nodig het standpunt bij.
+- Kosten en resource-gebruik. Waar een kaart een directe vergelijking met chirurgie of radiotherapie heeft, is een kosten-, ligduur- of dagopname-vergelijking een sterke, onderbelichte troef van IR. Voeg zo'n studie toe als je die vindt en laat het punt in de kaarttekst of de callout terugkomen, altijd met bron.
+
 ## Wat je niet doet
 
 - Voorstellen opnemen die Kenneth niet heeft genoemd.
