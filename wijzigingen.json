@@ -3,6 +3,150 @@
  "regels": [
   {
    "datum": "2026-07-28",
+   "kaart": "neurolyse",
+   "kort": "Coeliacusneurolyse",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Efficacy of EUS-guided celiac plexus neurolysis compared with medication alone for unresectable pancreatic cancer in the oxycodone/fentanyl era: a prospective randomized control study",
+   "bron": "https://doi.org/10.1016/j.gie.2020.01.011"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "neurolyse",
+   "kort": "Coeliacusneurolyse",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Randomized, double-blind, controlled trial of early endoscopic ultrasound-guided celiac plexus neurolysis to prevent pain progression in patients with newly diagnosed, painful, inoperable pancreatic cancer",
+   "bron": "https://doi.org/10.1200/JCO.2010.32.2750"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "urineweg-drainage",
+   "kort": "Urinewegdrainage",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Clinical outcomes and prognostic factors associated with internal ureteral stent placement for malignant extrinsic ureteral obstruction",
+   "bron": "https://doi.org/10.1007/s00520-020-05413-0"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "urineweg-drainage",
+   "kort": "Urinewegdrainage",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Prognostic model for predicting survival after palliative urinary diversion for ureteral obstruction: analysis of 140 cases",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/18554655/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "urineweg-drainage",
+   "kort": "Urinewegdrainage",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Percutaneous nephrostomy versus indwelling ureteral stents in the management of extrinsic ureteral obstruction in advanced malignancies: are there differences?",
+   "bron": "https://doi.org/10.1016/j.urology.2004.06.029"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "effusie-drainage",
+   "kort": "Pleura en ascites",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Aggressive versus symptom-guided drainage of malignant pleural effusion via indwelling pleural catheters (AMPLE-2): an open-label randomised trial",
+   "bron": "https://doi.org/10.1016/S2213-2600(18)30288-1"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "effusie-drainage",
+   "kort": "Pleura en ascites",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Outpatient Talc Administration by Indwelling Pleural Catheter for Malignant Effusion",
+   "bron": "https://doi.org/10.1056/NEJMoa1716883"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "thyroid-ablatie",
+   "kort": "Ablatie schildklier",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Ultrasound-Guided Radiofrequency Ablation Versus Thyroid Lobectomy for Low-Risk Papillary Thyroid Microcarcinoma: A Propensity-Matched Cohort Study of 884 Patients",
+   "bron": "https://doi.org/10.1089/thy.2021.0100"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "thyroid-ablatie",
+   "kort": "Ablatie schildklier",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Efficacy and Safety of Radiofrequency and Ethanol Ablation for Treating Locally Recurrent Thyroid Cancer: A Systematic Review and Meta-Analysis",
+   "bron": "https://doi.org/10.1089/thy.2015.0545"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "thyroid-ablatie",
+   "kort": "Ablatie schildklier",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Efficacy and Safety of Thermal Ablation Techniques for the Treatment of Primary Papillary Thyroid Microcarcinoma: A Systematic Review and Meta-Analysis",
+   "bron": "https://doi.org/10.1089/thy.2019.0707"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "bot-ablatie",
+   "kort": "Ablatie bot",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Percutaneous image-guided cryoablation of painful metastases involving bone: multicenter trial",
+   "bron": "https://doi.org/10.1002/cncr.27793"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "bot-ablatie",
+   "kort": "Ablatie bot",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Percutaneous radiofrequency ablation of painful osseous metastases: a multicenter American College of Radiology Imaging Network trial",
+   "bron": "https://doi.org/10.1002/cncr.24837"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "bot-ablatie",
+   "kort": "Ablatie bot",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Percutaneous image-guided radiofrequency ablation of painful metastases involving bone: a multicenter study",
+   "bron": "https://doi.org/10.1200/JCO.2004.03.097"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ire",
+   "kort": "IRE CRLM",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Irreversible Electroporation in Treating Colorectal Liver Metastases in Proximity to Critical Structures",
+   "bron": "https://doi.org/10.1016/j.jvir.2024.08.021"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ire",
+   "kort": "IRE CRLM",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Midterm Safety and Efficacy of Irreversible Electroporation of Malignant Liver Tumors Located Close to Major Portal or Hepatic Veins",
+   "bron": "https://doi.org/10.1148/radiol.2017161561"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ire",
+   "kort": "IRE CRLM",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Ablation of colorectal liver metastases by irreversible electroporation: results of the COLDFIRE-I ablate-and-resect study",
+   "bron": "https://doi.org/10.1007/s00330-014-3259-x"
+  },
+  {
+   "datum": "2026-07-28",
    "kaart": "crc-tare",
    "kort": "TARE CRLM",
    "type": "toegevoegd",
