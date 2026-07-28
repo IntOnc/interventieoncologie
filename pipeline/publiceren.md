@@ -1,7 +1,11 @@
-# Publiceren na akkoord
+# Publiceren (autonoom)
 
-Dit is de werkwijze voor een onderhoudsronde die van Kenneth te horen krijgt welke
-voorstellen erin mogen. De ronde publiceert zelf; hij uploadt niets.
+Dit is de werkwijze voor een onderhoudsronde die autonoom draait: zij beslist zelf
+welke geverifieerde voorstellen erin gaan, publiceert zelf en stuurt achteraf een
+korte samenvatting. Kenneth hoeft niets goed te keuren en uploadt niets. Neem elk
+voorstel op waarvan je de cijfers uit het abstract hebt geverifieerd en dat
+relevant en niet-dubbel is; laat weg wat je niet kon verifiëren en meld dat in de
+samenvatting.
 
 ## Wat je nodig hebt
 
@@ -155,11 +159,12 @@ samenvatting, geen vervanging.
 
 ## Tekstwijzigingen aan de kaart
 
-Een ronde mag ook de kaarttekst zelf voorstellen aan te passen: bl, de drie
-regels van `pos`, `crit`, `results`, `lim` en `alts`. Dat gebeurt alleen als
-Kenneth het nummer van dat tekstvoorstel heeft genoemd, en dan letterlijk zoals
-voorgesteld, in beide talen. Pas de zin aan, herschrijf niet de hele alinea, en
-laat elke wijziging steunen op een bron die in die ronde is opgehaald.
+Een ronde past ook de kaarttekst zelf aan waar nieuwe literatuur daarom vraagt:
+bl, de drie regels van `pos`, `crit`, `results`, `lim` en `alts`. De ronde voert
+zulke wijzigingen zelf door, in beide talen, per zin en niet als herschrijving
+van de hele alinea, en laat elke wijziging steunen op een bron die in die ronde
+is opgehaald. Volg daarbij de verwoordingsregels hierboven (kracht van IR voorop,
+niets weglaten of afzwakken).
 
 ## Terugkerende actualisatie
 
@@ -171,6 +176,7 @@ Naast nieuwe literatuur houdt elke ronde ook het bestaande actueel:
 
 ## Wat je niet doet
 
-- Voorstellen opnemen die Kenneth niet heeft genoemd.
-- Bestaande items of kaartteksten herschrijven zonder dat daar akkoord voor is.
-- Iets publiceren waarvan de cijfers niet geverifieerd zijn.
+- Voorstellen opnemen waarvan je de cijfers niet hebt kunnen verifiëren.
+- Bestaande items of kaartteksten herschrijven zonder dat een opgehaalde bron dat steunt.
+- Een ongunstige uitkomst of p-waarde weglaten of afzwakken.
+- Iets publiceren dat de controles (controle.py, bouw-stubs.js) niet doorstaat.
