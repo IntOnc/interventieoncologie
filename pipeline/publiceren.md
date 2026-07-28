@@ -20,6 +20,28 @@ over `add_repo`. Git over https werkt wel. Gebruik dus git, nooit de GitHub API.
 Ook `curl` naar willekeurige hosts is meestal geblokkeerd; gebruik WebFetch om te
 controleren of een wijziging live staat.
 
+## Abstract verifiëren, met terugval
+
+Cijfers komen alleen op de kaart als je ze zelf op een opgehaalde pagina hebt
+gelezen. De volgorde is: bij een bekend PMID het abstract met letterlijke getallen
+via PubTator3, en de exacte citatie via Crossref (`works/DOI`). Springer-bladen
+(CVIR, CVIR Oncology) leveren via Crossref vaak een abstract mee, Elsevier-bladen
+(JVIR, JCO, J Hepatol, Eur Urol, Lancet-titels) meestal niet.
+
+Geeft Crossref geen abstract terug bij een DOI van een doorgaans toegankelijke
+uitgever (`link.springer.com`, `mdpi.com`, `nature.com`, `frontiersin.org`,
+`karger.com`, `academic.oup.com`, `pubs.rsna.org`, `dirjournal.org`), haal dan
+eerst de artikelpagina zelf op met WebFetch (bijvoorbeeld
+`https://link.springer.com/article/DOI`) en lees het abstract daar, voordat je het
+als niet te verifiëren markeert. Deze terugval ving de UroCCR-studie (n°177) in
+CVIR op, die wel op de Springer-pagina stond maar niet in Crossref.
+
+Voor Elsevier-bladen blijft de Crossref-plus-PubTator3-route nodig. Staat een
+artikel nog niet in PubMed (geen PMID te vinden, vaak bij zeer recente nummers),
+noteer het dan onder NIET GEVERIFIEERD met titel, DOI en kaart, zodat een volgende
+ronde het oppakt zodra het geïndexeerd is. Deze regel staat ook in de prompt van
+elke geplande onderhoudsronde (STAP 2, BRONREGELS).
+
 ## Stappen
 
 1. Kloon het repo met het token in de URL, in een lege map buiten je werkmap.
