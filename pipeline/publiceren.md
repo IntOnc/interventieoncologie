@@ -141,6 +141,18 @@ overleving (p=0,021)". Dezelfde feiten, andere volgorde.
 Alle getallen, p-waarden en de referentie blijven staan. Dit is een kwestie van
 volgorde en nadruk, niet van selectie.
 
+Visueel uitlichten. De sterke kant van IR mag ook zichtbaar worden gemaakt. Er
+zijn twee middelen. Het inline-accent is de huisstijl: zet op de
+vergelijkingsregel de zinsnede met de gelijkwaardigheid of het IR-voordeel tussen
+`<span class="ir">...</span>`, dan krijgt die een rustig groen accent. Op een
+enkele vlaggenschipkaart met een echte kop-aan-kop-vergelijking mag daarnaast een
+callout: vul dan op de kaart in beide talen het veld `sterk` met twee tot vier
+korte punten (`"sterk":["...","..."]`), dan verschijnt boven Positie en kracht
+het blok "Kracht van IR". Gebruik op zo'n kaart de callout of het inline-accent,
+niet allebei, om dubbele nadruk te voorkomen. De p-waarden en de referentie
+blijven in de gewone tekst staan; de punten in de callout zijn een korte
+samenvatting, geen vervanging.
+
 ## Tekstwijzigingen aan de kaart
 
 Een ronde mag ook de kaarttekst zelf voorstellen aan te passen: bl, de drie
