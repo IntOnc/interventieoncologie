@@ -88,6 +88,29 @@ Radiology": "JVIR". Zet nooit de afkorting zelf in het tijdschriftveld.
   titel maar ook de link, en normaliseer daarbij: haal https, www en dx weg, en
   behandel doi.org/10.x en link.springer.com/article/10.x als dezelfde bron.
   Een publicatie hoort in core of in latest, nooit in allebei.
+- Draai `python3 pipeline/controle.py`. Dat controleert de terminologie en de
+  kale statements (zie hieronder). Faalt de controle, los de meldingen dan op
+  of bevestig dat ze terecht zijn voordat je pusht.
+
+## Terminologie en kale statements
+
+`pipeline/controle.py` bewaakt twee dingen en wordt vóór het pushen gedraaid.
+
+Terminologie: elke afkorting hoort bij de juiste term. RFA is uitsluitend
+radiofrequente ablatie, MWA is microwave- of microgolfablatie, TARE en SIRT zijn
+radio-embolisatie (nooit chemo-embolisatie), cTACE is conventionele TACE en
+DEB-TACE is de variant met drug-eluting beads. De controle meldt het als een
+afkorting tussen haakjes aan de verkeerde term wordt gekoppeld, bijvoorbeeld
+"microgolfablatie (RFA)" of "TARE (chemo-embolisatie)". Een gewone opsomming als
+"thermale ablatie (RFA of microwave)" is geen fout en wordt niet gemeld. Nieuw
+in te voegen tekst en samenvattingen moeten deze afkortingen dus consequent en
+correct gebruiken.
+
+Kale statements: een statement op de kaart hoort op een bron te steunen. De
+controle meldt een kaart waarvan de resultaten cijfers noemen terwijl er geen
+kern- of recente publicatie onder staat, en een kaart zonder enige referentie.
+Een cijfermatige uitspraak zonder onderbouwende publicatie hoort niet op de
+kaart; voeg de bron toe of haal de claim weg.
 
 ## Tekstwijzigingen aan de kaart
 
