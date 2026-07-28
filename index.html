@@ -768,19 +768,25 @@ function pubRij(x){
 }
 // Rustige startpagina: korte lijsten, 3 regels op mobiel en 5 op breder scherm
 function startAantal(){ return (window.innerWidth||360)<=640 ? 3 : 5; }
-let mustreadOpen=false;
-function toonMeerMustread(){ mustreadOpen=!mustreadOpen; renderMustread(); }
+let mustreadBlokOpen=null, mustreadAlles=false;
+function toggleMustread(){ mustreadBlokOpen=!mustreadBlokOpen; renderMustread(); }
+function toonMeerMustread(){ mustreadAlles=!mustreadAlles; renderMustread(); }
 function renderMustread(){
   const box=document.getElementById('mustread');
   if(!box) return;
   const alles=pubIndex().filter(x=>isMustRead(x.rij));
   if(!alles.length){ box.innerHTML=''; return; }
+  if(mustreadBlokOpen===null) mustreadBlokOpen=!isMobiel();
   const kop=lang==='nl'?'Must reads':'Must reads';
+  if(!mustreadBlokOpen){
+    box.innerHTML=`<div class="klapkop" role="button" tabindex="0" onclick="toggleMustread()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMustread()}">${kop} <span class="evhint">${alles.length}</span><span class="klapchev">&rsaquo;</span></div>`;
+    return;
+  }
   const hint=lang==='nl'?'sterke en recente evidence, automatisch geselecteerd':'strong and recent evidence, selected automatically';
   const start=startAantal();
-  const n=mustreadOpen?alles.length:start;
-  const meer=mustreadOpen?(lang==='nl'?'minder tonen ↑':'show less ↑'):(lang==='nl'?'meer tonen ↓':'show more ↓');
-  box.innerHTML=`<div class="blokkop">${kop} <span class="evhint">${hint}</span></div>`
+  const n=mustreadAlles?alles.length:start;
+  const meer=mustreadAlles?(lang==='nl'?'minder tonen ↑':'show less ↑'):(lang==='nl'?'meer tonen ↓':'show more ↓');
+  box.innerHTML=`<div class="blokkop klapbaar" role="button" tabindex="0" onclick="toggleMustread()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMustread()}">${kop} <span class="evhint">${hint}</span><span class="klapchev">&#8964;</span></div>`
     + alles.slice(0,n).map(pubRij).join('')
     + (alles.length>start?`<button class="meerlink" onclick="toonMeerMustread()">${meer}</button>`:'');
 }
