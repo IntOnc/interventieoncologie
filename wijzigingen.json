@@ -3,6 +3,301 @@
  "regels": [
   {
    "datum": "2026-07-28",
+   "kaart": "wervel-embolisatie",
+   "kort": "Embolisatie wervel",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Efficacy of preoperative embolization for metastatic spinal tumor surgery using angiographic vascularity assessment",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/36449062/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "wervel-embolisatie",
+   "kort": "Embolisatie wervel",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Preoperative embolization in surgical treatment of spinal metastases originating from non-hypervascular primary tumors: a propensity score matched study using 495 patients",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/35263662/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "wervel-embolisatie",
+   "kort": "Embolisatie wervel",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Retrospective Analysis of Preoperative Embolization of Spinal Tumors",
+   "bron": "https://www.ajnr.org/content/31/4/656"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "wervel-embolisatie",
+   "kort": "Embolisatie wervel",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Preoperative embolization in surgical treatment of spinal metastases: single-blind, randomized controlled clinical trial of efficacy in decreasing intraoperative blood loss",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/25636672/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "wervel-ablatie",
+   "kort": "Ablatie wervel",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Efficacy and Safety of Percutaneous Microwave Ablation and Cementoplasty in the Treatment of Painful Spinal Metastases and Myeloma",
+   "bron": "https://www.ajnr.org/content/39/7/1376"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "wervel-ablatie",
+   "kort": "Ablatie wervel",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Microwave ablation combined with cementoplasty under real-time temperature monitoring in the treatment of 82 patients with recurrent spinal metastases after radiotherapy",
+   "bron": "https://link.springer.com/article/10.1186/s12891-022-05999-y"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "wervel-ablatie",
+   "kort": "Ablatie wervel",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Percutaneous CT-Guided Microwave Ablation Combined with Vertebral Augmentation for Treatment of Painful Spinal Metastases",
+   "bron": "https://www.ajnr.org/content/43/3/501"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "wervel-ablatie",
+   "kort": "Ablatie wervel",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "The safety and efficacy of combined microwave ablation and percutaneous vertebral augmentation for spinal metastasis: a systematic review and meta-analysis",
+   "bron": "https://link.springer.com/article/10.1007/s00586-026-09823-2"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "wervel-ablatie",
+   "kort": "Ablatie wervel",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Multicenter Prospective Clinical Series Evaluating Radiofrequency Ablation in the Treatment of Painful Spine Metastases",
+   "bron": "https://link.springer.com/article/10.1007/s00270-016-1400-8"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Switching Monopolar No-Touch Radiofrequency Ablation Using Octopus Electrodes for Small Hepatocellular Carcinoma: A Randomized Clinical Trial",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/33708641/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Multicenter randomized controlled trial of percutaneous cryoablation versus radiofrequency ablation in hepatocellular carcinoma",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/25284802/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Adjuvant sorafenib for hepatocellular carcinoma after resection or ablation (STORM): a phase 3, randomised, double-blind, placebo-controlled trial",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/26361969/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Radiofrequency ablation with or without transcatheter arterial chemoembolization in the treatment of hepatocellular carcinoma: a prospective randomized trial",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/23269991/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Radiofrequency Ablation versus Hepatic Resection for Small Hepatocellular Carcinoma: Systematic Review of Randomized Controlled Trials with Meta-Analysis and Trial Sequential Analysis",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/29135366/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "desmoid-cryo",
+   "kort": "Cryo desmoïd",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Prognostic Factors for Local Recurrence after Cryoablation of Desmoid Tumors",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/37182669/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "desmoid-cryo",
+   "kort": "Cryo desmoïd",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Percutaneous Cryoablation Provides Disease Control for Extra-Abdominal Desmoid-Type Fibromatosis Comparable with Surgical Resection",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/34269943/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "desmoid-cryo",
+   "kort": "Cryo desmoïd",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Efficacy and safety of different thermal ablative therapies for desmoid-type fibromatosis: a systematic review and meta-analysis",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/37869315/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Percutaneous balloon kyphoplasty of malignant lesions of the spine: a prospective consecutive study in 115 patients",
+   "bron": "https://link.springer.com/article/10.1007/s00586-014-3751-7"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Vertebroplasty and Kyphoplasty for Metastatic Spinal Lesions: A Systematic Review",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/29283901/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Vertebroplasty or kyphoplasty as palliative treatment for cancer-related vertebral compression fractures: a systematic review",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/30822527/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Balloon kyphoplasty in malignant spinal fractures: a systematic review and meta-analysis",
+   "bron": "https://bmcpalliatcare.biomedcentral.com/articles/10.1186/1472-684X-8-12"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Vertebral Augmentation of Cancer-Related Spinal Compression Fractures: A Systematic Review and Meta-Analysis",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/33958537/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Long-term outcomes following 90Y Radioembolization of neuroendocrine liver metastases: evaluation of the RESiN registry",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/35232410/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Radioembolization with 90Y Resin Microspheres of Neuroendocrine Liver Metastases: International Multicenter Study on Efficacy and Toxicity",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/30603975/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Transarterial Chemoembolization vs Radioembolization for Neuroendocrine Liver Metastases: A Multi-Institutional Analysis",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/32032719/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Trans-arterial embolization versus chemoembolization for neuroendocrine liver metastases: a propensity matched analysis",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/39271375/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Yttrium-90 Selective Internal Radiation Therapy for Neuroendocrine Liver Metastases: An Institutional Case Series, Updated Systematic Review, and Meta-Analysis",
+   "bron": "https://www.mdpi.com/2075-4418/16/1/111"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Hepatic arterial embolization and chemoembolization for the treatment of patients with metastatic neuroendocrine tumors: variables affecting response rates and survival",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/16134179/"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Hepatic Arterial Embolization versus Chemoembolization in the Treatment of Liver Metastases from Well-Differentiated Midgut Endocrine Tumors: A Prospective Randomized Study",
+   "bron": "https://karger.com/nen/article/96/4/294/227190"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "verwijderd",
+   "lijst": "latest",
+   "wat": "Thermal Ablation versus Surgical Resection for Intermediate-Size (3–5 cm) Colorectal Liver Metastases: Results from the Amsterdam Colorectal Liver Met Registry (AmCORE)"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Thermal Ablation versus Surgical Resection for Intermediate-Size (3-5 cm) Colorectal Liver Metastases: Results from the Amsterdam Colorectal Liver Met Registry (AmCORE)",
+   "bron": "https://www.mdpi.com/2072-6694/18/6/1017"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "verwijderd",
+   "lijst": "guides",
+   "wat": "Richtlijn Colorectaal carcinoom – Locoregionale behandeling levermetastasen"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "richtlijn",
+   "lijst": "guides",
+   "wat": "Richtlijn Colorectaal carcinoom - Locoregionale behandeling levermetastasen",
+   "bron": "https://richtlijnendatabase.nl/richtlijn/colorectaal_carcinoom_crc/gemetastaseerd_colorectaalcarcinoom_crc/locoregionale_behandeling_levermetastasen.html"
+  },
+  {
+   "datum": "2026-07-28",
    "kaart": "vcs-stent",
    "kort": "VCS-stent",
    "type": "toegevoegd",
