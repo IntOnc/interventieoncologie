@@ -120,7 +120,7 @@
     .search{margin:14px 0 44px}
     .search input{font-size:13.5px;padding:13px 42px 13px 14px}
     .search input::placeholder{font-size:12px}
-    #home{display:flex!important;flex-direction:column;min-height:calc(100vh - 118px);min-height:calc(100svh - 118px)}
+    #home{display:flex;flex-direction:column;min-height:calc(100vh - 118px);min-height:calc(100svh - 118px)}
     #home .disclaimer{margin-top:auto}
   }
   .ir{background:#e7f4ee;color:#0e5c43;border-radius:4px;padding:0 3px;font-weight:600;box-shadow:inset 0 -1px 0 #bfe3d4}
@@ -1115,7 +1115,7 @@ function verbergAlles(){
 function toonPagina(id,zonderRoute){
   huidigePagina=id;
   verbergAlles();
-  if(id==='start'){ document.getElementById('home').style.display='block'; renderMustread(); renderNieuwste(); renderGewijzigd(); }
+  if(id==='start'){ document.getElementById('home').style.display=''; renderMustread(); renderNieuwste(); renderGewijzigd(); }
   if(id==='kaarten'){ document.getElementById('kaarten').style.display='block'; applyFilters(); }
   if(id==='literatuur'){ document.getElementById('literatuur').style.display='block'; renderLitPagina(); }
   if(id==='technieken'){ document.getElementById('technieken').style.display='block'; renderTechTiles(); }
