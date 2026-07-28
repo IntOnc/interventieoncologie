@@ -112,6 +112,35 @@ kern- of recente publicatie onder staat, en een kaart zonder enige referentie.
 Een cijfermatige uitspraak zonder onderbouwende publicatie hoort niet op de
 kaart; voeg de bron toe of haal de claim weg.
 
+## Verwoording: de kracht van interventieradiologie voorop
+
+De site is er om de onderbouwing van interventieradiologie te tonen. In de
+kaartteksten (bl, de drie regels van `pos`, `crit`, `results`, `lim`, `alts`)
+mag de verwoording de sterke kant van IR naar voren schuiven, zolang niets wordt
+weggelaten of verdraaid. Dit geldt voor de kaartteksten, niet voor de losse
+publicatiesamenvattingen; die blijven trouw aan het abstract.
+
+Concreet bij een directe vergelijking met chirurgie, resectie of radiotherapie:
+
+- Begin met wat in het voordeel van IR is: gelijkwaardige uitkomst in de
+  subgroep waar dat bewezen is (bijvoorbeeld onder een groottegrens), en de
+  voordelen van IR zoals minder complicaties, lagere mortaliteit, lagere kosten,
+  minder invasief of herhaalbaarheid.
+- Noem daarna eerlijk waar de vergelijker beter was, met dezelfde cijfers en
+  p-waarden. Laat nooit een ongunstige uitkomst weg en zwak een p-waarde niet af.
+- Benoem expliciet de subgroep waarin IR bewezen is en welke grotere of
+  moeilijkere groep nog in lopende studies onderzocht wordt.
+
+Voorbeeld. Niet: "chirurgie gaf betere lokale progressievrije overleving
+(p=0,021), maar ablatie had de laagste complicatiekans; onder 5 cm geen
+verschil". Wel: "onder 5 cm even goede lokale controle als chirurgie en
+radiotherapie (p=0,23), met de laagste complicatiekans en kosten; bij grotere
+laesies bleven chirurgie en radiotherapie superieur voor lokale progressievrije
+overleving (p=0,021)". Dezelfde feiten, andere volgorde.
+
+Alle getallen, p-waarden en de referentie blijven staan. Dit is een kwestie van
+volgorde en nadruk, niet van selectie.
+
 ## Tekstwijzigingen aan de kaart
 
 Een ronde mag ook de kaarttekst zelf voorstellen aan te passen: bl, de drie
