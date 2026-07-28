@@ -3,6 +3,23 @@
  "regels": [
   {
    "datum": "2026-07-27",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "verwijderd",
+   "lijst": "core",
+   "wat": "Radiofrequency ablation versus single-needle microwave ablation for HCC up to 4 cm: a randomized-controlled trial"
+  },
+  {
+   "datum": "2026-07-27",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Efficacy of microwave ablation versus radiofrequency ablation for the treatment of hepatocellular carcinoma in patients with chronic liver disease: a randomised controlled phase 2 trial",
+   "bron": "https://pubmed.ncbi.nlm.nih.gov/29503247/"
+  },
+  {
+   "datum": "2026-07-27",
    "kaart": "wervel-embolisatie",
    "kort": "Embolisatie wervel",
    "type": "bijgewerkt",
