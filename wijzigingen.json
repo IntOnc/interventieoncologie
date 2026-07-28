@@ -3,6 +3,132 @@
  "regels": [
   {
    "datum": "2026-07-28",
+   "kaart": "gastrostomie",
+   "kort": "Gastrostomie",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Percutaneous radiologic gastrostomy versus percutaneous endoscopic gastrostomy for enteral feeding: A systematic review and meta-analysis",
+   "bron": "https://doi.org/10.1002/jpen.2646"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "gastrostomie",
+   "kort": "Gastrostomie",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "A Systematic Review and Meta-Analysis on Outcomes and Complications of Percutaneous Endoscopic Versus Radiologic Gastrostomy for Enteral Feeding",
+   "bron": "https://doi.org/10.1097/mcg.0000000000001082"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "gastrostomie",
+   "kort": "Gastrostomie",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Radiologic, endoscopic, and surgical gastrostomy: an institutional evaluation and meta-analysis of the literature",
+   "bron": "https://doi.org/10.1148/radiology.197.3.7480742"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "biopsie",
+   "kort": "Biopsie",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Correlation between percutaneous transthoracic needle biopsy and recurrence in stage I lung cancer: a systematic review and meta-analysis",
+   "bron": "https://doi.org/10.1186/s12890-020-01235-2"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "biopsie",
+   "kort": "Biopsie",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Accuracy and Safety of Ultrasound-Guided Core Needle Biopsy of Soft Tissue Tumors in an Outpatient Setting: A Sarcoma Center Analysis of 392 Consecutive Patients",
+   "bron": "https://doi.org/10.3390/cancers13225659"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "bc-lever",
+   "kort": "Mamma levermeta",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Retrospective comparative survival analysis of ablation plus systemic therapy versus systemic therapy alone for breast cancer liver metastases, stratified by extrahepatic metastases status",
+   "bron": "https://doi.org/10.1016/j.breast.2025.103876"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "bc-lever",
+   "kort": "Mamma levermeta",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Survival Benefit of Surgical Treatment Added Into Systemic Treatment for Isolated Breast Cancer Liver Metastases: A Systematic Review and Meta-Analysis",
+   "bron": "https://doi.org/10.3389/fsurg.2021.751906"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "leverperfusie",
+   "kort": "Leverperfusie",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Hepatic and Overall Progression-Free Survival After Percutaneous Hepatic Perfusion (PHP) as First-Line or Second-Line Therapy for Metastatic Uveal Melanoma",
+   "bron": "https://doi.org/10.1245/s10434-024-16039-5"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "leverperfusie",
+   "kort": "Leverperfusie",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Selective internal radiotherapy and chemosaturation show equivalent survival in metastatic uveal melanoma: a retrospective multicenter study",
+   "bron": "https://doi.org/10.1093/oncolo/oyag152"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "conduit-enkelj",
+   "kort": "Enkel-J Bricker",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "A multicenter study of perioperative and functional outcomes of open vs. robot assisted uretero-enteric reimplantation after radical cystectomy",
+   "bron": "https://doi.org/10.1007/s00345-024-05435-x"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "conduit-enkelj",
+   "kort": "Enkel-J Bricker",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Lessons from 151 ureteral reimplantations for postcystectomy ureteroenteric strictures: A single-center experience over a decade",
+   "bron": "https://doi.org/10.1016/j.urolonc.2016.10.005"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "tumorbloeding",
+   "kort": "Tumorbloeding",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Selective Transarterial Embolization for Intractable Hematuria Due to Bladder Carcinomas: A Single-Center Experience",
+   "bron": "https://doi.org/10.5152/tud.2023.22224"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "tumorbloeding",
+   "kort": "Tumorbloeding",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Transcatheter arterial embolization with N-butyl cyanoacrylate versus gelatin sponge particles for gastric cancer-related upper gastrointestinal bleeding: a comparison of efficacy and safety",
+   "bron": "https://doi.org/10.21037/jgo-2025-1-1083"
+  },
+  {
+   "datum": "2026-07-28",
+   "kaart": "tumorbloeding",
+   "kort": "Tumorbloeding",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Early Hemostatic Treatment Could Improve 30-Day Survival After Spontaneous Rupture of Hepatocellular Carcinoma",
+   "bron": "https://doi.org/10.1111/liv.70332"
+  },
+  {
+   "datum": "2026-07-28",
    "kaart": "neurolyse",
    "kort": "Coeliacusneurolyse",
    "type": "toegevoegd",

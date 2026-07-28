@@ -183,6 +183,7 @@
     border-top:1px solid var(--line)}
   .pubrij.open .prsam{display:block}
   .pubrij.open .ptitel{white-space:normal;overflow:visible}
+  .watverd{font-weight:600;color:#33475b;margin-bottom:6px}
   .prkort{color:var(--muted);font-style:italic}
   .prlinks{display:block;margin-top:6px}
   .prlinks a{color:var(--brand);font-weight:600;text-decoration:none;white-space:nowrap;margin-right:14px}
@@ -1187,6 +1188,48 @@ const WTYPE={
   nieuw:{nl:'nieuwe kaart',en:'new card',kl:'core'}};
 let wFilter='alles';
 function zetWFilter(v){ wFilter=v; renderWijzig(); }
+// zoek de bijbehorende literatuurregel op de huidige kaart (voor abstract + score)
+function wijzigLit(r){
+  const c=CARDS[r.kaart]; if(!c) return null;
+  const d=c[lang]||{};
+  for(const k of ['guides','core','latest','ongoing']){
+    for(const it of (d[k]||[])){
+      if(r.bron && it[2]===r.bron) return it;
+    }
+  }
+  for(const k of ['guides','core','latest','ongoing']){
+    for(const it of (d[k]||[])){
+      if(it[0]===r.wat) return it;
+    }
+  }
+  return null;
+}
+// korte beschrijving van wat er op de kaart is veranderd
+function watVeranderd(r){
+  const c=CARDS[r.kaart];
+  const naam=c?(c[lang].title):(r.kort||r.kaart);
+  const L={
+    core:{nl:'de kernliteratuur',en:'the core literature'},
+    latest:{nl:'de recente literatuur',en:'the recent literature'},
+    guides:{nl:'de richtlijnen',en:'the guidelines'}};
+  const waar=L[r.lijst]?L[r.lijst][lang]:(lang==='nl'?'de literatuurlijst':'the reference list');
+  if(r.type==='toegevoegd'||r.type==='richtlijn')
+    return lang==='nl'?`Toegevoegd aan ${waar} van de kaart ${naam}.`
+                      :`Added to ${waar} of the ${naam} card.`;
+  if(r.type==='verwijderd')
+    return lang==='nl'?`Verwijderd uit ${waar} van de kaart ${naam}.`
+                      :`Removed from ${waar} of the ${naam} card.`;
+  if(r.type==='bijgewerkt')
+    return lang==='nl'?`De gegevens van deze publicatie op de kaart ${naam} zijn gecorrigeerd.`
+                      :`The details of this publication on the ${naam} card were corrected.`;
+  if(r.type==='tekst')
+    return lang==='nl'?`De kaarttekst van ${naam} is herzien op basis van nieuwe literatuur.`
+                      :`The card text of ${naam} was revised based on new literature.`;
+  if(r.type==='nieuw')
+    return lang==='nl'?`Nieuwe kaart ${naam} aan de site toegevoegd.`
+                      :`New card ${naam} added to the site.`;
+  return '';
+}
 async function renderWijzig(){
   document.getElementById('w-titel').textContent=lang==='nl'?'Wat is er veranderd':'What changed';
   document.getElementById('w-sub').textContent=lang==='nl'
@@ -1219,14 +1262,21 @@ async function renderWijzig(){
   lijst.innerHTML=balk+(Object.keys(perMaand).sort().reverse().map(k=>
     `<div class="blokkop">${maandnaam(k)} <span class="evhint">${perMaand[k].length}</span></div>`
     +perMaand[k].map(r=>{
-      const kaartBestaat=!!CARDS[r.kaart];
-      const klik=kaartBestaat?`onclick="showCard('${r.kaart}')" role="link" tabindex="0"`:'';
-      const bron=r.bron?` <a href="${r.bron}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗</a>`:'';
-      return `<div class="pubrij" ${klik}><div class="prkop">
+      const naarPub=lang==='nl'?'Naar publicatie ↗':'View publication ↗';
+      const naarKaart=lang==='nl'?'Naar de kaart →':'Open the card →';
+      const lit=(r.type!=='nieuw'&&r.type!=='verwijderd')?wijzigLit(r):null;
+      const bronLink=r.bron?`<a href="${r.bron}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${naarPub}</a>`:'';
+      const kaartLink=CARDS[r.kaart]?`<a href="#" onclick="event.stopPropagation();event.preventDefault();showCard('${r.kaart}')">${naarKaart}</a>`:'';
+      const binnen=`<div class="prsam"><div class="watverd">${watVeranderd(r)}</div>`
+        +(lit?`<div class="bron">${lit[1]}</div>${scoreUitleg(lit)}${kortSam(lit[3])}`:'')
+        +`<span class="prlinks">${bronLink}${kaartLink}</span></div>`;
+      return `<div class="pubrij" role="button" tabindex="0" aria-expanded="false"
+        onclick="klapUit(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();klapUit(this)}">
+        <div class="prkop">
         <span class="pdat">${Number(r.datum.slice(8))} ${MND[lang][Number(r.datum.slice(5,7))-1]}</span>
         <span class="pkaart ${WTYPE[r.type].kl}">${r.kort||r.kaart}</span>
-        <span class="ptitel">${r.wat}${bron}</span>
-        <span class="pmeta">${WTYPE[r.type][lang]}</span></div></div>`;
+        <span class="ptitel">${r.wat}</span>
+        <span class="pmeta">${WTYPE[r.type][lang]}</span>${lit?scorePil(lit):''}</div>${binnen}</div>`;
     }).join('')).join('')
     || `<p class="noresults">${lang==='nl'?'Niets gevonden.':'Nothing found.'}</p>`);
 }
