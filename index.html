@@ -148,21 +148,21 @@
              overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .lit.open .ttl{white-space:normal;overflow:visible}
   .lit:hover .ttl{color:var(--brand)}
-  .lit .venue{font-size:10.5px;color:var(--muted);white-space:nowrap;max-width:190px;overflow:hidden;text-overflow:ellipsis}
+  .lit .venue{font-size:10.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;flex:none}
   .badge{display:inline-block;font-size:9px;font-weight:700;padding:1px 6px;border-radius:999px;color:#fff;letter-spacing:.3px}
   .badge.core{background:var(--change)} .badge.latest{background:var(--brand-2)}
   .badge.ongoing{background:var(--ongoing)} .badge.guide{background:var(--guide)}
-  .lit .meta2{margin-left:auto;display:flex;align-items:baseline;gap:8px;flex:none;white-space:nowrap}
-  .lit .aut{font-size:10.5px;color:#5b6b7c;font-weight:600}
-  .bw{font-size:10px;font-weight:800;border-radius:5px;padding:1px 5px;color:#fff;flex:none;
-      font-variant-numeric:tabular-nums;cursor:help}
-  .bw.hoog{background:#0b6b6b} .bw.mid{background:#b45309} .bw.laag{background:#94a3b8}
+  .lit .meta2{margin-left:auto;display:flex;align-items:center;gap:5px;flex:none;white-space:nowrap}
+  .lit .aut{font-size:10.5px;color:#5b6b7c;font-weight:600;flex:none}
+  .sp{color:#cbd5df;font-size:10px;flex:none}
+  .bwdot{display:inline-block;width:8px;height:8px;border-radius:50%;flex:none;cursor:help}
+  .bwdot.hoog{background:#0b6b6b} .bwdot.mid{background:#d97706} .bwdot.laag{background:#c2ccd6}
   .bron{font-size:11px;color:var(--muted);margin-bottom:5px}
   .bwuitleg{font-size:11px;color:#46586b;background:#f6f9f9;border:1px solid var(--line);
       border-radius:6px;padding:5px 8px;margin-bottom:6px}
   .bwont{color:var(--muted);font-style:italic}
   .litchip.srt{background:#f6f9f9}
-  .lit .dat{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
+  .lit .dat{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:52px;text-align:right;flex:none}
   .litbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 8px}
   .litchips{display:flex;gap:6px;flex-wrap:wrap}
   .litchip{font:inherit;font-size:11px;font-weight:600;color:#46586b;background:#fff;border:1px solid var(--line);
@@ -177,8 +177,11 @@
   .litcount{font-size:10.5px;color:var(--muted);margin-left:auto}
   @media(max-width:760px){
     .lit .lh{flex-wrap:wrap}
-    .lit .meta2{margin-left:22px;width:100%;flex-wrap:wrap;white-space:normal}
-    .lit .dat{text-align:left;min-width:0}
+    .lit .ttl{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .lit.open .ttl{-webkit-line-clamp:unset;display:block;overflow:visible}
+    .lit .meta2{margin-left:20px;width:100%;flex-wrap:nowrap;overflow:hidden;white-space:nowrap;margin-top:2px}
+    .lit .venue{max-width:none;flex:0 1 auto;min-width:0}
+    .lit .dat{text-align:left;min-width:0;flex:none}
     .litcount{margin-left:0;width:100%}
   }
   .lit .sum{display:none;font-size:11.5px;color:#48586a;margin:6px 0 1px;line-height:1.5;padding-top:7px;border-top:1px solid var(--line)}
@@ -218,8 +221,7 @@
   .watverd{font-weight:600;color:#33475b;margin-bottom:6px}
   .aanl{border-left:2px solid var(--line);padding:2px 0 2px 9px;margin:5px 0}
   .aanltitel{font-weight:600;color:#2b3947;margin-bottom:2px}
-  .kern{display:inline-block;font-size:10.5px;font-weight:700;color:#0b5563;background:#e6f0f2;
-    border-radius:5px;padding:1px 6px;margin-right:7px;white-space:nowrap;vertical-align:middle}
+  .kern{font-size:10.5px;font-weight:600;color:#5b6b7c;white-space:nowrap;flex:none;vertical-align:middle}
   .mrbadge{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
     color:#7a4a02;background:#ffe8b3;border-radius:5px;padding:1px 6px;margin:0 6px;vertical-align:middle}
   .prkort{color:var(--muted);font-style:italic}
@@ -233,7 +235,8 @@
   .pubrij .pkaart.core{background:var(--change)} .pubrij .pkaart.ongoing{background:var(--ongoing)}
   .pubrij .ptitel{font-weight:700;font-size:12.5px;color:var(--ink);flex:1 1 auto;min-width:0;
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .pubrij .pmeta{font-size:10.5px;color:var(--muted);flex:none;white-space:nowrap;max-width:230px;
+  .pubrij .pmetawrap{display:flex;align-items:center;gap:5px;flex:0 1 auto;min-width:0;overflow:hidden;white-space:nowrap}
+  .pubrij .pmeta{font-size:10.5px;color:var(--muted);flex:0 1 auto;white-space:nowrap;min-width:0;
     overflow:hidden;text-overflow:ellipsis}
   .pubrij .paut{font-size:10.5px;color:#5b6b7c;font-weight:600;flex:none}
   .meerf{font:inherit;font-size:11.5px;font-weight:600;color:#46586b;background:#fff;border:1px solid var(--line);
@@ -243,7 +246,9 @@
   .meerlink{font-size:11.5px;font-weight:600;color:var(--brand);background:none;border:0;cursor:pointer;padding:6px 2px}
   @media(max-width:760px){
     .pubrij .prkop{flex-wrap:wrap}
-    .pubrij .ptitel{flex:1 1 100%;white-space:normal;overflow:visible}
+    .pubrij .ptitel{flex:1 1 100%;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .pubrij.open .ptitel{-webkit-line-clamp:unset;display:block;overflow:visible}
+    .pubrij .pmetawrap{flex:1 1 100%;width:100%;margin-left:0;margin-top:2px}
     .pubrij .pmeta,.pubrij .paut{max-width:none}
   }
   .evgroup{border-top:1px solid var(--line)}
@@ -573,8 +578,9 @@ function bandVan(s){ return s>=70?'hoog':s>=45?'mid':'laag'; }
 function scorePil(p){
   const b=bewijs(p);
   if(!b) return '';
-  const tip=(lang==='nl'?'Bewijskracht ':'Strength of evidence ')+b.score+': '+b.delen.join(' · ');
-  return `<span class="bw ${bandVan(b.score)}" title="${tip.replace(/"/g,'&quot;')}">${b.score}</span>`;
+  const bandtxt={hoog:lang==='nl'?'sterk':'strong',mid:lang==='nl'?'matig':'moderate',laag:lang==='nl'?'zwak':'weak'}[bandVan(b.score)];
+  const tip=(lang==='nl'?'Bewijskracht ':'Strength of evidence ')+b.score+' ('+bandtxt+'): '+b.delen.join(' · ');
+  return `<span class="bwdot ${bandVan(b.score)}" title="${tip.replace(/"/g,'&quot;')}" aria-label="${tip.replace(/"/g,'&quot;')}"></span>`;
 }
 function scoreUitleg(p){
   const b=bewijs(p);
@@ -607,8 +613,7 @@ function kernChip(p){
     meta:{nl:'meta-analyse',en:'meta-analysis'},prosp:{nl:'prospectief',en:'prospective'},
     retro:{nl:'retrospectief',en:'retrospective'},serie:{nl:'serie',en:'series'},review:{nl:'review',en:'review'}};
   const d=D[s.d]?D[s.d][lang]:''; if(!d) return '';
-  const n=s.n?` · ${s.n} ${lang==='nl'?'pt':'pts'}`:'';
-  return `<span class="kern">${d}${n}</span>`;
+  return `<span class="kern">${d}</span>`;
 }
 function litRegel(p,kind){
   const label=kind==='latest'?'':SOORT[kind][lang];
@@ -627,10 +632,12 @@ function litRegel(p,kind){
   const blad=(p[1]||'').replace(/\s*·\s*(?:[A-Za-zÀ-ÿ]{3,9}\.?\s+)?\d{4}\s*$/,'').replace(/\s*·\s*$/,'').trim();
   const aut=p[5]?`<span class="aut">${p[5]}</span>`:'';
   const mr=isMustRead(p)?mustBadge():'';
+  const venueSpan=`<span class="venue" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>`;
+  const mid=[aut,kernChip(p),venueSpan].filter(Boolean).join('<span class="sp">·</span>');
   return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
     <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}${mr}
-      <span class="meta2">${aut}${kernChip(p)}<span class="venue" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>${scorePil(p)}<span class="dat">${datumLabel(p[4])}</span></span></div>
-    <div class="sum"><div class="bron">${p[1]}</div>${scoreUitleg(p)}${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${deelKnop(p[2], p[0])}</div>
+      <span class="meta2">${scorePil(p)}${mid}<span class="dat">${datumLabel(p[4])}</span></span></div>
+    <div class="sum">${scoreUitleg(p)}${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${deelKnop(p[2], p[0])}</div>
   </div>`;
 }
 function litHTML(items,kind){
@@ -790,10 +797,9 @@ function pubRij(x){
       <span class="pdat">${datumLabel(x.sk)}</span>
       <span class="pkaart ${x.soort}">${x.kort}</span>
       <span class="ptitel">${x.titel}</span>${isMustRead(x.rij)?mustBadge():''}
-      ${x.aut?`<span class="paut">${x.aut}</span>`:''}
-      ${kernChip(x.rij)}<span class="pmeta" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>${scorePil(x.rij)}
+      <span class="pmetawrap">${scorePil(x.rij)}${[x.aut?`<span class="paut">${x.aut}</span>`:'',kernChip(x.rij),`<span class="pmeta" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>`].filter(Boolean).join('<span class="sp">·</span>')}</span>
     </div>
-    <div class="prsam"><div class="bron">${x.venue}</div>${scoreUitleg(x.rij)}${kortSam(x.sam)}
+    <div class="prsam">${scoreUitleg(x.rij)}${kortSam(x.sam)}
       <span class="prlinks">
         <a href="${x.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${naarPub}</a>
         <a href="#" onclick="event.stopPropagation();event.preventDefault();showCard('${x.id}')">${naarKaart}</a>
