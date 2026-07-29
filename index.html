@@ -256,6 +256,27 @@
   .footli{color:var(--brand);font-weight:600;text-decoration:none;white-space:nowrap}
   .footli svg{color:#0a66c2;vertical-align:-2px;margin-left:4px}
   .footli:hover{text-decoration:underline}
+  .deelbtn{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--brand);
+    background:var(--brand-soft);border:1px solid var(--line);border-radius:8px;padding:5px 10px;cursor:pointer;white-space:nowrap}
+  .deelbtn:hover{background:#d7e9e9}
+  .deelbtn svg{flex:none}
+  .doc-deel{margin-top:10px}
+  .deeloverlay{position:fixed;inset:0;background:rgba(15,30,46,.45);display:flex;align-items:center;justify-content:center;z-index:1000;padding:16px}
+  .deelkaart{background:#fff;border-radius:14px;max-width:340px;width:100%;padding:15px 16px 12px;box-shadow:0 12px 44px rgba(16,30,46,.3)}
+  .deelkop{display:flex;align-items:center;justify-content:space-between}
+  .deelkop b{font-size:15px;color:var(--ink)}
+  .deelx{border:0;background:none;font-size:23px;line-height:1;color:var(--muted);cursor:pointer;padding:0 2px}
+  .deeltitel{font-size:12px;color:var(--muted);margin:2px 0 12px;line-height:1.45;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .deelopties{display:flex;flex-direction:column;gap:1px}
+  .deelopt{display:flex;align-items:center;gap:12px;padding:11px 8px;border:0;background:none;width:100%;
+    text-align:left;font-size:14px;color:var(--ink);cursor:pointer;text-decoration:none;border-radius:8px;font-family:inherit}
+  .deelopt:hover{background:var(--brand-soft)}
+  .deelopt svg{flex:none}
+  @media(max-width:640px){
+    .deeloverlay{align-items:flex-end;padding:0}
+    .deelkaart{max-width:none;border-radius:16px 16px 0 0;padding-bottom:26px}
+  }
   .secnav{position:sticky;top:52px;z-index:5;display:flex;gap:4px;flex-wrap:wrap;padding:8px 22px;
     background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
   .secnav a{font-size:11px;font-weight:600;color:#46586b;text-decoration:none;border:1px solid var(--line);
@@ -403,6 +424,7 @@
           <span class="pill" id="c-grade"></span>
           <span class="pill date" id="c-date"></span>
         </div>
+        <div class="doc-deel" id="c-deel"></div>
       </div>
 
       <nav class="secnav" id="secnav" aria-label="Secties"></nav>
@@ -606,7 +628,7 @@ function litRegel(p,kind){
   return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
     <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}${mr}
       <span class="meta2">${aut}${kernChip(p)}<span class="venue" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>${scorePil(p)}<span class="dat">${datumLabel(p[4])}</span></span></div>
-    <div class="sum"><div class="bron">${p[1]}</div>${scoreUitleg(p)}${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a></div>
+    <div class="sum"><div class="bron">${p[1]}</div>${scoreUitleg(p)}${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${deelKnop(p[2], p[0])}</div>
   </div>`;
 }
 function litHTML(items,kind){
@@ -773,12 +795,66 @@ function pubRij(x){
       <span class="prlinks">
         <a href="${x.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${naarPub}</a>
         <a href="#" onclick="event.stopPropagation();event.preventDefault();showCard('${x.id}')">${naarKaart}</a>
+        ${deelKnop(x.url, x.titel)}
       </span>
     </div>
   </div>`;
 }
 // Rustige startpagina: korte lijsten, 3 regels op mobiel en 5 op breder scherm
 function startAantal(){ return (window.innerWidth||360)<=640 ? 3 : 5; }
+// ── Delen ────────────────────────────────────────────────────────────
+function deelEsc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function deelIcon(t){
+  const I={
+    kopieer:'<path d="M9 13a5 5 0 0 0 7.3.5l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M15 11a5 5 0 0 0-7.3-.5l-2 2a5 5 0 0 0 7 7l1-1"/>',
+    mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7.5l9 6 9-6"/>',
+    whatsapp:'<path d="M12 3.2a8.8 8.8 0 0 0-7.5 13.4L3 21l4.6-1.4A8.8 8.8 0 1 0 12 3.2z"/><path d="M8.6 8.4c.9 2.8 3.2 5.1 6 6"/>',
+    linkedin:'<path d="M7 10v7M7 6.6v.1M11 17v-4a2 2 0 0 1 4 0v4"/>',
+    x:'<path d="M5 5l14 14M19 5 5 19"/>',
+    meer:'<circle cx="6" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="18" cy="12" r="1.5"/>'
+  };
+  const kleur={whatsapp:'#25D366',linkedin:'#0a66c2',x:'#111'}[t]||'var(--brand)';
+  return `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="${kleur}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[t]||''}</svg>`;
+}
+function deelKnop(url, titel){
+  const lbl=lang==='nl'?'Deel':'Share';
+  const ic='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.4 13.4l7.2 4.2M15.6 6.4 8.4 10.6"/></svg>';
+  return `<button class="deelbtn" data-url="${deelEsc(url)}" data-titel="${deelEsc(titel)}" onclick="event.stopPropagation();deelUit(this)">${ic}<span>${lbl}</span></button>`;
+}
+function deelUit(btn){ deelMenu(btn.dataset.url, btn.dataset.titel); }
+function sluitDeel(){ const o=document.getElementById('deeloverlay'); if(o) o.remove(); }
+function kopieerLink(url, btn){
+  const klaar=()=>{ const sp=btn.querySelector('span'); if(sp) sp.textContent=(lang==='nl'?'Gekopieerd!':'Copied!'); setTimeout(sluitDeel,750); };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(url).then(klaar).catch(()=>{prompt(lang==='nl'?'Kopieer de link:':'Copy the link:',url);}); }
+  else { prompt(lang==='nl'?'Kopieer de link:':'Copy the link:',url); }
+}
+function systeemDeel(url, titel){ if(navigator.share){ navigator.share({title:titel,url:url}).catch(()=>{}); } sluitDeel(); }
+function deelMenu(url, titel){
+  sluitDeel();
+  const T=lang==='nl'
+    ? {kop:'Delen', kopieer:'Link kopiëren', mail:'E-mailen', meer:'Meer / systeem…', sluit:'Sluiten'}
+    : {kop:'Share', kopieer:'Copy link', mail:'Email', meer:'More / system…', sluit:'Close'};
+  const u=encodeURIComponent(url), t=encodeURIComponent(titel), tu=encodeURIComponent(titel+' '+url);
+  const opt=(t2,label,href,act)=> href
+    ? `<a class="deelopt" href="${href}" target="_blank" rel="noopener" onclick="sluitDeel()">${deelIcon(t2)}<span>${label}</span></a>`
+    : `<button class="deelopt" onclick="${act}">${deelIcon(t2)}<span>${label}</span></button>`;
+  const rijen=[
+    opt('kopieer',T.kopieer,null,`kopieerLink(${JSON.stringify(url)},this)`),
+    opt('mail',T.mail,`mailto:?subject=${t}&body=${encodeURIComponent(titel+'\n'+url)}`),
+    opt('whatsapp','WhatsApp',`https://wa.me/?text=${tu}`),
+    opt('linkedin','LinkedIn',`https://www.linkedin.com/sharing/share-offsite/?url=${u}`),
+    opt('x','X',`https://twitter.com/intent/tweet?text=${t}&url=${u}`)
+  ];
+  if(navigator.share) rijen.push(opt('meer',T.meer,null,`systeemDeel(${JSON.stringify(url)},${JSON.stringify(titel)})`));
+  const ov=document.createElement('div');
+  ov.id='deeloverlay'; ov.className='deeloverlay';
+  ov.addEventListener('click',e=>{ if(e.target===ov) sluitDeel(); });
+  ov.innerHTML=`<div class="deelkaart" role="dialog" aria-modal="true" aria-label="${T.kop}">
+    <div class="deelkop"><b>${T.kop}</b><button class="deelx" aria-label="${T.sluit}" onclick="sluitDeel()">×</button></div>
+    <div class="deeltitel">${deelEsc(titel)}</div>
+    <div class="deelopties">${rijen.join('')}</div></div>`;
+  document.body.appendChild(ov);
+}
 let mustreadBlokOpen=null, mustreadAlles=false;
 function toggleMustread(){ mustreadBlokOpen=!mustreadBlokOpen; renderMustread(); }
 function toonMeerMustread(){ mustreadAlles=!mustreadAlles; renderMustread(); }
@@ -1023,6 +1099,7 @@ function renderCard(){
   const d=CARDS[current][lang];
   document.getElementById('c-crumb').textContent=d.crumb;
   document.getElementById('c-title').textContent=d.title;
+  document.getElementById('c-deel').innerHTML=deelKnop('https://www.interventieoncologie.nl/kaart/'+current+'/', d.title);
   document.getElementById('c-proc').textContent=d.proc;
   document.getElementById('c-grade').textContent=d.grade;
   document.getElementById('c-date').textContent=d.date;
