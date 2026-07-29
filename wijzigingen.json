@@ -3,6 +3,380 @@
  "regels": [
   {
    "datum": "2026-07-29",
+   "kaart": "gastrostomie",
+   "kort": "Gastrostomie",
+   "type": "tekst",
+   "wat": "Percutane radiologische gastrostomie bij kankerpatiënten",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "biopsie",
+   "kort": "Biopsie",
+   "type": "tekst",
+   "wat": "Beeldgeleide biopsie voor diagnose en moleculaire diagnostiek",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "bc-lever",
+   "kort": "Mamma levermeta",
+   "type": "tekst",
+   "wat": "Leverdirecte behandeling van levermetastasen bij mammacarcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "leverperfusie",
+   "kort": "Leverperfusie",
+   "type": "tekst",
+   "wat": "Percutane leverperfusie met melfalan bij levermetastasen van uveamelanoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "conduit-enkelj",
+   "kort": "Enkel-J Bricker",
+   "type": "tekst",
+   "wat": "Enkel-J via het conduit bij uretero-enterale strictuur na Bricker-deviatie",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "tumorbloeding",
+   "kort": "Tumorbloeding",
+   "type": "tekst",
+   "wat": "Trans-arteriële embolisatie bij tumorbloeding",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "neurolyse",
+   "kort": "Coeliacusneurolyse",
+   "type": "tekst",
+   "wat": "Coeliacus-plexusneurolyse bij pijn door pancreascarcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "vcs-stent",
+   "kort": "VCS-stent",
+   "type": "tekst",
+   "wat": "Stenting bij maligne vena cava superior-obstructie",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "urineweg-drainage",
+   "kort": "Urinewegdrainage",
+   "type": "tekst",
+   "wat": "Percutane urinewegdrainage bij maligne ureterobstructie",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "effusie-drainage",
+   "kort": "Pleura en ascites",
+   "type": "tekst",
+   "wat": "Getunnelde drainage bij maligne pleuravocht en ascites",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "thyroid-ablatie",
+   "kort": "Ablatie schildklier",
+   "type": "tekst",
+   "wat": "Echogeleide thermale ablatie bij papillair schildkliercarcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "bot-ablatie",
+   "kort": "Ablatie bot",
+   "type": "tekst",
+   "wat": "Ablatie, cementoplastie en percutane fixatie bij botmetastasen buiten de wervelkolom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "crc-ire",
+   "kort": "IRE CRLM",
+   "type": "tekst",
+   "wat": "Irreversibele elektroporatie (IRE) bij perivasculaire colorectale levermetastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "crc-tare",
+   "kort": "TARE CRLM",
+   "type": "tekst",
+   "wat": "Radio-embolisatie (TARE / Y-90) bij colorectale levermetastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "ect-wervel",
+   "kort": "ECT wervel",
+   "type": "tekst",
+   "wat": "Elektrochemotherapie (ECT) bij radiotherapie-resistente epidurale wervelmetastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "ect",
+   "kort": "ECT cutaan",
+   "type": "tekst",
+   "wat": "Elektrochemotherapie (ECT) bij cutane en subcutane metastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "ire-pancreas",
+   "kort": "IRE pancreas",
+   "type": "tekst",
+   "wat": "Irreversibele elektroporatie (IRE) bij lokaal gevorderd pancreascarcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "tekst",
+   "wat": "Percutane ablatie van longtumoren",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "adrenal-ablatie",
+   "kort": "Ablatie bijnier",
+   "type": "tekst",
+   "wat": "Percutane ablatie van bijniermetastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "wervel-embolisatie",
+   "kort": "Embolisatie wervel",
+   "type": "tekst",
+   "wat": "Embolisatie van hypervasculaire wervelmetastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "wervel-ablatie",
+   "kort": "Ablatie wervel",
+   "type": "tekst",
+   "wat": "Percutane ablatie ± cementoplastie bij wervelmetastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "bc-cryo",
+   "kort": "Cryo mamma",
+   "type": "tekst",
+   "wat": "Cryoablatie van vroeg mammacarcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "cca-biliair",
+   "kort": "Galwegdrainage",
+   "type": "tekst",
+   "wat": "Galwegdrainage en endobiliaire RFA bij (peri)hilair cholangiocarcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "cca-arterieel",
+   "kort": "TARE/TACE CCA",
+   "type": "tekst",
+   "wat": "Trans-arteriële behandeling (TARE / TACE) bij intrahepatisch cholangiocarcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "cca-ablatie",
+   "kort": "Ablatie CCA",
+   "type": "tekst",
+   "wat": "Thermale ablatie bij intrahepatisch cholangiocarcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "pve",
+   "kort": "PVE",
+   "type": "tekst",
+   "wat": "Vena porta-embolisatie (PVE)",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "tekst",
+   "wat": "Trans-arteriële radio-embolisatie (TARE / Y-90) bij HCC",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "tekst",
+   "wat": "Trans-arteriële chemo-embolisatie (TACE) bij HCC",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "hcc-ablatie",
+   "kort": "Ablatie HCC",
+   "type": "tekst",
+   "wat": "Thermale ablatie bij hepatocellulair carcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "desmoid-cryo",
+   "kort": "Cryo desmoïd",
+   "type": "tekst",
+   "wat": "Cryoablatie van desmoïdtumor",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "tekst",
+   "wat": "Percutane ablatie van niercelcarcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "tekst",
+   "wat": "Cementaugmentatie (vertebroplastiek / kyfoplastiek) bij wervelmetastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "net-embolisatie",
+   "kort": "Embolisatie NET",
+   "type": "tekst",
+   "wat": "Transarteriële embolisatie bij NET-levermetastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "tekst",
+   "wat": "Thermale ablatie bij colorectale levermetastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
    "kaart": "hcc-tare",
    "kort": "TARE HCC",
    "type": "tekst",

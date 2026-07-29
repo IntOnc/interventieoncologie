@@ -51,6 +51,67 @@ def check_term(tekst):
 CIJFER = re.compile(r'\d+\s?%|\d+[\.,]?\d*\s*(maand|month|jaar|year|week|dag|day)|HR\s*[0-9]|\bp\s*[<=]\s*0|'
                     r'\d+\s*(patiënt|patient|pt\b)|\b\d{2,}\b')
 
+# --- Stijl: harde en zachte checks ------------------------------------------
+# Harde checks (falen): em-dash of en-dash, dubbele spatie, en een p-waarde die
+# niet de compacte kleine-letter-vorm heeft (dus "P<0,001" of "p = 0,05").
+# Zachte checks (waarschuwing, falen niet): een kwalitatief uitkomstwoord zonder
+# getal in de buurt, en een te lange zin in de kernboodschap.
+EMDASH, ENDASH = '—', '–'
+P_HOOFD = re.compile(r'\bP\s*[<>=]\s*0[.,]\d')          # hoofdletter-P p-waarde
+P_SPATIE = re.compile(r'\bp\s+[<>=]\s*0[.,]\d|\bp[<>=]\s+0[.,]\d')  # spatie rond de operator
+VAAG_UITKOMST = re.compile(r'\b(hoge|hoog|lage|laag|hoogste|laagste|snelle|snel|gunstige|gunstig)\b', re.I)
+
+def strings_van(o):
+    if isinstance(o, str): return [o]
+    if isinstance(o, dict): return [s for v in o.values() for s in strings_van(v)]
+    if isinstance(o, list): return [s for v in o for s in strings_van(v)]
+    return []
+
+def redactie_velden(d, cid, lang):
+    """De redactionele velden van een kaart (geen literatuursamenvattingen)."""
+    cc = d['cards'][cid][lang]
+    uit = []
+    for k in ('bl', 'crit', 'results', 'lim', 'alts'):
+        v = cc.get(k)
+        if isinstance(v, str): uit.append((k, v))
+        elif isinstance(v, list):
+            uit += [(f'{k}{i}', x) for i, x in enumerate(v) if isinstance(x, str)]
+    pos = d.get('pos', {}).get(cid, {}).get(lang, {})
+    uit += [(f'pos.{k}', pos[k]) for k in ('g', 'l', 'v') if pos.get(k)]
+    return uit
+
+def zinnen(t):
+    return re.split(r'(?<=[.]) (?=[A-Z0-9])', kaal(t))
+
+def check_stijl(d):
+    """Retourneert (harde_fouten, waarschuwingen)."""
+    hard, zacht = [], []
+    # harde checks over alle tekst
+    for s in strings_van(d):
+        if EMDASH in s or ENDASH in s:
+            hard.append(f'em/en-dash in tekst :: ...{s[max(0,s.find(EMDASH)-15) if EMDASH in s else max(0,s.find(ENDASH)-15):][:40]}...')
+        if P_HOOFD.search(s) or P_SPATIE.search(s):
+            m = (P_HOOFD.search(s) or P_SPATIE.search(s))
+            hard.append(f'p-notatie niet compact :: ...{s[max(0,m.start()-12):m.start()+12]}...')
+    # per kaart, redactionele velden
+    for cid in d['cards']:
+        for lang in ('nl', 'en'):
+            for f, t in redactie_velden(d, cid, lang):
+                plat = kaal(t)
+                if '  ' in t:  # ruwe tekst; kaal() zou tag-spaties als dubbel tellen
+                    hard.append(f'{cid} [{lang}] {f} :: dubbele spatie')
+                # zacht: vaag uitkomstwoord zonder getal in de buurt
+                for m in VAAG_UITKOMST.finditer(plat):
+                    seg = plat[max(0, m.start()-45):m.start()+45]
+                    if not re.search(r'\d', seg):
+                        zacht.append(f'{cid} [{lang}] {f} :: "{m.group()}" zonder getal :: ...{plat[max(0,m.start()-20):m.start()+30]}...')
+            # zacht: te lange zin in de kernboodschap
+            for z in zinnen(d['cards'][cid][lang].get('bl', '')):
+                w = len(z.split())
+                if w > 45:
+                    zacht.append(f'{cid} [{lang}] bl :: zin van {w} woorden (>45)')
+    return list(dict.fromkeys(hard)), list(dict.fromkeys(zacht))
+
 def main():
     d = json.load(open('content.json'))
     termfouten, kaalfouten = [], []
@@ -78,6 +139,8 @@ def main():
         if refs == 0:
             kaalfouten.append(f'{cid} :: kaart zonder enige referentie')
 
+    stijlfouten, waarschuwingen = check_stijl(d)
+
     # ontdubbelen met behoud van volgorde
     termfouten = list(dict.fromkeys(termfouten))
     kaalfouten = list(dict.fromkeys(kaalfouten))
@@ -92,8 +155,17 @@ def main():
         for x in kaalfouten: print('  - ' + x)
     else:
         print('Kale statements: geen kaart met een onbewezen claim gevonden.')
+    if stijlfouten:
+        print(f'\nSTIJL (hard), {len(stijlfouten)} fout(en):')
+        for x in stijlfouten: print('  - ' + x)
+    else:
+        print('Stijl: geen dash-, spatie- of p-notatiefouten gevonden.')
 
-    if termfouten or kaalfouten:
+    if waarschuwingen:
+        print(f'\nLET OP (zacht, faalt niet), {len(waarschuwingen)} punt(en) om na te lopen:')
+        for x in waarschuwingen: print('  - ' + x)
+
+    if termfouten or kaalfouten or stijlfouten:
         print('\nLos deze meldingen op of bevestig dat ze terecht zijn voordat je pusht.')
         sys.exit(1)
 

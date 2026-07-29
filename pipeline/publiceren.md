@@ -114,9 +114,12 @@ Radiology": "JVIR". Zet nooit de afkorting zelf in het tijdschriftveld.
   titel maar ook de link, en normaliseer daarbij: haal https, www en dx weg, en
   behandel doi.org/10.x en link.springer.com/article/10.x als dezelfde bron.
   Een publicatie hoort in core of in latest, nooit in allebei.
-- Draai `python3 pipeline/controle.py`. Dat controleert de terminologie en de
-  kale statements (zie hieronder). Faalt de controle, los de meldingen dan op
-  of bevestig dat ze terecht zijn voordat je pusht.
+- Draai `python3 pipeline/controle.py`. Dat controleert de terminologie, de
+  kale statements en de stijl (harde checks: em/en-dash, dubbele spatie,
+  niet-compacte p-notatie; zachte waarschuwingen: vaag woord zonder getal, zin
+  van meer dan 45 woorden). Faalt de controle op een harde check, los die dan op
+  of bevestig dat ze terecht is voordat je pusht. De zachte waarschuwingen laten
+  de controle slagen, maar loop ze na en kwantificeer of splits waar dat kan.
 
 ## Terminologie en kale statements
 

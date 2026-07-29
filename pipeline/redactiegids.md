@@ -12,6 +12,12 @@ de kaartteksten, niet voor die samenvattingen.
 
 De machinaal te controleren regels worden afgedwongen door `pipeline/controle.py`
 en de checklist in `pipeline/publiceren.md`. Draai die controle vóór het pushen.
+De controle faalt hard op een em- of en-dash, een dubbele spatie en een
+niet-compacte p-notatie (hoofdletter-P of spaties rond de operator), en
+waarschuwt zacht (zonder te falen) bij een kwalitatief uitkomstwoord zonder getal
+in de buurt en bij een zin van meer dan 45 woorden in de kernboodschap. Loop die
+zachte punten na; ze zijn een uitnodiging om te kwantificeren of te splitsen,
+geen verbod.
 
 ## 1. Toon en doel
 
@@ -127,11 +133,16 @@ drug-eluting beads. Koppel een afkorting nooit aan de verkeerde term;
 `controle.py` meldt "microgolfablatie (RFA)" en dergelijke.
 
 Eén term per begrip. Gebruik voor hetzelfde begrip steeds dezelfde term en wissel
-niet tussen synoniemen: "opnameduur" (niet afwisselen met "ligduur"),
-"complicatiekans", "majeure complicaties", "technisch succes". Bewaar wél de
-echte verschillen tussen eindpunten: "lokale controle", "lokaal recidiefvrije
-overleving", "progressievrije overleving" en "totale overleving" zijn geen
-synoniemen en mogen niet door elkaar worden gebruikt; volg wat de bron meet.
+niet tussen synoniemen. De vaste keuzes: "opnameduur" (niet "ligduur"),
+"complicatiekans" (niet "complicatierisico"), "lokale controle" (niet "lokale
+tumorcontrole"), "majeure complicaties", "technisch succes".
+
+Bewaar wél de echte verschillen tussen eindpunten. "Lokale controle", "lokaal
+recidiefvrije overleving", "progressievrije overleving" en "totale overleving"
+zijn geen synoniemen en mogen niet door elkaar worden gebruikt; volg wat de bron
+meet. Let ook op het verschil tussen "technisch succes" (de procedure is volgens
+plan uitgevoerd) en "technische effectiviteit" (volledige ablatie op de eerste
+controle-beeldvorming) — dat zijn twee verschillende eindpunten, geen synoniemen.
 
 Tijdschriftnaam voluit. Zet in het tijdschriftveld de naam voluit; de site kort
 hem zelf in via de lijst `afkortingen`. Nooit de afkorting zelf in het veld.
