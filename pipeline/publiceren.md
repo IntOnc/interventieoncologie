@@ -187,6 +187,17 @@ p-waarde en elke trialnaam blijft staan, maar bindwoorden en herhaling gaan
 eruit. Een kernboodschap van meer dan ongeveer honderd woorden is bijna altijd
 in te korten zonder verlies; laat al compacte kaarten met rust.
 
+Kwantificeer "klein". Schrijf nooit "kleine tumoren" (of "kleine laesies")
+zonder er meteen de maat bij te zetten die bij die kaart hoort, bijvoorbeeld
+"kleine tumoren (<5 cm)" bij bijnierablatie, "(tot ongeveer 3 cm)" bij HCC of
+"(cT1a, ≤4 cm)" bij niercelcarcinoom. De grens moet steunen op de literatuur van
+de kaart; verzin geen getal. Staat de maat al eerder in dezelfde zin, dan hoef je
+haar niet te herhalen.
+
+Geen opsomming van primaire-tumortypes. Laat bij een metastase-indicatie de
+opsomming van welke primaire tumoren het kan betreffen (long, niercel,
+colorectaal, melanoom, enzovoort) weg; die voegt niets toe aan de kernboodschap.
+
 De punten in de `sterk`-callout ("Kracht van IR") schrijf je in telegramstijl,
 niet als volzin. Begin waar het kan met de grens of het getal en benoem de
 vergelijker, bijvoorbeeld "<5 cm: lokale controle even goed als chirurgie en

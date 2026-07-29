@@ -3,6 +3,28 @@
  "regels": [
   {
    "datum": "2026-07-29",
+   "kaart": "cca-ablatie",
+   "kort": "Ablatie CCA",
+   "type": "tekst",
+   "wat": "Thermale ablatie bij intrahepatisch cholangiocarcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "tekst",
+   "wat": "Thermale ablatie bij colorectale levermetastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
    "kaart": "hcc-ablatie",
    "kort": "Ablatie HCC",
    "type": "tekst",
