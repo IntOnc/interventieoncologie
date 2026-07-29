@@ -835,17 +835,19 @@ function deelMenu(url, titel){
     ? {kop:'Delen', kopieer:'Link kopiëren', mail:'E-mailen', meer:'Meer / systeem…', sluit:'Sluiten'}
     : {kop:'Share', kopieer:'Copy link', mail:'Email', meer:'More / system…', sluit:'Close'};
   const u=encodeURIComponent(url), t=encodeURIComponent(titel), tu=encodeURIComponent(titel+' '+url);
-  const opt=(t2,label,href,act)=> href
-    ? `<a class="deelopt" href="${href}" target="_blank" rel="noopener" onclick="sluitDeel()">${deelIcon(t2)}<span>${label}</span></a>`
-    : `<button class="deelopt" onclick="${act}">${deelIcon(t2)}<span>${label}</span></button>`;
+  const opt=(t2,label,href,act)=>{
+    if(!href) return `<button class="deelopt" data-act="${act}">${deelIcon(t2)}<span>${label}</span></button>`;
+    const attr=/^https?:/i.test(href)?' target="_blank" rel="noopener"':'';
+    return `<a class="deelopt" href="${href}"${attr} onclick="sluitDeel()">${deelIcon(t2)}<span>${label}</span></a>`;
+  };
   const rijen=[
-    opt('kopieer',T.kopieer,null,`kopieerLink(${JSON.stringify(url)},this)`),
+    opt('kopieer',T.kopieer,null,'kopieer'),
     opt('mail',T.mail,`mailto:?subject=${t}&body=${encodeURIComponent(titel+'\n'+url)}`),
     opt('whatsapp','WhatsApp',`https://wa.me/?text=${tu}`),
     opt('linkedin','LinkedIn',`https://www.linkedin.com/sharing/share-offsite/?url=${u}`),
     opt('x','X',`https://twitter.com/intent/tweet?text=${t}&url=${u}`)
   ];
-  if(navigator.share) rijen.push(opt('meer',T.meer,null,`systeemDeel(${JSON.stringify(url)},${JSON.stringify(titel)})`));
+  if(navigator.share) rijen.push(opt('meer',T.meer,null,'systeem'));
   const ov=document.createElement('div');
   ov.id='deeloverlay'; ov.className='deeloverlay';
   ov.addEventListener('click',e=>{ if(e.target===ov) sluitDeel(); });
@@ -854,6 +856,8 @@ function deelMenu(url, titel){
     <div class="deeltitel">${deelEsc(titel)}</div>
     <div class="deelopties">${rijen.join('')}</div></div>`;
   document.body.appendChild(ov);
+  const kb=ov.querySelector('[data-act="kopieer"]'); if(kb) kb.onclick=()=>kopieerLink(url,kb);
+  const sb=ov.querySelector('[data-act="systeem"]'); if(sb) sb.onclick=()=>systeemDeel(url,titel);
 }
 let mustreadBlokOpen=null, mustreadAlles=false;
 function toggleMustread(){ mustreadBlokOpen=!mustreadBlokOpen; renderMustread(); }
