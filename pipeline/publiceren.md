@@ -138,106 +138,27 @@ kern- of recente publicatie onder staat, en een kaart zonder enige referentie.
 Een cijfermatige uitspraak zonder onderbouwende publicatie hoort niet op de
 kaart; voeg de bron toe of haal de claim weg.
 
-## Verwoording: de kracht van interventieradiologie voorop
+## Verwoording en huisstijl
 
-De site is er om de onderbouwing van interventieradiologie te tonen. In de
-kaartteksten (bl, de drie regels van `pos`, `crit`, `results`, `lim`, `alts`)
-mag de verwoording de sterke kant van IR naar voren schuiven, zolang niets wordt
-weggelaten of verdraaid. Dit geldt voor de kaartteksten, niet voor de losse
-publicatiesamenvattingen; die blijven trouw aan het abstract.
+De volledige huisstijl staat in `pipeline/redactiegids.md`. Lees die gids vóór je
+een kaarttekst schrijft of wijzigt; hij is de enige bron voor toon, opbouw,
+getallen, terminologie en de visuele middelen. De kern in het kort:
 
-Concreet bij een directe vergelijking met chirurgie, resectie of radiotherapie:
-
-- Begin met wat in het voordeel van IR is: gelijkwaardige uitkomst in de
-  subgroep waar dat bewezen is (bijvoorbeeld onder een groottegrens), en de
-  voordelen van IR zoals minder complicaties, lagere mortaliteit, lagere kosten,
-  minder invasief of herhaalbaarheid.
-- Noem daarna eerlijk waar de vergelijker beter was, met dezelfde cijfers en
-  p-waarden. Laat nooit een ongunstige uitkomst weg en zwak een p-waarde niet af.
-- Benoem expliciet de subgroep waarin IR bewezen is en welke grotere of
-  moeilijkere groep nog in lopende studies onderzocht wordt.
-
-Voorbeeld. Niet: "chirurgie gaf betere lokale progressievrije overleving
-(p=0,021), maar ablatie had de laagste complicatiekans; onder 5 cm geen
-verschil". Wel: "onder 5 cm even goede lokale controle als chirurgie en
-radiotherapie (p=0,23), met de laagste complicatiekans en kosten; bij grotere
-laesies bleven chirurgie en radiotherapie superieur voor lokale progressievrije
-overleving (p=0,021)". Dezelfde feiten, andere volgorde.
-
-Alle getallen, p-waarden en de referentie blijven staan. Dit is een kwestie van
-volgorde en nadruk, niet van selectie.
-
-Visueel uitlichten. De sterke kant van IR mag ook zichtbaar worden gemaakt. Er
-zijn twee middelen. Het inline-accent is de huisstijl: zet op de
-vergelijkingsregel de zinsnede met de gelijkwaardigheid of het IR-voordeel tussen
-`<span class="ir">...</span>`, dan krijgt die een rustig groen accent. Op een
-enkele vlaggenschipkaart met een echte kop-aan-kop-vergelijking mag daarnaast een
-callout: vul dan op de kaart in beide talen het veld `sterk` met twee tot vier
-korte punten (`"sterk":["...","..."]`), dan verschijnt boven Positie en kracht
-het blok "Kracht van IR". Gebruik op zo'n kaart de callout of het inline-accent,
-niet allebei, om dubbele nadruk te voorkomen. De p-waarden en de referentie
-blijven in de gewone tekst staan; de punten in de callout zijn een korte
-samenvatting, geen vervanging.
-
-## Bondig verwoorden
-
-Kort en to-the-point heeft de voorkeur. Schrijf nieuwe of gewijzigde
-kernboodschappen (`bl`) meteen beknopt: elke feitelijke claim, elk getal, elke
-p-waarde en elke trialnaam blijft staan, maar bindwoorden en herhaling gaan
-eruit. Een kernboodschap van meer dan ongeveer honderd woorden is bijna altijd
-in te korten zonder verlies; laat al compacte kaarten met rust.
-
-Kwantificeer "klein". Schrijf nooit "kleine tumoren" (of "kleine laesies")
-zonder er meteen de maat bij te zetten die bij die kaart hoort, bijvoorbeeld
-"kleine tumoren (<5 cm)" bij bijnierablatie, "(tot ongeveer 3 cm)" bij HCC of
-"(cT1a, ≤4 cm)" bij niercelcarcinoom. De grens moet steunen op de literatuur van
-de kaart; verzin geen getal. Staat de maat al eerder in dezelfde zin, dan hoef je
-haar niet te herhalen.
-
-Geen opsomming van primaire-tumortypes. Laat bij een metastase-indicatie de
-opsomming van welke primaire tumoren het kan betreffen (long, niercel,
-colorectaal, melanoom, enzovoort) weg; die voegt niets toe aan de kernboodschap.
-
-Witregels tegen lappen tekst. Een kernboodschap van meer dan twee, drie zinnen
-lees je prettiger in alinea's. Zet in het `bl`-veld een lege regel (twee
-newlines, `\n\n`) op een natuurlijk breekpunt, bijvoorbeeld tussen "wat het is"
-en "het bewijs", of voor een losse risico- of nuancezin. De front-end rendert
-elke door een lege regel gescheiden blok als een eigen alinea. Houd het aantal
-alinea's in `nl` en `en` gelijk en breek nooit midden in een citaat of een getal.
-
-De punten in de `sterk`-callout ("Kracht van IR") schrijf je in telegramstijl,
-niet als volzin. Begin waar het kan met de grens of het getal en benoem de
-vergelijker, bijvoorbeeld "<5 cm: lokale controle even goed als chirurgie en
-radiotherapie" of "Solitair ≤5 cm: <50% van de kosten van resectie, opname 3 vs
-10 dagen". Een kleiner-dan gevolgd door een cijfer (`<5 cm`, `<50%`) mag
-letterlijk blijven staan; de browser leest dat als tekst, niet als een tag.
-
-## Modaliteitsvoorkeur binnen ablatie
-
-Ablatie is geen monoliet: RFA, microwave (MWA), cryoablatie en IRE verschillen
-per indicatie. Waar de literatuur laat zien dat één modaliteit voor een
-behandeling betere resultaten haalt dan de andere, benoem dat expliciet in de
-kaarttekst, met dezelfde bronregels als elke andere claim (cijfers geverifieerd,
-referentie erbij). En andersom: is een modaliteit voor een indicatie achterhaald
-of verdrongen door een betere techniek, zeg dat dan ook, zodat de kaart niet
-suggereert dat alle ablatievormen gelijkwaardig zijn.
-
-Houd de terminologie zuiver (RFA is radiofrequente ablatie, MWA is microwave,
-enzovoort) en overdrijf niet: een voorkeur staat alleen op de kaart als een
-opgehaalde bron een directe of indirecte vergelijking onderbouwt. Ontbreekt die
-vergelijking, dan blijft de neutrale formulering "thermale ablatie (RFA of
-microwave)" staan en noteer je de openstaande vraag voor een volgende ronde.
-
-Let op de bewijskracht en de plaats. Een modaliteitsvoorkeur hoort alleen in de
-kernboodschap (`bl`) als ze robuust is onderbouwd: een gerandomiseerde trial of
-een meta-analyse. Rust ze op één retrospectieve studie of een enkel cohort, dan
-is dat te zwak voor de kernboodschap; laat de studie dan in de literatuurlijst
-staan en zet de nuance hooguit in `results`, met de opzet expliciet benoemd
-("in een retrospectieve studie"). Weeg ook de klinische context mee: een techniek
-die in de richtlijnen en de praktijk geen gangbare optie is voor een indicatie
-(bijvoorbeeld cryoablatie bij HCC, dat op één RCT uit 2015 rust) hoort niet als
-voorkeur in de kernboodschap, ook niet als er een positieve trial bestaat. Dit
-is een algemene regel: wat zwak onderbouwd is, hoort niet in de kernboodschap.
+- Kracht van IR voorop, maar niets weglaten, verdraaien of afzwakken; alle
+  getallen, p-waarden en referenties blijven staan. Dit is volgorde en nadruk,
+  geen selectie.
+- Kernboodschap bondig, met een vaste openingszin en witregels tussen de
+  alinea's (nl en en gelijk aantal).
+- Kwantificeer vage woorden (klein, hoog, vaak, zeldzaam) met het getal uit de
+  bron; verzin niets.
+- Wat zwak is onderbouwd (één retrospectieve studie of cohort) hoort niet in de
+  kernboodschap, hooguit in `results` met de opzet benoemd. Alleen een RCT of
+  meta-analyse is sterk genoeg voor `bl`.
+- Modaliteitsvoorkeur binnen ablatie alleen met een onderbouwende bron; anders
+  de neutrale formulering "thermale ablatie (RFA of microwave)".
+- Terminologie zuiver (RFA, MWA, TARE, cTACE, DEB-TACE) en één term per begrip.
+- Visueel: inline `.ir`-accent of de `sterk`-callout in telegramstijl, niet
+  allebei op één kaart.
 
 ## Tekstwijzigingen aan de kaart
 
