@@ -98,6 +98,8 @@
   .sec h4{margin:0 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
   .sec .lead{font-size:11px;color:var(--muted);margin:2px 0 9px}
   .bottomline{background:var(--brand-soft);border-left:4px solid var(--brand);padding:14px 16px;border-radius:8px;font-size:15px}
+  .bottomline p{margin:0}
+  .bottomline p+p{margin-top:.75em}
   .posbox{border:1px solid var(--line);border-radius:8px;overflow:hidden}
   .techblock{margin-top:26px;border-top:1px solid var(--line);padding-top:18px}
   .techhead{font-weight:800;font-size:15px;margin-bottom:12px}
@@ -1083,7 +1085,7 @@ function renderTech(){
   document.getElementById('t-crumb').textContent=lang==='nl'?'Interventieoncologie · Techniek':'Interventional oncology · Technique';
   document.getElementById('t-title').textContent=d.title;
   document.getElementById('t-lead').textContent=d.lead;
-  document.getElementById('t-intro').innerHTML=d.intro;
+  document.getElementById('t-intro').innerHTML=alineas(d.intro);
   document.getElementById('t-works').innerHTML=d.works.map(x=>`<li>${x}</li>`).join('');
   document.getElementById('t-risks').innerHTML=(d.risksList||[]).map(x=>`<li>${x}</li>`).join('');
   document.getElementById('t-h-works').textContent=L.t_works;
@@ -1107,7 +1109,7 @@ function renderCard(){
   document.getElementById('c-proc').textContent=d.proc;
   document.getElementById('c-grade').textContent=d.grade;
   document.getElementById('c-date').textContent=d.date;
-  document.getElementById('c-bl').innerHTML=d.bl;
+  document.getElementById('c-bl').innerHTML=alineas(d.bl);
   document.getElementById('c-pos').innerHTML=posHTML(current);
   document.getElementById('c-crit').innerHTML=d.crit.map(x=>`<li>${x}</li>`).join('');
   document.getElementById('c-res').innerHTML=d.results.map(x=>`<li>${x}</li>`).join('');
@@ -1357,6 +1359,7 @@ function zetRoute(soort,id){
   zetMeta(soort,id);
 }
 function tekstUit(html){ return (html||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim(); }
+function alineas(t){ return (t||'').split(/\n\n+/).map(p=>`<p>${p.trim()}</p>`).join(''); }
 function zetMeta(soort,id){
   const basis='https://www.interventieoncologie.nl/';
   let titel=lang==='nl'?'Interventie Oncologie · de evidence achter interventieradiologie'

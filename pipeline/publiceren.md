@@ -198,6 +198,13 @@ Geen opsomming van primaire-tumortypes. Laat bij een metastase-indicatie de
 opsomming van welke primaire tumoren het kan betreffen (long, niercel,
 colorectaal, melanoom, enzovoort) weg; die voegt niets toe aan de kernboodschap.
 
+Witregels tegen lappen tekst. Een kernboodschap van meer dan twee, drie zinnen
+lees je prettiger in alinea's. Zet in het `bl`-veld een lege regel (twee
+newlines, `\n\n`) op een natuurlijk breekpunt, bijvoorbeeld tussen "wat het is"
+en "het bewijs", of voor een losse risico- of nuancezin. De front-end rendert
+elke door een lege regel gescheiden blok als een eigen alinea. Houd het aantal
+alinea's in `nl` en `en` gelijk en breek nooit midden in een citaat of een getal.
+
 De punten in de `sterk`-callout ("Kracht van IR") schrijf je in telegramstijl,
 niet als volzin. Begin waar het kan met de grens of het getal en benoem de
 vergelijker, bijvoorbeeld "<5 cm: lokale controle even goed als chirurgie en

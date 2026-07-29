@@ -3,6 +3,17 @@
  "regels": [
   {
    "datum": "2026-07-29",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "tekst",
+   "wat": "Trans-arteriële radio-embolisatie (TARE / Y-90) bij HCC",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
    "kaart": "adrenal-ablatie",
    "kort": "Ablatie bijnier",
    "type": "tekst",
