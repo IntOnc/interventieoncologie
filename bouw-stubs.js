@@ -128,6 +128,16 @@ function sleutelVan(it) { return (it[2] || '') + '|' + (it[0] || ''); }
 function tekstVan(kaart, pos) {
   return JSON.stringify([kaart.bl, kaart.crit, kaart.results, kaart.lim, kaart.alts, pos || null]);
 }
+// Een veldwaarde (string, lijst of pos-object) omzetten naar leesbare platte tekst voor de voor/na-vergelijking.
+function platveld(v) {
+  if (v == null) return '';
+  let s;
+  if (Array.isArray(v)) s = v.map(x => (typeof x === 'string' ? x : '')).join(' • ');
+  else if (typeof v === 'object') s = ['g', 'l', 'v'].map(k => v[k] || '').filter(Boolean).join(' • ');
+  else s = String(v);
+  s = s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  return s.length > 1600 ? s.slice(0, 1600) + '…' : s;
+}
 try {
   const log = execSync('git log --date=short --pretty=format:%H%x09%ad -- content.json', { encoding: 'utf8' })
     .split('\n').filter(Boolean).map(r => { const [sha, datum] = r.split('\t'); return { sha, datum }; });
@@ -157,14 +167,23 @@ try {
         }
         // welke tekstvelden zijn veranderd
         const ov = vorige.cards[id].nl, nv = nu.cards[id].nl;
+        const ev = vorige.cards[id].en || {}, env = nu.cards[id].en || {};
         const oPos = (vorige.pos || {})[id] && vorige.pos[id].nl, nPos = (nu.pos || {})[id] && nu.pos[id].nl;
+        const oPosE = (vorige.pos || {})[id] && vorige.pos[id].en, nPosE = (nu.pos || {})[id] && nu.pos[id].en;
         const gelijk = (x, y) => JSON.stringify(x || null) === JSON.stringify(y || null);
         const velden = [];
         for (const f of ['bl', 'crit', 'results', 'lim', 'alts']) if (!gelijk(ov[f], nv[f])) velden.push(f);
         if (!gelijk(oPos, nPos)) velden.push('pos');
         const a = tekstVan(ov, oPos);
         const b = tekstVan(nv, nPos);
-        if (a !== b) regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: 'tekst', wat: nu.cards[id].nl.title, velden, naaraanleiding: nieuweHier.slice(0, 4) });
+        if (a !== b) {
+          const diff = velden.map(f => {
+            const ovl = f === 'pos' ? oPos : ov[f], nvl = f === 'pos' ? nPos : nv[f];
+            const evl = f === 'pos' ? oPosE : ev[f], envl = f === 'pos' ? nPosE : env[f];
+            return { veld: f, oud: { nl: platveld(ovl), en: platveld(evl) }, nieuw: { nl: platveld(nvl), en: platveld(envl) } };
+          }).filter(dd => dd.oud.nl !== dd.nieuw.nl || dd.oud.en !== dd.nieuw.en);
+          regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: 'tekst', wat: nu.cards[id].nl.title, velden, naaraanleiding: nieuweHier.slice(0, 4), diff });
+        }
       }
     }
     vorige = nu;

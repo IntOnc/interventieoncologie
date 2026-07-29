@@ -3,6 +3,199 @@
  "regels": [
   {
    "datum": "2026-07-29",
+   "kaart": "biopsie",
+   "kort": "Biopsie",
+   "type": "tekst",
+   "wat": "Beeldgeleide biopsie voor diagnose en moleculaire diagnostiek",
+   "velden": [
+    "lim"
+   ],
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "lim",
+     "oud": {
+      "nl": "Een diagnostisch adequaat biopt is niet hetzelfde als een moleculair adequaat biopt. Die twee percentages worden in de literatuur en in kwaliteitsregistraties vaak door elkaar gehaald. • Er is geen enkele studie die de moleculaire adequaatheid netjes per orgaan uitsplitst binnen één cohort. Wat vaststaat is de rangorde: resectiepreparaten ongeveer 97 tot 98%, cores 70 tot 92% afhankelijk van het protocol, cytologie 57 tot 87% en scleroserend bot rond 73%. • Cytologie presteert beter dan interventieradiologen doorgaans aannemen: in gepaarde bemonstering was de tumorfractie in punctaten juist hoger dan in cores (p=0,003) en werden alle mutaties uit de cores ook in de punctaten gevonden. De DNA-opbrengst is wel lager (p=0,01). Het is dus geen simpele hiërarchie. • Coaxiale techniek verlaagt de pneumothoraxkans niet (23,2% tegen 27%; p=0,14). Het voordeel zit in het ontkoppelen van het aantal cores van het aantal puncties, en niet in een lager complicatierisico op zichzelf. • Voor het zaaiingsrisico bestaat geen richtlijnzin die zegt dat men een biopsie er niet om moet nalaten. CIRSE vraagt om een individuele afweging bij de risicovollere tumoren. De dichtstbijzijnde expliciete uitspraak is Nederlands en staat in de HCC-module. • Bij niercelcarcinoom betreft de gemeten zaaiing vrijwel uitsluitend papillair type: histologisch werd bij 6 van 98 nefrectomiepreparaten tractweefsel gevonden, alle papillair (6 van 28), en geen enkele bij helderceltype. • Vergelijkingen tussen echografische en CT-geleide biopsie zijn vertekend doordat de moeilijkere laesies onder CT worden gedaan.",
+      "en": "A diagnostically adequate biopsy is not the same as a molecularly adequate one. Those two percentages are frequently conflated in the literature and in quality registries. • No study breaks molecular adequacy down cleanly by organ within a single cohort. What is established is the ordering: resection specimens about 97 to 98%, cores 70 to 92% depending on protocol, cytology 57 to 87% and sclerotic bone around 73%. • Cytology performs better than interventional radiologists generally assume: in paired sampling the tumour fraction was higher in aspirates than in cores (p=0.003) and all mutations found in cores were also found in aspirates. DNA yield is lower (p=0.01). It is therefore not a simple hierarchy. • Coaxial technique does not lower the pneumothorax rate (23.2% versus 27%; p=0.14). Its advantage lies in decoupling core number from puncture number, not in a lower complication risk in itself. • For seeding risk there is no guideline sentence saying biopsy should not be withheld because of it. CIRSE asks for an individual assessment in the higher-risk tumours. The closest explicit statement is Dutch and sits in the HCC module. • In renal cell carcinoma, measured seeding is almost exclusively papillary: histologically, tract tissue was found in 6 of 98 nephrectomy specimens, all papillary (6 of 28), and none in clear cell. • Comparisons between ultrasound and CT guidance are confounded because the more difficult lesions are done under CT."
+     },
+     "nieuw": {
+      "nl": "Een diagnostisch adequaat biopt is niet hetzelfde als een moleculair adequaat biopt. Die twee percentages worden in de literatuur en in kwaliteitsregistraties vaak door elkaar gehaald. • Er is geen enkele studie die de moleculaire adequaatheid netjes per orgaan uitsplitst binnen één cohort. Wat vaststaat is de rangorde: resectiepreparaten ongeveer 97 tot 98%, cores 70 tot 92% afhankelijk van het protocol, cytologie 57 tot 87% en scleroserend bot rond 73%. • Cytologie presteert beter dan interventieradiologen doorgaans aannemen: in gepaarde bemonstering was de tumorfractie in punctaten juist hoger dan in cores (p=0,003) en werden alle mutaties uit de cores ook in de punctaten gevonden. De DNA-opbrengst is wel lager (p=0,01). Het is dus geen simpele hiërarchie. • Coaxiale techniek verlaagt de pneumothoraxkans niet (23,2% tegen 27%; p=0,14). Het voordeel zit in het ontkoppelen van het aantal cores van het aantal puncties, en niet in een lager complicatiekans op zichzelf. • Voor het zaaiingsrisico bestaat geen richtlijnzin die zegt dat men een biopsie er niet om moet nalaten. CIRSE vraagt om een individuele afweging bij de risicovollere tumoren. De dichtstbijzijnde expliciete uitspraak is Nederlands en staat in de HCC-module. • Bij niercelcarcinoom betreft de gemeten zaaiing vrijwel uitsluitend papillair type: histologisch werd bij 6 van 98 nefrectomiepreparaten tractweefsel gevonden, alle papillair (6 van 28), en geen enkele bij helderceltype. • Vergelijkingen tussen echografische en CT-geleide biopsie zijn vertekend doordat de moeilijkere laesies onder CT worden gedaan.",
+      "en": "A diagnostically adequate biopsy is not the same as a molecularly adequate one. Those two percentages are frequently conflated in the literature and in quality registries. • No study breaks molecular adequacy down cleanly by organ within a single cohort. What is established is the ordering: resection specimens about 97 to 98%, cores 70 to 92% depending on protocol, cytology 57 to 87% and sclerotic bone around 73%. • Cytology performs better than interventional radiologists generally assume: in paired sampling the tumour fraction was higher in aspirates than in cores (p=0.003) and all mutations found in cores were also found in aspirates. DNA yield is lower (p=0.01). It is therefore not a simple hierarchy. • Coaxial technique does not lower the pneumothorax rate (23.2% versus 27%; p=0.14). Its advantage lies in decoupling core number from puncture number, not in a lower complication risk in itself. • For seeding risk there is no guideline sentence saying biopsy should not be withheld because of it. CIRSE asks for an individual assessment in the higher-risk tumours. The closest explicit statement is Dutch and sits in the HCC module. • In renal cell carcinoma, measured seeding is almost exclusively papillary: histologically, tract tissue was found in 6 of 98 nephrectomy specimens, all papillary (6 of 28), and none in clear cell. • Comparisons between ultrasound and CT guidance are confounded because the more difficult lesions are done under CT."
+     }
+    }
+   ]
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "long-ablatie",
+   "kort": "Ablatie long",
+   "type": "tekst",
+   "wat": "Percutane ablatie van longtumoren",
+   "velden": [
+    "lim"
+   ],
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "lim",
+     "oud": {
+      "nl": "Boven ongeveer 3 cm en bij een centrale ligging nemen lokaal recidief en het complicatierisico toe. • Pneumothorax is de meest voorkomende complicatie; meestal mild en behandelbaar. • Het heat-sink-effect bij grote vaten beperkt de effectiviteit; cryoablatie kan hier soms beter uitpakken. • De evidence is overwegend prospectief en observationeel; een gerandomiseerde vergelijking met SBRT is beperkt. • Ablatie behandelt de lokale laesie; systemische ziekte vraagt systemische therapie.",
+      "en": "Above about 3 cm and with a central location, local recurrence and complication risk rise. • Pneumothorax is the most common complication; usually mild and treatable. • The heat-sink effect near large vessels reduces efficacy; cryoablation may do better here. • The evidence is mostly prospective and observational; a randomised comparison with SBRT is limited. • Ablation treats the local lesion; systemic disease requires systemic therapy."
+     },
+     "nieuw": {
+      "nl": "Boven ongeveer 3 cm en bij een centrale ligging nemen lokaal recidief en het complicatiekans toe. • Pneumothorax is de meest voorkomende complicatie; meestal mild en behandelbaar. • Het heat-sink-effect bij grote vaten beperkt de effectiviteit; cryoablatie kan hier soms beter uitpakken. • De evidence is overwegend prospectief en observationeel; een gerandomiseerde vergelijking met SBRT is beperkt. • Ablatie behandelt de lokale laesie; systemische ziekte vraagt systemische therapie.",
+      "en": "Above about 3 cm and with a central location, local recurrence and complication risk rise. • Pneumothorax is the most common complication; usually mild and treatable. • The heat-sink effect near large vessels reduces efficacy; cryoablation may do better here. • The evidence is mostly prospective and observational; a randomised comparison with SBRT is limited. • Ablation treats the local lesion; systemic disease requires systemic therapy."
+     }
+    }
+   ]
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "wervel-embolisatie",
+   "kort": "Embolisatie wervel",
+   "type": "tekst",
+   "wat": "Embolisatie van hypervasculaire wervelmetastasen",
+   "velden": [
+    "alts"
+   ],
+   "naaraanleiding": [],
+   "diff": []
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "wervel-ablatie",
+   "kort": "Ablatie wervel",
+   "type": "tekst",
+   "wat": "Percutane ablatie ± cementoplastie bij wervelmetastasen",
+   "velden": [
+    "bl",
+    "crit",
+    "results"
+   ],
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Percutane thermale ablatie (radiofrequente ablatie of cryoablatie) van wervelmetastasen geeft lokale tumorcontrole én duurzame pijnvermindering, en wordt vaak in dezelfde sessie gecombineerd met cementaugmentatie voor directe stabilisatie. In een meta-analyse gaf de combinatie van RFA en cementaugmentatie significante en aanhoudende pijnvermindering met een gunstig veiligheidsprofiel (N Am Spine Soc J 2024). Bij pijnlijke botmetastasen daalde de ergste pijnscore gemiddeld 2,6 punten op 8 weken na cryoablatie (MOTION; Jennings et al., Radiol Imaging Cancer 2021). Ablatie is vooral waardevol bij oligometastatische of radioresistente laesies en als aanvulling op of alternatief voor radiotherapie.",
+      "en": "Percutaneous thermal ablation (radiofrequency or cryoablation) of vertebral metastases provides local tumour control and durable pain relief, and is often combined with cement augmentation in the same session for immediate stabilisation. In a meta-analysis, combining RFA with cement augmentation gave significant and durable pain relief with a favourable safety profile (N Am Spine Soc J 2024). In painful bone metastases, the worst-pain score fell on average 2.6 points at 8 weeks after cryoablation (MOTION; Jennings et al., Radiol Imaging Cancer 2021). Ablation is especially valuable for oligometastatic or radioresistant lesions and as a complement to or alternative for radiotherapy."
+     },
+     "nieuw": {
+      "nl": "Percutane thermale ablatie (radiofrequente ablatie of cryoablatie) van wervelmetastasen geeft lokale controle én duurzame pijnvermindering, en wordt vaak in dezelfde sessie gecombineerd met cementaugmentatie voor directe stabilisatie. In een meta-analyse gaf de combinatie van RFA en cementaugmentatie significante en aanhoudende pijnvermindering met een gunstig veiligheidsprofiel (N Am Spine Soc J 2024). Bij pijnlijke botmetastasen daalde de ergste pijnscore gemiddeld 2,6 punten op 8 weken na cryoablatie (MOTION; Jennings et al., Radiol Imaging Cancer 2021). Ablatie is vooral waardevol bij oligometastatische of radioresistente laesies en als aanvulling op of alternatief voor radiotherapie.",
+      "en": "Percutaneous thermal ablation (radiofrequency or cryoablation) of vertebral metastases provides local control and durable pain relief, and is often combined with cement augmentation in the same session for immediate stabilisation. In a meta-analysis, combining RFA with cement augmentation gave significant and durable pain relief with a favourable safety profile (N Am Spine Soc J 2024). In painful bone metastases, the worst-pain score fell on average 2.6 points at 8 weeks after cryoablation (MOTION; Jennings et al., Radiol Imaging Cancer 2021). Ablation is especially valuable for oligometastatic or radioresistant lesions and as a complement to or alternative for radiotherapy."
+     }
+    },
+    {
+     "veld": "crit",
+     "oud": {
+      "nl": "Pijnlijke of oligometastatische wervelmetastase waar naast stabilisatie ook lokale tumorcontrole gewenst is. • Radioresistente tumoren (bijv. niercel, melanoom) of recidief na radiotherapie. • Veilige afstand of thermobescherming ten opzichte van het ruggenmerg en de zenuwwortels. • Vaak gecombineerd met cementaugmentatie in dezelfde sessie voor directe stabiliteit. • Beoordeling in een MDO; te combineren met SBRT bij geselecteerde patiënten.",
+      "en": "Painful or oligometastatic vertebral metastasis where local tumour control is wanted alongside stabilisation. • Radioresistant tumours (e.g. renal, melanoma) or recurrence after radiotherapy. • Safe distance or thermoprotection relative to the spinal cord and nerve roots. • Often combined with cement augmentation in the same session for immediate stability. • Assessment in an MDT; can be combined with SBRT in selected patients."
+     },
+     "nieuw": {
+      "nl": "Pijnlijke of oligometastatische wervelmetastase waar naast stabilisatie ook lokale controle gewenst is. • Radioresistente tumoren (bijv. niercel, melanoom) of recidief na radiotherapie. • Veilige afstand of thermobescherming ten opzichte van het ruggenmerg en de zenuwwortels. • Vaak gecombineerd met cementaugmentatie in dezelfde sessie voor directe stabiliteit. • Beoordeling in een MDO; te combineren met SBRT bij geselecteerde patiënten.",
+      "en": "Painful or oligometastatic vertebral metastasis where local control is wanted alongside stabilisation. • Radioresistant tumours (e.g. renal, melanoma) or recurrence after radiotherapy. • Safe distance or thermoprotection relative to the spinal cord and nerve roots. • Often combined with cement augmentation in the same session for immediate stability. • Assessment in an MDT; can be combined with SBRT in selected patients."
+     }
+    },
+    {
+     "veld": "results",
+     "oud": {
+      "nl": "Gecombineerde RFA en cementaugmentatie: significante, aanhoudende pijnvermindering met een gunstig veiligheidsprofiel (meta-analyse, N Am Spine Soc J 2024). • RFA met augmentatie geeft een hoge lokale tumorcontrole in prospectieve series (AJNR 2018). • Cryoablatie bij botmetastasen: ergste pijnscore gemiddeld 2,6 punten lager op 8 weken (MOTION; Jennings et al., Radiol Imaging Cancer 2021). • Snelle pijnrespons, vaak binnen 1 tot 4 weken.",
+      "en": "Combined RFA and cement augmentation: significant, durable pain relief with a favourable safety profile (meta-analysis, N Am Spine Soc J 2024). • RFA with augmentation gives high local tumour control in prospective series (AJNR 2018). • Cryoablation in bone metastases: worst-pain score on average 2.6 points lower at 8 weeks (MOTION; Jennings et al., Radiol Imaging Cancer 2021). • Rapid pain response, often within 1 to 4 weeks."
+     },
+     "nieuw": {
+      "nl": "Gecombineerde RFA en cementaugmentatie: significante, aanhoudende pijnvermindering met een gunstig veiligheidsprofiel (meta-analyse, N Am Spine Soc J 2024). • RFA met augmentatie geeft een hoge lokale controle in prospectieve series (AJNR 2018). • Cryoablatie bij botmetastasen: ergste pijnscore gemiddeld 2,6 punten lager op 8 weken (MOTION; Jennings et al., Radiol Imaging Cancer 2021). • Snelle pijnrespons, vaak binnen 1 tot 4 weken.",
+      "en": "Combined RFA and cement augmentation: significant, durable pain relief with a favourable safety profile (meta-analysis, N Am Spine Soc J 2024). • RFA with augmentation gives high local control in prospective series (AJNR 2018). • Cryoablation in bone metastases: worst-pain score on average 2.6 points lower at 8 weeks (MOTION; Jennings et al., Radiol Imaging Cancer 2021). • Rapid pain response, often within 1 to 4 weeks."
+     }
+    }
+   ]
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "rcc-ablatie",
+   "kort": "Ablatie nier",
+   "type": "tekst",
+   "wat": "Percutane ablatie van niercelcarcinoom",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij kleine niertumoren (cT1a, ≤4 cm) is percutane thermale ablatie (cryoablatie, RFA of microwave) een nefronsparende, minimaal invasieve behandeling met hoge lokale controle en behoud van nierfunctie. In grote observationele cohorten zijn de oncologische uitkomsten voor cT1a vergelijkbaar met partiële nefrectomie, met minder morbiditeit. Richtlijnen (EAU, AUA) bevelen ablatie vooral aan bij oudere of comorbide patiënten, een solitaire nier of chronische nierschade. Binnen de thermale technieken gaf cryoablatie in een meta-analyse minder lokale progressie en minder herbehandelingen dan RFA. Een percutane biopsie vooraf voor histologische diagnose is standaard.",
+      "en": "For small renal tumours (cT1a, ≤4 cm), percutaneous thermal ablation (cryoablation, RFA or microwave) is a nephron-sparing, minimally invasive treatment with high local control and preserved kidney function. In large observational cohorts, oncologic outcomes for cT1a are comparable to partial nephrectomy, with less morbidity. Guidelines (EAU, AUA) recommend ablation mainly for elderly or comorbid patients, a solitary kidney or chronic kidney disease. Within the thermal techniques, cryoablation gave less local progression and fewer retreatments than RFA in a meta-analysis. A percutaneous biopsy beforehand for histological diagnosis is standard."
+     },
+     "nieuw": {
+      "nl": "Bij kleine niertumoren (cT1a, ≤4 cm) is percutane thermale ablatie (cryoablatie, RFA of microwave) een nefronsparende, minimaal invasieve behandeling met hoge lokale controle (5-jaars rond 90%) en behoud van nierfunctie. In grote observationele cohorten zijn de oncologische uitkomsten voor cT1a vergelijkbaar met partiële nefrectomie, met minder morbiditeit. Richtlijnen (EAU, AUA) bevelen ablatie vooral aan bij oudere of comorbide patiënten, een solitaire nier of chronische nierschade. Binnen de thermale technieken gaf cryoablatie in een meta-analyse minder lokale progressie en minder herbehandelingen dan RFA. Een percutane biopsie vooraf voor histologische diagnose is standaard.",
+      "en": "For small renal tumours (cT1a, ≤4 cm), percutaneous thermal ablation (cryoablation, RFA or microwave) is a nephron-sparing, minimally invasive treatment with high local control (around 90% at 5 years) and preserved kidney function. In large observational cohorts, oncologic outcomes for cT1a are comparable to partial nephrectomy, with less morbidity. Guidelines (EAU, AUA) recommend ablation mainly for elderly or comorbid patients, a solitary kidney or chronic kidney disease. Within the thermal techniques, cryoablation gave less local progression and fewer retreatments than RFA in a meta-analysis. A percutaneous biopsy beforehand for histological diagnosis is standard."
+     }
+    }
+   ]
+  },
+  {
+   "datum": "2026-07-29",
+   "kaart": "vertebroplastiek",
+   "kort": "Vertebroplastiek",
+   "type": "tekst",
+   "wat": "Cementaugmentatie (vertebroplastiek / kyfoplastiek) bij wervelmetastasen",
+   "velden": [
+    "bl",
+    "crit",
+    "results",
+    "alts",
+    "pos"
+   ],
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij pijnlijke wervelmetastasen, myeloomlokalisaties of pathologische inzakkingsfracturen geeft percutane cementaugmentatie (vertebroplastiek of ballonkyfoplastiek) snelle en duurzame pijnvermindering en herstel van functie. In de gerandomiseerde CAFE-trial (2011) verbeterde ballonkyfoplastiek bij kankerpatiënten de rugfunctie, pijn en kwaliteit van leven binnen 1 maand duidelijk meer dan niet-chirurgische behandeling. Combinatie met radiofrequente ablatie voegt lokale tumorcontrole toe. De behandeling is aanvullend op, en geen vervanging van, radiotherapie en systemische therapie.",
+      "en": "For painful vertebral metastases, myeloma lesions or pathological compression fractures, percutaneous cement augmentation (vertebroplasty or balloon kyphoplasty) provides rapid and durable pain relief and functional recovery. In the randomised CAFE trial (2011), balloon kyphoplasty in cancer patients improved back function, pain and quality of life within 1 month clearly more than non-surgical management. Combination with radiofrequency ablation adds local tumour control. The treatment complements, and does not replace, radiotherapy and systemic therapy."
+     },
+     "nieuw": {
+      "nl": "Bij pijnlijke wervelmetastasen, myeloomlokalisaties of pathologische inzakkingsfracturen geeft percutane cementaugmentatie (vertebroplastiek of ballonkyfoplastiek) snelle en duurzame pijnvermindering en herstel van functie. In de gerandomiseerde CAFE-trial (2011) verbeterde ballonkyfoplastiek bij kankerpatiënten de rugfunctie, pijn en kwaliteit van leven binnen 1 maand duidelijk meer dan niet-chirurgische behandeling. Combinatie met radiofrequente ablatie voegt lokale controle toe. De behandeling is aanvullend op, en geen vervanging van, radiotherapie en systemische therapie.",
+      "en": "For painful vertebral metastases, myeloma lesions or pathological compression fractures, percutaneous cement augmentation (vertebroplasty or balloon kyphoplasty) provides rapid and durable pain relief and functional recovery. In the randomised CAFE trial (2011), balloon kyphoplasty in cancer patients improved back function, pain and quality of life within 1 month clearly more than non-surgical management. Combination with radiofrequency ablation adds local control. The treatment complements, and does not replace, radiotherapy and systemic therapy."
+     }
+    },
+    {
+     "veld": "crit",
+     "oud": {
+      "nl": "Pijnlijke wervelmetastase, myeloomlokalisatie of pathologische inzakkingsfractuur die correspondeert met de klachten (bevestigd op MRI). • Onvoldoende pijnrespons op of contra-indicatie voor conservatieve behandeling; pijn vooral mechanisch en axiaal. • Bij voorkeur een intacte achterste wervelwand; bij aantasting zorgvuldige selectie wegens cementlekkage-risico. • Geen ernstige epidurale compressie met myelopathie of instabiliteit die eerst chirurgie of decompressie vereist. • Combinatie met RFA te overwegen voor lokale tumorcontrole; beoordeling in een MDO met radiotherapie en chirurgie.",
+      "en": "Painful vertebral metastasis, myeloma lesion or pathological compression fracture matching the symptoms (confirmed on MRI). • Inadequate pain response to, or a contraindication for, conservative management; pain mainly mechanical and axial. • Preferably an intact posterior vertebral wall; with involvement, careful selection because of cement-leak risk. • No severe epidural compression with myelopathy or instability requiring surgery or decompression first. • Consider combination with RFA for local tumour control; assess in an MDT with radiotherapy and surgery."
+     },
+     "nieuw": {
+      "nl": "Pijnlijke wervelmetastase, myeloomlokalisatie of pathologische inzakkingsfractuur die correspondeert met de klachten (bevestigd op MRI). • Onvoldoende pijnrespons op of contra-indicatie voor conservatieve behandeling; pijn vooral mechanisch en axiaal. • Bij voorkeur een intacte achterste wervelwand; bij aantasting zorgvuldige selectie wegens cementlekkage-risico. • Geen ernstige epidurale compressie met myelopathie of instabiliteit die eerst chirurgie of decompressie vereist. • Combinatie met RFA te overwegen voor lokale controle; beoordeling in een MDO met radiotherapie en chirurgie.",
+      "en": "Painful vertebral metastasis, myeloma lesion or pathological compression fracture matching the symptoms (confirmed on MRI). • Inadequate pain response to, or a contraindication for, conservative management; pain mainly mechanical and axial. • Preferably an intact posterior vertebral wall; with involvement, careful selection because of cement-leak risk. • No severe epidural compression with myelopathy or instability requiring surgery or decompression first. • Consider combination with RFA for local control; assess in an MDT with radiotherapy and surgery."
+     }
+    },
+    {
+     "veld": "results",
+     "oud": {
+      "nl": "Pijnscore (0-10) daalde 3,8 punten op dag 7 na ballonkyfoplastiek versus 0,3 punten bij niet-chirurgische behandeling (CAFE; Berenson et al., Lancet Oncol 2011, P8,5 punten beter op 1 maand versus niet-chirurgische behandeling, met verbeterde mobiliteit en kwaliteit van leven (CAFE; Berenson et al., Lancet Oncol 2011). • Gecombineerde RFA en cementaugmentatie: significante en aanhoudende pijnvermindering bij spinale metastasen (meta-analyse, N Am Spine Soc J 2024). • Gunstig veiligheidsprofiel; cementlekkage komt voor maar is meestal asymptomatisch.",
+      "en": "Pain score (0-10) fell 3.8 points at day 7 after balloon kyphoplasty versus 0.3 points with non-surgical management (CAFE; Berenson et al., Lancet Oncol 2011, P8.5 points better at 1 month versus non-surgical management, with improved mobility and quality of life (CAFE; Berenson et al., Lancet Oncol 2011). • Combined RFA and cement augmentation: significant and durable pain relief in spinal metastases (meta-analysis, N Am Spine Soc J 2024). • Favourable safety profile; cement leakage occurs but is usually asymptomatic."
+     },
+     "nieuw": {
+      "nl": "Pijnscore (0-10) daalde 3,8 punten op dag 7 na ballonkyfoplastiek versus 0,3 punten bij niet-chirurgische behandeling (CAFE; Berenson et al., Lancet Oncol 2011, p8,5 punten beter op 1 maand versus niet-chirurgische behandeling, met verbeterde mobiliteit en kwaliteit van leven (CAFE; Berenson et al., Lancet Oncol 2011). • Gecombineerde RFA en cementaugmentatie: significante en aanhoudende pijnvermindering bij spinale metastasen (meta-analyse, N Am Spine Soc J 2024). • Gunstig veiligheidsprofiel; cementlekkage komt voor maar is meestal asymptomatisch.",
+      "en": "Pain score (0-10) fell 3.8 points at day 7 after balloon kyphoplasty versus 0.3 points with non-surgical management (CAFE; Berenson et al., Lancet Oncol 2011, p8.5 points better at 1 month versus non-surgical management, with improved mobility and quality of life (CAFE; Berenson et al., Lancet Oncol 2011). • Combined RFA and cement augmentation: significant and durable pain relief in spinal metastases (meta-analysis, N Am Spine Soc J 2024). • Favourable safety profile; cement leakage occurs but is usually asymptomatic."
+     }
+    },
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "Aanvullend op radiotherapie en systemische therapie, niet vervangend. Richtlijnen positioneren cementaugmentatie bij pijnlijke pathologische wervelfracturen wanneer conservatieve behandeling tekortschiet. • Pijnlijke wervelmetastase, myeloomlokalisatie of pathologische inzakkingsfractuur die op MRI correspondeert met de klachten, bij voorkeur met intacte achterste wervelwand. Niet bij ernstige epidurale compressie met myelopathie of instabiliteit die eerst chirurgie vraagt. • Tegenover niet-chirurgische behandeling: pijnscore 3,8 punten lager op dag 7 tegen 0,3 punten, en rugfunctie (Roland-Morris) 8,5 punten beter op 1 maand (CAFE, RCT; Berenson et al., Lancet Oncol 2011, PBij maligne wervelfracturen is de percutane route goedkoper dan open chirurgie, met 13.565 USD lagere kosten en 4,1 minder opnamedagen (Itagaki et al., JVIR 2012).",
+      "en": "Additive to radiotherapy and systemic therapy, not a replacement. Guidelines position cement augmentation for painful pathological vertebral fractures when conservative treatment falls short. • Painful vertebral metastasis, myeloma lesion or pathological compression fracture matching the symptoms on MRI, preferably with an intact posterior wall. Not for severe epidural compression with myelopathy or instability requiring surgery first. • Against non-surgical management: pain score 3.8 points lower at day 7 versus 0.3 points, and back function (Roland-Morris) 8.5 points better at 1 month (CAFE, RCT; Berenson et al., Lancet Oncol 2011, PFor malignant vertebral fractures the percutaneous route is cheaper than open surgery, with 13,565 USD lower cost and 4.1 fewer inpatient days (Itagaki et al., JVIR 2012)."
+     },
+     "nieuw": {
+      "nl": "Aanvullend op radiotherapie en systemische therapie, niet vervangend. Richtlijnen positioneren cementaugmentatie bij pijnlijke pathologische wervelfracturen wanneer conservatieve behandeling tekortschiet. • Pijnlijke wervelmetastase, myeloomlokalisatie of pathologische inzakkingsfractuur die op MRI correspondeert met de klachten, bij voorkeur met intacte achterste wervelwand. Niet bij ernstige epidurale compressie met myelopathie of instabiliteit die eerst chirurgie vraagt. • Tegenover niet-chirurgische behandeling: pijnscore 3,8 punten lager op dag 7 tegen 0,3 punten, en rugfunctie (Roland-Morris) 8,5 punten beter op 1 maand (CAFE, RCT; Berenson et al., Lancet Oncol 2011, pBij maligne wervelfracturen is de percutane route goedkoper dan open chirurgie, met 13.565 USD lagere kosten en 4,1 minder opnamedagen (Itagaki et al., JVIR 2012).",
+      "en": "Additive to radiotherapy and systemic therapy, not a replacement. Guidelines position cement augmentation for painful pathological vertebral fractures when conservative treatment falls short. • Painful vertebral metastasis, myeloma lesion or pathological compression fracture matching the symptoms on MRI, preferably with an intact posterior wall. Not for severe epidural compression with myelopathy or instability requiring surgery first. • Against non-surgical management: pain score 3.8 points lower at day 7 versus 0.3 points, and back function (Roland-Morris) 8.5 points better at 1 month (CAFE, RCT; Berenson et al., Lancet Oncol 2011, pFor malignant vertebral fractures the percutaneous route is cheaper than open surgery, with 13,565 USD lower cost and 4.1 fewer inpatient days (Itagaki et al., JVIR 2012)."
+     }
+    }
+   ]
+  },
+  {
+   "datum": "2026-07-29",
    "kaart": "gastrostomie",
    "kort": "Gastrostomie",
    "type": "tekst",
@@ -10,7 +203,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -21,7 +215,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -32,7 +227,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -43,7 +239,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -54,7 +251,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -65,7 +263,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -76,7 +275,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -87,7 +287,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -98,7 +299,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -109,7 +311,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -120,7 +323,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -131,7 +335,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -142,7 +347,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -153,7 +359,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -164,7 +371,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -175,7 +383,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -186,7 +395,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -197,7 +407,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -208,7 +419,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -219,7 +431,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -230,7 +443,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -241,7 +455,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -252,7 +467,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -263,7 +479,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -274,7 +491,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -285,7 +503,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -296,7 +515,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -307,7 +527,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -318,7 +539,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -329,7 +551,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -340,7 +563,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -351,7 +575,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -362,7 +587,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -373,7 +599,8 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-29",
@@ -384,7 +611,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Radio-embolisatie met yttrium-90 (TARE) levert selectief interne bestraling aan HCC via de leverarterie. Bij solitaire, kleine tumoren geeft een hooggedoseerde, gesegmenteerde aanpak (radiation segmentectomy) een hoge respons en langdurige controle (LEGACY; Salem et al., Hepatology 2021: respons 88%, 3-jaars overleving 87%). Gepersonaliseerde dosimetrie verbetert de respons verder (DOSISPHERE-01; Garin et al., Lancet Gastroenterol Hepatol 2021). Bij BCLC A/B was TARE in de TRACE-trial superieur aan DEB-TACE qua overleving (Dhondt et al., Radiology 2022). TARE is ook bruikbaar bij portaveneuze invasie en voor downstaging of bridging.",
+      "en": "Radioembolization with yttrium-90 (TARE) delivers selective internal radiation to HCC via the hepatic artery. For solitary, small tumours, a high-dose, segmental approach (radiation segmentectomy) gives high response and durable control (LEGACY; Salem et al., Hepatology 2021: response 88%, 3-year survival 87%). Personalised dosimetry further improves response (DOSISPHERE-01; Garin et al., Lancet Gastroenterol Hepatol 2021). For BCLC A/B, TARE was superior to DEB-TACE for survival in the TRACE trial (Dhondt et al., Radiology 2022). TARE is also usable for portal venous invasion and for downstaging or bridging."
+     },
+     "nieuw": {
+      "nl": "Radio-embolisatie met yttrium-90 (TARE) levert selectief interne bestraling aan HCC via de leverarterie. Bij solitaire HCC tot 8 cm (mediaan 2,7 cm) geeft een hooggedoseerde, gesegmenteerde aanpak (radiation segmentectomy) een hoge respons en langdurige controle (LEGACY; Salem et al., Hepatology 2021: respons 88%, 3-jaars overleving 87%). Gepersonaliseerde dosimetrie verbetert de respons verder (DOSISPHERE-01; Garin et al., Lancet Gastroenterol Hepatol 2021). Bij BCLC A/B was TARE in de TRACE-trial superieur aan DEB-TACE qua overleving (Dhondt et al., Radiology 2022). TARE is ook bruikbaar bij portaveneuze invasie en voor downstaging of bridging.",
+      "en": "Radioembolization with yttrium-90 (TARE) delivers selective internal radiation to HCC via the hepatic artery. For solitary HCC up to 8 cm (median 2.7 cm), a high-dose, segmental approach (radiation segmentectomy) gives high response and durable control (LEGACY; Salem et al., Hepatology 2021: response 88%, 3-year survival 87%). Personalised dosimetry further improves response (DOSISPHERE-01; Garin et al., Lancet Gastroenterol Hepatol 2021). For BCLC A/B, TARE was superior to DEB-TACE for survival in the TRACE trial (Dhondt et al., Radiology 2022). TARE is also usable for portal venous invasion and for downstaging or bridging."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -395,7 +635,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Percutane thermale ablatie (RFA, microwave of cryoablatie) is een minimaal invasieve, bijniersparende behandeling voor een geïsoleerde of oligometastatische bijniermetastase (vaak van long-, niercel-, colorectaal- of leverkanker of melanoom), bij een gecontroleerde primaire tumor. In cohorten en meta-analyses geeft ablatie een hoge lokale controle bij kleine tumoren, met technische successen rond 90% en een aanvaardbaar veiligheidsprofiel. Het onderscheidende risico is een intraprocedurele catecholamine-uitstoot met een acute hypertensieve crisis; daarom zijn alfa-blokkade als premedicatie en anesthesie met arteriële drukmonitoring essentieel.",
+      "en": "Percutaneous thermal ablation (RFA, microwave or cryoablation) is a minimally invasive, adrenal-sparing treatment for an isolated or oligometastatic adrenal metastasis (often from lung, renal, colorectal or liver cancer or melanoma), with a controlled primary tumour. In cohorts and meta-analyses ablation gives high local control for small tumours, with technical success around 90% and an acceptable safety profile. The distinctive risk is an intraprocedural catecholamine surge with an acute hypertensive crisis; therefore alpha-blockade premedication and anaesthesia with arterial pressure monitoring are essential."
+     },
+     "nieuw": {
+      "nl": "Percutane thermale ablatie (RFA, microwave of cryoablatie) is een minimaal invasieve, bijniersparende behandeling voor een geïsoleerde of oligometastatische bijniermetastase, bij een gecontroleerde primaire tumor. In cohorten en meta-analyses geeft ablatie een hoge lokale controle bij kleine tumoren (<5 cm), met technische successen rond 90% en een aanvaardbaar veiligheidsprofiel. Het onderscheidende risico is een intraprocedurele catecholamine-uitstoot met een acute hypertensieve crisis; daarom zijn alfa-blokkade als premedicatie en anesthesie met arteriële drukmonitoring essentieel.",
+      "en": "Percutaneous thermal ablation (RFA, microwave or cryoablation) is a minimally invasive, adrenal-sparing treatment for an isolated or oligometastatic adrenal metastasis, with a controlled primary tumour. In cohorts and meta-analyses ablation gives high local control for small tumours (<5 cm), with technical success around 90% and an acceptable safety profile. The distinctive risk is an intraprocedural catecholamine surge with an acute hypertensive crisis; therefore alpha-blockade premedication and anaesthesia with arterial pressure monitoring are essential."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -406,7 +659,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij klein, niet-resectabel intrahepatisch cholangiocarcinoom (iCCA), meestal ≤3 cm, biedt thermale ablatie (RFA of microwave) lokale controle en overleving als alternatief voor resectie bij niet-operabele patiënten. In een meta-analyse van 917 patiënten was de technische effectiviteit 91,9% en waren de 1-, 3- en 5-jaars overleving 82%, 42% en 29%, met 5,7% majeure complicaties (Kim et al., Eur Radiol 2022). De resultaten zijn het best bij tumoren ≤3 cm; grotere en multifocale tumoren voorspellen een slechtere uitkomst. Microwave-ablatie gaf in een retrospectieve studie een betere overleving dan RFA, vooral bij nodi ≤3 cm. Ablatie wordt ingezet naast systemische therapie en als lokale behandeling van recidief.",
+      "en": "For small, unresectable intrahepatic cholangiocarcinoma (iCCA), usually ≤3 cm, thermal ablation (RFA or microwave) provides local control and survival as an alternative to resection in non-operable patients. In a meta-analysis of 917 patients, technical efficacy was 91.9% and 1-, 3- and 5-year survival were 82%, 42% and 29%, with 5.7% major complications (Kim et al., Eur Radiol 2022). Results are best for tumours ≤3 cm; larger and multifocal tumours predict worse outcomes. Microwave ablation gave better survival than RFA in a retrospective study, especially for nodes ≤3 cm. Ablation is used alongside systemic therapy and as local treatment of recurrence."
+     },
+     "nieuw": {
+      "nl": "Bij klein, niet-resectabel intrahepatisch cholangiocarcinoom (iCCA), meestal ≤3 cm, biedt thermale ablatie (RFA of microwave) lokale controle en overleving als alternatief voor resectie bij niet-operabele patiënten. In een meta-analyse van 917 patiënten was de technische effectiviteit 91,9% en waren de 1-, 3- en 5-jaars overleving 82%, 42% en 29%, met 5,7% majeure complicaties (Kim et al., Eur Radiol 2022). De resultaten zijn het best bij tumoren ≤3 cm; grotere en multifocale tumoren voorspellen een slechtere uitkomst. Ablatie wordt ingezet naast systemische therapie en als lokale behandeling van recidief.",
+      "en": "For small, unresectable intrahepatic cholangiocarcinoma (iCCA), usually ≤3 cm, thermal ablation (RFA or microwave) provides local control and survival as an alternative to resection in non-operable patients. In a meta-analysis of 917 patients, technical efficacy was 91.9% and 1-, 3- and 5-year survival were 82%, 42% and 29%, with 5.7% major complications (Kim et al., Eur Radiol 2022). Results are best for tumours ≤3 cm; larger and multifocal tumours predict worse outcomes. Ablation is used alongside systemic therapy and as local treatment of recurrence."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -417,7 +683,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij kleine (≤3 cm) colorectale levermetastasen geeft thermale ablatie een totale overleving die non-inferieur is aan chirurgische resectie, met minder complicaties, lagere mortaliteit en een kortere opnameduur (COLLISION, fase 3 RCT, 2025; ondersteund door MAVERRIC, 2023). Bij irresectabele, lever-beperkte ziekte verbetert ablatie bovenop chemotherapie de langetermijnoverleving ten opzichte van chemotherapie alleen (CLOCC, RCT). Een adequate ablatiemarge (≥5 tot 10 mm) is bepalend voor de lokale controle. Binnen de thermale technieken gaf microwave in een retrospectief cohort een lager lokaal recidief dan RFA (13 versus 29 procent; p<0,001), bij iets meer ernstige complicaties (8 versus 3 procent).",
+      "en": "For small (≤3 cm) colorectal liver metastases, thermal ablation gives overall survival non-inferior to surgical resection, with fewer complications, lower mortality and a shorter hospital stay (COLLISION, phase 3 RCT, 2025; supported by MAVERRIC, 2023). For unresectable, liver-limited disease, ablation added to chemotherapy improves long-term survival versus chemotherapy alone (CLOCC, RCT). An adequate ablation margin (≥5 to 10 mm) determines local control. Within the thermal techniques, microwave gave a lower local recurrence than RFA in a retrospective cohort (13 versus 29 percent; p<0.001), with slightly more major complications (8 versus 3 percent)."
+     },
+     "nieuw": {
+      "nl": "Bij kleine (≤3 cm) colorectale levermetastasen geeft thermale ablatie een totale overleving die non-inferieur is aan chirurgische resectie, met minder complicaties, lagere mortaliteit en een kortere opnameduur (COLLISION, fase 3 RCT, 2025; ondersteund door MAVERRIC, 2023). Bij irresectabele, lever-beperkte ziekte verbetert ablatie bovenop chemotherapie de langetermijnoverleving ten opzichte van chemotherapie alleen (CLOCC, RCT). Een adequate ablatiemarge (≥5 tot 10 mm) is bepalend voor de lokale controle.",
+      "en": "For small (≤3 cm) colorectal liver metastases, thermal ablation gives overall survival non-inferior to surgical resection, with fewer complications, lower mortality and a shorter hospital stay (COLLISION, phase 3 RCT, 2025; supported by MAVERRIC, 2023). For unresectable, liver-limited disease, ablation added to chemotherapy improves long-term survival versus chemotherapy alone (CLOCC, RCT). An adequate ablation margin (≥5 to 10 mm) determines local control."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -428,7 +707,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij vroeg hepatocellulair carcinoom (BCLC 0/A) met een of enkele kleine tumoren (tot ongeveer 3 cm) is thermale ablatie (RFA of microwave) een curatieve behandeling, met overleving vergelijkbaar met chirurgische resectie bij kleine tumoren en behoud van leverfunctie. In de gerandomiseerde SURF-trial waren recidiefvrije en totale overleving na RFA niet significant verschillend van resectie. Microwave-ablatie is non-inferieur aan RFA, en cryoablatie gaf in een gerandomiseerde trial een betere lokale tumorcontrole dan RFA. Ablatie is de voorkeursbehandeling bij niet-resectabele vroege HCC en bij patiënten met beperkte leverreserve, en kan als brug naar transplantatie dienen.",
+      "en": "For early hepatocellular carcinoma (BCLC 0/A) with one or a few small tumours (up to about 3 cm), thermal ablation (RFA or microwave) is a curative treatment, with survival comparable to surgical resection for small tumours and preservation of liver function. In the randomised SURF trial, recurrence-free and overall survival after RFA were not significantly different from resection. Microwave ablation is non-inferior to RFA, and cryoablation gave better local tumour control than RFA in a randomised trial. Ablation is the preferred treatment for unresectable early HCC and for patients with limited liver reserve, and can serve as a bridge to transplantation."
+     },
+     "nieuw": {
+      "nl": "Bij vroeg hepatocellulair carcinoom (BCLC 0/A) met een of enkele kleine tumoren (tot ongeveer 3 cm) is thermale ablatie (RFA of microwave) een curatieve behandeling, met overleving vergelijkbaar met chirurgische resectie bij kleine tumoren en behoud van leverfunctie. In de gerandomiseerde SURF-trial waren recidiefvrije en totale overleving na RFA niet significant verschillend van resectie. Microwave-ablatie is non-inferieur aan RFA. Ablatie is de voorkeursbehandeling bij niet-resectabele vroege HCC en bij patiënten met beperkte leverreserve, en kan als brug naar transplantatie dienen.",
+      "en": "For early hepatocellular carcinoma (BCLC 0/A) with one or a few small tumours (up to about 3 cm), thermal ablation (RFA or microwave) is a curative treatment, with survival comparable to surgical resection for small tumours and preservation of liver function. In the randomised SURF trial, recurrence-free and overall survival after RFA were not significantly different from resection. Microwave ablation is non-inferior to RFA. Ablation is the preferred treatment for unresectable early HCC and for patients with limited liver reserve, and can serve as a bridge to transplantation."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -439,7 +731,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij klein, niet-resectabel intrahepatisch cholangiocarcinoom (iCCA), meestal ≤3 cm, biedt thermale ablatie (RFA of microwave) lokale controle en overleving als alternatief voor resectie bij niet-operabele patiënten. In een meta-analyse van 917 patiënten was de technische effectiviteit 91,9% en waren de 1-, 3- en 5-jaars overleving 82%, 42% en 29%, met 5,7% majeure complicaties (Kim et al., Eur Radiol 2022). De resultaten zijn het best bij tumoren ≤3 cm; grotere en multifocale tumoren voorspellen een slechtere uitkomst. Ablatie wordt ingezet naast systemische therapie en als lokale behandeling van recidief.",
+      "en": "For small, unresectable intrahepatic cholangiocarcinoma (iCCA), usually ≤3 cm, thermal ablation (RFA or microwave) provides local control and survival as an alternative to resection in non-operable patients. In a meta-analysis of 917 patients, technical efficacy was 91.9% and 1-, 3- and 5-year survival were 82%, 42% and 29%, with 5.7% major complications (Kim et al., Eur Radiol 2022). Results are best for tumours ≤3 cm; larger and multifocal tumours predict worse outcomes. Ablation is used alongside systemic therapy and as local treatment of recurrence."
+     },
+     "nieuw": {
+      "nl": "Bij klein, niet-resectabel intrahepatisch cholangiocarcinoom (iCCA), meestal ≤3 cm, biedt thermale ablatie (RFA of microwave) lokale controle en overleving als alternatief voor resectie bij niet-operabele patiënten. In een meta-analyse van 917 patiënten was de technische effectiviteit 91,9% en waren de 1-, 3- en 5-jaars overleving 82%, 42% en 29%, met 5,7% majeure complicaties (Kim et al., Eur Radiol 2022). De resultaten zijn het best bij tumoren ≤3 cm; grotere en multifocale tumoren voorspellen een slechtere uitkomst. Microwave-ablatie gaf in een retrospectieve studie een betere overleving dan RFA, vooral bij nodi ≤3 cm. Ablatie wordt ingezet naast systemische therapie en als lokale behandeling van recidief.",
+      "en": "For small, unresectable intrahepatic cholangiocarcinoma (iCCA), usually ≤3 cm, thermal ablation (RFA or microwave) provides local control and survival as an alternative to resection in non-operable patients. In a meta-analysis of 917 patients, technical efficacy was 91.9% and 1-, 3- and 5-year survival were 82%, 42% and 29%, with 5.7% major complications (Kim et al., Eur Radiol 2022). Results are best for tumours ≤3 cm; larger and multifocal tumours predict worse outcomes. Microwave ablation gave better survival than RFA in a retrospective study, especially for nodes ≤3 cm. Ablation is used alongside systemic therapy and as local treatment of recurrence."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -450,7 +755,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij vroeg hepatocellulair carcinoom (BCLC 0/A) met een of enkele kleine tumoren (tot ongeveer 3 cm) is thermale ablatie (RFA of microwave) een curatieve behandeling, met overleving vergelijkbaar met chirurgische resectie bij kleine tumoren en behoud van leverfunctie. In de gerandomiseerde SURF-trial waren recidiefvrije en totale overleving na RFA niet significant verschillend van resectie. Microwave-ablatie is non-inferieur aan RFA. Ablatie is de voorkeursbehandeling bij niet-resectabele vroege HCC en bij patiënten met beperkte leverreserve, en kan als brug naar transplantatie dienen.",
+      "en": "For early hepatocellular carcinoma (BCLC 0/A) with one or a few small tumours (up to about 3 cm), thermal ablation (RFA or microwave) is a curative treatment, with survival comparable to surgical resection for small tumours and preservation of liver function. In the randomised SURF trial, recurrence-free and overall survival after RFA were not significantly different from resection. Microwave ablation is non-inferior to RFA. Ablation is the preferred treatment for unresectable early HCC and for patients with limited liver reserve, and can serve as a bridge to transplantation."
+     },
+     "nieuw": {
+      "nl": "Bij vroeg hepatocellulair carcinoom (BCLC 0/A) met een of enkele kleine tumoren (tot ongeveer 3 cm) is thermale ablatie (RFA of microwave) een curatieve behandeling, met overleving vergelijkbaar met chirurgische resectie bij kleine tumoren en behoud van leverfunctie. In de gerandomiseerde SURF-trial waren recidiefvrije en totale overleving na RFA niet significant verschillend van resectie. Microwave-ablatie is non-inferieur aan RFA, en cryoablatie gaf in een gerandomiseerde trial een betere lokale tumorcontrole dan RFA. Ablatie is de voorkeursbehandeling bij niet-resectabele vroege HCC en bij patiënten met beperkte leverreserve, en kan als brug naar transplantatie dienen.",
+      "en": "For early hepatocellular carcinoma (BCLC 0/A) with one or a few small tumours (up to about 3 cm), thermal ablation (RFA or microwave) is a curative treatment, with survival comparable to surgical resection for small tumours and preservation of liver function. In the randomised SURF trial, recurrence-free and overall survival after RFA were not significantly different from resection. Microwave ablation is non-inferior to RFA, and cryoablation gave better local tumour control than RFA in a randomised trial. Ablation is the preferred treatment for unresectable early HCC and for patients with limited liver reserve, and can serve as a bridge to transplantation."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -461,7 +779,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij kleine niertumoren (cT1a, ≤4 cm) is percutane thermale ablatie (cryoablatie, RFA of microwave) een nefronsparende, minimaal invasieve behandeling met hoge lokale controle en behoud van nierfunctie. In grote observationele cohorten zijn de oncologische uitkomsten voor cT1a vergelijkbaar met partiële nefrectomie, met minder morbiditeit. Richtlijnen (EAU, AUA) bevelen ablatie vooral aan bij oudere of comorbide patiënten, een solitaire nier of chronische nierschade. Een percutane biopsie vooraf voor histologische diagnose is standaard.",
+      "en": "For small renal tumours (cT1a, ≤4 cm), percutaneous thermal ablation (cryoablation, RFA or microwave) is a nephron-sparing, minimally invasive treatment with high local control and preserved kidney function. In large observational cohorts, oncologic outcomes for cT1a are comparable to partial nephrectomy, with less morbidity. Guidelines (EAU, AUA) recommend ablation mainly for elderly or comorbid patients, a solitary kidney or chronic kidney disease. A percutaneous biopsy beforehand for histological diagnosis is standard."
+     },
+     "nieuw": {
+      "nl": "Bij kleine niertumoren (cT1a, ≤4 cm) is percutane thermale ablatie (cryoablatie, RFA of microwave) een nefronsparende, minimaal invasieve behandeling met hoge lokale controle en behoud van nierfunctie. In grote observationele cohorten zijn de oncologische uitkomsten voor cT1a vergelijkbaar met partiële nefrectomie, met minder morbiditeit. Richtlijnen (EAU, AUA) bevelen ablatie vooral aan bij oudere of comorbide patiënten, een solitaire nier of chronische nierschade. Binnen de thermale technieken gaf cryoablatie in een meta-analyse minder lokale progressie en minder herbehandelingen dan RFA. Een percutane biopsie vooraf voor histologische diagnose is standaard.",
+      "en": "For small renal tumours (cT1a, ≤4 cm), percutaneous thermal ablation (cryoablation, RFA or microwave) is a nephron-sparing, minimally invasive treatment with high local control and preserved kidney function. In large observational cohorts, oncologic outcomes for cT1a are comparable to partial nephrectomy, with less morbidity. Guidelines (EAU, AUA) recommend ablation mainly for elderly or comorbid patients, a solitary kidney or chronic kidney disease. Within the thermal techniques, cryoablation gave less local progression and fewer retreatments than RFA in a meta-analysis. A percutaneous biopsy beforehand for histological diagnosis is standard."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -472,7 +803,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij kleine (≤3 cm) colorectale levermetastasen geeft thermale ablatie een totale overleving die non-inferieur is aan chirurgische resectie, met minder complicaties, lagere mortaliteit en een kortere opnameduur (COLLISION, fase 3 RCT, 2025; ondersteund door MAVERRIC, 2023). Bij irresectabele, lever-beperkte ziekte verbetert ablatie bovenop chemotherapie de langetermijnoverleving ten opzichte van chemotherapie alleen (CLOCC, RCT). Een adequate ablatiemarge (≥5 tot 10 mm) is bepalend voor de lokale controle.",
+      "en": "For small (≤3 cm) colorectal liver metastases, thermal ablation gives overall survival non-inferior to surgical resection, with fewer complications, lower mortality and a shorter hospital stay (COLLISION, phase 3 RCT, 2025; supported by MAVERRIC, 2023). For unresectable, liver-limited disease, ablation added to chemotherapy improves long-term survival versus chemotherapy alone (CLOCC, RCT). An adequate ablation margin (≥5 to 10 mm) determines local control."
+     },
+     "nieuw": {
+      "nl": "Bij kleine (≤3 cm) colorectale levermetastasen geeft thermale ablatie een totale overleving die non-inferieur is aan chirurgische resectie, met minder complicaties, lagere mortaliteit en een kortere opnameduur (COLLISION, fase 3 RCT, 2025; ondersteund door MAVERRIC, 2023). Bij irresectabele, lever-beperkte ziekte verbetert ablatie bovenop chemotherapie de langetermijnoverleving ten opzichte van chemotherapie alleen (CLOCC, RCT). Een adequate ablatiemarge (≥5 tot 10 mm) is bepalend voor de lokale controle. Binnen de thermale technieken gaf microwave in een retrospectief cohort een lager lokaal recidief dan RFA (13 versus 29 procent; p<0,001), bij iets meer ernstige complicaties (8 versus 3 procent).",
+      "en": "For small (≤3 cm) colorectal liver metastases, thermal ablation gives overall survival non-inferior to surgical resection, with fewer complications, lower mortality and a shorter hospital stay (COLLISION, phase 3 RCT, 2025; supported by MAVERRIC, 2023). For unresectable, liver-limited disease, ablation added to chemotherapy improves long-term survival versus chemotherapy alone (CLOCC, RCT). An adequate ablation margin (≥5 to 10 mm) determines local control. Within the thermal techniques, microwave gave a lower local recurrence than RFA in a retrospective cohort (13 versus 29 percent; p<0.001), with slightly more major complications (8 versus 3 percent)."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -483,7 +827,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Een radiologisch geplaatste gastrostomie heeft twee heel verschillende indicaties: voedingstoegang bij hoofd-hals- en oesofaguscarcinoom, en ontlastende drainage bij maligne darmobstructie. Voor de eerste indicatie is de vergelijking met de endoscopische route bepalend, en die valt genuanceerder uit dan beide kampen beweren. In gemengde populaties wijzen de meta-analyses naar een lagere 30-daagse mortaliteit na endoscopische plaatsing (5,5% tegen 10,5%), maar in een analyse die uitsluitend hoofd-halskanker betrof overlappen de betrouwbaarheidsintervallen op elke uitkomst. Dat verschil is vrijwel zeker vertekening door indicatie: patiënten krijgen juist een radiologische gastrostomie omdat endoscopie door de tumor niet lukt of omdat ze te ziek zijn. Voor de tweede indicatie is het beeld eenduidiger: ontlastende gastrostomie geeft bij 77 tot 92% van de patiënten verlichting van misselijkheid en braken, ook wanneer er ascites is.",
+      "en": "A radiologically inserted gastrostomy serves two quite different indications: feeding access in head and neck and oesophageal cancer, and venting drainage in malignant bowel obstruction. For the first, the comparison with the endoscopic route is decisive, and it turns out more nuanced than either camp claims. In mixed populations the meta-analyses point to lower 30-day mortality after endoscopic placement (5.5% versus 10.5%), but in an analysis confined to head and neck cancer the confidence intervals overlap on every outcome. That difference is almost certainly confounding by indication: patients receive a radiological gastrostomy precisely because endoscopy fails through the tumour or because they are too unwell. For the second indication the picture is clearer: venting gastrostomy relieves nausea and vomiting in 77 to 92% of patients, including in the presence of ascites."
+     },
+     "nieuw": {
+      "nl": "Een radiologisch geplaatste gastrostomie heeft twee heel verschillende indicaties: voedingstoegang bij hoofd-hals- en oesofaguscarcinoom, en ontlastende drainage bij maligne darmobstructie. Voor de eerste is de vergelijking met de endoscopische route bepalend en genuanceerder dan beide kampen beweren: in gemengde populaties wijzen de meta-analyses op een lagere 30-daagse mortaliteit na endoscopische plaatsing (5,5% tegen 10,5%), maar in een analyse van uitsluitend hoofd-halskanker overlappen de betrouwbaarheidsintervallen op elke uitkomst. Dat is vrijwel zeker vertekening door indicatie: patiënten krijgen juist een radiologische gastrostomie omdat endoscopie door de tumor niet lukt of omdat ze te ziek zijn. Voor de tweede indicatie is het beeld eenduidig: ontlastende gastrostomie verlicht misselijkheid en braken bij 77 tot 92%, ook bij ascites.",
+      "en": "A radiologically inserted gastrostomy serves two quite different indications: feeding access in head and neck and oesophageal cancer, and venting drainage in malignant bowel obstruction. For the first, the comparison with the endoscopic route is decisive and more nuanced than either camp claims: in mixed populations the meta-analyses point to lower 30-day mortality after endoscopic placement (5.5% versus 10.5%), but in an analysis confined to head and neck cancer the confidence intervals overlap on every outcome. That is almost certainly confounding by indication: patients receive a radiological gastrostomy precisely because endoscopy fails through the tumour or because they are too unwell. For the second indication the picture is clear: venting gastrostomy relieves nausea and vomiting in 77 to 92%, including with ascites."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -494,7 +851,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Vrijwel elke behandelbeslissing in de oncologie begint met weefsel dat via een naald is verkregen, en de eisen daaraan zijn de afgelopen tien jaar verschoven. Een biopt dat voldoende is voor de diagnose is namelijk niet automatisch voldoende voor moleculaire diagnostiek: dat zijn twee verschillende eindpunten, en het moleculaire ligt consequent lager. In de Nederlandse whole genome sequencing-praktijk slaagde 89% van 888 monsters, maar bij cytologie slechts 57% tegen 91% bij biopten en resectiepreparaten, en 40% van de mislukkingen kwam door een tumorcelpercentage onder 20%. De praktische consequentie is dat het aantal cores en de naalddikte tegenwoordig door de moleculaire vraag worden bepaald en niet meer door de histologische. Daarbij is er goed nieuws: door een coaxiale sheath extra cores nemen verhoogt de complicatiekans niet, terwijl elke extra pleurapunctie dat wel doet.",
+      "en": "Almost every treatment decision in oncology starts with tissue obtained through a needle, and the requirements have shifted over the past decade. A biopsy adequate for diagnosis is not automatically adequate for molecular profiling: these are two different endpoints, and the molecular one is consistently lower. In Dutch whole genome sequencing practice, 89% of 888 samples succeeded, but only 57% of cytology samples against 91% of biopsies and resection specimens, and 40% of failures had a tumour cell percentage below 20%. The practical consequence is that core number and needle gauge are now driven by the molecular question rather than the histological one. There is good news alongside this: taking extra cores through a coaxial sheath does not raise the complication rate, whereas each additional pleural puncture does."
+     },
+     "nieuw": {
+      "nl": "Vrijwel elke behandelbeslissing in de oncologie begint met naaldweefsel, en de eisen zijn de afgelopen tien jaar verschoven. Een biopt dat volstaat voor de diagnose volstaat niet automatisch voor moleculaire diagnostiek: twee verschillende eindpunten, en het moleculaire ligt consequent lager. In de Nederlandse whole genome sequencing-praktijk slaagde 89% van 888 monsters, maar bij cytologie slechts 57% tegen 91% bij biopten en resectiepreparaten; 40% van de mislukkingen kwam door een tumorcelpercentage onder 20%. Daardoor worden het aantal cores en de naalddikte nu bepaald door de moleculaire vraag, niet meer door de histologische. Het goede nieuws: extra cores via een coaxiale sheath verhogen de complicatiekans niet, terwijl elke extra pleurapunctie dat wél doet.",
+      "en": "Almost every treatment decision in oncology starts with needle tissue, and the requirements have shifted over the past decade. A biopsy adequate for diagnosis is not automatically adequate for molecular profiling: two different endpoints, and the molecular one is consistently lower. In Dutch whole genome sequencing practice, 89% of 888 samples succeeded, but only 57% of cytology samples against 91% of biopsies and resection specimens; 40% of failures had a tumour cell percentage below 20%. As a result, core number and needle gauge are now driven by the molecular question rather than the histological one. The good news: taking extra cores through a coaxial sheath does not raise the complication rate, whereas each additional pleural puncture does."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -505,7 +875,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Voor levermetastasen van mammacarcinoom bestaat geen enkele gerandomiseerde onderbouwing van welke leverdirecte behandeling dan ook, en dat is over drie onafhankelijke systematische reviews consistent vastgesteld. De enige gerandomiseerde trial die metastase-gerichte behandeling bij mammacarcinoom onderzocht, NRG-BR002, was negatief: volledige ablatie van alle metastasen naast systemische therapie verbeterde noch de progressievrije noch de totale overleving. Binnen dat beeld is thermale ablatie de best onderbouwde optie bij een klein aantal beperkte laesies, met een mediane overleving van 44 maanden en een chemotherapievrij interval van 16,4 maanden in een recente serie, al is die populatie sterk geselecteerd. Trans-arteriële chemotherapie met mitomycine-C is een apart verhaal: de gunstige cijfers komen uit één centrum en worden tegengesproken door de prospectieve studie van datzelfde centrum en door twee onafhankelijke centra die uitkomen op een mediane overleving van 7 maanden. De belangrijkste ontwikkeling staat bovendien buiten de interventieradiologie: bij HER2-positieve ziekte haalt eerstelijns systemische therapie inmiddels een mediane progressievrije overleving van 40,7 maanden, meer dan de mediane tótale overleving van elke trans-arteriële serie in deze literatuur.",
+      "en": "There is no randomised support for any liver-directed treatment in breast cancer liver metastases, and three independent systematic reviews state this consistently. The one randomised trial that tested metastasis-directed treatment in breast cancer, NRG-BR002, was negative: total ablation of all metastases added to systemic therapy improved neither progression-free nor overall survival. Within that picture, thermal ablation is the best-supported option for a limited number of confined lesions, with a median overall survival of 44 months and a chemotherapy-free interval of 16.4 months in a recent series, although that population is heavily selected. Transarterial chemotherapy with mitomycin C is a separate matter: the favourable figures come from one centre and are contradicted by that same centre's own prospective study and by two independent centres reporting a median survival of 7 months. The most important development moreover lies outside interventional radiology: in HER2-positive disease, first-line systemic therapy now reaches a median progression-free survival of 40.7 months, more than the median overall survival of every transarterial series in this literature."
+     },
+     "nieuw": {
+      "nl": "Voor levermetastasen van mammacarcinoom ontbreekt gerandomiseerde onderbouwing voor élke leverdirecte behandeling; drie systematische reviews bevestigen dat, en de enige gerandomiseerde trial (NRG-BR002) was negatief op zowel progressievrije als totale overleving. Binnen dat beeld is thermale ablatie de best onderbouwde optie bij een klein aantal beperkte laesies (mediane overleving 44 maanden, chemotherapievrij interval 16,4 maanden in een sterk geselecteerde serie). Trans-arteriële chemotherapie met mitomycine-C berust op eencentrumcijfers die door de eigen prospectieve studie en twee onafhankelijke centra worden tegengesproken (mediane overleving 7 maanden). De grootste ontwikkeling ligt bovendien buiten de interventieradiologie: bij HER2-positieve ziekte haalt eerstelijns systemische therapie een mediane progressievrije overleving van 40,7 maanden, meer dan de mediane totale overleving van elke trans-arteriële serie.",
+      "en": "There is no randomised support for any liver-directed treatment in breast cancer liver metastases; three systematic reviews confirm this, and the only randomised trial (NRG-BR002) was negative for both progression-free and overall survival. Within that picture, thermal ablation is the best-supported option for a limited number of confined lesions (median overall survival 44 months, chemotherapy-free interval 16.4 months in a heavily selected series). Transarterial chemotherapy with mitomycin C rests on single-centre figures contradicted by that centre's own prospective study and by two independent centres (median survival 7 months). The most important development moreover lies outside interventional radiology: in HER2-positive disease, first-line systemic therapy reaches a median progression-free survival of 40.7 months, exceeding the median overall survival of every transarterial series."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -516,7 +899,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij percutane leverperfusie wordt de veneuze afvoer van de lever met een dubbele-ballonkatheter in de vena cava geïsoleerd, wordt hoog gedoseerd melfalan in de leverarterie ingespoten en wordt het levervenebloed extracorporeel gefilterd voordat het terugkeert in de circulatie. Daarmee bereikt de lever een dosis die systemisch niet toedienbaar zou zijn. De behandeling doet betrouwbaar wat ze belooft op tumorniveau: in de eenarmige FOCUS-populatie was de objectieve respons 36,3% met een mediane responsduur van 14,0 maanden, en in de gerandomiseerde arm 27,5% tegen 9,4% met standaardbehandeling. Wat ze niet heeft laten zien is overlevingswinst, en dat geldt ook voor de chirurgische variant. De enige behandeling bij uitgezaaid uveamelanoom met een gerandomiseerde overlevingswinst is tebentafusp, dat juist een respons van slechts 9,1% heeft. Voor de Nederlandse praktijk is er nog een tweede spanning: de Nederlandse richtlijn beveelt percutane leverperfusie aan, terwijl Zorginstituut Nederland in 2019 oordeelde dat de behandeling niet aan de stand van wetenschap en praktijk voldoet en geen onderdeel is van het basispakket.",
+      "en": "In percutaneous hepatic perfusion the hepatic venous outflow is isolated with a double-balloon catheter in the vena cava, high-dose melphalan is infused into the hepatic artery, and the hepatic venous blood is filtered extracorporeally before returning to the circulation. The liver thereby receives a dose that could not be given systemically. The treatment reliably does what it promises at tumour level: in the single-arm FOCUS population the objective response rate was 36.3% with a median duration of response of 14.0 months, and in the randomised arm 27.5% versus 9.4% with standard care. What it has not shown is a survival benefit, and the same is true of the surgical variant. The only treatment in metastatic uveal melanoma with a randomised survival benefit is tebentafusp, which by contrast has a response rate of only 9.1%. For Dutch practice there is a second tension: the Dutch guideline recommends percutaneous hepatic perfusion, while the national health institute ruled in 2019 that it does not meet the standard of science and practice and is not part of basic insurance cover."
+     },
+     "nieuw": {
+      "nl": "Bij percutane leverperfusie wordt de leverveneuze afvoer met een dubbele-ballonkatheter geïsoleerd en hoog gedoseerd melfalan in de leverarterie ingespoten, waarna het bloed extracorporeel wordt gefilterd; zo bereikt de lever een systemisch niet-toedienbare dosis. Op tumorniveau doet ze wat ze belooft: objectieve respons 36,3% met mediane responsduur 14,0 maanden in de eenarmige FOCUS-populatie, en 27,5% tegen 9,4% in de gerandomiseerde arm. Overlevingswinst is echter niet aangetoond, net zomin als bij de chirurgische variant. De enige behandeling bij uitgezaaid uveamelanoom met een gerandomiseerde overlevingswinst is tebentafusp, met juist een respons van slechts 9,1%. Voor de Nederlandse praktijk speelt bovendien dat de richtlijn de behandeling aanbeveelt, terwijl Zorginstituut Nederland in 2019 oordeelde dat ze niet aan de stand van wetenschap en praktijk voldoet en geen onderdeel is van het basispakket.",
+      "en": "In percutaneous hepatic perfusion the hepatic venous outflow is isolated with a double-balloon catheter and high-dose melphalan is infused into the hepatic artery, after which the blood is filtered extracorporeally; the liver thus receives a dose that could not be given systemically. At tumour level it delivers: objective response 36.3% with a median duration of 14.0 months in the single-arm FOCUS population, and 27.5% versus 9.4% in the randomised arm. A survival benefit has not been shown, however, nor has it for the surgical variant. The only treatment in metastatic uveal melanoma with a randomised survival benefit is tebentafusp, which by contrast has a response rate of only 9.1%. For Dutch practice there is the added tension that the guideline recommends it, while the national health institute ruled in 2019 that it does not meet the standard of science and practice and is not part of basic insurance cover."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -527,7 +923,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Een strictuur van de uretero-enterale anastomose treft ongeveer 10 tot 15% van de patiënten na cystectomie met ileumconduit en presenteert zich meestal in het eerste jaar, vaker links. De kernvraag is niet hoe je de strictuur opheft maar of je dat moet proberen: endo-urologische pogingen tot genezing lukken in ongeveer 26% en bij stricturen langer dan 1 cm in slechts 6%, terwijl elke voltooide poging gemiddeld 12,3 ml/min/1,73 m2 aan eGFR kost. Chirurgische reïmplantatie geneest wel (84 tot 92% strictuurvrij) maar met reële morbiditeit. Daartussen staat de enkel-J: een retrograad via het conduit geplaatste katheter waarvan het uiteinde in de stomazak uitkomt, die niet geneest maar wel duurzaam draineert en periodiek zonder nefrostomie te wisselen is. In de grootste series was het technisch succes 90 tot 92% en het klinisch succes ongeveer 90% over gemiddeld 22 tot 31 maanden, en bij Tal diende de stent bij 94,7% als definitieve oplossing.",
+      "en": "A ureteroenteric anastomotic stricture affects about 10 to 15% of patients after cystectomy with an ileal conduit and usually presents within the first year, more often on the left. The key question is not how to relieve the stricture but whether to try: endourological attempts at cure succeed in about 26%, and in strictures longer than 1 cm in only 6%, while every completed attempt costs a mean 12.3 mL/min/1.73 m2 of eGFR. Surgical reimplantation does cure it (84 to 92% stricture-free) but with real morbidity. Between the two sits the single-J: a catheter placed retrogradely through the conduit with its end emerging in the stoma bag, which does not cure but does drain durably and can be exchanged periodically without a nephrostomy. In the largest series technical success was 90 to 92% and clinical success about 90% over a mean 22 to 31 months, and in Tal's series the stent served as the definitive solution in 94.7%."
+     },
+     "nieuw": {
+      "nl": "Een uretero-enterale strictuur treft ongeveer 10 tot 15% van de patiënten na cystectomie met ileumconduit, meestal in het eerste jaar en vaker links. De kernvraag is niet hoe je haar opheft maar of je dat moet proberen: endo-urologische genezing lukt in ongeveer 26% en bij stricturen langer dan 1 cm in slechts 6%, terwijl elke voltooide poging gemiddeld 12,3 ml/min/1,73 m2 aan eGFR kost. Chirurgische reïmplantatie geneest wel (84 tot 92% strictuurvrij) maar met reële morbiditeit. Daartussen staat de enkel-J: retrograad via het conduit geplaatst, uitkomend in de stomazak, die niet geneest maar duurzaam draineert en zonder nefrostomie te wisselen is. In de grootste series was het technisch succes 90 tot 92% en het klinisch succes ongeveer 90% over gemiddeld 22 tot 31 maanden; bij Tal was de stent bij 94,7% de definitieve oplossing.",
+      "en": "A ureteroenteric stricture affects about 10 to 15% of patients after cystectomy with an ileal conduit, usually within the first year and more often on the left. The key question is not how to relieve it but whether to try: endourological cure succeeds in about 26%, and in strictures longer than 1 cm in only 6%, while every completed attempt costs a mean 12.3 mL/min/1.73 m2 of eGFR. Surgical reimplantation does cure it (84 to 92% stricture-free) but with real morbidity. Between the two sits the single-J: placed retrogradely through the conduit, emerging in the stoma bag, which does not cure but drains durably and can be exchanged without a nephrostomy. In the largest series technical success was 90 to 92% and clinical success about 90% over a mean 22 to 31 months; in Tal's series the stent was the definitive solution in 94.7%."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -538,7 +947,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij een bloedende tumor is embolisatie vaak de snelste manier om de bloeding te stoppen zonder de patiënt een operatie op te leggen. De cijfers per orgaan zijn consistent hoog: bij bloedingen uit de blaas was het technisch succes 99,0% en het klinisch succes 80,9% met 5,5% majeure complicaties, bij gastro-intestinale bloedingen respectievelijk 97,7% en 80%, en bij maligne hemoptoë 91,2% technisch succes, gelijk aan dat bij benigne oorzaken. Tegenover chirurgie voor refractaire bloeding uit de bovenste tractus digestivus ruilt embolisatie een hoger recidiefpercentage (OR 2,44) voor duidelijk minder complicaties (OR 0,45), zonder verschil in mortaliteit. Wat de kaart eerlijk moet zeggen: de bloeding stopt, de tumor blijft, en de overleving wordt bepaald door de onderliggende ziekte.",
+      "en": "With a bleeding tumour, embolisation is often the fastest way to stop the bleeding without subjecting the patient to an operation. The figures by organ are consistently high: for bladder bleeding, technical success was 99.0% and clinical success 80.9% with 5.5% major complications; for gastrointestinal bleeding 97.7% and 80% respectively; and for malignant haemoptysis technical success was 91.2%, equal to that in benign causes. Against surgery for refractory upper gastrointestinal bleeding, embolisation trades a higher rebleeding rate (OR 2.44) for clearly fewer complications (OR 0.45), with no difference in mortality. What the card must say honestly: the bleeding stops, the tumour remains, and survival is determined by the underlying disease."
+     },
+     "nieuw": {
+      "nl": "Bij een bloedende tumor is embolisatie vaak de snelste manier om de bloeding te stoppen zonder een operatie. De cijfers per orgaan zijn consistent hoog: bij blaasbloeding 99,0% technisch en 80,9% klinisch succes met 5,5% majeure complicaties, bij gastro-intestinale bloeding 97,7% en 80%, en bij maligne hemoptoë 91,2% technisch succes, gelijk aan dat bij benigne oorzaken. Tegenover chirurgie voor refractaire bovenste-tractusbloeding ruilt embolisatie een hoger recidief (OR 2,44) voor duidelijk minder complicaties (OR 0,45), zonder verschil in mortaliteit. Eerlijk gezegd: de bloeding stopt, de tumor blijft, en de overleving wordt bepaald door de onderliggende ziekte.",
+      "en": "With a bleeding tumour, embolisation is often the fastest way to stop the bleeding without an operation. The figures by organ are consistently high: for bladder bleeding 99.0% technical and 80.9% clinical success with 5.5% major complications, for gastrointestinal bleeding 97.7% and 80%, and for malignant haemoptysis 91.2% technical success, equal to that in benign causes. Against surgery for refractory upper gastrointestinal bleeding, embolisation trades a higher rebleeding rate (OR 2.44) for clearly fewer complications (OR 0.45), with no difference in mortality. Honestly put: the bleeding stops, the tumour remains, and survival is determined by the underlying disease."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -549,7 +971,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Neurolyse van de plexus coeliacus onderbreekt de viscerale pijngeleiding uit de bovenbuik en is een van de weinige interventieradiologische behandelingen met een gerandomiseerde trial als basis. In de dubbelblinde RCT van Wong (100 patiënten met niet-resectabel pancreascarcinoom) had in de eerste zes weken 14% van de behandelde patiënten matige tot ernstige pijn tegen 40% met alleen systemische analgesie (p=0,005). Een meta-analyse van 10 RCT's met 646 patiënten bevestigt een pijnvermindering van 0,58 punten op 4 weken, met een effect dat daarna afvlakt. Twee dingen zijn belangrijk voor het eerlijke verhaal: het effect op opiaatgebruik is tegenstrijdig, en er is geen effect op kwaliteit van leven of overleving. ESMO geeft de aanbeveling niveau II, graad B, met een voordeel tot zes maanden.",
+      "en": "Coeliac plexus neurolysis interrupts visceral pain conduction from the upper abdomen and is one of the few interventional radiology treatments with a randomised trial as its foundation. In Wong's double-blind RCT (100 patients with unresectable pancreatic cancer), 14% of treated patients had moderate or severe pain in the first six weeks versus 40% with systemic analgesia alone (p=0.005). A meta-analysis of 10 RCTs with 646 patients confirms a pain reduction of 0.58 points at 4 weeks, with the effect flattening thereafter. Two things matter for the honest account: the effect on opioid use is contradictory, and there is no effect on quality of life or survival. ESMO grades the recommendation level II, grade B, with a benefit up to six months."
+     },
+     "nieuw": {
+      "nl": "Neurolyse van de plexus coeliacus onderbreekt de viscerale pijngeleiding uit de bovenbuik en is een van de weinige interventieradiologische behandelingen met een gerandomiseerde trial als basis. In de dubbelblinde RCT van Wong (100 patiënten met niet-resectabel pancreascarcinoom) had in de eerste zes weken 14% matige tot ernstige pijn tegen 40% met alleen systemische analgesie (p=0,005). Een meta-analyse van 10 RCT's (646 patiënten) bevestigt een pijnvermindering van 0,58 punten op 4 weken, met een daarna afvlakkend effect. Voor het eerlijke verhaal: het effect op opiaatgebruik is tegenstrijdig en er is geen effect op kwaliteit van leven of overleving. ESMO geeft niveau II, graad B, met een voordeel tot zes maanden.",
+      "en": "Coeliac plexus neurolysis interrupts visceral pain conduction from the upper abdomen and is one of the few interventional radiology treatments with a randomised trial as its foundation. In Wong's double-blind RCT (100 patients with unresectable pancreatic cancer), 14% had moderate or severe pain in the first six weeks versus 40% with systemic analgesia alone (p=0.005). A meta-analysis of 10 RCTs (646 patients) confirms a pain reduction of 0.58 points at 4 weeks, with the effect flattening thereafter. For the honest account: the effect on opioid use is contradictory and there is no effect on quality of life or survival. ESMO grades it level II, grade B, with a benefit up to six months."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -560,7 +995,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij het vena cava superior-syndroom is snelheid het belangrijkste argument voor interventieradiologie. In een meta-analyse van 54 studies met 2249 patiënten was het technisch succes van stenting 96,8% en het klinisch succes 92,8%, met complicaties bij 5,78% en herinterventie bij 9,11%. De verlichting treedt binnen 24 tot 72 uur op, tegenover 7 dagen tot 3 weken bij chemotherapie of radiotherapie, en het percentage patiënten met symptoomverlichting is hoger (ongeveer 95% tegen 59 tot 83%). In een radiotherapiecohort waarin geen enkele patiënt een stent had gekregen, was de symptoomverlichting 68,4%. Stenting behandelt echter alleen de obstructie: de onderliggende ziekte vraagt nog steeds systemische therapie of bestraling, en de mediane overleving blijft kort, ongeveer 2 tot 6 maanden.",
+      "en": "In superior vena cava syndrome, speed is the main argument for interventional radiology. In a meta-analysis of 54 studies with 2249 patients, technical success of stenting was 96.8% and clinical success 92.8%, with complications in 5.78% and reintervention in 9.11%. Relief occurs within 24 to 72 hours, against 7 days to 3 weeks with chemotherapy or radiotherapy, and the proportion of patients with symptom relief is higher (about 95% versus 59 to 83%). In a radiotherapy cohort in which no patient had received a stent, symptom relief was 68.4%. Stenting treats only the obstruction, however: the underlying disease still requires systemic therapy or irradiation, and median survival remains short, about 2 to 6 months."
+     },
+     "nieuw": {
+      "nl": "Bij het vena cava superior-syndroom is snelheid het belangrijkste argument voor interventieradiologie. In een meta-analyse van 54 studies (2249 patiënten) was het technisch succes van stenting 96,8% en het klinisch succes 92,8%, met complicaties bij 5,78% en herinterventie bij 9,11%. De verlichting treedt binnen 24 tot 72 uur op, tegenover 7 dagen tot 3 weken bij chemo- of radiotherapie, en bij een hoger percentage patiënten (ongeveer 95% tegen 59 tot 83%; in een radiotherapiecohort zonder stents 68,4%). Stenting behandelt echter alleen de obstructie: de onderliggende ziekte vraagt nog systemische therapie of bestraling, en de mediane overleving blijft kort, ongeveer 2 tot 6 maanden.",
+      "en": "In superior vena cava syndrome, speed is the main argument for interventional radiology. In a meta-analysis of 54 studies (2249 patients), technical success of stenting was 96.8% and clinical success 92.8%, with complications in 5.78% and reintervention in 9.11%. Relief occurs within 24 to 72 hours, against 7 days to 3 weeks with chemotherapy or radiotherapy, and in a higher proportion of patients (about 95% versus 59 to 83%; in a radiotherapy cohort without stents 68.4%). Stenting treats only the obstruction, however: the underlying disease still requires systemic therapy or irradiation, and median survival remains short, about 2 to 6 months."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -571,7 +1019,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Maligne ureterobstructie leidt tot postrenale nierinsufficiëntie en urosepsis, en blokkeert daarmee vaak ook de systemische therapie. Percutane nefrostomie herstelt de afvloed met een technisch succes dat bij gedilateerde systemen tegen 100% loopt. De keuze tussen nefrostomie en ureterstent is geen kwaliteitsvraag maar een haalbaarheidsvraag: in een meta-analyse van tien vergelijkende studies gaf de double J-stent een kortere ingreepduur, een 1,3 dag kortere opname en minder dislocaties, zonder verschil in complicaties, herstel van nierfunctie, koortsepisodes of overleving. Retrograde stentplaatsing lukt echter vaak niet: in een serie van 164 patiënten mislukte het bij 34,7% van de ureters, met blaaswandinvasie en ernstige hydronefrose als voorspellers. Belangrijk voor het gesprek met de patiënt is dat de mediane overleving na drainage kort is, ongeveer 5,6 maanden, en dat 30,8% de opname waarin de nefrostomie werd geplaatst niet overleefde.",
+      "en": "Malignant ureteric obstruction causes postrenal renal failure and urosepsis, and often blocks systemic therapy as well. Percutaneous nephrostomy restores drainage with a technical success approaching 100% in dilated systems. The choice between nephrostomy and ureteric stent is not a question of quality but of feasibility: in a meta-analysis of ten comparative studies, the double J stent gave a shorter procedure, a 1.3 day shorter hospital stay and fewer dislodgements, with no difference in complications, recovery of renal function, febrile episodes or survival. Retrograde stent placement often fails, however: in a series of 164 patients it failed in 34.7% of ureters, with bladder wall invasion and severe hydronephrosis as predictors. Important for the conversation with the patient is that median survival after drainage is short, about 5.6 months, and that 30.8% did not survive the admission during which the nephrostomy was placed."
+     },
+     "nieuw": {
+      "nl": "Maligne ureterobstructie geeft postrenale nierinsufficiëntie en urosepsis en blokkeert vaak ook de systemische therapie. Percutane nefrostomie herstelt de afvloed met een technisch succes dat bij gedilateerde systemen tegen 100% loopt. De keuze tussen nefrostomie en ureterstent is een haalbaarheids-, geen kwaliteitsvraag: in een meta-analyse van tien studies gaf de double J-stent een kortere ingreep, 1,3 dag kortere opname en minder dislocaties, zonder verschil in complicaties, nierfunctieherstel, koortsepisodes of overleving. Retrograde plaatsing lukt echter vaak niet: in een serie van 164 patiënten mislukte ze bij 34,7% van de ureters, met blaaswandinvasie en ernstige hydronefrose als voorspellers. Belangrijk voor het gesprek: de mediane overleving na drainage is kort (ongeveer 5,6 maanden) en 30,8% overleefde de opname waarin de nefrostomie werd geplaatst niet.",
+      "en": "Malignant ureteric obstruction causes postrenal renal failure and urosepsis and often blocks systemic therapy as well. Percutaneous nephrostomy restores drainage with a technical success approaching 100% in dilated systems. The choice between nephrostomy and ureteric stent is one of feasibility, not quality: in a meta-analysis of ten studies the double J stent gave a shorter procedure, a 1.3 day shorter stay and fewer dislodgements, with no difference in complications, renal function recovery, febrile episodes or survival. Retrograde placement often fails, however: in a series of 164 patients it failed in 34.7% of ureters, with bladder wall invasion and severe hydronephrosis as predictors. Important for the conversation: median survival after drainage is short (about 5.6 months) and 30.8% did not survive the admission during which the nephrostomy was placed."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -582,7 +1043,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Echogeleide thermale ablatie is opgeschoven van experiment naar erkende optie bij laag-risico papillair schildkliercarcinoom. Het internationale expertconsensus in Radiology beveelt ablatie aan als een van de eerstelijnsbehandelingen bij T1aN0M0 (sterke aanbeveling) en als alternatief bij T1bN0M0 wanneer de patiënt active surveillance en chirurgie afwijst of niet operabel is. In een cohort van 1613 patiënten verdween de tumor bij 85,3% en trad lokale progressie op bij 4,3%, met complicaties bij 2,0% en majeure complicaties bij 0,4%. Bij tien jaar follow-up van 179 patiënten was de ziektevrije overleving 93,9%. De sterkste vergelijkende winst zit echter niet bij primaire tumoren maar bij recidief kliermetastasen: tegenover heroperatie waren permanente stembandzenuwuitval 2,8% tegen 7,0% en de totale complicatiekans 11,3% tegen 45,1%. Er bestaat geen gerandomiseerde vergelijking met chirurgie of met active surveillance.",
+      "en": "Ultrasound-guided thermal ablation has moved from experiment to accepted option in low-risk papillary thyroid carcinoma. The international expert consensus in Radiology recommends ablation as one of the first-line treatments for T1aN0M0 (strong recommendation) and as an alternative in T1bN0M0 when the patient declines active surveillance and surgery or is ineligible for surgery. In a cohort of 1613 patients the tumour disappeared in 85.3% and local progression occurred in 4.3%, with complications in 2.0% and major complications in 0.4%. At ten-year follow-up of 179 patients, disease-free survival was 93.9%. The strongest comparative advantage, however, is not in primary tumours but in recurrent nodal disease: against reoperation, permanent recurrent laryngeal nerve injury was 2.8% versus 7.0% and the overall complication rate 11.3% versus 45.1%. There is no randomised comparison with surgery or with active surveillance."
+     },
+     "nieuw": {
+      "nl": "Echogeleide thermale ablatie is bij laag-risico papillair schildkliercarcinoom opgeschoven van experiment naar erkende optie. Het internationale expertconsensus in Radiology beveelt haar aan als eerstelijnsoptie bij T1aN0M0 (sterke aanbeveling) en als alternatief bij T1bN0M0 wanneer de patiënt active surveillance en chirurgie afwijst of niet operabel is. In een cohort van 1613 patiënten verdween de tumor bij 85,3%, met lokale progressie bij 4,3%, complicaties bij 2,0% en majeure complicaties bij 0,4%; bij tien jaar follow-up (179 patiënten) was de ziektevrije overleving 93,9%. De sterkste vergelijkende winst zit niet bij primaire tumoren maar bij recidief kliermetastasen: tegenover heroperatie 2,8% tegen 7,0% permanente stembandzenuwuitval en 11,3% tegen 45,1% totale complicaties. Een gerandomiseerde vergelijking met chirurgie of active surveillance ontbreekt.",
+      "en": "Ultrasound-guided thermal ablation has moved from experiment to accepted option in low-risk papillary thyroid carcinoma. The international expert consensus in Radiology recommends it as a first-line option in T1aN0M0 (strong recommendation) and as an alternative in T1bN0M0 when the patient declines active surveillance and surgery or is ineligible. In a cohort of 1613 patients the tumour disappeared in 85.3%, with local progression in 4.3%, complications in 2.0% and major complications in 0.4%; at ten-year follow-up (179 patients) disease-free survival was 93.9%. The strongest comparative advantage is not in primary tumours but in recurrent nodal disease: against reoperation, 2.8% versus 7.0% permanent recurrent laryngeal nerve injury and 11.3% versus 45.1% overall complications. A randomised comparison with surgery or active surveillance is lacking."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -593,7 +1067,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "Bij pijnlijke botmetastasen in bekken, acetabulum, sacrum en extremiteiten geeft percutane ablatie snelle pijnvermindering, en voegt cementoplastie of schroeffixatie mechanische stabiliteit toe. In de prospectieve MOTION-studie (65 behandelde patiënten, overwegend rib, ilium en bekken) daalde de ergste pijnscore gemiddeld 2,61 punten op 8 weken en bereikte 92% palliatie. In een meta-analyse van ablatie met cementoplastie (21 studies, 661 casus) daalde de pijnscore van 7,60 naar 3,30 op dag 1 en 1,62 op 6 maanden, met 4% majeure complicaties. De winst zit vooral in snelheid: waar radiotherapie doorgaans weken nodig heeft, is de respons hier binnen 1 tot 3 dagen meetbaar. De Nederlandse richtlijn Botmetastasen positioneert ablatie als tweede stap, bij pijn die refractair is voor of ongeschikt is voor medicatie, radiotherapie of chirurgie.",
+      "en": "For painful bone metastases in the pelvis, acetabulum, sacrum and extremities, percutaneous ablation gives rapid pain reduction, and cementoplasty or screw fixation adds mechanical stability. In the prospective MOTION study (65 treated patients, mostly rib, ilium and pelvis) the worst pain score fell by a mean 2.61 points at 8 weeks and 92% achieved palliation. In a meta-analysis of ablation with cementoplasty (21 studies, 661 cases) the pain score fell from 7.60 to 3.30 at day 1 and 1.62 at 6 months, with 4% major complications. The main advantage is speed: where radiotherapy usually needs weeks, the response here is measurable within 1 to 3 days. The Dutch bone metastases guideline positions ablation as a second step, for pain refractory to or unsuitable for medication, radiotherapy or surgery."
+     },
+     "nieuw": {
+      "nl": "Bij pijnlijke botmetastasen in bekken, acetabulum, sacrum en extremiteiten geeft percutane ablatie snelle pijnvermindering; cementoplastie of schroeffixatie voegt mechanische stabiliteit toe. In de prospectieve MOTION-studie (65 patiënten, overwegend rib, ilium en bekken) daalde de ergste pijnscore gemiddeld 2,61 punten op 8 weken en bereikte 92% palliatie. Een meta-analyse van ablatie met cementoplastie (21 studies, 661 casus) liet de pijnscore dalen van 7,60 naar 3,30 op dag 1 en 1,62 op 6 maanden, met 4% majeure complicaties. De winst zit vooral in snelheid: waar radiotherapie doorgaans weken vraagt, is de respons hier binnen 1 tot 3 dagen meetbaar. De Nederlandse richtlijn Botmetastasen positioneert ablatie als tweede stap, bij pijn die refractair of ongeschikt is voor medicatie, radiotherapie of chirurgie.",
+      "en": "For painful bone metastases in the pelvis, acetabulum, sacrum and extremities, percutaneous ablation gives rapid pain reduction; cementoplasty or screw fixation adds mechanical stability. In the prospective MOTION study (65 patients, mostly rib, ilium and pelvis) the worst pain score fell by a mean 2.61 points at 8 weeks and 92% achieved palliation. A meta-analysis of ablation with cementoplasty (21 studies, 661 cases) lowered the pain score from 7.60 to 3.30 at day 1 and 1.62 at 6 months, with 4% major complications. The main advantage is speed: where radiotherapy usually needs weeks, the response here is measurable within 1 to 3 days. The Dutch bone metastases guideline positions ablation as a second step, for pain refractory to or unsuitable for medication, radiotherapy or surgery."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-29",
@@ -604,7 +1091,20 @@
    "velden": [
     "bl"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "bl",
+     "oud": {
+      "nl": "IRE doodt tumorcellen met korte elektrische pulsen in plaats van met hitte of kou, waardoor de collageenstructuur van vaten en galwegen relatief gespaard blijft. Daarmee wordt een deel van de laesies behandelbaar die te dicht bij de leverhilus of grote vaten liggen voor veilige thermale ablatie. In de fase 2 COLDFIRE-2-trial (50 behandelde patiënten, 76 metastasen tot 5 cm, alle ongeschikt voor resectie en thermale ablatie) was de 1-jaars lokale progressievrije overleving 68% (95% BI 59-84) en de mediane overleving 2,7 jaar. Daar hoort een reële complicatiekans bij: 40% van de 62 procedures gaf een complicatie en er was één behandelingsgerelateerd overlijden. IRE is dus een gerichte uitbreiding van het ablatiepalet, niet een betere ablatie.",
+      "en": "IRE kills tumour cells with short electrical pulses rather than heat or cold, so the collagen framework of vessels and bile ducts is relatively spared. That makes a subset of lesions treatable that lie too close to the hepatic hilum or large vessels for safe thermal ablation. In the phase 2 COLDFIRE-2 trial (50 treated patients, 76 metastases up to 5 cm, all unsuitable for both resection and thermal ablation) 1-year local progression-free survival was 68% (95% CI 59-84) and median overall survival 2.7 years. That comes with a real complication rate: 40% of the 62 procedures had a complication and there was one treatment-related death. IRE is therefore a targeted extension of the ablation toolkit, not a better ablation."
+     },
+     "nieuw": {
+      "nl": "IRE doodt tumorcellen met korte elektrische pulsen in plaats van hitte of kou, waardoor de collageenstructuur van vaten en galwegen relatief gespaard blijft. Daarmee wordt een deel van de laesies behandelbaar die te dicht bij de leverhilus of grote vaten liggen voor veilige thermale ablatie. In de fase 2 COLDFIRE-2-trial (50 behandelde patiënten, 76 metastasen tot 5 cm, alle ongeschikt voor resectie én thermale ablatie) was de 1-jaars lokale progressievrije overleving 68% (95% BI 59-84) en de mediane overleving 2,7 jaar. Daar hoort een reële complicatiekans bij: 40% van de 62 procedures gaf een complicatie en er was één behandelingsgerelateerd overlijden. IRE is dus een gerichte uitbreiding van het ablatiepalet, geen betere ablatie.",
+      "en": "IRE kills tumour cells with short electrical pulses rather than heat or cold, so the collagen framework of vessels and bile ducts is relatively spared. That makes treatable a subset of lesions lying too close to the hepatic hilum or large vessels for safe thermal ablation. In the phase 2 COLDFIRE-2 trial (50 treated patients, 76 metastases up to 5 cm, all unsuitable for both resection and thermal ablation) 1-year local progression-free survival was 68% (95% CI 59-84) and median overall survival 2.7 years. That comes with a real complication rate: 40% of the 62 procedures had a complication and there was one treatment-related death. IRE is therefore a targeted extension of the ablation toolkit, not a better ablation."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-28",
@@ -675,7 +1175,20 @@
    "velden": [
     "pos"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "Curatieve eerstelijnsoptie bij BCLC 0/A. EASL, AASLD en de BCLC-strategie in de update van 2026 noemen ablatie een curatieve behandeling voor vroeg HCC en de voorkeursbehandeling bij niet-resectabele of niet-transplantabele kleine tumoren. • Solitaire of enkele tumoren tot ongeveer 3 cm geven de beste resultaten; tot 5 cm is ablatie mogelijk maar met een hogere lokale recidiefkans. Behouden leverfunctie (Child-Pugh A of goede B). • Tegenover resectie bij kleine HCC (SURF, RCT, 150 tegen 151 patiënten): 3-jaars recidiefvrije overleving 50,5% na RFA tegen 54,6% na resectie (p=0,58), met een mediane opnameduur van 10 tegen 17 dagen (p (Takayama et al., Liver Cancer 2022). Bij klein HCC is percutane ablatie ook kosteneffectiever dan resectie (Cucchetti et al., J Hepatol 2013).",
+      "en": "First-line curative option in BCLC 0/A. EASL, AASLD and the BCLC strategy in its 2026 update call ablation a curative treatment for early HCC and the preferred option for small tumours that are not resectable or transplantable. • Solitary or few tumours up to about 3 cm give the best results; up to 5 cm ablation is feasible but with higher local recurrence. Preserved liver function (Child-Pugh A or good B). • Against resection in small HCC (SURF, RCT, 150 versus 151 patients): 3-year recurrence-free survival 50.5% after RFA versus 54.6% after resection (p=0.58), with median hospital stay 10 versus 17 days (p (Takayama et al., Liver Cancer 2022). For small HCC, percutaneous ablation is also more cost-effective than resection (Cucchetti et al., J Hepatol 2013)."
+     },
+     "nieuw": {
+      "nl": "Curatieve eerstelijnsoptie bij BCLC 0/A. EASL, AASLD en de BCLC-strategie in de update van 2026 noemen ablatie een curatieve behandeling voor vroeg HCC en de voorkeursbehandeling bij niet-resectabele of niet-transplantabele kleine tumoren. • Solitaire of enkele tumoren tot ongeveer 3 cm geven de beste resultaten; tot 5 cm is ablatie mogelijk maar met een hogere lokale recidiefkans. Behouden leverfunctie (Child-Pugh A of goede B). • Tegenover resectie bij kleine HCC (SURF, RCT, 150 tegen 151 patiënten): 3-jaars recidiefvrije overleving 50,5% na RFA tegen 54,6% na resectie (p=0,58), met een mediane opnameduur van 10 tegen 17 dagen (p<0,01) en bijwerkingen bij 0% tegen 3% (Takayama et al., Liver Cancer 2022). Bij klein HCC is percutane ablatie ook kosteneffectiever dan resectie (Cucchetti et al., J Hepatol 2013).",
+      "en": "First-line curative option in BCLC 0/A. EASL, AASLD and the BCLC strategy in its 2026 update call ablation a curative treatment for early HCC and the preferred option for small tumours that are not resectable or transplantable. • Solitary or few tumours up to about 3 cm give the best results; up to 5 cm ablation is feasible but with higher local recurrence. Preserved liver function (Child-Pugh A or good B). • Against resection in small HCC (SURF, RCT, 150 versus 151 patients): 3-year recurrence-free survival 50.5% after RFA versus 54.6% after resection (p=0.58), with median hospital stay 10 versus 17 days (p<0.01) and adverse events in 0% versus 3% (Takayama et al., Liver Cancer 2022). For small HCC, percutaneous ablation is also more cost-effective than resection (Cucchetti et al., J Hepatol 2013)."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-28",
@@ -686,7 +1199,20 @@
    "velden": [
     "pos"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "EAU 2025 zet tumorablatie en stereotactische radiotherapie naast elkaar: bied een van beide aan bij cT1-tumoren met een behandelindicatie bij patiënten die niet operabel zijn (zwakke aanbeveling). Een percutane biopsie vóór, en niet gelijktijdig met, de ablatie is een sterke aanbeveling. Partiële nefrectomie blijft de standaard bij operabele patiënten. • EAU 2025: bied RFA niet routinematig aan boven 3 cm en cryoablatie niet boven 4 cm. Bij cT1a is de 5-jaars kankerspecifieke overleving gelijkwaardig (96% na RFA en 100% na cryoablatie tegen 99% na partiële nefrectomie), bij cT1b loopt het uiteen (91% na cryoablatie tegen 98% na partiële nefrectomie) (Andrews et al., Eur Urol 2019). • Tegenover chirurgie bij T1a (4310 patiënten): 30-daagse niet-urologische complicaties 6% na ablatie tegen 29% na partiële en 30% na radicale nefrectomie, en acuut nierfalen minder dan 3% tegen 7% en 11%, bij een kankerspecifieke overleving van 95% tegen 98% respectievelijk 96% tegen 95% (Uhlig et al., Ann Intern Med 2018). De prijs is een hoger lokaal recidief (OR 3,81; pBij cT1a is percutane cryoablatie kosteneffectiever dan partiele nefrectomie, tegen lagere kosten en gelijke QALY (Wu et al., Eur Radiol 2023).",
+      "en": "EAU 2025 places tumour ablation and stereotactic ablative radiotherapy side by side: offer either for cT1 tumours with an indication for treatment in patients unfit for surgery (weak recommendation). A percutaneous biopsy before, and not concomitant with, ablation is a strong recommendation. Partial nephrectomy remains standard in operable patients. • EAU 2025: do not routinely offer RFA above 3 cm or cryoablation above 4 cm. In cT1a, 5-year cancer-specific survival is equivalent (96% after RFA and 100% after cryoablation versus 99% after partial nephrectomy); in cT1b the curves separate (91% after cryoablation versus 98% after partial nephrectomy) (Andrews et al., Eur Urol 2019). • Against surgery in T1a (4310 patients): 30-day non-urologic complications 6% after ablation versus 29% after partial and 30% after radical nephrectomy, and acute renal failure under 3% versus 7% and 11%, with cancer-specific survival of 95% versus 98% and 96% versus 95% respectively (Uhlig et al., Ann Intern Med 2018). The price is higher local recurrence (OR 3.81; pFor cT1a, percutaneous cryoablation is more cost-effective than partial nephrectomy, at lower cost and equal QALY (Wu et al., Eur Radiol 2023)."
+     },
+     "nieuw": {
+      "nl": "EAU 2025 zet tumorablatie en stereotactische radiotherapie naast elkaar: bied een van beide aan bij cT1-tumoren met een behandelindicatie bij patiënten die niet operabel zijn (zwakke aanbeveling). Een percutane biopsie vóór, en niet gelijktijdig met, de ablatie is een sterke aanbeveling. Partiële nefrectomie blijft de standaard bij operabele patiënten. • EAU 2025: bied RFA niet routinematig aan boven 3 cm en cryoablatie niet boven 4 cm. Bij cT1a is de 5-jaars kankerspecifieke overleving gelijkwaardig (96% na RFA en 100% na cryoablatie tegen 99% na partiële nefrectomie), bij cT1b loopt het uiteen (91% na cryoablatie tegen 98% na partiële nefrectomie) (Andrews et al., Eur Urol 2019). • Tegenover chirurgie bij T1a (4310 patiënten): 30-daagse niet-urologische complicaties 6% na ablatie tegen 29% na partiële en 30% na radicale nefrectomie, en acuut nierfalen minder dan 3% tegen 7% en 11%, bij een kankerspecifieke overleving van 95% tegen 98% respectievelijk 96% tegen 95% (Uhlig et al., Ann Intern Med 2018). De prijs is een hoger lokaal recidief (OR 3,81; p<0,00001), zonder verschil in overleving (Li et al., J Robot Surg 2024). Tegenover radiotherapie: SABR haalt 100% lokale controle tot 84 maanden met graad 3-toxiciteit bij 10% (FASTRACK II, Lancet Oncol 2026), maar kost meer nierfunctie: mediane eGFR-daling 14 ml/min/1,73 m2 en CKD-stadium 4-5 bij 24% (Ali et al., Radiat Oncol 2024). Bij cT1a is percutane cryoablatie kosteneffectiever dan partiele nefrectomie, tegen lagere kosten en gelijke QALY (Wu et al., Eur Radiol 2023).",
+      "en": "EAU 2025 places tumour ablation and stereotactic ablative radiotherapy side by side: offer either for cT1 tumours with an indication for treatment in patients unfit for surgery (weak recommendation). A percutaneous biopsy before, and not concomitant with, ablation is a strong recommendation. Partial nephrectomy remains standard in operable patients. • EAU 2025: do not routinely offer RFA above 3 cm or cryoablation above 4 cm. In cT1a, 5-year cancer-specific survival is equivalent (96% after RFA and 100% after cryoablation versus 99% after partial nephrectomy); in cT1b the curves separate (91% after cryoablation versus 98% after partial nephrectomy) (Andrews et al., Eur Urol 2019). • Against surgery in T1a (4310 patients): 30-day non-urologic complications 6% after ablation versus 29% after partial and 30% after radical nephrectomy, and acute renal failure under 3% versus 7% and 11%, with cancer-specific survival of 95% versus 98% and 96% versus 95% respectively (Uhlig et al., Ann Intern Med 2018). The price is higher local recurrence (OR 3.81; p<0.00001), without a survival difference (Li et al., J Robot Surg 2024). Against radiotherapy: SABR achieves 100% local control to 84 months with grade 3 toxicity in 10% (FASTRACK II, Lancet Oncol 2026), but costs more kidney function: median eGFR decline 14 mL/min/1.73 m2 and CKD stage 4-5 in 24% (Ali et al., Radiat Oncol 2024). For cT1a, percutaneous cryoablation is more cost-effective than partial nephrectomy, at lower cost and equal QALY (Wu et al., Eur Radiol 2023)."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-28",
@@ -701,6 +1227,19 @@
     {
      "wat": "Cost Minimization Study of Image-Guided Core Biopsy Versus Surgical Excisional Biopsy for Women With Abnormal Mammograms",
      "bron": "https://doi.org/10.1200/JCO.2004.06.154"
+    }
+   ],
+   "diff": [
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "De praktijkstandaard van CIRSE (2017) is nog steeds het geldende document en noemt een technisch succes van 70 tot 96%, met een door SIR voorgestelde drempelwaarde van 70 tot 75%. Voor de moleculaire vraag bestaat geen internationale richtlijn; de bruikbaarste Nederlandse uitspraak staat in de HCC-richtlijn, die stelt dat de risico's van een biopt niet vaak voorkomen, behandelbaar zijn en het ziekteverloop en de overleving niet beïnvloeden. • Niet de laesiegrootte maar de tumorfractie is de grens. Whole genome sequencing vraagt in Nederland ten minste 20% tumorcellen en 50 ng DNA. Bij bot zijn drie cores en 20 mm totale corelengte de streefwaarden (OR 2,78 en 4,16); bij scleroserend bot voorspelt de attenuatie beter dan het etiket, met 610 HU als grens voor een diagnostisch biopt en 370 HU voor een NGS-geschikt monster. • Tegenover chirurgische biopsie bij weke delen: vrijwel gelijke subtypering (87% tegen 89%) en gradering (87% tegen 84%), maar de helft van de tijd tot het MDO (8,4 tegen 15,6 dagen). Tegenover cytologie: hogere DNA-opbrengst maar niet per se een hogere tumorfractie; in de Nederlandse WGS-praktijk 91% tegen 57% succes. Het echte verschil zit niet in de techniek maar in het protocol: standaardisatie bracht de moleculaire adequaatheid van 82,6% naar 91,2%, en extra cores door een coaxiale sheath kosten aantoonbaar geen extra complicaties (alle p&gt;0,25).",
+      "en": "The CIRSE practice standard (2017) remains the governing document and cites technical success of 70 to 96%, with an SIR-suggested threshold of 70 to 75%. No international guideline covers the molecular question; the most usable Dutch statement sits in the HCC guideline, which states that the risks of a biopsy are infrequent, treatable, and do not influence disease course or survival. • Not lesion size but tumour fraction is the threshold. Whole genome sequencing in the Netherlands requires at least 20% tumour cells and 50 ng of DNA. In bone, three cores and 20 mm total core length are the targets (OR 2.78 and 4.16); in sclerotic bone, attenuation predicts better than the label, with 610 HU as the cut-off for a diagnostic biopsy and 370 HU for an NGS-suitable sample. • Against surgical biopsy in soft tissue: near-identical subtyping (87% versus 89%) and grading (87% versus 84%), but half the time to tumour board (8.4 versus 15.6 days). Against cytology: higher DNA yield though not necessarily a higher tumour fraction; in Dutch WGS practice 91% versus 57% success. The real difference lies not in the technique but in the protocol: standardisation raised molecular adequacy from 82.6% to 91.2%, and extra cores through a coaxial sheath demonstrably cost no extra complications (all p&gt;0.25)."
+     },
+     "nieuw": {
+      "nl": "De praktijkstandaard van CIRSE (2017) is nog steeds het geldende document en noemt een technisch succes van 70 tot 96%, met een door SIR voorgestelde drempelwaarde van 70 tot 75%. Voor de moleculaire vraag bestaat geen internationale richtlijn; de bruikbaarste Nederlandse uitspraak staat in de HCC-richtlijn, die stelt dat de risico's van een biopt niet vaak voorkomen, behandelbaar zijn en het ziekteverloop en de overleving niet beïnvloeden. • Niet de laesiegrootte maar de tumorfractie is de grens. Whole genome sequencing vraagt in Nederland ten minste 20% tumorcellen en 50 ng DNA. Bij bot zijn drie cores en 20 mm totale corelengte de streefwaarden (OR 2,78 en 4,16); bij scleroserend bot voorspelt de attenuatie beter dan het etiket, met 610 HU als grens voor een diagnostisch biopt en 370 HU voor een NGS-geschikt monster. • Tegenover chirurgische biopsie bij weke delen: vrijwel gelijke subtypering (87% tegen 89%) en gradering (87% tegen 84%), maar de helft van de tijd tot het MDO (8,4 tegen 15,6 dagen). Tegenover cytologie: hogere DNA-opbrengst maar niet per se een hogere tumorfractie; in de Nederlandse WGS-praktijk 91% tegen 57% succes. Het echte verschil zit niet in de techniek maar in het protocol: standaardisatie bracht de moleculaire adequaatheid van 82,6% naar 91,2%, en extra cores door een coaxiale sheath kosten aantoonbaar geen extra complicaties (alle p&gt;0,25). De poliklinische kernbiopsie stelt de diagnose bovendien goedkoper dan chirurgische excisiebiopsie (Golub et al., J Clin Oncol 2004).",
+      "en": "The CIRSE practice standard (2017) remains the governing document and cites technical success of 70 to 96%, with an SIR-suggested threshold of 70 to 75%. No international guideline covers the molecular question; the most usable Dutch statement sits in the HCC guideline, which states that the risks of a biopsy are infrequent, treatable, and do not influence disease course or survival. • Not lesion size but tumour fraction is the threshold. Whole genome sequencing in the Netherlands requires at least 20% tumour cells and 50 ng of DNA. In bone, three cores and 20 mm total core length are the targets (OR 2.78 and 4.16); in sclerotic bone, attenuation predicts better than the label, with 610 HU as the cut-off for a diagnostic biopsy and 370 HU for an NGS-suitable sample. • Against surgical biopsy in soft tissue: near-identical subtyping (87% versus 89%) and grading (87% versus 84%), but half the time to tumour board (8.4 versus 15.6 days). Against cytology: higher DNA yield though not necessarily a higher tumour fraction; in Dutch WGS practice 91% versus 57% success. The real difference lies not in the technique but in the protocol: standardisation raised molecular adequacy from 82.6% to 91.2%, and extra cores through a coaxial sheath demonstrably cost no extra complications (all p&gt;0.25). The outpatient core biopsy also reaches the diagnosis more cheaply than surgical excisional biopsy (Golub et al., J Clin Oncol 2004)."
+     }
     }
    ]
   },
@@ -727,6 +1266,19 @@
      "wat": "National Utilization, Survival, and Costs Analysis of Treatment Options for Stage I Non-Small Cell Lung Cancer: A SEER-Medicare Database Analysis",
      "bron": "https://doi.org/10.1016/j.acra.2021.07.009"
     }
+   ],
+   "diff": [
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "Alternatief voor of aanvulling op SBRT en chirurgie. Richtlijnen noemen thermale ablatie bij inoperabel vroeg-stadium NSCLC en bij een beperkt aantal longmetastasen, met beoordeling in een MDO. • Kleine tumoren, doorgaans ≤3 cm, met de beste lokale controle bij de kleinste laesies; een beperkt aantal laesies en voldoende afstand tot centrale luchtwegen en grote vaten. • Longmetastase-ablatie: 1-jaars lokale controle 91% en mediane overleving 5,1 jaar, met majeure complicaties bij 1% en zonder periprocedurele mortaliteit; pneumothorax treedt op bij ongeveer 44% van de sessies, waarvan de helft een drain nodig heeft (Nguyenhuy et al., CVIR 2022). Een gerandomiseerde vergelijking met SBRT of chirurgie ontbreekt; ablatie is herhaalbaar en spaart longfunctie.",
+      "en": "Alternative to or complement for SBRT and surgery. Guidelines list thermal ablation for inoperable early-stage NSCLC and for a limited number of lung metastases, with tumour board assessment. • Small tumours, typically ≤3 cm, with best local control in the smallest lesions; a limited number of lesions and adequate distance from central airways and large vessels. • Lung metastasis ablation: 1-year local control 91% and median survival 5.1 years, with major complications in 1% and no periprocedural mortality; pneumothorax occurs in about 44% of sessions, half of which need a drain (Nguyenhuy et al., CVIR 2022). A randomised comparison with SBRT or surgery is lacking; ablation is repeatable and spares lung function."
+     },
+     "nieuw": {
+      "nl": "Alternatief voor of aanvulling op SBRT en chirurgie. Richtlijnen noemen thermale ablatie bij inoperabel vroeg-stadium NSCLC en bij een beperkt aantal longmetastasen, met beoordeling in een MDO. • Kleine tumoren, doorgaans ≤3 cm, met de beste lokale controle bij de kleinste laesies; een beperkt aantal laesies en voldoende afstand tot centrale luchtwegen en grote vaten. • Longmetastase-ablatie: 1-jaars lokale controle 91% en mediane overleving 5,1 jaar, met majeure complicaties bij 1% en zonder periprocedurele mortaliteit; pneumothorax treedt op bij ongeveer 44% van de sessies, waarvan de helft een drain nodig heeft (Nguyenhuy et al., CVIR 2022). Een gerandomiseerde vergelijking met SBRT of chirurgie ontbreekt; ablatie is herhaalbaar en spaart longfunctie. Bij stadium I longkanker zijn de eerstejaarskosten van ablatie het laagst (11.976 USD tegen 15.447 voor radiotherapie en 22.669 voor chirurgie; Mukherjee et al., Acad Radiol 2022).",
+      "en": "Alternative to or complement for SBRT and surgery. Guidelines list thermal ablation for inoperable early-stage NSCLC and for a limited number of lung metastases, with tumour board assessment. • Small tumours, typically ≤3 cm, with best local control in the smallest lesions; a limited number of lesions and adequate distance from central airways and large vessels. • Lung metastasis ablation: 1-year local control 91% and median survival 5.1 years, with major complications in 1% and no periprocedural mortality; pneumothorax occurs in about 44% of sessions, half of which need a drain (Nguyenhuy et al., CVIR 2022). A randomised comparison with SBRT or surgery is lacking; ablation is repeatable and spares lung function. In stage I lung cancer, first-year costs are lowest for ablation (11,976 USD versus 15,447 for radiotherapy and 22,669 for surgery; Mukherjee et al., Acad Radiol 2022)."
+     }
+    }
    ]
   },
   {
@@ -752,6 +1304,19 @@
      "wat": "Cost-effectiveness of hepatic resection versus percutaneous radiofrequency ablation for early hepatocellular carcinoma",
      "bron": "https://doi.org/10.1016/j.jhep.2013.04.009"
     }
+   ],
+   "diff": [
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "Curatieve eerstelijnsoptie bij BCLC 0/A. EASL, AASLD en de BCLC-strategie in de update van 2026 noemen ablatie een curatieve behandeling voor vroeg HCC en de voorkeursbehandeling bij niet-resectabele of niet-transplantabele kleine tumoren. • Solitaire of enkele tumoren tot ongeveer 3 cm geven de beste resultaten; tot 5 cm is ablatie mogelijk maar met een hogere lokale recidiefkans. Behouden leverfunctie (Child-Pugh A of goede B). • Tegenover resectie bij kleine HCC (SURF, RCT, 150 tegen 151 patiënten): 3-jaars recidiefvrije overleving 50,5% na RFA tegen 54,6% na resectie (p=0,58), met een mediane opnameduur van 10 tegen 17 dagen (p (Takayama et al., Liver Cancer 2022).",
+      "en": "First-line curative option in BCLC 0/A. EASL, AASLD and the BCLC strategy in its 2026 update call ablation a curative treatment for early HCC and the preferred option for small tumours that are not resectable or transplantable. • Solitary or few tumours up to about 3 cm give the best results; up to 5 cm ablation is feasible but with higher local recurrence. Preserved liver function (Child-Pugh A or good B). • Against resection in small HCC (SURF, RCT, 150 versus 151 patients): 3-year recurrence-free survival 50.5% after RFA versus 54.6% after resection (p=0.58), with median hospital stay 10 versus 17 days (p (Takayama et al., Liver Cancer 2022)."
+     },
+     "nieuw": {
+      "nl": "Curatieve eerstelijnsoptie bij BCLC 0/A. EASL, AASLD en de BCLC-strategie in de update van 2026 noemen ablatie een curatieve behandeling voor vroeg HCC en de voorkeursbehandeling bij niet-resectabele of niet-transplantabele kleine tumoren. • Solitaire of enkele tumoren tot ongeveer 3 cm geven de beste resultaten; tot 5 cm is ablatie mogelijk maar met een hogere lokale recidiefkans. Behouden leverfunctie (Child-Pugh A of goede B). • Tegenover resectie bij kleine HCC (SURF, RCT, 150 tegen 151 patiënten): 3-jaars recidiefvrije overleving 50,5% na RFA tegen 54,6% na resectie (p=0,58), met een mediane opnameduur van 10 tegen 17 dagen (p (Takayama et al., Liver Cancer 2022). Bij klein HCC is percutane ablatie ook kosteneffectiever dan resectie (Cucchetti et al., J Hepatol 2013).",
+      "en": "First-line curative option in BCLC 0/A. EASL, AASLD and the BCLC strategy in its 2026 update call ablation a curative treatment for early HCC and the preferred option for small tumours that are not resectable or transplantable. • Solitary or few tumours up to about 3 cm give the best results; up to 5 cm ablation is feasible but with higher local recurrence. Preserved liver function (Child-Pugh A or good B). • Against resection in small HCC (SURF, RCT, 150 versus 151 patients): 3-year recurrence-free survival 50.5% after RFA versus 54.6% after resection (p=0.58), with median hospital stay 10 versus 17 days (p (Takayama et al., Liver Cancer 2022). For small HCC, percutaneous ablation is also more cost-effective than resection (Cucchetti et al., J Hepatol 2013)."
+     }
+    }
    ]
   },
   {
@@ -776,6 +1341,19 @@
     {
      "wat": "Cost-effectiveness of minimally invasive partial nephrectomy and percutaneous cryoablation for cT1a renal cell carcinoma",
      "bron": "https://doi.org/10.1007/s00330-022-09211-6"
+    }
+   ],
+   "diff": [
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "EAU 2025 zet tumorablatie en stereotactische radiotherapie naast elkaar: bied een van beide aan bij cT1-tumoren met een behandelindicatie bij patiënten die niet operabel zijn (zwakke aanbeveling). Een percutane biopsie vóór, en niet gelijktijdig met, de ablatie is een sterke aanbeveling. Partiële nefrectomie blijft de standaard bij operabele patiënten. • EAU 2025: bied RFA niet routinematig aan boven 3 cm en cryoablatie niet boven 4 cm. Bij cT1a is de 5-jaars kankerspecifieke overleving gelijkwaardig (96% na RFA en 100% na cryoablatie tegen 99% na partiële nefrectomie), bij cT1b loopt het uiteen (91% na cryoablatie tegen 98% na partiële nefrectomie) (Andrews et al., Eur Urol 2019). • Tegenover chirurgie bij T1a (4310 patiënten): 30-daagse niet-urologische complicaties 6% na ablatie tegen 29% na partiële en 30% na radicale nefrectomie, en acuut nierfalen minder dan 3% tegen 7% en 11%, bij een kankerspecifieke overleving van 95% tegen 98% respectievelijk 96% tegen 95% (Uhlig et al., Ann Intern Med 2018). De prijs is een hoger lokaal recidief (OR 3,81; p<0,00001), zonder verschil in overleving (Li et al., J Robot Surg 2024). Tegenover radiotherapie: SABR haalt 100% lokale controle tot 84 maanden met graad 3-toxiciteit bij 10% (FASTRACK II, Lancet Oncol 2026), maar kost meer nierfunctie: mediane eGFR-daling 14 ml/min/1,73 m2 en CKD-stadium 4-5 bij 24% (Ali et al., Radiat Oncol 2024).",
+      "en": "EAU 2025 places tumour ablation and stereotactic ablative radiotherapy side by side: offer either for cT1 tumours with an indication for treatment in patients unfit for surgery (weak recommendation). A percutaneous biopsy before, and not concomitant with, ablation is a strong recommendation. Partial nephrectomy remains standard in operable patients. • EAU 2025: do not routinely offer RFA above 3 cm or cryoablation above 4 cm. In cT1a, 5-year cancer-specific survival is equivalent (96% after RFA and 100% after cryoablation versus 99% after partial nephrectomy); in cT1b the curves separate (91% after cryoablation versus 98% after partial nephrectomy) (Andrews et al., Eur Urol 2019). • Against surgery in T1a (4310 patients): 30-day non-urologic complications 6% after ablation versus 29% after partial and 30% after radical nephrectomy, and acute renal failure under 3% versus 7% and 11%, with cancer-specific survival of 95% versus 98% and 96% versus 95% respectively (Uhlig et al., Ann Intern Med 2018). The price is higher local recurrence (OR 3.81; p<0.00001), without a survival difference (Li et al., J Robot Surg 2024). Against radiotherapy: SABR achieves 100% local control to 84 months with grade 3 toxicity in 10% (FASTRACK II, Lancet Oncol 2026), but costs more kidney function: median eGFR decline 14 mL/min/1.73 m2 and CKD stage 4-5 in 24% (Ali et al., Radiat Oncol 2024)."
+     },
+     "nieuw": {
+      "nl": "EAU 2025 zet tumorablatie en stereotactische radiotherapie naast elkaar: bied een van beide aan bij cT1-tumoren met een behandelindicatie bij patiënten die niet operabel zijn (zwakke aanbeveling). Een percutane biopsie vóór, en niet gelijktijdig met, de ablatie is een sterke aanbeveling. Partiële nefrectomie blijft de standaard bij operabele patiënten. • EAU 2025: bied RFA niet routinematig aan boven 3 cm en cryoablatie niet boven 4 cm. Bij cT1a is de 5-jaars kankerspecifieke overleving gelijkwaardig (96% na RFA en 100% na cryoablatie tegen 99% na partiële nefrectomie), bij cT1b loopt het uiteen (91% na cryoablatie tegen 98% na partiële nefrectomie) (Andrews et al., Eur Urol 2019). • Tegenover chirurgie bij T1a (4310 patiënten): 30-daagse niet-urologische complicaties 6% na ablatie tegen 29% na partiële en 30% na radicale nefrectomie, en acuut nierfalen minder dan 3% tegen 7% en 11%, bij een kankerspecifieke overleving van 95% tegen 98% respectievelijk 96% tegen 95% (Uhlig et al., Ann Intern Med 2018). De prijs is een hoger lokaal recidief (OR 3,81; pBij cT1a is percutane cryoablatie kosteneffectiever dan partiele nefrectomie, tegen lagere kosten en gelijke QALY (Wu et al., Eur Radiol 2023).",
+      "en": "EAU 2025 places tumour ablation and stereotactic ablative radiotherapy side by side: offer either for cT1 tumours with an indication for treatment in patients unfit for surgery (weak recommendation). A percutaneous biopsy before, and not concomitant with, ablation is a strong recommendation. Partial nephrectomy remains standard in operable patients. • EAU 2025: do not routinely offer RFA above 3 cm or cryoablation above 4 cm. In cT1a, 5-year cancer-specific survival is equivalent (96% after RFA and 100% after cryoablation versus 99% after partial nephrectomy); in cT1b the curves separate (91% after cryoablation versus 98% after partial nephrectomy) (Andrews et al., Eur Urol 2019). • Against surgery in T1a (4310 patients): 30-day non-urologic complications 6% after ablation versus 29% after partial and 30% after radical nephrectomy, and acute renal failure under 3% versus 7% and 11%, with cancer-specific survival of 95% versus 98% and 96% versus 95% respectively (Uhlig et al., Ann Intern Med 2018). The price is higher local recurrence (OR 3.81; pFor cT1a, percutaneous cryoablation is more cost-effective than partial nephrectomy, at lower cost and equal QALY (Wu et al., Eur Radiol 2023)."
+     }
     }
    ]
   },
@@ -805,6 +1383,19 @@
     {
      "wat": "Comparison of inpatient treatment costs after balloon kyphoplasty and non-surgical treatment of vertebral body compression fractures",
      "bron": "https://doi.org/10.1007/s00586-011-1692-y"
+    }
+   ],
+   "diff": [
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "Aanvullend op radiotherapie en systemische therapie, niet vervangend. Richtlijnen positioneren cementaugmentatie bij pijnlijke pathologische wervelfracturen wanneer conservatieve behandeling tekortschiet. • Pijnlijke wervelmetastase, myeloomlokalisatie of pathologische inzakkingsfractuur die op MRI correspondeert met de klachten, bij voorkeur met intacte achterste wervelwand. Niet bij ernstige epidurale compressie met myelopathie of instabiliteit die eerst chirurgie vraagt. • Tegenover niet-chirurgische behandeling: pijnscore 3,8 punten lager op dag 7 tegen 0,3 punten, en rugfunctie (Roland-Morris) 8,5 punten beter op 1 maand (CAFE, RCT; Berenson et al., Lancet Oncol 2011, P<0,0001). Radiotherapie behandelt de tumor maar herstelt de mechanische stabiliteit niet en geeft doorgaans pas na enkele weken pijnrespons.",
+      "en": "Additive to radiotherapy and systemic therapy, not a replacement. Guidelines position cement augmentation for painful pathological vertebral fractures when conservative treatment falls short. • Painful vertebral metastasis, myeloma lesion or pathological compression fracture matching the symptoms on MRI, preferably with an intact posterior wall. Not for severe epidural compression with myelopathy or instability requiring surgery first. • Against non-surgical management: pain score 3.8 points lower at day 7 versus 0.3 points, and back function (Roland-Morris) 8.5 points better at 1 month (CAFE, RCT; Berenson et al., Lancet Oncol 2011, P<0.0001). Radiotherapy treats the tumour but does not restore mechanical stability and typically takes several weeks for pain response."
+     },
+     "nieuw": {
+      "nl": "Aanvullend op radiotherapie en systemische therapie, niet vervangend. Richtlijnen positioneren cementaugmentatie bij pijnlijke pathologische wervelfracturen wanneer conservatieve behandeling tekortschiet. • Pijnlijke wervelmetastase, myeloomlokalisatie of pathologische inzakkingsfractuur die op MRI correspondeert met de klachten, bij voorkeur met intacte achterste wervelwand. Niet bij ernstige epidurale compressie met myelopathie of instabiliteit die eerst chirurgie vraagt. • Tegenover niet-chirurgische behandeling: pijnscore 3,8 punten lager op dag 7 tegen 0,3 punten, en rugfunctie (Roland-Morris) 8,5 punten beter op 1 maand (CAFE, RCT; Berenson et al., Lancet Oncol 2011, PBij maligne wervelfracturen is de percutane route goedkoper dan open chirurgie, met 13.565 USD lagere kosten en 4,1 minder opnamedagen (Itagaki et al., JVIR 2012).",
+      "en": "Additive to radiotherapy and systemic therapy, not a replacement. Guidelines position cement augmentation for painful pathological vertebral fractures when conservative treatment falls short. • Painful vertebral metastasis, myeloma lesion or pathological compression fracture matching the symptoms on MRI, preferably with an intact posterior wall. Not for severe epidural compression with myelopathy or instability requiring surgery first. • Against non-surgical management: pain score 3.8 points lower at day 7 versus 0.3 points, and back function (Roland-Morris) 8.5 points better at 1 month (CAFE, RCT; Berenson et al., Lancet Oncol 2011, PFor malignant vertebral fractures the percutaneous route is cheaper than open surgery, with 13,565 USD lower cost and 4.1 fewer inpatient days (Itagaki et al., JVIR 2012)."
+     }
     }
    ]
   },
@@ -844,7 +1435,8 @@
    "velden": [
     "pos"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-28",
@@ -855,7 +1447,8 @@
    "velden": [
     "pos"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-28",
@@ -866,7 +1459,8 @@
    "velden": [
     "pos"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": []
   },
   {
    "datum": "2026-07-28",
@@ -877,7 +1471,20 @@
    "velden": [
     "pos"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "Curatieve eerstelijnsoptie bij BCLC 0/A. EASL, AASLD en de BCLC-strategie in de update van 2026 noemen ablatie een curatieve behandeling voor vroeg HCC en de voorkeursbehandeling bij niet-resectabele of niet-transplantabele kleine tumoren. • Solitaire of enkele tumoren tot ongeveer 3 cm geven de beste resultaten; tot 5 cm is ablatie mogelijk maar met een hogere lokale recidiefkans. Behouden leverfunctie (Child-Pugh A of goede B). • Tegenover resectie bij kleine HCC (SURF, RCT, 150 tegen 151 patiënten): 3-jaars recidiefvrije overleving 50,5% na RFA tegen 54,6% na resectie (p=0,58), met een mediane opnameduur van 10 tegen 17 dagen (p<0,01) en bijwerkingen bij 0% tegen 3% (Takayama et al., Liver Cancer 2022).",
+      "en": "First-line curative option in BCLC 0/A. EASL, AASLD and the BCLC strategy in its 2026 update call ablation a curative treatment for early HCC and the preferred option for small tumours that are not resectable or transplantable. • Solitary or few tumours up to about 3 cm give the best results; up to 5 cm ablation is feasible but with higher local recurrence. Preserved liver function (Child-Pugh A or good B). • Against resection in small HCC (SURF, RCT, 150 versus 151 patients): 3-year recurrence-free survival 50.5% after RFA versus 54.6% after resection (p=0.58), with median hospital stay 10 versus 17 days (p<0.01) and adverse events in 0% versus 3% (Takayama et al., Liver Cancer 2022)."
+     },
+     "nieuw": {
+      "nl": "Curatieve eerstelijnsoptie bij BCLC 0/A. EASL, AASLD en de BCLC-strategie in de update van 2026 noemen ablatie een curatieve behandeling voor vroeg HCC en de voorkeursbehandeling bij niet-resectabele of niet-transplantabele kleine tumoren. • Solitaire of enkele tumoren tot ongeveer 3 cm geven de beste resultaten; tot 5 cm is ablatie mogelijk maar met een hogere lokale recidiefkans. Behouden leverfunctie (Child-Pugh A of goede B). • Tegenover resectie bij kleine HCC (SURF, RCT, 150 tegen 151 patiënten): 3-jaars recidiefvrije overleving 50,5% na RFA tegen 54,6% na resectie (p=0,58), met een mediane opnameduur van 10 tegen 17 dagen (p (Takayama et al., Liver Cancer 2022).",
+      "en": "First-line curative option in BCLC 0/A. EASL, AASLD and the BCLC strategy in its 2026 update call ablation a curative treatment for early HCC and the preferred option for small tumours that are not resectable or transplantable. • Solitary or few tumours up to about 3 cm give the best results; up to 5 cm ablation is feasible but with higher local recurrence. Preserved liver function (Child-Pugh A or good B). • Against resection in small HCC (SURF, RCT, 150 versus 151 patients): 3-year recurrence-free survival 50.5% after RFA versus 54.6% after resection (p=0.58), with median hospital stay 10 versus 17 days (p (Takayama et al., Liver Cancer 2022)."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-28",
@@ -889,7 +1496,31 @@
     "results",
     "pos"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "results",
+     "oud": {
+      "nl": "Hoge technische effectiviteit (rond 90%) met beperkte lokale progressie; bij cryoablatie technisch succes 91,7% en lokaal recidief 16,7% (dir 2024). • Meta-analyses ondersteunen een hoge lokale controle en een gunstige overleving bij geselecteerde patiënten (JVIR 2020; systematische review 2023). • Intraprocedurele hypertensieve events komen voor en zijn te beheersen met alfa-blokkade en drukmonitoring (catecholamine-surge; JVIR 2016). • Tegenover chirurgie en radiotherapie (496 patiënten): chirurgie en radiotherapie gaven een betere lokale progressievrije overleving (p=0,021) en chirurgie een betere totale overleving (p=0,004), maar ablatie had de laagste complicatiekans en kosten (p5 cm was er geen verschil in lokale controle (p=0,23) (Xie et al., Eur Radiol 2026). • Bijniersparend, met behoud van functie bij unilaterale behandeling.",
+      "en": "High technical efficacy (around 90%) with limited local progression; for cryoablation technical success 91.7% and local recurrence 16.7% (dir 2024). • Meta-analyses support high local control and favourable survival in selected patients (JVIR 2020; systematic review 2023). • Intraprocedural hypertensive events occur and are manageable with alpha-blockade and pressure monitoring (catecholamine surge; JVIR 2016). • Against surgery and radiotherapy (496 patients): surgery and radiotherapy gave better local progression-free survival (p=0.021) and surgery better overall survival (p=0.004), but ablation had the lowest complication rate and cost (p5 cm there was no difference in local control (p=0.23) (Xie et al., Eur Radiol 2026). • Adrenal-sparing, preserving function with unilateral treatment."
+     },
+     "nieuw": {
+      "nl": "Hoge technische effectiviteit (rond 90%) met beperkte lokale progressie; bij cryoablatie technisch succes 91,7% en lokaal recidief 16,7% (dir 2024). • Meta-analyses ondersteunen een hoge lokale controle en een gunstige overleving bij geselecteerde patiënten (JVIR 2020; systematische review 2023). • Intraprocedurele hypertensieve events komen voor en zijn te beheersen met alfa-blokkade en drukmonitoring (catecholamine-surge; JVIR 2016). • Onder 5 cm even goede lokale controle als chirurgie en radiotherapie (p=0,23), met de laagste complicatiekans en kosten van de drie behandelingen (p<0,001). Bij grotere laesies bleven chirurgie en radiotherapie superieur voor lokale progressievrije overleving (p=0,021) en chirurgie voor totale overleving (p=0,004) (Xie et al., 496 patiënten, Eur Radiol 2026). • Bijniersparend, met behoud van functie bij unilaterale behandeling.",
+      "en": "High technical efficacy (around 90%) with limited local progression; for cryoablation technical success 91.7% and local recurrence 16.7% (dir 2024). • Meta-analyses support high local control and favourable survival in selected patients (JVIR 2020; systematic review 2023). • Intraprocedural hypertensive events occur and are manageable with alpha-blockade and pressure monitoring (catecholamine surge; JVIR 2016). • Below 5 cm, local control equals surgery and radiotherapy (p=0.23), with the lowest complication rate and cost of the three treatments (p<0.001). For larger lesions, surgery and radiotherapy remained superior for local progression-free survival (p=0.021) and surgery for overall survival (p=0.004) (Xie et al., 496 patients, Eur Radiol 2026). • Adrenal-sparing, preserving function with unilateral treatment."
+     }
+    },
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "Optie bij oligometastatische ziekte. Richtlijnen noemen lokale behandeling van een bijniermetastase bij een gecontroleerde primaire tumor, met adrenalectomie, SBRT en percutane ablatie als de drie opties. • Geïsoleerde of oligometastatische bijniermetastase, meestal ≤3 tot 5 cm. Onder 5 cm is de lokale progressievrije overleving gelijkwaardig aan chirurgie en radiotherapie (p=0,23); daarboven presteert ablatie slechter (Xie et al., Eur Radiol 2026). Alfa-blokkade en arteriële drukmonitoring zijn verplicht wegens het risico op een catecholamine-uitstoot. • Multi-institutionele cohortstudie van 496 patiënten (231 chirurgie, 132 ablatie, 133 radiotherapie): chirurgie en radiotherapie gaven een betere lokale progressievrije overleving dan ablatie (p=0,021) en chirurgie een betere totale overleving (p=0,004), maar ablatie had de laagste complicatiekans en de laagste kosten (p<0,001). Bij tumoren onder 5 cm verdween het verschil in lokale controle (p=0,23) (Xie et al., Eur Radiol 2026).",
+      "en": "Option in oligometastatic disease. Guidelines list local treatment of an adrenal metastasis with a controlled primary, with adrenalectomy, SBRT and percutaneous ablation as the three options. • Isolated or oligometastatic adrenal metastasis, usually ≤3 to 5 cm. Below 5 cm local progression-free survival equals surgery and radiotherapy (p=0.23); above it ablation performs worse (Xie et al., Eur Radiol 2026). Alpha blockade and arterial pressure monitoring are mandatory because of the risk of a catecholamine surge. • Multi-institutional cohort of 496 patients (231 surgery, 132 ablation, 133 radiotherapy): surgery and radiotherapy gave better local progression-free survival than ablation (p=0.021) and surgery better overall survival (p=0.004), but ablation had the lowest complication rate and the lowest cost (p<0.001). Below 5 cm the difference in local control disappeared (p=0.23) (Xie et al., Eur Radiol 2026)."
+     },
+     "nieuw": {
+      "nl": "Optie bij oligometastatische ziekte. Richtlijnen noemen lokale behandeling van een bijniermetastase bij een gecontroleerde primaire tumor, met adrenalectomie, SBRT en percutane ablatie als de drie opties. • Geïsoleerde of oligometastatische bijniermetastase, meestal ≤3 tot 5 cm. Onder 5 cm is de lokale controle gelijkwaardig aan chirurgie en radiotherapie (p=0,23), met de laagste complicatiekans en kosten; daarboven presteert ablatie slechter (Xie et al., Eur Radiol 2026). Alfa-blokkade en arteriële drukmonitoring zijn verplicht wegens het risico op een catecholamine-uitstoot. • Multi-institutionele cohortstudie van 496 patiënten (231 chirurgie, 132 ablatie, 133 radiotherapie): onder 5 cm gelijkwaardige lokale controle (p=0,23), waarbij ablatie de laagste complicatiekans en de laagste kosten had (p<0,001). Bij grotere laesies gaven chirurgie en radiotherapie een betere lokale progressievrije overleving (p=0,021) en chirurgie een betere totale overleving (p=0,004) (Xie et al., Eur Radiol 2026).",
+      "en": "Option in oligometastatic disease. Guidelines list local treatment of an adrenal metastasis with a controlled primary, with adrenalectomy, SBRT and percutaneous ablation as the three options. • Isolated or oligometastatic adrenal metastasis, usually ≤3 to 5 cm. Below 5 cm local control equals surgery and radiotherapy (p=0.23), with the lowest complication rate and cost; above it ablation performs worse (Xie et al., Eur Radiol 2026). Alpha blockade and arterial pressure monitoring are mandatory because of the risk of a catecholamine surge. • Multi-institutional cohort of 496 patients (231 surgery, 132 ablation, 133 radiotherapy): below 5 cm local control was equivalent (p=0.23), with ablation having the lowest complication rate and the lowest cost (p<0.001). For larger lesions, surgery and radiotherapy gave better local progression-free survival (p=0.021) and surgery better overall survival (p=0.004) (Xie et al., Eur Radiol 2026)."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-28",
@@ -900,7 +1531,20 @@
    "velden": [
     "pos"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "Curatief bedoelde standaardoptie. ESMO en CIRSE noemen lokale ablatie een hoeksteen bij beperkte (oligo)metastatische leverziekte; NCCN staat ablatie toe alleen of naast resectie wanneer alle ziekte behandeld kan worden. • Sterkste evidentie bij laesies ≤3 cm, tot ongeveer 10 laesies, lever-only, met een ablatiemarge van ≥5 tot 10 mm. Tussen 3 en 5 cm is de evidentie zwakker (registerdata). • Tegenover resectie bij ≤3 cm: non-inferieure overleving met minder complicaties, lagere mortaliteit en kortere opnameduur (COLLISION, fase 3 RCT; van der Lei et al., Lancet Oncol 2025). Tegenover chemotherapie alleen bij niet-resectabele ziekte: 8-jaars overleving 35,9% tegen 8,9% (CLOCC; Ruers et al., JNCI 2017).",
+      "en": "Standard curative-intent option. ESMO and CIRSE call local ablation a cornerstone in limited (oligo)metastatic liver disease; NCCN allows ablation alone or alongside resection when all disease can be eradicated. • Strongest evidence for lesions ≤3 cm, up to about 10 lesions, liver-only, with an ablation margin of ≥5 to 10 mm. Between 3 and 5 cm the evidence is weaker (registry data). • Against resection at ≤3 cm: non-inferior survival with fewer complications, lower mortality and shorter hospital stay (COLLISION, phase 3 RCT; van der Lei et al., Lancet Oncol 2025). Against chemotherapy alone in unresectable disease: 8-year survival 35.9% versus 8.9% (CLOCC; Ruers et al., JNCI 2017)."
+     },
+     "nieuw": {
+      "nl": "Curatief bedoelde standaardoptie. ESMO en CIRSE noemen lokale ablatie een hoeksteen bij beperkte (oligo)metastatische leverziekte; NCCN staat ablatie toe alleen of naast resectie wanneer alle ziekte behandeld kan worden. • Sterkste evidentie bij laesies ≤3 cm, tot ongeveer 10 laesies, lever-only, met een ablatiemarge van ≥5 tot 10 mm. Voor 3 tot 5 cm steunt het nu op registerdata (AmCORE) en loopt gericht vergelijkend onderzoek (COLLISION-XL). • Tegenover resectie bij ≤3 cm: non-inferieure overleving met minder complicaties, lagere mortaliteit en kortere opnameduur (COLLISION, fase 3 RCT; van der Lei et al., Lancet Oncol 2025). Tegenover chemotherapie alleen bij niet-resectabele ziekte: 8-jaars overleving 35,9% tegen 8,9% (CLOCC; Ruers et al., JNCI 2017).",
+      "en": "Standard curative-intent option. ESMO and CIRSE call local ablation a cornerstone in limited (oligo)metastatic liver disease; NCCN allows ablation alone or alongside resection when all disease can be eradicated. • Strongest evidence for lesions ≤3 cm, up to about 10 lesions, liver-only, with an ablation margin of ≥5 to 10 mm. For 3 to 5 cm it currently rests on registry data (AmCORE) with dedicated comparative trials under way (COLLISION-XL). • Against resection at ≤3 cm: non-inferior survival with fewer complications, lower mortality and shorter hospital stay (COLLISION, phase 3 RCT; van der Lei et al., Lancet Oncol 2025). Against chemotherapy alone in unresectable disease: 8-year survival 35.9% versus 8.9% (CLOCC; Ruers et al., JNCI 2017)."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-28",
@@ -2159,7 +2803,20 @@
    "velden": [
     "pos"
    ],
-   "naaraanleiding": []
+   "naaraanleiding": [],
+   "diff": [
+    {
+     "veld": "pos",
+     "oud": {
+      "nl": "Curatieve eerstelijnsoptie bij BCLC 0/A. EASL, AASLD en de BCLC-2022-strategie noemen ablatie een curatieve behandeling voor vroeg HCC en de voorkeursbehandeling bij niet-resectabele of niet-transplantabele kleine tumoren. • Solitaire of enkele tumoren tot ongeveer 3 cm geven de beste resultaten; tot 5 cm is ablatie mogelijk maar met een hogere lokale recidiefkans. Behouden leverfunctie (Child-Pugh A of goede B). • Tegenover resectie bij kleine HCC (SURF, RCT, 150 tegen 151 patiënten): 3-jaars recidiefvrije overleving 50,5% na RFA tegen 54,6% na resectie (p=0,58), met een mediane opnameduur van 10 tegen 17 dagen (p<0,01) en bijwerkingen bij 0% tegen 3% (Takayama et al., Liver Cancer 2022).",
+      "en": "First-line curative option in BCLC 0/A. EASL, AASLD and the BCLC 2022 strategy call ablation a curative treatment for early HCC and the preferred option for small tumours that are not resectable or transplantable. • Solitary or few tumours up to about 3 cm give the best results; up to 5 cm ablation is feasible but with higher local recurrence. Preserved liver function (Child-Pugh A or good B). • Against resection in small HCC (SURF, RCT, 150 versus 151 patients): 3-year recurrence-free survival 50.5% after RFA versus 54.6% after resection (p=0.58), with median hospital stay 10 versus 17 days (p<0.01) and adverse events in 0% versus 3% (Takayama et al., Liver Cancer 2022)."
+     },
+     "nieuw": {
+      "nl": "Curatieve eerstelijnsoptie bij BCLC 0/A. EASL, AASLD en de BCLC-strategie in de update van 2026 noemen ablatie een curatieve behandeling voor vroeg HCC en de voorkeursbehandeling bij niet-resectabele of niet-transplantabele kleine tumoren. • Solitaire of enkele tumoren tot ongeveer 3 cm geven de beste resultaten; tot 5 cm is ablatie mogelijk maar met een hogere lokale recidiefkans. Behouden leverfunctie (Child-Pugh A of goede B). • Tegenover resectie bij kleine HCC (SURF, RCT, 150 tegen 151 patiënten): 3-jaars recidiefvrije overleving 50,5% na RFA tegen 54,6% na resectie (p=0,58), met een mediane opnameduur van 10 tegen 17 dagen (p<0,01) en bijwerkingen bij 0% tegen 3% (Takayama et al., Liver Cancer 2022).",
+      "en": "First-line curative option in BCLC 0/A. EASL, AASLD and the BCLC strategy in its 2026 update call ablation a curative treatment for early HCC and the preferred option for small tumours that are not resectable or transplantable. • Solitary or few tumours up to about 3 cm give the best results; up to 5 cm ablation is feasible but with higher local recurrence. Preserved liver function (Child-Pugh A or good B). • Against resection in small HCC (SURF, RCT, 150 versus 151 patients): 3-year recurrence-free survival 50.5% after RFA versus 54.6% after resection (p=0.58), with median hospital stay 10 versus 17 days (p<0.01) and adverse events in 0% versus 3% (Takayama et al., Liver Cancer 2022)."
+     }
+    }
+   ]
   },
   {
    "datum": "2026-07-27",

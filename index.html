@@ -219,6 +219,16 @@
   .pubrij.open .prsam{display:block}
   .pubrij.open .ptitel{white-space:normal;overflow:visible}
   .watverd{font-weight:600;color:#33475b;margin-bottom:6px}
+  .diffknop{font:inherit;font-size:11.5px;font-weight:600;color:var(--brand);background:none;border:0;cursor:pointer;padding:2px 0;margin:0 0 4px}
+  .diffknop::before{content:'▸ ';font-size:9px}
+  .diffknop.open::before{content:'▾ '}
+  .diffbox{display:none;margin:2px 0 6px}
+  .diffbox.open{display:block}
+  .diffveld+.diffveld{margin-top:8px}
+  .difflabel{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px}
+  .diffline{font-size:12px;line-height:1.65;color:#46586b;background:#f8fafc;border:1px solid var(--line);border-radius:7px;padding:7px 10px}
+  .diffline del{background:#fdeaea;color:#b23b3b;text-decoration:line-through;padding:0 1px;border-radius:2px}
+  .diffline ins{background:#e7f4ee;color:#147a5a;text-decoration:none;padding:0 1px;border-radius:2px}
   .aanl{border-left:2px solid var(--line);padding:2px 0 2px 9px;margin:5px 0}
   .aanltitel{font-weight:600;color:#2b3947;margin-bottom:2px}
   .kern{font-size:10.5px;font-weight:600;color:#5b6b7c;white-space:nowrap;flex:none;vertical-align:middle}
@@ -1467,6 +1477,38 @@ function watVeranderd(r){
                       :`New card ${naam} added to the site.`;
   return '';
 }
+function woordDiff(a,b){
+  const A=(a||'').split(/(\s+)/), B=(b||'').split(/(\s+)/);
+  const n=A.length,m=B.length;
+  const dp=Array.from({length:n+1},()=>new Int32Array(m+1));
+  for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)
+    dp[i][j]=A[i]===B[j]?dp[i+1][j+1]+1:Math.max(dp[i+1][j],dp[i][j+1]);
+  const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  let i=0,j=0,out='';
+  while(i<n&&j<m){
+    if(A[i]===B[j]){out+=esc(A[i]);i++;j++;}
+    else if(dp[i+1][j]>=dp[i][j+1]){ out+=A[i].trim()?'<del>'+esc(A[i])+'</del>':esc(A[i]); i++; }
+    else { out+=B[j].trim()?'<ins>'+esc(B[j])+'</ins>':esc(B[j]); j++; }
+  }
+  while(i<n){ out+=A[i].trim()?'<del>'+esc(A[i])+'</del>':esc(A[i]); i++; }
+  while(j<m){ out+=B[j].trim()?'<ins>'+esc(B[j])+'</ins>':esc(B[j]); j++; }
+  return out;
+}
+function diffHTML(r){
+  if(!r.diff||!r.diff.length) return '';
+  const FL={bl:{nl:'inleiding',en:'introduction'},crit:{nl:'wanneer geschikt',en:'when suitable'},
+    results:{nl:'resultaten',en:'results'},lim:{nl:'beperkingen',en:'limitations'},
+    alts:{nl:'alternatieven',en:'alternatives'},pos:{nl:'positie en kracht',en:'position and strength'}};
+  const blks=r.diff.map(dd=>{
+    const oud=(dd.oud&&(dd.oud[lang]||dd.oud.nl))||'', nieuw=(dd.nieuw&&(dd.nieuw[lang]||dd.nieuw.nl))||'';
+    if(oud===nieuw) return '';
+    const lab=FL[dd.veld]?FL[dd.veld][lang]:dd.veld;
+    return `<div class="diffveld"><div class="difflabel">${lab}</div><div class="diffline">${woordDiff(oud,nieuw)}</div></div>`;
+  }).filter(Boolean).join('');
+  if(!blks) return '';
+  const knop=lang==='nl'?'Wat is er precies aangepast?':'Exactly what changed?';
+  return `<button class="diffknop" onclick="event.stopPropagation();const d=this.nextElementSibling;d.classList.toggle('open');this.classList.toggle('open')">${knop}</button><div class="diffbox">${blks}</div>`;
+}
 async function renderWijzig(){
   document.getElementById('w-titel').textContent=lang==='nl'?'Wat is er veranderd':'What changed';
   document.getElementById('w-sub').textContent=lang==='nl'
@@ -1513,7 +1555,7 @@ async function renderWijzig(){
             return `<div class="aanl"><div class="aanltitel">${kernChip(t||[])}${titel}${lnk}</div>${det}</div>`;
           }).join('')
         : '';
-      const binnen=`<div class="prsam"><div class="watverd">${watVeranderd(r)}</div>`
+      const binnen=`<div class="prsam"><div class="watverd">${watVeranderd(r)}</div>${diffHTML(r)}`
         +(lit?`<div class="bron">${lit[1]}</div>${scoreUitleg(lit)}${kortSam(lit[3])}`:'')
         +aanleiding
         +`<span class="prlinks">${bronLink}${kaartLink}</span></div>`;
