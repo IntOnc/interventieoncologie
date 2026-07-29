@@ -206,8 +206,14 @@ try {
   }
   regels.length = 0; regels.push(...samen);
   regels.reverse();                    // nieuwste eerst
-  fs.writeFileSync('wijzigingen.json', JSON.stringify({ bijgewerkt: vandaag, regels: regels.slice(0, 500) }, null, 1));
-  console.log('wijzigingen.json:', regels.length, 'inhoudelijke wijzigingen');
+  // Alleen literatuur-gedreven wijzigingen op de site: toegevoegde publicaties en
+  // richtlijnen, nieuwe kaarten, en tekstwijzigingen die op nieuwe literatuur steunen.
+  // Puur redactionele tekstwijzigingen, correcties en verwijderingen blijven eruit.
+  const uitLit = r => (r.type === 'toegevoegd' || r.type === 'richtlijn' || r.type === 'nieuw')
+    || (r.type === 'tekst' && r.naaraanleiding && r.naaraanleiding.length);
+  const eind = regels.filter(uitLit);
+  fs.writeFileSync('wijzigingen.json', JSON.stringify({ bijgewerkt: vandaag, regels: eind.slice(0, 500) }, null, 1));
+  console.log('wijzigingen.json:', eind.length, 'literatuur-gedreven wijzigingen (van', regels.length, 'totaal)');
 } catch (e) {
   console.log('wijzigingen.json overgeslagen:', e.message);
 }

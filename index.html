@@ -1432,7 +1432,7 @@ function uitLiteratuur(r){
   if(r.type==='tekst') return !!(r.naaraanleiding&&r.naaraanleiding.length);
   return false;
 }
-let wFilter='lit';
+let wFilter='alles';
 function zetWFilter(v){ wFilter=v; renderWijzig(); }
 // zoek een literatuurregel op de kaart via de bron-url
 function litViaBron(kaart,bron){
@@ -1524,8 +1524,8 @@ function diffHTML(r){
 async function renderWijzig(){
   document.getElementById('w-titel').textContent=lang==='nl'?'Wat is er veranderd':'What changed';
   document.getElementById('w-sub').textContent=lang==='nl'
-    ? 'Wijzigingen op basis van nieuwe literatuur. Redactionele aanpassingen staan onder de filter Redactioneel.'
-    : 'Changes driven by new literature. Editorial edits are under the Editorial filter.';
+    ? 'Elke wijziging aan de kaarten op basis van nieuwe literatuur, afgeleid uit het archief van de site.'
+    : 'Every change to the cards driven by new literature, derived from the site archive.';
   const lijst=document.getElementById('w-lijst');
   if(!wijzigCache){
     lijst.innerHTML=`<p class="refs">${lang==='nl'?'Bezig met ophalen…':'Loading…'}</p>`;
@@ -1540,18 +1540,14 @@ async function renderWijzig(){
       return;
     }
   }
-  const litN=wijzigCache.filter(uitLiteratuur).length;
-  const tel={lit:litN, redactioneel:wijzigCache.length-litN, alles:wijzigCache.length};
+  const basis=wijzigCache.filter(uitLiteratuur);   // veiligheidsnet; de generator levert al alleen literatuur-gedreven
+  const tel={alles:basis.length};
+  Object.keys(WTYPE).forEach(t=>tel[t]=basis.filter(r=>r.type===t).length);
   const knop=(v,t)=>tel[v]?`<button class="litchip${wFilter===v?' on':''}" onclick="zetWFilter('${v}')">${t} <span class="n">${tel[v]}</span></button>`:'';
-  const balk=`<div class="litbar"><span class="litchips">`
-    +knop('lit',lang==='nl'?'Uit de literatuur':'From the literature')
-    +knop('redactioneel',lang==='nl'?'Redactioneel':'Editorial')
-    +knop('alles',lang==='nl'?'Alles':'All')
+  const balk=`<div class="litbar"><span class="litchips">`+knop('alles',lang==='nl'?'Alles':'All')
+    +['toegevoegd','richtlijn','tekst','nieuw'].map(t=>knop(t,WTYPE[t][lang])).join('')
     +`</span></div>`;
-  const zicht=wFilter==='lit'?wijzigCache.filter(uitLiteratuur)
-    :wFilter==='redactioneel'?wijzigCache.filter(r=>!uitLiteratuur(r))
-    :wFilter==='alles'?wijzigCache
-    :wijzigCache.filter(r=>r.type===wFilter);
+  const zicht=wFilter==='alles'?basis:basis.filter(r=>r.type===wFilter);
   const perMaand={};
   zicht.forEach(r=>{ const k=(r.datum||'').slice(0,7); (perMaand[k]=perMaand[k]||[]).push(r); });
   const maandnaam=k=>{const t=k.split('-'); return MND[lang][Number(t[1])-1]+' '+t[0];};
