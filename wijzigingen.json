@@ -3,6 +3,17 @@
  "regels": [
   {
    "datum": "2026-07-29",
+   "kaart": "adrenal-ablatie",
+   "kort": "Ablatie bijnier",
+   "type": "tekst",
+   "wat": "Percutane ablatie van bijniermetastasen",
+   "velden": [
+    "bl"
+   ],
+   "naaraanleiding": []
+  },
+  {
+   "datum": "2026-07-29",
    "kaart": "cca-ablatie",
    "kort": "Ablatie CCA",
    "type": "tekst",
