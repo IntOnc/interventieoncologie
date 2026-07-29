@@ -139,8 +139,8 @@ function platveld(v) {
   return s.length > 1600 ? s.slice(0, 1600) + '…' : s;
 }
 try {
-  const log = execSync('git log --date=short --pretty=format:%H%x09%ad -- content.json', { encoding: 'utf8' })
-    .split('\n').filter(Boolean).map(r => { const [sha, datum] = r.split('\t'); return { sha, datum }; });
+  const log = execSync('git log --date=short --pretty=format:%H%x09%ad%x09%s -- content.json', { encoding: 'utf8' })
+    .split('\n').filter(Boolean).map(r => { const [sha, datum, ...rest] = r.split('\t'); return { sha, datum, subject: rest.join(' ').trim() }; });
   log.reverse();                       // oudste eerst
   const regels = [];
   let vorige = null;
@@ -148,6 +148,7 @@ try {
     const nu = lees(c.sha);
     if (!nu) continue;
     if (vorige) {
+      const _start = regels.length;    // regels die in deze commit ontstaan, krijgen straks de commit-boodschap als aanleiding
       const kort = id => {
         const rij = (d.index || []).find(x => x.id === id);
         return rij && rij.kort ? rij.kort.nl : ((d.cards[id] && d.cards[id].nl.title) || id);
@@ -185,6 +186,7 @@ try {
           regels.push({ datum: c.datum, kaart: id, kort: kort(id), type: 'tekst', wat: nu.cards[id].nl.title, velden, naaraanleiding: nieuweHier.slice(0, 4), diff });
         }
       }
+      for (let k = _start; k < regels.length; k++) if (c.subject) regels[k].reden = c.subject;
     }
     vorige = nu;
   }
