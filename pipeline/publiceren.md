@@ -179,6 +179,37 @@ niet allebei, om dubbele nadruk te voorkomen. De p-waarden en de referentie
 blijven in de gewone tekst staan; de punten in de callout zijn een korte
 samenvatting, geen vervanging.
 
+## Bondig verwoorden
+
+Kort en to-the-point heeft de voorkeur. Schrijf nieuwe of gewijzigde
+kernboodschappen (`bl`) meteen beknopt: elke feitelijke claim, elk getal, elke
+p-waarde en elke trialnaam blijft staan, maar bindwoorden en herhaling gaan
+eruit. Een kernboodschap van meer dan ongeveer honderd woorden is bijna altijd
+in te korten zonder verlies; laat al compacte kaarten met rust.
+
+De punten in de `sterk`-callout ("Kracht van IR") schrijf je in telegramstijl,
+niet als volzin. Begin waar het kan met de grens of het getal en benoem de
+vergelijker, bijvoorbeeld "<5 cm: lokale controle even goed als chirurgie en
+radiotherapie" of "Solitair ≤5 cm: <50% van de kosten van resectie, opname 3 vs
+10 dagen". Een kleiner-dan gevolgd door een cijfer (`<5 cm`, `<50%`) mag
+letterlijk blijven staan; de browser leest dat als tekst, niet als een tag.
+
+## Modaliteitsvoorkeur binnen ablatie
+
+Ablatie is geen monoliet: RFA, microwave (MWA), cryoablatie en IRE verschillen
+per indicatie. Waar de literatuur laat zien dat één modaliteit voor een
+behandeling betere resultaten haalt dan de andere, benoem dat expliciet in de
+kaarttekst, met dezelfde bronregels als elke andere claim (cijfers geverifieerd,
+referentie erbij). En andersom: is een modaliteit voor een indicatie achterhaald
+of verdrongen door een betere techniek, zeg dat dan ook, zodat de kaart niet
+suggereert dat alle ablatievormen gelijkwaardig zijn.
+
+Houd de terminologie zuiver (RFA is radiofrequente ablatie, MWA is microwave,
+enzovoort) en overdrijf niet: een voorkeur staat alleen op de kaart als een
+opgehaalde bron een directe of indirecte vergelijking onderbouwt. Ontbreekt die
+vergelijking, dan blijft de neutrale formulering "thermale ablatie (RFA of
+microwave)" staan en noteer je de openstaande vraag voor een volgende ronde.
+
 ## Tekstwijzigingen aan de kaart
 
 Een ronde past ook de kaarttekst zelf aan waar nieuwe literatuur daarom vraagt:
