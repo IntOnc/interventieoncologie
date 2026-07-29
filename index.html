@@ -1259,8 +1259,9 @@ async function renderGewijzigd(){
       wijzigCache=(await r.json()).regels||[];
     }catch(e){ wijzigCache=null; }
   }
-  if(wijzigCache && wijzigCache.length){
-    const rijen=wijzigCache.slice(0,startAantal());
+  const litRegels=wijzigCache?wijzigCache.filter(uitLiteratuur):[];
+  if(litRegels.length){
+    const rijen=litRegels.slice(0,startAantal());
     box.innerHTML=kopH
       + rijen.map(r=>{
           const klik=CARDS[r.kaart]?`onclick="showCard('${r.kaart}')" role="link" tabindex="0"`:'';
@@ -1422,7 +1423,16 @@ const WTYPE={
   richtlijn:{nl:'richtlijn',en:'guideline',kl:'guide'},
   tekst:{nl:'kaarttekst',en:'card text',kl:'ongoing'},
   nieuw:{nl:'nieuwe kaart',en:'new card',kl:'core'}};
-let wFilter='alles';
+// Een wijziging komt "uit de literatuur" als er een publicatie of richtlijn achter zit:
+// een toegevoegde/verwijderde publicatie of richtlijn, een nieuwe kaart, of een
+// tekstwijziging die op nieuwe literatuur in dezelfde ronde steunt. Puur redactionele
+// tekstwijzigingen (inkorten, terminologie, stijl) en losse correcties vallen erbuiten.
+function uitLiteratuur(r){
+  if(r.type==='toegevoegd'||r.type==='richtlijn'||r.type==='nieuw') return true;
+  if(r.type==='tekst') return !!(r.naaraanleiding&&r.naaraanleiding.length);
+  return false;
+}
+let wFilter='lit';
 function zetWFilter(v){ wFilter=v; renderWijzig(); }
 // zoek een literatuurregel op de kaart via de bron-url
 function litViaBron(kaart,bron){
@@ -1514,8 +1524,8 @@ function diffHTML(r){
 async function renderWijzig(){
   document.getElementById('w-titel').textContent=lang==='nl'?'Wat is er veranderd':'What changed';
   document.getElementById('w-sub').textContent=lang==='nl'
-    ? 'Elke inhoudelijke wijziging aan de kaarten, afgeleid uit het archief van de site'
-    : 'Every content change to the cards, derived from the site archive';
+    ? 'Wijzigingen op basis van nieuwe literatuur. Redactionele aanpassingen staan onder de filter Redactioneel.'
+    : 'Changes driven by new literature. Editorial edits are under the Editorial filter.';
   const lijst=document.getElementById('w-lijst');
   if(!wijzigCache){
     lijst.innerHTML=`<p class="refs">${lang==='nl'?'Bezig met ophalen…':'Loading…'}</p>`;
@@ -1530,13 +1540,18 @@ async function renderWijzig(){
       return;
     }
   }
-  const tel={alles:wijzigCache.length};
-  Object.keys(WTYPE).forEach(t=>tel[t]=wijzigCache.filter(r=>r.type===t).length);
+  const litN=wijzigCache.filter(uitLiteratuur).length;
+  const tel={lit:litN, redactioneel:wijzigCache.length-litN, alles:wijzigCache.length};
   const knop=(v,t)=>tel[v]?`<button class="litchip${wFilter===v?' on':''}" onclick="zetWFilter('${v}')">${t} <span class="n">${tel[v]}</span></button>`:'';
-  const balk=`<div class="litbar"><span class="litchips">`+knop('alles',lang==='nl'?'Alles':'All')
-    +['toegevoegd','richtlijn','tekst','bijgewerkt','verwijderd'].map(t=>knop(t,WTYPE[t][lang])).join('')
+  const balk=`<div class="litbar"><span class="litchips">`
+    +knop('lit',lang==='nl'?'Uit de literatuur':'From the literature')
+    +knop('redactioneel',lang==='nl'?'Redactioneel':'Editorial')
+    +knop('alles',lang==='nl'?'Alles':'All')
     +`</span></div>`;
-  const zicht=wFilter==='alles'?wijzigCache:wijzigCache.filter(r=>r.type===wFilter);
+  const zicht=wFilter==='lit'?wijzigCache.filter(uitLiteratuur)
+    :wFilter==='redactioneel'?wijzigCache.filter(r=>!uitLiteratuur(r))
+    :wFilter==='alles'?wijzigCache
+    :wijzigCache.filter(r=>r.type===wFilter);
   const perMaand={};
   zicht.forEach(r=>{ const k=(r.datum||'').slice(0,7); (perMaand[k]=perMaand[k]||[]).push(r); });
   const maandnaam=k=>{const t=k.split('-'); return MND[lang][Number(t[1])-1]+' '+t[0];};
