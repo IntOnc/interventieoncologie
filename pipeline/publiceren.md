@@ -210,6 +210,17 @@ opgehaalde bron een directe of indirecte vergelijking onderbouwt. Ontbreekt die
 vergelijking, dan blijft de neutrale formulering "thermale ablatie (RFA of
 microwave)" staan en noteer je de openstaande vraag voor een volgende ronde.
 
+Let op de bewijskracht en de plaats. Een modaliteitsvoorkeur hoort alleen in de
+kernboodschap (`bl`) als ze robuust is onderbouwd: een gerandomiseerde trial of
+een meta-analyse. Rust ze op één retrospectieve studie of een enkel cohort, dan
+is dat te zwak voor de kernboodschap; laat de studie dan in de literatuurlijst
+staan en zet de nuance hooguit in `results`, met de opzet expliciet benoemd
+("in een retrospectieve studie"). Weeg ook de klinische context mee: een techniek
+die in de richtlijnen en de praktijk geen gangbare optie is voor een indicatie
+(bijvoorbeeld cryoablatie bij HCC, dat op één RCT uit 2015 rust) hoort niet als
+voorkeur in de kernboodschap, ook niet als er een positieve trial bestaat. Dit
+is een algemene regel: wat zwak onderbouwd is, hoort niet in de kernboodschap.
+
 ## Tekstwijzigingen aan de kaart
 
 Een ronde past ook de kaarttekst zelf aan waar nieuwe literatuur daarom vraagt:
