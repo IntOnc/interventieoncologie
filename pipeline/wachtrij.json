@@ -1,0 +1,5 @@
+{
+ "bijgewerkt": "2026-07-29",
+ "toelichting": "Gevonden publicaties die nog niet indexeerbaar of verifieerbaar waren. De dagelijkse scan (pipeline/dagelijkse-scan.md) en de diepe rondes checken deze opnieuw en voegen ze toe zodra ze wel te verifieren zijn. Item: kaart, titel, doi of url, reden, sinds (JJJJ-MM-DD). Verwijderen zodra toegevoegd of ouder dan 60 dagen.",
+ "wachtrij": []
+}

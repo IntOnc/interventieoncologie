@@ -179,6 +179,11 @@ Naast nieuwe literatuur houdt elke ronde ook het bestaande actueel:
 - Lopende studies. Loop de `ongoing`-lijsten na. Is een trial afgerond en gepubliceerd, verplaats hem dan naar `core` of `latest` met een samenvatting met kerngetallen; is hij ingetrokken of gestopt, haal hem weg. Controleer de status via het trialregister (NCT-nummer) of een recente publicatie.
 - Richtlijnversies. Controleer of een geciteerde richtlijn (BCLC, EASL, AASLD, ESMO, NCCN, CIRSE, Richtlijnendatabase) een nieuwere versie heeft en werk jaartal, link en zo nodig het standpunt bij.
 - Kosten en resource-gebruik. Waar een kaart een directe vergelijking met chirurgie of radiotherapie heeft, is een kosten-, ligduur- of dagopname-vergelijking een sterke, onderbelichte troef van IR. Voeg zo'n studie toe als je die vindt en laat het punt in de kaarttekst of de callout terugkomen, altijd met bron.
+- Wachtrij. `pipeline/wachtrij.json` is de gedeelde lijst van eerder gevonden maar nog niet verifieerbare items. Loop die aan het begin van je ronde langs: is een item nu wel indexeerbaar, voeg het dan toe en haal het uit de wachtrij; laat items ouder dan 60 dagen vallen. Wat je zelf vindt maar niet kunt verifieren, zet je erin met datum.
+
+## Verhouding tot de dagelijkse scan
+
+Naast deze diepe rondes (maandag, woensdag, vrijdag) draait op de tussenliggende dagen een lichte dagelijkse scan, beschreven in `pipeline/dagelijkse-scan.md`. Die ontdekt alleen of er nieuwe, geindexeerde literatuur of een gewijzigde trialstatus is en verwerkt dat gericht; het volledige tijdschrift- en per-kaart-werk blijft aan de diepe rondes. Beide delen dezelfde `wachtrij.json`.
 
 ## Wat je niet doet
 
