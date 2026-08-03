@@ -218,6 +218,8 @@
     border-top:1px solid var(--line)}
   .pubrij.open .prsam{display:block}
   .pubrij.open .ptitel{white-space:normal;overflow:visible;-webkit-line-clamp:unset;display:block}
+  .auteurs{font-size:11px;color:var(--muted);line-height:1.5;margin:7px 0 2px;padding-top:6px;border-top:1px solid var(--line)}
+  .auteurs b{color:#5b6b7c;font-weight:700}
   .watverd{font-weight:600;color:#33475b;margin-bottom:6px}
   .reden{font-size:12px;color:#46586b;background:#f6f9f9;border-left:3px solid var(--brand-2);border-radius:0 6px 6px 0;padding:5px 10px;margin:0 0 7px}
   .reden b{color:#33475b;font-weight:700}
@@ -495,14 +497,19 @@
 // Alle inhoud staat in content.json. Dit bestand bevat alleen opmaak en weergave.
 // De pipeline bewerkt uitsluitend content.json.
 let AFK={};
+let AUTEURS={};
 let SITE={}, ORGANS={}, DISEASES={}, TECHS={}, INDEX=[], CARDS={}, POS={}, TECHPAGES=[];
+function normUrl(u){ return (u||'').toString().toLowerCase().replace(/^https?:\/\//,'').replace(/^www\./,'').replace(/^dx\./,'').replace(/\/$/,''); }
+function auteursVan(url){ const a=AUTEURS[normUrl(url)]; return (a&&a.length)?a:null; }
+function auteursRegel(url){ const a=auteursVan(url); if(!a) return '';
+  return `<div class="auteurs"><b>${lang==='nl'?'Auteurs':'Authors'}:</b> ${a.join(', ')}</div>`; }
 let editorialNL='', editorialEN='';
 
 async function laadInhoud(){
   const res = await fetch('content.json?v=' + Date.now());
   if(!res.ok) throw new Error('content.json niet gevonden (' + res.status + ')');
   const d = await res.json();
-  SITE=d.site; AFK=d.afkortingen||{}; ORGANS=d.organs; DISEASES=d.diseases; TECHS=d.techs;
+  SITE=d.site; AFK=d.afkortingen||{}; AUTEURS=d.auteurs||{}; ORGANS=d.organs; DISEASES=d.diseases; TECHS=d.techs;
   INDEX=d.index; CARDS=d.cards; POS=d.pos; TECHPAGES=d.techpages;
   editorialNL=d.editorial.nl; editorialEN=d.editorial.en;
   for(const id of Object.keys(CARDS)){
@@ -664,7 +671,7 @@ function litRegel(p,kind){
   return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
     <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}${mr}
       <span class="meta2">${scorePil(p)}${mid}<span class="dat">${datumLabel(p[4])}</span></span></div>
-    <div class="sum">${scoreUitleg(p)}${full} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${deelKnop(p[2], p[0])}</div>
+    <div class="sum">${scoreUitleg(p)}${full}${auteursRegel(p[2])} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${deelKnop(p[2], p[0])}</div>
   </div>`;
 }
 function litHTML(items,kind){
@@ -826,7 +833,7 @@ function pubRij(x){
       <span class="ptitel">${x.titel}</span>${isMustRead(x.rij)?mustBadge():''}
       <span class="pmetawrap">${scorePil(x.rij)}${[x.aut?`<span class="paut">${x.aut}</span>`:'',kernChip(x.rij),`<span class="pmeta" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>`].filter(Boolean).join('<span class="sp">·</span>')}</span>
     </div>
-    <div class="prsam">${scoreUitleg(x.rij)}${kortSam(x.sam)}
+    <div class="prsam">${scoreUitleg(x.rij)}${kortSam(x.sam)}${auteursRegel(x.url)}
       <span class="prlinks">
         <a href="${x.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${naarPub}</a>
         <a href="#" onclick="event.stopPropagation();event.preventDefault();showCard('${x.id}')">${naarKaart}</a>
@@ -1421,7 +1428,7 @@ function renderLitPagina(){
     if(lpFilters.minscore){ const b=bewijs(x.rij); if(!b||b.score<lpFilters.minscore) return false; }
     if(maanden){ const g=new Date(nu.getFullYear(),nu.getMonth()-maanden,1); const grens=g.getFullYear()*100+(g.getMonth()+1);
       if(x.sk<grens) return false; }
-    if(termen.length){ const hooi=lpNorm(x.titel+' '+x.aut+' '+x.venue+' '+tekstUit(x.sam)+' '+x.kaart);
+    if(termen.length){ const hooi=lpNorm(x.titel+' '+x.aut+' '+(auteursVan(x.url)||[]).join(' ')+' '+x.venue+' '+tekstUit(x.sam)+' '+x.kaart);
       if(!termen.every(t=>hooi.includes(t))) return false; }
     return true;
   });
