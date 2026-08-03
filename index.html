@@ -224,6 +224,8 @@
   .auteurs b{color:#5b6b7c;font-weight:700}
   .instituten{font-size:11px;color:var(--muted);line-height:1.5;margin:3px 0 2px}
   .instituten b{color:#5b6b7c;font-weight:700}
+  .landen{font-size:11px;color:var(--muted);line-height:1.5;margin:3px 0 2px}
+  .landen b{color:#5b6b7c;font-weight:700}
   .watverd{font-weight:600;color:#33475b;margin-bottom:6px}
   .reden{font-size:12px;color:#46586b;background:#f6f9f9;border-left:3px solid var(--brand-2);border-radius:0 6px 6px 0;padding:5px 10px;margin:0 0 7px}
   .reden b{color:#33475b;font-weight:700}
@@ -240,8 +242,8 @@
   .aanl{border-left:2px solid var(--line);padding:2px 0 2px 9px;margin:5px 0}
   .aanltitel{font-weight:600;color:#2b3947;margin-bottom:2px}
   .kern{font-size:10.5px;font-weight:600;color:#5b6b7c;white-space:nowrap;flex:none;vertical-align:middle}
-  .mrbadge{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
-    color:#7a4a02;background:#ffe8b3;border-radius:5px;padding:1px 6px;margin:0 6px;vertical-align:middle}
+  .mrbadge{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;
+    color:#7a4a02;background:#ffe8b3;border-radius:5px;padding:1px 6px;margin:0;vertical-align:middle}
   .prkort{color:var(--muted);font-style:italic}
   .prlinks{display:block;margin-top:6px}
   .prlinks a{color:var(--brand);font-weight:600;text-decoration:none;white-space:nowrap;margin-right:14px}
@@ -501,7 +503,7 @@
 // Alle inhoud staat in content.json. Dit bestand bevat alleen opmaak en weergave.
 // De pipeline bewerkt uitsluitend content.json.
 let AFK={};
-let AUTEURS={}, INSTITUTEN={};
+let AUTEURS={}, INSTITUTEN={}, LANDEN={};
 let SITE={}, ORGANS={}, DISEASES={}, TECHS={}, INDEX=[], CARDS={}, POS={}, TECHPAGES=[];
 function normUrl(u){ return (u||'').toString().toLowerCase().replace(/^https?:\/\//,'').replace(/^www\./,'').replace(/^dx\./,'').replace(/\/$/,''); }
 function auteursVan(url){ const a=AUTEURS[normUrl(url)]; return (a&&a.length)?a:null; }
@@ -510,13 +512,16 @@ function auteursRegel(url){ const a=auteursVan(url); if(!a) return '';
 function institutenVan(url){ const a=INSTITUTEN[normUrl(url)]; return (a&&a.length)?a:null; }
 function institutenRegel(url){ const a=institutenVan(url); if(!a) return '';
   return `<div class="instituten"><b>${lang==='nl'?'Instituten':'Institutions'}:</b> ${a.join(' · ')}</div>`; }
+function landenVan(url){ const a=LANDEN[normUrl(url)]; return (a&&a.length)?a:null; }
+function landenRegel(url){ const a=landenVan(url); if(!a) return '';
+  return `<div class="landen"><b>${lang==='nl'?'Land':'Country'}:</b> ${a.join(' · ')}</div>`; }
 let editorialNL='', editorialEN='';
 
 async function laadInhoud(){
   const res = await fetch('content.json?v=' + Date.now());
   if(!res.ok) throw new Error('content.json niet gevonden (' + res.status + ')');
   const d = await res.json();
-  SITE=d.site; AFK=d.afkortingen||{}; AUTEURS=d.auteurs||{}; INSTITUTEN=d.instituten||{}; ORGANS=d.organs; DISEASES=d.diseases; TECHS=d.techs;
+  SITE=d.site; AFK=d.afkortingen||{}; AUTEURS=d.auteurs||{}; INSTITUTEN=d.instituten||{}; LANDEN=d.landen||{}; ORGANS=d.organs; DISEASES=d.diseases; TECHS=d.techs;
   INDEX=d.index; CARDS=d.cards; POS=d.pos; TECHPAGES=d.techpages;
   editorialNL=d.editorial.nl; editorialEN=d.editorial.en;
   for(const id of Object.keys(CARDS)){
@@ -644,7 +649,7 @@ function klapUit(el){
 // Must-read: sterke en recente evidence (bewijskracht hoog + laatste 24 maanden)
 function grensMR(){ const n=new Date(); const t=n.getFullYear()*12+n.getMonth()-24; return Math.floor(t/12)*100+(t%12)+1; }
 function isMustRead(p){ const b=bewijs(p); return !!(b && b.score>=70 && (Number(p&&p[4])||0)>=grensMR()); }
-function mustBadge(){ return `<span class="mrbadge" title="${lang==='nl'?'Sterke, recente evidence':'Strong, recent evidence'}">must read</span>`; }
+function mustBadge(){ return `<span class="mrbadge" title="${lang==='nl'?'Sterke, recente evidence':'Strong, recent evidence'}">★ must read</span>`; }
 // Kerngetal: opzet + aantal patiënten uit de gestructureerde bewijsgegevens (altijd correct);
 // een expliciete kop in het 8e element gaat voor als die er is.
 function kernChip(p){
@@ -676,9 +681,9 @@ function litRegel(p,kind){
   const venueSpan=`<span class="venue" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>`;
   const mid=[aut,kernChip(p),venueSpan].filter(Boolean).join('<span class="sp">·</span>');
   return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
-    <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}${mr}
-      <span class="meta2">${scorePil(p)}${mid}<span class="dat">${datumLabel(p[4])}</span></span></div>
-    <div class="sum">${scoreUitleg(p)}${segLijnen(full)}${auteursRegel(p[2])}${institutenRegel(p[2])} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${deelKnop(p[2], p[0])}</div>
+    <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}
+      <span class="meta2">${mr}${scorePil(p)}${mid}<span class="dat">${datumLabel(p[4])}</span></span></div>
+    <div class="sum">${scoreUitleg(p)}${segLijnen(full)}${auteursRegel(p[2])}${institutenRegel(p[2])}${landenRegel(p[2])} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${deelKnop(p[2], p[0])}</div>
   </div>`;
 }
 function litHTML(items,kind){
@@ -837,10 +842,10 @@ function pubRij(x){
     <div class="prkop">
       <span class="pdat">${datumLabel(x.sk)}</span>
       <span class="pkaart ${x.soort}">${x.kort}</span>
-      <span class="ptitel">${x.titel}</span>${isMustRead(x.rij)?mustBadge():''}
-      <span class="pmetawrap">${scorePil(x.rij)}${[x.aut?`<span class="paut">${x.aut}</span>`:'',kernChip(x.rij),`<span class="pmeta" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>`].filter(Boolean).join('<span class="sp">·</span>')}</span>
+      <span class="ptitel">${x.titel}</span>
+      <span class="pmetawrap">${isMustRead(x.rij)?mustBadge():''}${scorePil(x.rij)}${[x.aut?`<span class="paut">${x.aut}</span>`:'',kernChip(x.rij),`<span class="pmeta" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>`].filter(Boolean).join('<span class="sp">·</span>')}</span>
     </div>
-    <div class="prsam">${scoreUitleg(x.rij)}${kortSam(x.sam)}${auteursRegel(x.url)}${institutenRegel(x.url)}
+    <div class="prsam">${scoreUitleg(x.rij)}${kortSam(x.sam)}${auteursRegel(x.url)}${institutenRegel(x.url)}${landenRegel(x.url)}
       <span class="prlinks">
         <a href="${x.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${naarPub}</a>
         <a href="#" onclick="event.stopPropagation();event.preventDefault();showCard('${x.id}')">${naarKaart}</a>
@@ -1314,7 +1319,7 @@ async function renderGewijzigd(){
 }
 
 // ── Literatuurpagina met filters ─────────────────────────────────────
-const LP_DEFAULT={periode:'alles', kaart:'', blad:'', soort:'', minscore:0, sort:'datum', q:'', mustread:false, instituut:''};
+const LP_DEFAULT={periode:'alles', kaart:'', blad:'', soort:'', minscore:0, sort:'datum', q:'', mustread:false, instituut:'', land:''};
 let lpFilters={...LP_DEFAULT};
 let lpActivePreset='';
 let lpAantal=25;
@@ -1346,6 +1351,7 @@ function litHash(){
     if(f.kaart) p.push('kaart='+encodeURIComponent(f.kaart));
     if(f.blad) p.push('blad='+encodeURIComponent(f.blad));
     if(f.instituut) p.push('inst='+encodeURIComponent(f.instituut));
+    if(f.land) p.push('land='+encodeURIComponent(f.land));
     if(f.minscore) p.push('min='+f.minscore);
     if(f.periode&&f.periode!=='alles') p.push('periode='+f.periode);
     if(f.sort&&f.sort!=='datum') p.push('sort='+f.sort);
@@ -1365,6 +1371,7 @@ function litParse(qs){
   if(pr.kaart) f.kaart=pr.kaart;
   if(pr.blad) f.blad=pr.blad;
   if(pr.inst) f.instituut=pr.inst;
+  if(pr.land) f.land=pr.land;
   if(pr.min) f.minscore=Number(pr.min)||0;
   if(pr.periode) f.periode=pr.periode;
   if(pr.sort) f.sort=pr.sort;
@@ -1388,6 +1395,7 @@ function renderLitFilters(alles){
   const box=document.getElementById('litfilters'); if(!box) return;
   const bladen=[...new Set(alles.map(x=>bladVan(x.venue)).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
   const instituten=[...new Set(Object.values(INSTITUTEN).flat())].sort((a,b)=>a.localeCompare(b));
+  const landen=[...new Set(Object.values(LANDEN).flat())].sort((a,b)=>a.localeCompare(b));
   const kaarten=INDEX.map(c=>[c.id,(c.kort?c.kort[lang]:CARDS[c.id][lang].title)]).sort((a,b)=>a[1].localeCompare(b[1]));
   const L=(nl,en)=>lang==='nl'?nl:en;
   const opt=(v,t,sel)=>`<option value="${v}"${sel===v?' selected':''}>${t}</option>`;
@@ -1401,6 +1409,8 @@ function renderLitFilters(alles){
       ${opt('',L('alle tijdschriften','all journals'),lpFilters.blad)}${bladen.map(b=>opt(b,b,lpFilters.blad)).join('')}</select></label>
     ${instituten.length?`<label>${L('Instituut','Institution')}<select onchange="lpZet('instituut',this.value)">
       ${opt('',L('alle instituten','all institutions'),lpFilters.instituut)}${instituten.map(b=>opt(b,b,lpFilters.instituut)).join('')}</select></label>`:''}
+    ${landen.length?`<label>${L('Land','Country')}<select onchange="lpZet('land',this.value)">
+      ${opt('',L('alle landen','all countries'),lpFilters.land)}${landen.map(b=>opt(b,b,lpFilters.land)).join('')}</select></label>`:''}
     <label>${L('Soort','Type')}<select onchange="lpZet('soort',this.value)">
       ${opt('',L('alles','all'),lpFilters.soort)}${opt('guides',SOORT.guide[lang],lpFilters.soort)}
       ${opt('core',SOORT.core[lang],lpFilters.soort)}${opt('latest',L('aanvullend','additional'),lpFilters.soort)}
@@ -1438,10 +1448,11 @@ function renderLitPagina(){
     if(lpFilters.blad && bladVan(x.venue)!==lpFilters.blad) return false;
     if(lpFilters.soort && x.soort!==lpFilters.soort) return false;
     if(lpFilters.instituut && !(institutenVan(x.url)||[]).includes(lpFilters.instituut)) return false;
+    if(lpFilters.land && !(landenVan(x.url)||[]).includes(lpFilters.land)) return false;
     if(lpFilters.minscore){ const b=bewijs(x.rij); if(!b||b.score<lpFilters.minscore) return false; }
     if(maanden){ const g=new Date(nu.getFullYear(),nu.getMonth()-maanden,1); const grens=g.getFullYear()*100+(g.getMonth()+1);
       if(x.sk<grens) return false; }
-    if(termen.length){ const hooi=lpNorm(x.titel+' '+x.aut+' '+(auteursVan(x.url)||[]).join(' ')+' '+(institutenVan(x.url)||[]).join(' ')+' '+x.venue+' '+tekstUit(x.sam)+' '+x.kaart);
+    if(termen.length){ const hooi=lpNorm(x.titel+' '+x.aut+' '+(auteursVan(x.url)||[]).join(' ')+' '+(institutenVan(x.url)||[]).join(' ')+' '+(landenVan(x.url)||[]).join(' ')+' '+x.venue+' '+tekstUit(x.sam)+' '+x.kaart);
       if(!termen.every(t=>hooi.includes(t))) return false; }
     return true;
   });
@@ -1453,7 +1464,7 @@ function renderLitPagina(){
   document.getElementById('lp-telling').textContent=lang==='nl'
     ? `${zicht.length} van ${alles.length} verwijzingen`
     : `${zicht.length} of ${alles.length} references`;
-  const actief = lpActivePreset || lpFilters.q || lpFilters.mustread || lpFilters.kaart || lpFilters.blad || lpFilters.instituut
+  const actief = lpActivePreset || lpFilters.q || lpFilters.mustread || lpFilters.kaart || lpFilters.blad || lpFilters.instituut || lpFilters.land
     || lpFilters.soort || lpFilters.minscore || (lpFilters.periode&&lpFilters.periode!=='alles') || (lpFilters.sort&&lpFilters.sort!=='datum');
   const clr=document.getElementById('lp-clear');
   if(clr){ clr.style.display=actief?'':'none'; clr.textContent=lang==='nl'?'alles wissen':'clear all'; }
