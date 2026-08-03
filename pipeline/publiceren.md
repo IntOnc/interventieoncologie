@@ -99,9 +99,10 @@ Radiology": "JVIR". Zet nooit de afkorting zelf in het tijdschriftveld.
 
 ## Auteurs en instituten
 
-Elke publicatie met een DOI krijgt de volledige auteurslijst en de betrokken
-instituten, zodat de site ook op een derde of vierde auteur en op een ziekenhuis
-doorzoekbaar is. Beide velden staan top-level in `content.json`, met als sleutel
+Elke publicatie met een DOI krijgt de volledige auteurslijst, de betrokken
+instituten en de betrokken landen, zodat de site ook op een derde of vierde
+auteur, op een ziekenhuis en op een land doorzoekbaar is. Deze velden staan
+top-level in `content.json` (`auteurs`, `instituten`, `landen`), met als sleutel
 de genormaliseerde URL (kleine letters, zonder `https://`, `www.`, `dx.` en
 zonder eindslash).
 
@@ -116,6 +117,13 @@ en sla de ontdubbelde lijst genormaliseerde instituutsnamen op. OpenAlex is
 hiervoor de bron; Crossref-affiliaties zijn meestal leeg. De dekking is
 noodzakelijkerwijs onvolledig: niet elk record heeft geparste affiliaties, en zeer
 recente artikelen staan soms nog niet in OpenAlex. Sla alleen op wat er echt staat.
+
+Landen (`landen`): haal ze uit dezelfde OpenAlex-call, veld
+`authorships[].institutions[].country_code` (ISO2). Ontdubbel de codes en sla ze
+op als Nederlandse landnamen (`US` → `Verenigde Staten`, `NL` → `Nederland`,
+`CN` → `China`, enz.). Een multicenter-studie krijgt dus meerdere landen. Filter
+duidelijke niet-instituten (subsidiegevers, verenigingen, bedrijven met een
+`(Land)`-achtervoegsel, laboratoria) uit de instituutlijst weg voordat je opslaat.
 
 Sla niets op wat je niet zelf op het record hebt gelezen. Richtlijnen en lopende
 studies krijgen geen auteurs- of instituutlijst (verenigingen en trials, geen
