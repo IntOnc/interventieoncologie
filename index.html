@@ -335,6 +335,16 @@
   .lpwis:hover{background:#e2e8ee}
   .lppresets{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
   .lpclear{font:inherit;font-size:11px;font-weight:600;color:var(--brand);background:none;border:0;cursor:pointer;padding:2px 4px}
+  .lpactief{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 10px}
+  .lpactief:empty{display:none}
+  .afilter{font:inherit;font-size:11px;font-weight:600;color:#3a4b5c;background:var(--brand-soft);border:1px solid #cfe4e4;
+    border-radius:20px;padding:3px 5px 3px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;line-height:1.4}
+  .afilter:hover{border-color:var(--brand);background:#dcefef}
+  .afilter .afl{color:#5a6b7b;font-weight:600}
+  .afilter .afl b{color:#1f2d3a;font-weight:700}
+  .afilter .afx{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;
+    background:#fff;color:#5a6b7b;font-size:13px;line-height:1;flex:none}
+  .afilter:hover .afx{background:var(--brand);color:#fff}
   .litfilters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
   .litfilters select,.litfilters input{font:inherit;font-size:12px;border:1px solid var(--line);border-radius:8px;
     padding:5px 8px;background:#fff;color:var(--ink)}
@@ -422,6 +432,7 @@
     </div>
     <div class="lppresets" id="lp-presets"></div>
     <div class="litfilters" id="litfilters"></div>
+    <div class="lpactief" id="lp-actief"></div>
     <div class="litbar"><span id="lp-telling" class="litcount"></span><button id="lp-clear" class="lpclear" onclick="lpReset(true)" style="display:none"></button></div>
     <div id="lp-lijst"></div>
     <div class="meerrij"><button class="meerlink" id="lp-meer" onclick="meerLit()"></button></div>
@@ -1394,7 +1405,6 @@ function bladVan(v){ return (v||'').replace(/\s*·\s*(?:[A-Za-zÀ-ÿ]{3,9}\.?\s+
 function renderLitFilters(alles){
   const box=document.getElementById('litfilters'); if(!box) return;
   const bladen=[...new Set(alles.map(x=>bladVan(x.venue)).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
-  const instituten=[...new Set(Object.values(INSTITUTEN).flat())].sort((a,b)=>a.localeCompare(b));
   const landen=[...new Set(Object.values(LANDEN).flat())].sort((a,b)=>a.localeCompare(b));
   const kaarten=INDEX.map(c=>[c.id,(c.kort?c.kort[lang]:CARDS[c.id][lang].title)]).sort((a,b)=>a[1].localeCompare(b[1]));
   const L=(nl,en)=>lang==='nl'?nl:en;
@@ -1407,8 +1417,6 @@ function renderLitFilters(alles){
       ${opt('',L('alle kaarten','all cards'),lpFilters.kaart)}${kaarten.map(k=>opt(k[0],k[1],lpFilters.kaart)).join('')}</select></label>
     <label>${L('Tijdschrift','Journal')}<select onchange="lpZet('blad',this.value)">
       ${opt('',L('alle tijdschriften','all journals'),lpFilters.blad)}${bladen.map(b=>opt(b,b,lpFilters.blad)).join('')}</select></label>
-    ${instituten.length?`<label>${L('Instituut','Institution')}<select onchange="lpZet('instituut',this.value)">
-      ${opt('',L('alle instituten','all institutions'),lpFilters.instituut)}${instituten.map(b=>opt(b,b,lpFilters.instituut)).join('')}</select></label>`:''}
     ${landen.length?`<label>${L('Land','Country')}<select onchange="lpZet('land',this.value)">
       ${opt('',L('alle landen','all countries'),lpFilters.land)}${landen.map(b=>opt(b,b,lpFilters.land)).join('')}</select></label>`:''}
     <label>${L('Soort','Type')}<select onchange="lpZet('soort',this.value)">
@@ -1429,6 +1437,42 @@ function renderLitPresets(){
   const box=document.getElementById('lp-presets'); if(!box) return;
   box.innerHTML=LP_PRESETS.map(p=>`<button class="litchip${lpActivePreset===p.key?' on':''}" onclick="lpKiesPreset('${p.key}')">${p[lang]}</button>`).join('');
 }
+// Eén filter losklikken (geen waarde in de onclick → veilig bij apostrofs e.d.)
+function lpWis(veld){
+  if(veld==='preset'){ lpReset(true); return; }
+  if(veld==='q') lpFilters.q='';
+  else if(veld==='mustread') lpFilters.mustread=false;
+  else if(veld==='minscore') lpFilters.minscore=0;
+  else if(veld==='periode') lpFilters.periode='alles';
+  else if(veld==='sort') lpFilters.sort='datum';
+  else lpFilters[veld]='';
+  lpActivePreset=''; lpAantal=25; renderLitPagina(); litHashSet();
+}
+function lpSoortLabel(s){ if(s==='guides')return SOORT.guide[lang]; if(s==='core')return SOORT.core[lang]; if(s==='ongoing')return SOORT.ongoing[lang]; if(s==='latest')return lang==='nl'?'aanvullend':'additional'; return s; }
+function lpPeriodeLabel(p){ const m={'12':lang==='nl'?'laatste 12 maanden':'last 12 months','24':lang==='nl'?'laatste 2 jaar':'last 2 years','60':lang==='nl'?'laatste 5 jaar':'last 5 years'}; return m[p]||p; }
+function lpKaartLabel(id){ const c=INDEX.find(x=>x.id===id); return c?(c.kort?c.kort[lang]:CARDS[id][lang].title):id; }
+function renderLitActief(){
+  const box=document.getElementById('lp-actief'); if(!box) return;
+  const f=lpFilters, L=(nl,en)=>lang==='nl'?nl:en, chips=[];
+  const chip=(veld,label,waarde)=>`<button class="afilter" onclick="lpWis('${veld}')" title="${L('filter verwijderen','remove filter')}"><span class="afl">${label}: <b>${deelEsc(waarde)}</b></span><span class="afx" aria-hidden="true">×</span></button>`;
+  if(lpActivePreset){
+    const pr=LP_PRESETS.find(p=>p.key===lpActivePreset);
+    chips.push(`<button class="afilter" onclick="lpWis('preset')" title="${L('filter verwijderen','remove filter')}"><span class="afl"><b>${pr?pr[lang]:lpActivePreset}</b></span><span class="afx" aria-hidden="true">×</span></button>`);
+  } else {
+    if(f.q) chips.push(chip('q',L('zoek','search'),'"'+f.q+'"'));
+    if(f.mustread) chips.push(chip('mustread',L('markering','flag'),'must read'));
+    if(f.soort) chips.push(chip('soort',L('soort','type'),lpSoortLabel(f.soort)));
+    if(f.kaart) chips.push(chip('kaart',L('onderwerp','topic'),lpKaartLabel(f.kaart)));
+    if(f.blad) chips.push(chip('blad',L('tijdschrift','journal'),f.blad));
+    if(f.land) chips.push(chip('land',L('land','country'),f.land));
+    if(f.instituut) chips.push(chip('instituut',L('instituut','institution'),f.instituut));
+    if(f.minscore) chips.push(chip('minscore',L('bewijskracht','strength'),'≥'+f.minscore));
+    if(f.periode&&f.periode!=='alles') chips.push(chip('periode',L('periode','period'),lpPeriodeLabel(f.periode)));
+    if(f.sort&&f.sort!=='datum') chips.push(chip('sort',L('sortering','sort'),L('sterkste eerst','strongest first')));
+  }
+  box.innerHTML=chips.join('');
+  box.style.display=chips.length?'':'none';
+}
 function renderLitPagina(){
   const alles=lpAlles();
   document.getElementById('lp-titel').textContent=lang==='nl'?'Literatuur':'Literature';
@@ -1437,6 +1481,7 @@ function renderLitPagina(){
     : 'Every guideline, publication and ongoing trial on the site in one list, with filters for period, topic, journal, type and strength of evidence.';
   renderLitFilters(alles);
   renderLitPresets();
+  renderLitActief();
   // zoekveld en wis-knop synchroniseren met de status (bij preset/URL)
   const zk=document.getElementById('lp-zoek'); if(zk && zk.value!==lpFilters.q) zk.value=lpFilters.q;
   const wis=document.getElementById('lp-wis'); if(wis) wis.style.display=lpFilters.q?'':'none';
