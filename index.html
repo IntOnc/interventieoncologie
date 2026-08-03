@@ -694,7 +694,7 @@ function litRegel(p,kind){
   return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
     <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}
       <span class="meta2">${mr}${scorePil(p)}${mid}<span class="dat">${datumLabel(p[4])}</span></span></div>
-    <div class="sum">${scoreUitleg(p)}${segLijnen(full)}${auteursRegel(p[2])}${institutenRegel(p[2])}${landenRegel(p[2])} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${deelKnop(p[2], p[0])}</div>
+    <div class="sum">${scoreUitleg(p)}${segLijnen(full)}${auteursRegel(p[2])}${institutenRegel(p[2])}${landenRegel(p[2])} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${pubmedLink(p[2])} ${deelKnop(p[2], p[0])}</div>
   </div>`;
 }
 function litHTML(items,kind){
@@ -859,6 +859,7 @@ function pubRij(x){
     <div class="prsam">${scoreUitleg(x.rij)}${kortSam(x.sam)}${auteursRegel(x.url)}${institutenRegel(x.url)}${landenRegel(x.url)}
       <span class="prlinks">
         <a href="${x.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${naarPub}</a>
+        ${pubmedLink(x.url)}
         <a href="#" onclick="event.stopPropagation();event.preventDefault();showCard('${x.id}')">${naarKaart}</a>
         ${deelKnop(x.url, x.titel)}
       </span>
@@ -881,6 +882,9 @@ function deelIcon(t){
   const kleur={whatsapp:'#25D366',linkedin:'#0a66c2',x:'#111'}[t]||'var(--brand)';
   return `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="${kleur}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[t]||''}</svg>`;
 }
+function doiVan(u){ const m=(u||'').match(/10\.\d{4,9}\/[^\s?#"']+/i); return m?m[0].replace(/[.,;]+$/,''):''; }
+function pubmedLink(url){ const doi=doiVan(url); if(!doi) return '';
+  return `<a class="pmlink" href="https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(doi)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${lang==='nl'?'origineel abstract ↗':'original abstract ↗'}</a>`; }
 function deelKnop(url, titel){
   const lbl=lang==='nl'?'Deel':'Share';
   const ic='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.4 13.4l7.2 4.2M15.6 6.4 8.4 10.6"/></svg>';
