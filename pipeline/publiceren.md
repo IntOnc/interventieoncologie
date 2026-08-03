@@ -97,21 +97,31 @@ plaatsen met weinig ruimte, aan de hand van de lijst `afkortingen` in
 met de gangbare afkorting, bijvoorbeeld "Journal of Vascular and Interventional
 Radiology": "JVIR". Zet nooit de afkorting zelf in het tijdschriftveld.
 
-## Auteurs
+## Auteurs en instituten
 
-Elke publicatie met een DOI krijgt de volledige auteurslijst, zodat de site ook
-op een derde of vierde auteur doorzoekbaar is. Voeg je een publicatie toe of
-verifieer je er een, haal dan de auteurs op uit Crossref (`api.crossref.org/works/DOI`,
-veld `message.author`) en zet ze in het top-level veld `auteurs` van
-`content.json`, met als sleutel de genormaliseerde URL (kleine letters, zonder
-`https://`, `www.`, `dx.` en zonder eindslash) en als waarde een lijst
-`["Achternaam Initialen", ...]`, bijvoorbeeld `["van der Lei S","Puijk RS"]`. Sla
-niets op wat je niet zelf op het Crossref-record hebt gelezen. Richtlijnen en
-lopende studies krijgen geen auteurslijst (verenigingen en trials, geen artikel).
-Ontbreekt een DOI maar is er een PMID, dan mag je de auteurs via PubTator3 halen.
-Vul waar je toch bij een kaart bent ook ontbrekende auteurslijsten van bestaande
-publicaties aan; de samengevouwen weergave blijft "eerste auteur et al.", de
-volledige lijst verschijnt pas bij uitklappen.
+Elke publicatie met een DOI krijgt de volledige auteurslijst en de betrokken
+instituten, zodat de site ook op een derde of vierde auteur en op een ziekenhuis
+doorzoekbaar is. Beide velden staan top-level in `content.json`, met als sleutel
+de genormaliseerde URL (kleine letters, zonder `https://`, `www.`, `dx.` en
+zonder eindslash).
+
+Auteurs (`auteurs`): haal ze uit Crossref (`api.crossref.org/works/DOI`, veld
+`message.author`) en sla ze op als lijst `["Achternaam Initialen", ...]`,
+bijvoorbeeld `["van der Lei S","Puijk RS"]`. Ontbreekt een DOI maar is er een
+PMID, dan mag je de auteurs via PubTator3 halen.
+
+Instituten (`instituten`): haal ze uit OpenAlex
+(`api.openalex.org/works/doi:DOI`, veld `authorships[].institutions[].display_name`)
+en sla de ontdubbelde lijst genormaliseerde instituutsnamen op. OpenAlex is
+hiervoor de bron; Crossref-affiliaties zijn meestal leeg. De dekking is
+noodzakelijkerwijs onvolledig: niet elk record heeft geparste affiliaties, en zeer
+recente artikelen staan soms nog niet in OpenAlex. Sla alleen op wat er echt staat.
+
+Sla niets op wat je niet zelf op het record hebt gelezen. Richtlijnen en lopende
+studies krijgen geen auteurs- of instituutlijst (verenigingen en trials, geen
+artikel). Vul waar je toch bij een kaart bent ook ontbrekende lijsten van
+bestaande publicaties aan; samengevouwen blijft het "eerste auteur et al.", de
+volledige auteurs- en instituutlijst verschijnt pas bij uitklappen.
 
 ## Controles voor het pushen
 

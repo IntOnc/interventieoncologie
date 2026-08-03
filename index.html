@@ -186,6 +186,8 @@
   }
   .lit .sum{display:none;font-size:11.5px;color:#48586a;margin:6px 0 1px;line-height:1.5;padding-top:7px;border-top:1px solid var(--line)}
   .lit.open .sum{display:block}
+  .sum .seg,.prsam .seg{display:block}
+  .sum .seg+.seg,.prsam .seg+.seg{margin-top:5px}
   .lit .sum a{color:var(--brand);font-weight:600;text-decoration:none;white-space:nowrap}
   .lit .sum a:hover{text-decoration:underline}
   .flag{font-size:9px;font-weight:700;color:#92400e;background:#fef3c7;border:1px solid #fde68a;border-radius:999px;padding:1px 7px;white-space:nowrap}
@@ -220,6 +222,8 @@
   .pubrij.open .ptitel{white-space:normal;overflow:visible;-webkit-line-clamp:unset;display:block}
   .auteurs{font-size:11px;color:var(--muted);line-height:1.5;margin:7px 0 2px;padding-top:6px;border-top:1px solid var(--line)}
   .auteurs b{color:#5b6b7c;font-weight:700}
+  .instituten{font-size:11px;color:var(--muted);line-height:1.5;margin:3px 0 2px}
+  .instituten b{color:#5b6b7c;font-weight:700}
   .watverd{font-weight:600;color:#33475b;margin-bottom:6px}
   .reden{font-size:12px;color:#46586b;background:#f6f9f9;border-left:3px solid var(--brand-2);border-radius:0 6px 6px 0;padding:5px 10px;margin:0 0 7px}
   .reden b{color:#33475b;font-weight:700}
@@ -497,19 +501,22 @@
 // Alle inhoud staat in content.json. Dit bestand bevat alleen opmaak en weergave.
 // De pipeline bewerkt uitsluitend content.json.
 let AFK={};
-let AUTEURS={};
+let AUTEURS={}, INSTITUTEN={};
 let SITE={}, ORGANS={}, DISEASES={}, TECHS={}, INDEX=[], CARDS={}, POS={}, TECHPAGES=[];
 function normUrl(u){ return (u||'').toString().toLowerCase().replace(/^https?:\/\//,'').replace(/^www\./,'').replace(/^dx\./,'').replace(/\/$/,''); }
 function auteursVan(url){ const a=AUTEURS[normUrl(url)]; return (a&&a.length)?a:null; }
 function auteursRegel(url){ const a=auteursVan(url); if(!a) return '';
   return `<div class="auteurs"><b>${lang==='nl'?'Auteurs':'Authors'}:</b> ${a.join(', ')}</div>`; }
+function institutenVan(url){ const a=INSTITUTEN[normUrl(url)]; return (a&&a.length)?a:null; }
+function institutenRegel(url){ const a=institutenVan(url); if(!a) return '';
+  return `<div class="instituten"><b>${lang==='nl'?'Instituten':'Institutions'}:</b> ${a.join(' · ')}</div>`; }
 let editorialNL='', editorialEN='';
 
 async function laadInhoud(){
   const res = await fetch('content.json?v=' + Date.now());
   if(!res.ok) throw new Error('content.json niet gevonden (' + res.status + ')');
   const d = await res.json();
-  SITE=d.site; AFK=d.afkortingen||{}; AUTEURS=d.auteurs||{}; ORGANS=d.organs; DISEASES=d.diseases; TECHS=d.techs;
+  SITE=d.site; AFK=d.afkortingen||{}; AUTEURS=d.auteurs||{}; INSTITUTEN=d.instituten||{}; ORGANS=d.organs; DISEASES=d.diseases; TECHS=d.techs;
   INDEX=d.index; CARDS=d.cards; POS=d.pos; TECHPAGES=d.techpages;
   editorialNL=d.editorial.nl; editorialEN=d.editorial.en;
   for(const id of Object.keys(CARDS)){
@@ -671,7 +678,7 @@ function litRegel(p,kind){
   return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
     <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}${mr}
       <span class="meta2">${scorePil(p)}${mid}<span class="dat">${datumLabel(p[4])}</span></span></div>
-    <div class="sum">${scoreUitleg(p)}${full}${auteursRegel(p[2])} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${deelKnop(p[2], p[0])}</div>
+    <div class="sum">${scoreUitleg(p)}${segLijnen(full)}${auteursRegel(p[2])}${institutenRegel(p[2])} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${deelKnop(p[2], p[0])}</div>
   </div>`;
 }
 function litHTML(items,kind){
@@ -815,11 +822,11 @@ function pubIndex(metLopend){
 function kortSam(html){
   const h=html||'';
   const kaal=h.replace(/<[^>]+>/g,'');
-  if(kaal.length<=700) return h;
+  if(kaal.length<=700) return segLijnen(h);
   const seg=/<b>\s*(?:Resultaten|Results)\s*:?\s*<\/b>[\s\S]*/i.exec(h);
   const kort=seg?seg[0]:h;
   const merk=lang==='nl'?'Opzet staat op de kaart.':'Design is on the card.';
-  return seg? kort+` <span class="prkort">${merk}</span>` : kort;
+  return segLijnen(seg? kort+` <span class="prkort">${merk}</span>` : kort);
 }
 function pubRij(x){
   const blad=(x.venue||'').replace(/\s*·\s*(?:[A-Za-zÀ-ÿ]{3,9}\.?\s+)?\d{4}\s*$/,'').replace(/\s*·\s*$/,'').trim();
@@ -833,7 +840,7 @@ function pubRij(x){
       <span class="ptitel">${x.titel}</span>${isMustRead(x.rij)?mustBadge():''}
       <span class="pmetawrap">${scorePil(x.rij)}${[x.aut?`<span class="paut">${x.aut}</span>`:'',kernChip(x.rij),`<span class="pmeta" title="${blad.replace(/"/g,'&quot;')}">${kortBlad(blad)}</span>`].filter(Boolean).join('<span class="sp">·</span>')}</span>
     </div>
-    <div class="prsam">${scoreUitleg(x.rij)}${kortSam(x.sam)}${auteursRegel(x.url)}
+    <div class="prsam">${scoreUitleg(x.rij)}${kortSam(x.sam)}${auteursRegel(x.url)}${institutenRegel(x.url)}
       <span class="prlinks">
         <a href="${x.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${naarPub}</a>
         <a href="#" onclick="event.stopPropagation();event.preventDefault();showCard('${x.id}')">${naarKaart}</a>
@@ -1307,7 +1314,7 @@ async function renderGewijzigd(){
 }
 
 // ── Literatuurpagina met filters ─────────────────────────────────────
-const LP_DEFAULT={periode:'alles', kaart:'', blad:'', soort:'', minscore:0, sort:'datum', q:'', mustread:false};
+const LP_DEFAULT={periode:'alles', kaart:'', blad:'', soort:'', minscore:0, sort:'datum', q:'', mustread:false, instituut:''};
 let lpFilters={...LP_DEFAULT};
 let lpActivePreset='';
 let lpAantal=25;
@@ -1338,6 +1345,7 @@ function litHash(){
     if(f.soort) p.push('soort='+f.soort);
     if(f.kaart) p.push('kaart='+encodeURIComponent(f.kaart));
     if(f.blad) p.push('blad='+encodeURIComponent(f.blad));
+    if(f.instituut) p.push('inst='+encodeURIComponent(f.instituut));
     if(f.minscore) p.push('min='+f.minscore);
     if(f.periode&&f.periode!=='alles') p.push('periode='+f.periode);
     if(f.sort&&f.sort!=='datum') p.push('sort='+f.sort);
@@ -1356,6 +1364,7 @@ function litParse(qs){
   if(pr.soort) f.soort=pr.soort;
   if(pr.kaart) f.kaart=pr.kaart;
   if(pr.blad) f.blad=pr.blad;
+  if(pr.inst) f.instituut=pr.inst;
   if(pr.min) f.minscore=Number(pr.min)||0;
   if(pr.periode) f.periode=pr.periode;
   if(pr.sort) f.sort=pr.sort;
@@ -1378,6 +1387,7 @@ function bladVan(v){ return (v||'').replace(/\s*·\s*(?:[A-Za-zÀ-ÿ]{3,9}\.?\s+
 function renderLitFilters(alles){
   const box=document.getElementById('litfilters'); if(!box) return;
   const bladen=[...new Set(alles.map(x=>bladVan(x.venue)).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+  const instituten=[...new Set(Object.values(INSTITUTEN).flat())].sort((a,b)=>a.localeCompare(b));
   const kaarten=INDEX.map(c=>[c.id,(c.kort?c.kort[lang]:CARDS[c.id][lang].title)]).sort((a,b)=>a[1].localeCompare(b[1]));
   const L=(nl,en)=>lang==='nl'?nl:en;
   const opt=(v,t,sel)=>`<option value="${v}"${sel===v?' selected':''}>${t}</option>`;
@@ -1389,6 +1399,8 @@ function renderLitFilters(alles){
       ${opt('',L('alle kaarten','all cards'),lpFilters.kaart)}${kaarten.map(k=>opt(k[0],k[1],lpFilters.kaart)).join('')}</select></label>
     <label>${L('Tijdschrift','Journal')}<select onchange="lpZet('blad',this.value)">
       ${opt('',L('alle tijdschriften','all journals'),lpFilters.blad)}${bladen.map(b=>opt(b,b,lpFilters.blad)).join('')}</select></label>
+    ${instituten.length?`<label>${L('Instituut','Institution')}<select onchange="lpZet('instituut',this.value)">
+      ${opt('',L('alle instituten','all institutions'),lpFilters.instituut)}${instituten.map(b=>opt(b,b,lpFilters.instituut)).join('')}</select></label>`:''}
     <label>${L('Soort','Type')}<select onchange="lpZet('soort',this.value)">
       ${opt('',L('alles','all'),lpFilters.soort)}${opt('guides',SOORT.guide[lang],lpFilters.soort)}
       ${opt('core',SOORT.core[lang],lpFilters.soort)}${opt('latest',L('aanvullend','additional'),lpFilters.soort)}
@@ -1425,10 +1437,11 @@ function renderLitPagina(){
     if(lpFilters.kaart && x.id!==lpFilters.kaart) return false;
     if(lpFilters.blad && bladVan(x.venue)!==lpFilters.blad) return false;
     if(lpFilters.soort && x.soort!==lpFilters.soort) return false;
+    if(lpFilters.instituut && !(institutenVan(x.url)||[]).includes(lpFilters.instituut)) return false;
     if(lpFilters.minscore){ const b=bewijs(x.rij); if(!b||b.score<lpFilters.minscore) return false; }
     if(maanden){ const g=new Date(nu.getFullYear(),nu.getMonth()-maanden,1); const grens=g.getFullYear()*100+(g.getMonth()+1);
       if(x.sk<grens) return false; }
-    if(termen.length){ const hooi=lpNorm(x.titel+' '+x.aut+' '+(auteursVan(x.url)||[]).join(' ')+' '+x.venue+' '+tekstUit(x.sam)+' '+x.kaart);
+    if(termen.length){ const hooi=lpNorm(x.titel+' '+x.aut+' '+(auteursVan(x.url)||[]).join(' ')+' '+(institutenVan(x.url)||[]).join(' ')+' '+x.venue+' '+tekstUit(x.sam)+' '+x.kaart);
       if(!termen.every(t=>hooi.includes(t))) return false; }
     return true;
   });
@@ -1440,7 +1453,7 @@ function renderLitPagina(){
   document.getElementById('lp-telling').textContent=lang==='nl'
     ? `${zicht.length} van ${alles.length} verwijzingen`
     : `${zicht.length} of ${alles.length} references`;
-  const actief = lpActivePreset || lpFilters.q || lpFilters.mustread || lpFilters.kaart || lpFilters.blad
+  const actief = lpActivePreset || lpFilters.q || lpFilters.mustread || lpFilters.kaart || lpFilters.blad || lpFilters.instituut
     || lpFilters.soort || lpFilters.minscore || (lpFilters.periode&&lpFilters.periode!=='alles') || (lpFilters.sort&&lpFilters.sort!=='datum');
   const clr=document.getElementById('lp-clear');
   if(clr){ clr.style.display=actief?'':'none'; clr.textContent=lang==='nl'?'alles wissen':'clear all'; }
@@ -1464,6 +1477,13 @@ function zetRoute(soort,id){
   zetMeta(soort,id);
 }
 function tekstUit(html){ return (html||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim(); }
+// Zet elke gelabelde sectie (Opzet/Resultaten/Conclusie) op een eigen regel in de overzichten
+function segLijnen(html){
+  if(!html) return html||'';
+  const LAB=/(?=<b>\s*(?:Opzet|Design|Resultaten|Results|Conclusie|Conclusion)\s*:?\s*<\/b>)/i;
+  if(!LAB.test(html)) return html;
+  return html.split(LAB).map(p=>{ const t=p.trim(); return t?`<span class="seg">${t}</span>`:''; }).join('');
+}
 function alineas(t){ return (t||'').split(/\n\n+/).map(p=>`<p>${p.trim()}</p>`).join(''); }
 function zetMeta(soort,id){
   const basis='https://www.interventieoncologie.nl/';
