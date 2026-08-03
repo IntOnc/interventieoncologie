@@ -836,13 +836,9 @@ function pubIndex(metLopend){
   return uit.sort((a,b)=>b.sk-a.sk);
 }
 function kortSam(html){
-  const h=html||'';
-  const kaal=h.replace(/<[^>]+>/g,'');
-  if(kaal.length<=700) return segLijnen(h);
-  const seg=/<b>\s*(?:Resultaten|Results)\s*:?\s*<\/b>[\s\S]*/i.exec(h);
-  const kort=seg?seg[0]:h;
-  const merk=lang==='nl'?'Opzet staat op de kaart.':'Design is on the card.';
-  return segLijnen(seg? kort+` <span class="prkort">${merk}</span>` : kort);
+  // Altijd de volledige gestructureerde samenvatting tonen: Opzet eerst, dan Resultaten, dan Conclusie.
+  // (Deze tekst verschijnt pas bij uitklappen, dus de lengte is geen bezwaar.)
+  return segLijnen(html||'');
 }
 function pubRij(x){
   const blad=(x.venue||'').replace(/\s*·\s*(?:[A-Za-zÀ-ÿ]{3,9}\.?\s+)?\d{4}\s*$/,'').replace(/\s*·\s*$/,'').trim();
