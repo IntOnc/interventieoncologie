@@ -97,6 +97,22 @@ plaatsen met weinig ruimte, aan de hand van de lijst `afkortingen` in
 met de gangbare afkorting, bijvoorbeeld "Journal of Vascular and Interventional
 Radiology": "JVIR". Zet nooit de afkorting zelf in het tijdschriftveld.
 
+## Auteurs
+
+Elke publicatie met een DOI krijgt de volledige auteurslijst, zodat de site ook
+op een derde of vierde auteur doorzoekbaar is. Voeg je een publicatie toe of
+verifieer je er een, haal dan de auteurs op uit Crossref (`api.crossref.org/works/DOI`,
+veld `message.author`) en zet ze in het top-level veld `auteurs` van
+`content.json`, met als sleutel de genormaliseerde URL (kleine letters, zonder
+`https://`, `www.`, `dx.` en zonder eindslash) en als waarde een lijst
+`["Achternaam Initialen", ...]`, bijvoorbeeld `["van der Lei S","Puijk RS"]`. Sla
+niets op wat je niet zelf op het Crossref-record hebt gelezen. Richtlijnen en
+lopende studies krijgen geen auteurslijst (verenigingen en trials, geen artikel).
+Ontbreekt een DOI maar is er een PMID, dan mag je de auteurs via PubTator3 halen.
+Vul waar je toch bij een kaart bent ook ontbrekende auteurslijsten van bestaande
+publicaties aan; de samengevouwen weergave blijft "eerste auteur et al.", de
+volledige lijst verschijnt pas bij uitklappen.
+
 ## Controles voor het pushen
 
 - `content.json` is geldige JSON.
