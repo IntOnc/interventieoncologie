@@ -3,6 +3,46 @@
  "regels": [
   {
    "datum": "2026-08-03",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Durvalumab and tremelimumab plus local partial tumour ablation in patients with unresectable liver metastases from metastatic colorectal cancer: results of the EORTC-1560-GITCG multicentre, single-arm phase II study (ILOC)",
+   "bron": "https://doi.org/10.1016/j.esmoop.2025.105508",
+   "reden": "Literatuur-uitbreiding blok 1 (crc-ablatie): 4 nieuwe publicaties toegevoegd"
+  },
+  {
+   "datum": "2026-08-03",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Local Treatment of Colorectal Liver Metastases in the Presence of Extrahepatic Disease: Survival Outcomes from the Amsterdam Colorectal Liver Met Registry (AmCORE)",
+   "bron": "https://doi.org/10.3390/cancers16061098",
+   "reden": "Literatuur-uitbreiding blok 1 (crc-ablatie): 4 nieuwe publicaties toegevoegd"
+  },
+  {
+   "datum": "2026-08-03",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Trends and overall survival after combined liver resection and thermal ablation of colorectal liver metastases: a nationwide population-based propensity score-matched study",
+   "bron": "https://doi.org/10.1016/j.hpb.2023.09.012",
+   "reden": "Literatuur-uitbreiding blok 1 (crc-ablatie): 4 nieuwe publicaties toegevoegd"
+  },
+  {
+   "datum": "2026-08-03",
+   "kaart": "crc-ablatie",
+   "kort": "Ablatie CRLM",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "Thermal Ablation Versus Surgical Resection for Intermediate-Size (3-5 cm) Colorectal Liver Metastases: Results from the Amsterdam Colorectal Liver Met Registry (AmCORE)",
+   "bron": "https://doi.org/10.3390/cancers18061017",
+   "reden": "Literatuur-uitbreiding blok 1 (crc-ablatie): 4 nieuwe publicaties toegevoegd"
+  },
+  {
+   "datum": "2026-08-03",
    "kaart": "cca-biliair",
    "kort": "Galwegdrainage",
    "type": "toegevoegd",
