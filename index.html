@@ -213,6 +213,9 @@
   .klapkop .evhint{font-weight:400}
   .klapchev{margin-left:auto;color:var(--muted);font-weight:700;font-size:17px;line-height:1}
   .blokkop.klapbaar{cursor:pointer;display:flex;align-items:center;gap:8px}
+  .klapkop.open{margin-bottom:0}
+  .klapkop .bktitel{white-space:nowrap}
+  .blokhint{font-size:11.5px;font-weight:500;color:var(--muted);letter-spacing:0;margin:6px 4px 4px;line-height:1.45}
   .pubblok{margin:14px 0 0}
   .pubrij{padding:5px 10px;border:1px solid var(--line);border-radius:7px;background:#fff;margin-bottom:3px;cursor:pointer}
   .pubrij .prkop{display:flex;align-items:baseline;gap:9px}
@@ -304,6 +307,30 @@
     .deeloverlay{align-items:flex-end;padding:0}
     .deelkaart{max-width:none;border-radius:16px 16px 0 0;padding-bottom:26px}
   }
+  /* Feedback / suggesties */
+  .fbknop{display:inline-flex;align-items:center;gap:4px;font:inherit;font-size:11px;font-weight:600;color:var(--muted);
+    background:none;border:0;cursor:pointer;padding:2px 4px;border-radius:6px;vertical-align:middle}
+  .fbknop:hover{color:var(--brand);background:var(--brand-soft)}
+  .fbknop svg{width:13px;height:13px}
+  .sec h4 .fbknop{margin-left:8px;font-weight:600}
+  .fboverlay{position:fixed;inset:0;background:rgba(15,30,46,.45);display:flex;align-items:center;justify-content:center;z-index:1200;padding:16px}
+  .fbkaart{position:relative;background:#fff;border-radius:14px;max-width:440px;width:100%;padding:20px 20px 18px;box-shadow:var(--shadow);max-height:92vh;overflow:auto}
+  .fbclose{position:absolute;top:10px;right:12px;border:0;background:none;font-size:22px;line-height:1;color:var(--muted);cursor:pointer}
+  .fbkaart h3{font-size:16px;margin:0 6px 6px 0}
+  .fbover{font-size:12px;color:var(--muted);background:var(--brand-soft);border:1px solid #cfe4e4;border-radius:8px;padding:7px 10px;margin:0 0 12px}
+  .fbover b{color:#1f2d3a}
+  .fblab{display:block;font-size:12px;font-weight:600;color:#46586b;margin:8px 0 3px}
+  .fbveld{width:100%;font:inherit;font-size:13px;border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:#fff;color:var(--ink)}
+  .fbveld:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(11,85,99,.10)}
+  textarea.fbveld{resize:vertical}
+  .fbrij{display:flex;gap:10px}.fbrij>div{flex:1}
+  .fbnote{font-size:11px;color:var(--muted);margin:8px 0 0;line-height:1.45}
+  .fbacties{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+  .fbannul{font:inherit;font-size:13px;font-weight:600;color:#46586b;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
+  .fbverstuur{font:inherit;font-size:13px;font-weight:700;color:#fff;background:var(--brand);border:0;border-radius:8px;padding:8px 16px;cursor:pointer}
+  .fbverstuur:disabled{opacity:.6;cursor:default}
+  .fbdank{font-size:14px;color:var(--ink);padding:10px 2px;line-height:1.5}
+  @media(max-width:640px){.fboverlay{align-items:flex-end;padding:0}.fbkaart{max-width:none;border-radius:16px 16px 0 0}}
   .secnav{position:sticky;top:52px;z-index:5;display:flex;gap:4px;flex-wrap:wrap;padding:8px 22px;
     background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
   .secnav a{font-size:11px;font-weight:600;color:#46586b;text-decoration:none;border:1px solid var(--line);
@@ -337,6 +364,18 @@
   .lpclear{font:inherit;font-size:11px;font-weight:600;color:var(--brand);background:none;border:0;cursor:pointer;padding:2px 4px}
   .lpactief{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 10px}
   .lpactief:empty{display:none}
+  .lpfiltoggle{display:none;align-items:center;justify-content:space-between;gap:8px;width:100%;font:inherit;font-size:13px;
+    font-weight:700;color:#3a4b5c;background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 14px;
+    margin:0 0 10px;cursor:pointer}
+  .lpfiltoggle .filn{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 5px;
+    border-radius:9px;background:var(--brand);color:#fff;font-size:11px;font-weight:800;margin-left:4px}
+  .lpfiltoggle .filchev{color:var(--muted);font-size:11px}
+  @media(max-width:640px){
+    #literatuur .paginakop p{display:none}
+    .lpfiltoggle{display:flex}
+    #litfilters{display:none}
+    #litfilters.open{display:flex}
+  }
   .afilter{font:inherit;font-size:11px;font-weight:600;color:#3a4b5c;background:var(--brand-soft);border:1px solid #cfe4e4;
     border-radius:20px;padding:3px 5px 3px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;line-height:1.4}
   .afilter:hover{border-color:var(--brand);background:#dcefef}
@@ -431,6 +470,7 @@
       <button id="lp-wis" class="lpwis" onclick="lpZoek('')" aria-label="wis" style="display:none">&times;</button>
     </div>
     <div class="lppresets" id="lp-presets"></div>
+    <button class="lpfiltoggle" id="lp-filtoggle" type="button" aria-expanded="false" onclick="toggleLitFilters()"></button>
     <div class="litfilters" id="litfilters"></div>
     <div class="lpactief" id="lp-actief"></div>
     <div class="litbar"><span id="lp-telling" class="litcount"></span><button id="lp-clear" class="lpclear" onclick="lpReset(true)" style="display:none"></button></div>
@@ -509,12 +549,117 @@
 <div class="foot"><p data-i="foot"></p>
   <p><a href="#/nl/wijzigingen" id="wlink" onclick="event.preventDefault();showWijzig()"></a></p></div>
 
+<div class="fboverlay" id="fboverlay" style="display:none" onclick="if(event.target===this)sluitFeedback()">
+  <div class="fbkaart" role="dialog" aria-modal="true" aria-labelledby="fb-kop">
+    <button class="fbclose" type="button" onclick="sluitFeedback()" aria-label="Sluiten">&times;</button>
+    <h3 id="fb-kop"></h3>
+    <div class="fbover" id="fb-over"></div>
+    <form id="fb-form" onsubmit="return verstuurFeedback(event)">
+      <label class="fblab" id="fb-l-type"></label>
+      <select id="fb-type" class="fbveld" onchange="fbTypeWissel()"></select>
+      <div id="fb-doiwrap" style="display:none">
+        <label class="fblab" id="fb-l-doi"></label>
+        <input id="fb-doi" class="fbveld" type="text" autocomplete="off">
+      </div>
+      <label class="fblab" id="fb-l-bericht"></label>
+      <textarea id="fb-bericht" class="fbveld" rows="4" required></textarea>
+      <div class="fbrij">
+        <div><label class="fblab" id="fb-l-naam"></label><input id="fb-naam" class="fbveld" type="text" autocomplete="name"></div>
+        <div><label class="fblab" id="fb-l-email"></label><input id="fb-email" class="fbveld" type="email" autocomplete="email"></div>
+      </div>
+      <div class="fbnote" id="fb-note"></div>
+      <div class="fbacties">
+        <button type="button" class="fbannul" id="fb-annul" onclick="sluitFeedback()"></button>
+        <button type="submit" class="fbverstuur" id="fb-verstuur"></button>
+      </div>
+    </form>
+    <div class="fbdank" id="fb-dank" style="display:none"></div>
+  </div>
+</div>
+
 <script>
 // ============ INHOUD ============
 // Alle inhoud staat in content.json. Dit bestand bevat alleen opmaak en weergave.
 // De pipeline bewerkt uitsluitend content.json.
 let AFK={};
 let AUTEURS={}, INSTITUTEN={}, LANDEN={};
+// ── Feedback / suggesties van collega's ──────────────────────────────
+// Vul FEEDBACK_ENDPOINT met je Formspree-URL (bijv. 'https://formspree.io/f/xxxxxxx').
+// Zonder endpoint valt het formulier terug op een e-mail (FEEDBACK_EMAIL).
+const FEEDBACK_ENDPOINT='https://formspree.io/f/xaewyowj';
+const FEEDBACK_EMAIL='';
+let fbCtx={};
+const FBT={nl:{kop:'Suggestie of correctie',over:'Over',type:'Soort',t_cor:'Correctie (iets klopt niet)',t_lit:'Literatuursuggestie',t_ov:'Overig',doi:'DOI of link (optioneel)',ber:'Je opmerking',naam:'Naam (optioneel)',mail:'E-mail (optioneel, voor terugkoppeling)',annul:'Annuleren',verstuur:'Versturen',bezig:'Versturen…',dank:'Dank je wel — je suggestie is verstuurd.',note:'Deel geen patiëntgegevens. Kaart, sectie en pagina worden automatisch meegestuurd.',sectie:'sectie',pub:'publicatie',algemeen:'deze kaart',fout:'Versturen lukte niet. Probeer het later opnieuw of mail ons.'},
+              en:{kop:'Suggestion or correction',over:'About',type:'Type',t_cor:'Correction (something is wrong)',t_lit:'Literature suggestion',t_ov:'Other',doi:'DOI or link (optional)',ber:'Your comment',naam:'Name (optional)',mail:'Email (optional, for follow-up)',annul:'Cancel',verstuur:'Send',bezig:'Sending…',dank:'Thank you — your suggestion has been sent.',note:'Do not share patient data. Card, section and page are included automatically.',sectie:'section',pub:'publication',algemeen:'this card',fout:'Sending failed. Please try again later or email us.'}};
+function fbIcon(){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15V4a1 1 0 0 1 1-1h11l-2 4 2 4H5a1 1 0 0 0-1 1zM4 22v-7"/></svg>'; }
+function fbBtn(sectie,label,pubTitel,pubUrl){
+  const lbl=lang==='nl'?'opmerking':'comment';
+  const a=[sectie||'',label||'',pubTitel||'',pubUrl||''].map(s=>deelEsc(s));
+  return `<button class="fbknop" type="button" title="${lang==='nl'?'Suggestie of correctie':'Suggestion or correction'}" onclick="event.stopPropagation();openFeedback('${a[0]}','${a[1]}','${a[2]}','${a[3]}')">${fbIcon()}<span>${lbl}</span></button>`;
+}
+function openFeedback(sectie,label,pubTitel,pubUrl){
+  const T=FBT[lang]; const d=CARDS[current]?CARDS[current][lang]:null;
+  fbCtx={kaart:current||'', kaartTitel:d?d.title:document.title, sectie:sectie||'', sectieLabel:label||'', pub:pubTitel||'', pubUrl:pubUrl||'', lang:lang, url:location.href};
+  document.getElementById('fb-kop').textContent=T.kop;
+  let over=`<b>${fbCtx.kaartTitel||T.algemeen}</b>`;
+  if(fbCtx.pub) over+=` › ${T.pub}: ${deelEsc(fbCtx.pub)}`;
+  else if(fbCtx.sectieLabel) over+=` › ${T.sectie}: ${deelEsc(fbCtx.sectieLabel)}`;
+  document.getElementById('fb-over').innerHTML=`${T.over}: ${over}`;
+  document.getElementById('fb-l-type').textContent=T.type;
+  const sel=document.getElementById('fb-type');
+  sel.innerHTML=`<option value="correctie">${T.t_cor}</option><option value="literatuur">${T.t_lit}</option><option value="overig">${T.t_ov}</option>`;
+  sel.value = fbCtx.pub ? 'literatuur' : 'correctie';
+  document.getElementById('fb-l-doi').textContent=T.doi;
+  document.getElementById('fb-l-bericht').textContent=T.ber;
+  document.getElementById('fb-l-naam').textContent=T.naam;
+  document.getElementById('fb-l-email').textContent=T.mail;
+  document.getElementById('fb-note').textContent=T.note;
+  document.getElementById('fb-annul').textContent=T.annul;
+  const vb=document.getElementById('fb-verstuur'); vb.textContent=T.verstuur; vb.disabled=false;
+  document.getElementById('fb-bericht').value=''; document.getElementById('fb-doi').value='';
+  document.getElementById('fb-naam').value=''; document.getElementById('fb-email').value='';
+  if(fbCtx.pubUrl && !document.getElementById('fb-doi').value) document.getElementById('fb-doi').value=fbCtx.pubUrl;
+  fbTypeWissel();
+  document.getElementById('fb-form').style.display='';
+  document.getElementById('fb-dank').style.display='none';
+  const ov=document.getElementById('fboverlay'); ov.style.display='flex';
+  setTimeout(()=>document.getElementById('fb-bericht').focus(),50);
+}
+function fbTypeWissel(){ const t=document.getElementById('fb-type').value; document.getElementById('fb-doiwrap').style.display=(t==='literatuur')?'':'none'; }
+function sluitFeedback(){ document.getElementById('fboverlay').style.display='none'; }
+function verstuurFeedback(e){
+  e.preventDefault(); const T=FBT[lang];
+  const data={
+    _subject:`[${lang.toUpperCase()}] ${document.getElementById('fb-type').value} · ${fbCtx.kaartTitel}${fbCtx.sectieLabel?(' · '+fbCtx.sectieLabel):''}`,
+    soort:document.getElementById('fb-type').value,
+    bericht:document.getElementById('fb-bericht').value.trim(),
+    doi_of_link:document.getElementById('fb-doi').value.trim(),
+    naam:document.getElementById('fb-naam').value.trim(),
+    email:document.getElementById('fb-email').value.trim(),
+    kaart:fbCtx.kaart, kaart_titel:fbCtx.kaartTitel, sectie:fbCtx.sectieLabel||fbCtx.sectie, publicatie:fbCtx.pub, taal:fbCtx.lang, pagina:fbCtx.url
+  };
+  if(!data.bericht) return false;
+  const vb=document.getElementById('fb-verstuur'); vb.disabled=true; vb.textContent=T.bezig;
+  const klaar=()=>{ document.getElementById('fb-form').style.display='none'; const dk=document.getElementById('fb-dank'); dk.textContent=T.dank; dk.style.display='block'; setTimeout(sluitFeedback,1600); };
+  const viaMail=()=>{
+    const adres=FEEDBACK_EMAIL||'';
+    const body=`${data.bericht}\n\n— — —\nSoort: ${data.soort}\nKaart: ${data.kaart_titel} (${data.kaart})\nSectie: ${data.sectie||'-'}\nPublicatie: ${data.publicatie||'-'}\nDOI/link: ${data.doi_of_link||'-'}\nNaam: ${data.naam||'-'}\nTaal: ${data.taal}\nPagina: ${data.pagina}`;
+    location.href=`mailto:${adres}?subject=${encodeURIComponent(data._subject)}&body=${encodeURIComponent(body)}`;
+    klaar();
+  };
+  if(FEEDBACK_ENDPOINT){
+    fetch(FEEDBACK_ENDPOINT,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(r=>{ if(r.ok) klaar(); else if(FEEDBACK_EMAIL) viaMail(); else { vb.disabled=false; vb.textContent=T.verstuur; document.getElementById('fb-note').textContent=T.fout; } })
+      .catch(()=>{ if(FEEDBACK_EMAIL) viaMail(); else { vb.disabled=false; vb.textContent=T.verstuur; document.getElementById('fb-note').textContent=T.fout; } });
+  } else { viaMail(); }
+  return false;
+}
+function plaatsSectieKnoppen(){
+  const T=FBT[lang];
+  const secs=[['sec-bl',lang==='nl'?'Kernboodschap':'Bottom line'],['sec-crit',lang==='nl'?'Wanneer geschikt':'When suitable'],
+              ['sec-res',lang==='nl'?'Resultaten':'Results'],['sec-lim',lang==='nl'?'Beperkingen':'Limitations']];
+  secs.forEach(([id,label])=>{ const h=document.querySelector('#'+id+' h4'); if(h && !h.querySelector('.fbknop')) h.insertAdjacentHTML('beforeend',fbBtn(id,label,'','')); });
+}
 let SITE={}, ORGANS={}, DISEASES={}, TECHS={}, INDEX=[], CARDS={}, POS={}, TECHPAGES=[];
 function normUrl(u){ return (u||'').toString().toLowerCase().replace(/^https?:\/\//,'').replace(/^www\./,'').replace(/^dx\./,'').replace(/\/$/,''); }
 function auteursVan(url){ const a=AUTEURS[normUrl(url)]; return (a&&a.length)?a:null; }
@@ -694,7 +839,7 @@ function litRegel(p,kind){
   return `<div class="lit ${kind}${needsData?' needsdata':''}" onclick="this.classList.toggle('open')">
     <div class="lh"><span class="chev">▸</span>${label?`<span class="badge ${kind}">${label}</span>`:''}<span class="ttl">${p[0]}</span>${flag}
       <span class="meta2">${mr}${scorePil(p)}${mid}<span class="dat">${datumLabel(p[4])}</span></span></div>
-    <div class="sum">${scoreUitleg(p)}${segLijnen(full)}${auteursRegel(p[2])}${institutenRegel(p[2])}${landenRegel(p[2])} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${pubmedLink(p[2])} ${deelKnop(p[2], p[0])}</div>
+    <div class="sum">${scoreUitleg(p)}${segLijnen(full)}${auteursRegel(p[2])}${institutenRegel(p[2])}${landenRegel(p[2])} <a href="${p[2]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${linkTxt}</a> ${pubmedLink(p[2])} ${deelKnop(p[2], p[0])} ${fbBtn('literatuur',lang==='nl'?'Literatuur':'Literature',p[0],p[2])}</div>
   </div>`;
 }
 function litHTML(items,kind){
@@ -927,6 +1072,11 @@ function deelMenu(url, titel){
 let mustreadBlokOpen=null, mustreadAlles=false;
 function toggleMustread(){ mustreadBlokOpen=!mustreadBlokOpen; renderMustread(); }
 function toonMeerMustread(){ mustreadAlles=!mustreadAlles; renderMustread(); }
+// Open blokkop: dezelfde nette kaart als ingeklapt (titel + chevron), omschrijving als aparte regel eronder
+function klapkopOpen(titel, hint, fn){
+  return `<div class="klapkop open" role="button" tabindex="0" onclick="${fn}()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();${fn}()}"><span class="bktitel">${titel}</span><span class="klapchev">&#8964;</span></div>`
+    + (hint?`<div class="blokhint">${hint}</div>`:'');
+}
 function renderMustread(){
   const box=document.getElementById('mustread');
   if(!box) return;
@@ -941,7 +1091,7 @@ function renderMustread(){
   const hint=lang==='nl'?'sterke en recente evidence, automatisch geselecteerd':'strong and recent evidence, selected automatically';
   const start=startAantal();
   const meer=lang==='nl'?'alle must reads →':'all must reads →';
-  box.innerHTML=`<div class="blokkop klapbaar" role="button" tabindex="0" onclick="toggleMustread()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMustread()}">${kop} <span class="evhint">${hint}</span><span class="klapchev">&#8964;</span></div>`
+  box.innerHTML=klapkopOpen(kop, hint, 'toggleMustread')
     + alles.slice(0,start).map(pubRij).join('')
     + (alles.length>start?`<button class="meerlink" onclick="openLit('mustread')">${meer}</button>`:'');
 }
@@ -964,17 +1114,12 @@ function renderNieuwste(){
     box.innerHTML=`<div class="klapkop" role="button" tabindex="0" onclick="toggleNieuwste()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleNieuwste()}">${kop} <span class="evhint">${totaal.length} ${woord}</span><span class="klapchev">&rsaquo;</span></div>`;
     return;
   }
-  const hint=lang==='nl'?'over alle kaarten heen, nieuwste eerst':'across all cards, newest first';
+  const hint=(lang==='nl'?'over alle kaarten heen, nieuwste eerst':'across all cards, newest first')+` · ${totaal.length} ${woord}`;
   const start=startAantal();
   const meer=lang==='nl'?'alle publicaties →':'all publications →';
-  const knop=(v,t)=>`<button class="litchip${nieuwstePeriode===v?' on':''}" onclick="zetPeriode('${v}')">${t}</button>`;
-  const rij=`<div class="litbar"><span class="litchips">`
-    +knop('alles',lang==='nl'?'Alles':'All')
-    +knop('jaar',lang==='nl'?'Laatste 12 maanden':'Last 12 months')
-    +`</span><span class="litcount">${alles.length} ${woord}</span></div>`;
-  box.innerHTML=`<div class="blokkop klapbaar" role="button" tabindex="0" onclick="toggleNieuwste()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleNieuwste()}">${kop} <span class="evhint">${hint}</span><span class="klapchev">&#8964;</span></div>`+rij
-    + alles.slice(0,start).map(pubRij).join('')
-    + (alles.length>start?`<button class="meerlink" onclick="openLit('nieuwste')">${meer}</button>`:'');
+  box.innerHTML=klapkopOpen(kop, hint, 'toggleNieuwste')
+    + totaal.slice(0,start).map(pubRij).join('')
+    + (totaal.length>start?`<button class="meerlink" onclick="openLit('nieuwste')">${meer}</button>`:'');
 }
 function toggleFacets(){
   const b=document.getElementById('meerfacets');
@@ -1179,7 +1324,8 @@ function renderCard(){
     const naar=lang==='nl'?'naar de kaart':'open the card';
     return `<li><b>${a[0]}</b>: ${a[1]}`+(doel?` <a class="altlink" href="${hashVan('kaart',doel)}">${naar} →</a>`:'')+'</li>';
   }).join('')+'</ul>';
-  renderSecnav(); renderVerwant();
+  document.getElementById('c-deel').innerHTML+=' '+fbBtn('','','','');
+  renderSecnav(); renderVerwant(); plaatsSectieKnoppen();
   document.getElementById('c-editorial').innerHTML=d.editorial;
   const pv=document.getElementById('printvoet');
   if(pv){ const u='https://www.interventieoncologie.nl/kaart/'+current+'/';
@@ -1292,8 +1438,7 @@ async function renderGewijzigd(){
     box.innerHTML=`<div class="klapkop" role="button" tabindex="0" onclick="toggleGewijzigd()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleGewijzigd()}">${kop}<span class="klapchev">&rsaquo;</span></div>`;
     return;
   }
-  const klapchev=`<span class="klapchev">&#8964;</span>`;
-  const kopH=`<div class="blokkop klapbaar" role="button" tabindex="0" onclick="toggleGewijzigd()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleGewijzigd()}">${kop} <span class="evhint">${lang==='nl'?'per kaart, met datum':'per card, dated'}</span>${klapchev}</div>`;
+  const kopH=klapkopOpen(kop, lang==='nl'?'per kaart, met datum':'per card, dated', 'toggleGewijzigd');
   if(!wijzigCache){
     try{
       const r=await fetch('wijzigingen.json?v='+Date.now());
@@ -1451,6 +1596,20 @@ function lpWis(veld){
 function lpSoortLabel(s){ if(s==='guides')return SOORT.guide[lang]; if(s==='core')return SOORT.core[lang]; if(s==='ongoing')return SOORT.ongoing[lang]; if(s==='latest')return lang==='nl'?'aanvullend':'additional'; return s; }
 function lpPeriodeLabel(p){ const m={'12':lang==='nl'?'laatste 12 maanden':'last 12 months','24':lang==='nl'?'laatste 2 jaar':'last 2 years','60':lang==='nl'?'laatste 5 jaar':'last 5 years'}; return m[p]||p; }
 function lpKaartLabel(id){ const c=INDEX.find(x=>x.id===id); return c?(c.kort?c.kort[lang]:CARDS[id][lang].title):id; }
+let litFiltersOpen=false;
+function toggleLitFilters(){ litFiltersOpen=!litFiltersOpen;
+  const f=document.getElementById('litfilters'); if(f) f.classList.toggle('open',litFiltersOpen);
+  const b=document.getElementById('lp-filtoggle'); if(b) b.setAttribute('aria-expanded',litFiltersOpen?'true':'false');
+  updateFilToggle();
+}
+function litFilterCount(){ const f=lpFilters; let n=0;
+  if(f.kaart) n++; if(f.blad) n++; if(f.land) n++; if(f.soort) n++; if(f.minscore) n++;
+  if(f.periode&&f.periode!=='alles') n++; if(f.sort&&f.sort!=='datum') n++; return n; }
+function updateFilToggle(){ const b=document.getElementById('lp-filtoggle'); if(!b) return;
+  const n=litFilterCount(); const lab=lang==='nl'?'Filters':'Filters';
+  b.innerHTML=`<span>${lab}${n?` <span class="filn">${n}</span>`:''}</span><span class="filchev">${litFiltersOpen?'▲':'▼'}</span>`;
+  const f=document.getElementById('litfilters'); if(f) f.classList.toggle('open',litFiltersOpen);
+}
 function renderLitActief(){
   const box=document.getElementById('lp-actief'); if(!box) return;
   const f=lpFilters, L=(nl,en)=>lang==='nl'?nl:en, chips=[];
@@ -1482,6 +1641,7 @@ function renderLitPagina(){
   renderLitFilters(alles);
   renderLitPresets();
   renderLitActief();
+  updateFilToggle();
   // zoekveld en wis-knop synchroniseren met de status (bij preset/URL)
   const zk=document.getElementById('lp-zoek'); if(zk && zk.value!==lpFilters.q) zk.value=lpFilters.q;
   const wis=document.getElementById('lp-wis'); if(wis) wis.style.display=lpFilters.q?'':'none';

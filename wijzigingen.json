@@ -2,6 +2,62 @@
  "bijgewerkt": "2026-08-05",
  "regels": [
   {
+   "datum": "2026-08-05",
+   "kaart": "lymfocele",
+   "kort": "Lymfocele",
+   "type": "nieuw",
+   "wat": "Percutane behandeling van postoperatieve lymfocele",
+   "reden": "Nieuwe kaarten: Lymfatische interventies (chyluslekkage) en Lymfocele"
+  },
+  {
+   "datum": "2026-08-05",
+   "kaart": "lymfe-interventies",
+   "kort": "Chyluslekkage",
+   "type": "nieuw",
+   "wat": "Lymfatische interventies bij chyluslekkage",
+   "reden": "Nieuwe kaarten: Lymfatische interventies (chyluslekkage) en Lymfocele"
+  },
+  {
+   "datum": "2026-08-05",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "tekst",
+   "wat": "Trans-arteriële chemo-embolisatie (TACE) bij HCC",
+   "velden": [
+    "results"
+   ],
+   "naaraanleiding": [
+    {
+     "wat": "Transarterial Chemoembolization Plus Thermal Ablation in Unresectable Hepatocellular Carcinoma: The Phase 3 TORCH Randomized Clinical Trial",
+     "bron": "https://doi.org/10.1001/jamaoncol.2026.2366"
+    }
+   ],
+   "diff": [
+    {
+     "veld": "results",
+     "oud": {
+      "nl": "Overlevingswinst van TACE ten opzichte van ondersteunende zorg bij intermediair HCC (Llovet et al., Lancet 2002). • DEB-TACE: vergelijkbare effectiviteit en betere verdraagbaarheid dan conventionele TACE (PRECISION V; Lammer et al., CVIR 2010). • Objectieve tumorrespons bij een groot deel van de patiënten; herhaalbaar bij respons. • Kan downstaging of bridging naar levertransplantatie mogelijk maken.",
+      "en": "Survival benefit of TACE over supportive care in intermediate HCC (Llovet et al., Lancet 2002). • DEB-TACE: comparable efficacy and better tolerability than conventional TACE (PRECISION V; Lammer et al., CVIR 2010). • Objective tumour response in a large proportion of patients; repeatable with response. • Can enable downstaging or bridging to liver transplantation."
+     },
+     "nieuw": {
+      "nl": "Overlevingswinst van TACE ten opzichte van ondersteunende zorg bij intermediair HCC (Llovet et al., Lancet 2002). • DEB-TACE: vergelijkbare effectiviteit en betere verdraagbaarheid dan conventionele TACE (PRECISION V; Lammer et al., CVIR 2010). • Objectieve tumorrespons bij een groot deel van de patiënten; herhaalbaar bij respons. • Kan downstaging of bridging naar levertransplantatie mogelijk maken. • TACE gecombineerd met thermale ablatie gaf een langere mediane totale overleving dan TACE alleen bij niet-resectabel HCC: 88,6 versus 35,1 maanden (HR 0,50; TORCH-trial, gerandomiseerd fase 3; Lyu et al., JAMA Oncol 2026).",
+      "en": "Survival benefit of TACE over supportive care in intermediate HCC (Llovet et al., Lancet 2002). • DEB-TACE: comparable efficacy and better tolerability than conventional TACE (PRECISION V; Lammer et al., CVIR 2010). • Objective tumour response in a large proportion of patients; repeatable with response. • Can enable downstaging or bridging to liver transplantation. • TACE combined with thermal ablation gave longer median overall survival than TACE alone in unresectable HCC: 88.6 versus 35.1 months (HR 0.50; TORCH trial, randomized phase 3; Lyu et al., JAMA Oncol 2026)."
+     }
+    }
+   ],
+   "reden": "Ronde 2: TORCH-trial (TACE plus thermale ablatie, JAMA Oncol 2026) toegevoegd aan hcc-tace met overlevingsregel in results; en-dash in instituutsnaam genormaliseerd"
+  },
+  {
+   "datum": "2026-08-05",
+   "kaart": "hcc-tace",
+   "kort": "TACE HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Transarterial Chemoembolization Plus Thermal Ablation in Unresectable Hepatocellular Carcinoma: The Phase 3 TORCH Randomized Clinical Trial",
+   "bron": "https://doi.org/10.1001/jamaoncol.2026.2366",
+   "reden": "Ronde 2: TORCH-trial (TACE plus thermale ablatie, JAMA Oncol 2026) toegevoegd aan hcc-tace met overlevingsregel in results; en-dash in instituutsnaam genormaliseerd"
+  },
+  {
    "datum": "2026-08-04",
    "kaart": "hcc-tare",
    "kort": "TARE HCC",
