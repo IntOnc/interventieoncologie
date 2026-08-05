@@ -1,6 +1,74 @@
 {
- "bijgewerkt": "2026-08-03",
+ "bijgewerkt": "2026-08-05",
  "regels": [
+  {
+   "datum": "2026-08-04",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "tekst",
+   "wat": "Trans-arteriële radio-embolisatie (TARE / Y-90) bij HCC",
+   "velden": [
+    "results"
+   ],
+   "naaraanleiding": [
+    {
+     "wat": "A global evaluation of advanced dosimetry in transarterial radioembolization of hepatocellular carcinoma with Yttrium-90: the TARGET study",
+     "bron": "https://doi.org/10.1007/s00259-022-05774-0"
+    },
+    {
+     "wat": "A Phase I/IIa Trial of Yttrium-90 Radioembolization in Combination with Durvalumab for Locally Advanced Unresectable Hepatocellular Carcinoma",
+     "bron": "https://doi.org/10.1158/1078-0432.CCR-23-0581"
+    },
+    {
+     "wat": "Segmental Yttrium-90 Radioembolization with Day-of-Calibration Resin Microspheres: Durable Transarterial Ablation for Solitary Hepatocellular Carcinoma",
+     "bron": "https://doi.org/10.1007/s00270-025-04130-7"
+    }
+   ],
+   "diff": [
+    {
+     "veld": "results",
+     "oud": {
+      "nl": "Radiation segmentectomy bij solitaire HCC: objectieve respons 88% en 3-jaars overleving 87% (LEGACY; Salem et al., Hepatology 2021). • Gepersonaliseerde dosimetrie verhoogt de respons tot ongeveer 71% versus 36% bij standaarddosering (DOSISPHERE-01; Garin et al., Lancet Gastroenterol Hepatol 2021). • Bij BCLC A/B: mediane overleving 30,2 versus 15,6 maanden voor TARE versus DEB-TACE (TRACE; Dhondt et al., Radiology 2022). • Doorgaans goed verdragen, met minder post-embolisatiesyndroom dan TACE.",
+      "en": "Radiation segmentectomy for solitary HCC: objective response 88% and 3-year survival 87% (LEGACY; Salem et al., Hepatology 2021). • Personalised dosimetry raises response to about 71% versus 36% with standard dosing (DOSISPHERE-01; Garin et al., Lancet Gastroenterol Hepatol 2021). • For BCLC A/B: median survival 30.2 versus 15.6 months for TARE versus DEB-TACE (TRACE; Dhondt et al., Radiology 2022). • Generally well tolerated, with less post-embolisation syndrome than TACE."
+     },
+     "nieuw": {
+      "nl": "Radiation segmentectomy bij solitaire HCC: objectieve respons 88% en 3-jaars overleving 87% (LEGACY; Salem et al., Hepatology 2021). • Gepersonaliseerde dosimetrie verhoogt de respons tot ongeveer 71% versus 36% bij standaarddosering (DOSISPHERE-01; Garin et al., Lancet Gastroenterol Hepatol 2021). • Een hogere tumor-geabsorbeerde dosis hangt samen met betere respons én langere overleving (TARGET; Lam et al., Eur J Nucl Med Mol Imaging 2022: HR 0,83 per 100 Gy, n=209). • Bij BCLC A/B: mediane overleving 30,2 versus 15,6 maanden voor TARE versus DEB-TACE (TRACE; Dhondt et al., Radiology 2022). • Doorgaans goed verdragen, met minder post-embolisatiesyndroom dan TACE.",
+      "en": "Radiation segmentectomy for solitary HCC: objective response 88% and 3-year survival 87% (LEGACY; Salem et al., Hepatology 2021). • Personalised dosimetry raises response to about 71% versus 36% with standard dosing (DOSISPHERE-01; Garin et al., Lancet Gastroenterol Hepatol 2021). • A higher tumour-absorbed dose is associated with better response and longer survival (TARGET; Lam et al., Eur J Nucl Med Mol Imaging 2022: HR 0.83 per 100 Gy, n=209). • For BCLC A/B: median survival 30.2 versus 15.6 months for TARE versus DEB-TACE (TRACE; Dhondt et al., Radiology 2022). • Generally well tolerated, with less post-embolisation syndrome than TACE."
+     }
+    }
+   ],
+   "reden": "Literatuur-uitbreiding blok 2 (hcc-tare): 3 publicaties + dosimetrie-bullet"
+  },
+  {
+   "datum": "2026-08-04",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "Segmental Yttrium-90 Radioembolization with Day-of-Calibration Resin Microspheres: Durable Transarterial Ablation for Solitary Hepatocellular Carcinoma",
+   "bron": "https://doi.org/10.1007/s00270-025-04130-7",
+   "reden": "Literatuur-uitbreiding blok 2 (hcc-tare): 3 publicaties + dosimetrie-bullet"
+  },
+  {
+   "datum": "2026-08-04",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "latest",
+   "wat": "A Phase I/IIa Trial of Yttrium-90 Radioembolization in Combination with Durvalumab for Locally Advanced Unresectable Hepatocellular Carcinoma",
+   "bron": "https://doi.org/10.1158/1078-0432.CCR-23-0581",
+   "reden": "Literatuur-uitbreiding blok 2 (hcc-tare): 3 publicaties + dosimetrie-bullet"
+  },
+  {
+   "datum": "2026-08-04",
+   "kaart": "hcc-tare",
+   "kort": "TARE HCC",
+   "type": "toegevoegd",
+   "lijst": "core",
+   "wat": "A global evaluation of advanced dosimetry in transarterial radioembolization of hepatocellular carcinoma with Yttrium-90: the TARGET study",
+   "bron": "https://doi.org/10.1007/s00259-022-05774-0",
+   "reden": "Literatuur-uitbreiding blok 2 (hcc-tare): 3 publicaties + dosimetrie-bullet"
+  },
   {
    "datum": "2026-08-03",
    "kaart": "crc-ablatie",
